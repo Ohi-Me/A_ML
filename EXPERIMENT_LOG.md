@@ -81,3 +81,10 @@ All compute runs as PBS GPU jobs on the NITJ H100 cluster (MIG 3g.47gb slice, 46
 Validated progression (test-prior simulation, fold 0): exact keys 0.641 -> stage 1 C1 0.9818 -> C2 (OOF embeddings,
 number/legal/token features) 0.9852 -> stage 2 0.9869 -> GNN 0.9884 -> GNN + multilingual cross-encoder 0.9908.
 Submissions: final_c1 (0.983 plain val), final_c2v1 (0.9848 sim), final_v2 (0.9870 sim), **final_v3 (0.9908 sim)**.
+
+## Phase 2 (25 Sep, evening): V3 leaderboard regression (0.99078 val → 0.982814 LB, V2 0.98696 → 0.98332)
+| id | what | result |
+|---|---|---|
+| SUBDIFF | label-free diff of the submitted files (`code/audit/submission_diff.py`) | V3 vs V2: +106,409 / −39,770 pairs (net +66,639, +1.14 %); 99.4 % of V3-only accepts are records V2 left unassigned, 98.2 % land on S1 V2 already matched; empty rate 5.705 % → 5.745 %. Validation predicted only +5,379 on 358 k S1 (≈ +26 k at test scale) → test change ≈ 2.5× validation |
+| CODE-AUDIT | train/test pipeline mismatches (see `PHASE2.md` §2) | M1 test `cos_e3` = mean of 5 fold models vs single held-out model in validation (GNN edge input in V3; dropped by V2's stage 2); M2 refit stage 1 vs half models; M3 XLM-R mean of halves + band from refit; M4 GNN mean of halves vs single chain on validation; M5 r_e3_emb from e2f on test |
+| PHASE2-SUITE | `code/phase2/` + `run_all.sh` + `H100_MANUAL.md`: cosine variants, 10-way ablation, extra-accept trace, India→US LOCO, chain-A V4 candidates (V4A/B/C), pre-registered selection | written and CPU smoke-tested on synthetic data (`code/phase2/tests/smoke.sh`); **labelled runs pending on the GPU** |

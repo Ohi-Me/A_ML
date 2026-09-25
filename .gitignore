@@ -8,3 +8,7 @@ package/output/candidate_pairs.tsv
 __pycache__/
 *.pyc
 Data/__MACOSX/
+# runner working data (dataset link, parquet caches, model downloads)
+data/
+hf_cache/
+run_all.out
