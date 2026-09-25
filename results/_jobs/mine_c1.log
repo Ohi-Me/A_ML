@@ -1,0 +1,551 @@
+job 32612.master on master at 2026-09-25T12:05:51+05:30
+CUDA_VISIBLE_DEVICES=MIG-2f219700-5dc6-59eb-81ef-2bb9414d3ec0
+GPU: NVIDIA H100 NVL MIG 3g.47gb, 46.4 GiB, SMs 60, torch 2.5.1+cu121, cuda 12.1
+{
+ "n_pairs_p>=0.9_best": 7310557,
+ "error_rate": 0.0016714184705761818,
+ "fp_distractor_share": 0.8159423848105409,
+ "leg_pat": [
+  {
+   "leg_pat": "same",
+   "n": 3491887,
+   "err_rate": 0.0017271463824573934
+  },
+  {
+   "leg_pat": "both none",
+   "n": 1904064,
+   "err_rate": 0.0010997529494806897
+  },
+  {
+   "leg_pat": "S1 has, rec none",
+   "n": 1148548,
+   "err_rate": 0.0010360907859314544
+  },
+  {
+   "leg_pat": "S1 none, rec has",
+   "n": 416590,
+   "err_rate": 0.003070164910343503
+  },
+  {
+   "leg_pat": "different",
+   "n": 349468,
+   "err_rate": 0.004649925028901073
+  }
+ ],
+ "num_pat": [
+  {
+   "num_pat": "equal",
+   "n": 5498682,
+   "err_rate": 0.0006217853660204391
+  },
+  {
+   "num_pat": "missing",
+   "n": 779642,
+   "err_rate": 0.002597345961351492
+  },
+  {
+   "num_pat": "different",
+   "n": 708205,
+   "err_rate": 0.008432586609809306
+  },
+  {
+   "num_pat": "one contains other",
+   "n": 324028,
+   "err_rate": 0.0024781808979470908
+  }
+ ],
+ "src3": [
+  {
+   "src3": 1.0,
+   "n": 3772138,
+   "err_rate": 0.001705398901100649
+  },
+  {
+   "src3": 0.0,
+   "n": 3538419,
+   "err_rate": 0.0016351935709140156
+  }
+ ],
+ "a_empty2": [
+  {
+   "a_empty2": 0.0,
+   "n": 7146825,
+   "err_rate": 0.0014946497220793848
+  },
+  {
+   "a_empty2": 1.0,
+   "n": 163732,
+   "err_rate": 0.009387291427454621
+  }
+ ],
+ "nonlatin": [
+  {
+   "nonlatin": 0.0,
+   "n": 6767371,
+   "err_rate": 0.0017204613135588399
+  },
+  {
+   "nonlatin": 1.0,
+   "n": 543186,
+   "err_rate": 0.001060410246214004
+  }
+ ],
+ "is_domain": [
+  {
+   "is_domain": 0.0,
+   "n": 6959077,
+   "err_rate": 0.0017401733017180295
+  },
+  {
+   "is_domain": 1.0,
+   "n": 351480,
+   "err_rate": 0.0003101172186184136
+  }
+ ],
+ "k_eq": [
+  {
+   "k_eq": 1.0,
+   "n": 4872280,
+   "err_rate": 0.0015852947695945226
+  },
+  {
+   "k_eq": 0.0,
+   "n": 2438277,
+   "err_rate": 0.0018435149082733423
+  }
+ ],
+ "a_conf": [
+  {
+   "a_conf": 4,
+   "n": 1869684,
+   "err_rate": 0.0016430583991733363
+  },
+  {
+   "a_conf": 3,
+   "n": 1627890,
+   "err_rate": 0.0014380578540319064
+  },
+  {
+   "a_conf": 5,
+   "n": 1474605,
+   "err_rate": 0.0016580711444759784
+  },
+  {
+   "a_conf": 6,
+   "n": 856320,
+   "err_rate": 0.0017376681614349775
+  },
+  {
+   "a_conf": 2,
+   "n": 819932,
+   "err_rate": 0.001030573267051414
+  },
+  {
+   "a_conf": 7,
+   "n": 365183,
+   "err_rate": 0.0019058937573764386
+  },
+  {
+   "a_conf": 1,
+   "n": 149492,
+   "err_rate": 0.006481952211489578
+  },
+  {
+   "a_conf": 8,
+   "n": 116456,
+   "err_rate": 0.0023270591468022256
+  },
+  {
+   "a_conf": 9,
+   "n": 26901,
+   "err_rate": 0.0027508271067990036
+  },
+  {
+   "a_conf": 10,
+   "n": 3830,
+   "err_rate": 0.004177545691906005
+  },
+  {
+   "a_conf": 11,
+   "n": 264,
+   "err_rate": 0.007575757575757576
+  }
+ ],
+ "leg_x_num": [
+  {
+   "leg_pat": "same",
+   "num_pat": "equal",
+   "n": 2565236,
+   "err_rate": 0.0004689626997282121
+  },
+  {
+   "leg_pat": "both none",
+   "num_pat": "equal",
+   "n": 1471685,
+   "err_rate": 0.0004899146216751546
+  },
+  {
+   "leg_pat": "S1 has, rec none",
+   "num_pat": "equal",
+   "n": 874671,
+   "err_rate": 0.0005967958238011778
+  },
+  {
+   "leg_pat": "same",
+   "num_pat": "different",
+   "n": 383425,
+   "err_rate": 0.00982721523114038
+  },
+  {
+   "leg_pat": "same",
+   "num_pat": "missing",
+   "n": 380004,
+   "err_rate": 0.002136819612425132
+  },
+  {
+   "leg_pat": "S1 none, rec has",
+   "num_pat": "equal",
+   "n": 336921,
+   "err_rate": 0.0011931580400153152
+  },
+  {
+   "leg_pat": "different",
+   "num_pat": "equal",
+   "n": 250169,
+   "err_rate": 0.002282457059028097
+  },
+  {
+   "leg_pat": "both none",
+   "num_pat": "missing",
+   "n": 192740,
+   "err_rate": 0.0027342533983604855
+  },
+  {
+   "leg_pat": "same",
+   "num_pat": "one contains other",
+   "n": 163222,
+   "err_rate": 0.001519403021651493
+  },
+  {
+   "leg_pat": "both none",
+   "num_pat": "different",
+   "n": 152317,
+   "err_rate": 0.005094638155951076
+  },
+  {
+   "leg_pat": "S1 has, rec none",
+   "num_pat": "missing",
+   "n": 114243,
+   "err_rate": 0.0028448132489517957
+  },
+  {
+   "leg_pat": "S1 has, rec none",
+   "num_pat": "different",
+   "n": 105778,
+   "err_rate": 0.002873943542135416
+  },
+  {
+   "leg_pat": "both none",
+   "num_pat": "one contains other",
+   "n": 87322,
+   "err_rate": 0.0008016307459746684
+  },
+  {
+   "leg_pat": "S1 has, rec none",
+   "num_pat": "one contains other",
+   "n": 53856,
+   "err_rate": 0.0007241532976827095
+  },
+  {
+   "leg_pat": "S1 none, rec has",
+   "num_pat": "missing",
+   "n": 49561,
+   "err_rate": 0.003349407800488287
+  },
+  {
+   "leg_pat": "different",
+   "num_pat": "different",
+   "n": 45477,
+   "err_rate": 0.01657980957407041
+  },
+  {
+   "leg_pat": "different",
+   "num_pat": "missing",
+   "n": 43094,
+   "err_rate": 0.004524991878219706
+  },
+  {
+   "leg_pat": "S1 none, rec has",
+   "num_pat": "different",
+   "n": 21208,
+   "err_rate": 0.017446246699358733
+  },
+  {
+   "leg_pat": "different",
+   "num_pat": "one contains other",
+   "n": 10728,
+   "err_rate": 0.009787472035794184
+  },
+  {
+   "leg_pat": "S1 none, rec has",
+   "num_pat": "one contains other",
+   "n": 8900,
+   "err_rate": 0.03831460674157303
+  }
+ ],
+ "legal_transitions_err": [
+  {
+   "leg1": "",
+   "leg2": "",
+   "len": 2094
+  },
+  {
+   "leg1": "inc",
+   "leg2": "inc",
+   "len": 1985
+  },
+  {
+   "leg1": "ltd pvt",
+   "leg2": "ltd pvt",
+   "len": 1857
+  },
+  {
+   "leg1": "llc",
+   "leg2": "llc",
+   "len": 1104
+  },
+  {
+   "leg1": "ltd pvt",
+   "leg2": "ltd",
+   "len": 796
+  },
+  {
+   "leg1": "ltd",
+   "leg2": "ltd pvt",
+   "len": 364
+  },
+  {
+   "leg1": "ltd pvt",
+   "leg2": "",
+   "len": 357
+  },
+  {
+   "leg1": "corp",
+   "leg2": "corp",
+   "len": 322
+  },
+  {
+   "leg1": "llc",
+   "leg2": "",
+   "len": 282
+  },
+  {
+   "leg1": "",
+   "leg2": "ltd pvt",
+   "len": 247
+  },
+  {
+   "leg1": "co",
+   "leg2": "co",
+   "len": 246
+  },
+  {
+   "leg1": "ltd",
+   "leg2": "ltd",
+   "len": 234
+  },
+  {
+   "leg1": "",
+   "leg2": "ltd",
+   "len": 208
+  },
+  {
+   "leg1": "inc",
+   "leg2": "",
+   "len": 207
+  },
+  {
+   "leg1": "pc",
+   "leg2": "pc",
+   "len": 159
+  },
+  {
+   "leg1": "",
+   "leg2": "llc",
+   "len": 153
+  },
+  {
+   "leg1": "",
+   "leg2": "co",
+   "len": 150
+  },
+  {
+   "leg1": "",
+   "leg2": "inc",
+   "len": 139
+  },
+  {
+   "leg1": "",
+   "leg2": "corp",
+   "len": 132
+  },
+  {
+   "leg1": "ltd pvt",
+   "leg2": "pvt",
+   "len": 128
+  },
+  {
+   "leg1": "",
+   "leg2": "ltd public",
+   "len": 118
+  },
+  {
+   "leg1": "ltd",
+   "leg2": "",
+   "len": 105
+  },
+  {
+   "leg1": "",
+   "leg2": "llp",
+   "len": 101
+  },
+  {
+   "leg1": "corp",
+   "leg2": "",
+   "len": 56
+  },
+  {
+   "leg1": "llp",
+   "leg2": "llp",
+   "len": 55
+  }
+ ],
+ "legal_transitions_ok": [
+  {
+   "leg1": "",
+   "leg2": "",
+   "len": 1901970
+  },
+  {
+   "leg1": "ltd pvt",
+   "leg2": "ltd pvt",
+   "len": 1307672
+  },
+  {
+   "leg1": "llc",
+   "leg2": "llc",
+   "len": 860383
+  },
+  {
+   "leg1": "inc",
+   "leg2": "inc",
+   "len": 537689
+  },
+  {
+   "leg1": "llc",
+   "leg2": "",
+   "len": 390031
+  },
+  {
+   "leg1": "ltd",
+   "leg2": "ltd",
+   "len": 279447
+  },
+  {
+   "leg1": "inc",
+   "leg2": "",
+   "len": 250183
+  },
+  {
+   "leg1": "ltd pvt",
+   "leg2": "pvt",
+   "len": 205395
+  },
+  {
+   "leg1": "ltd pvt",
+   "leg2": "",
+   "len": 202746
+  },
+  {
+   "leg1": "corp",
+   "leg2": "corp",
+   "len": 107464
+  },
+  {
+   "leg1": "",
+   "leg2": "corp",
+   "len": 104643
+  },
+  {
+   "leg1": "ltd pvt",
+   "leg2": "ltd",
+   "len": 103689
+  },
+  {
+   "leg1": "llp",
+   "leg2": "llp",
+   "len": 98943
+  },
+  {
+   "leg1": "ltd",
+   "leg2": "",
+   "len": 92881
+  },
+  {
+   "leg1": "pc",
+   "leg2": "pc",
+   "len": 91623
+  },
+  {
+   "leg1": "co",
+   "leg2": "co",
+   "len": 87731
+  },
+  {
+   "leg1": "",
+   "leg2": "inc",
+   "len": 82702
+  },
+  {
+   "leg1": "",
+   "leg2": "co",
+   "len": 66705
+  },
+  {
+   "leg1": "",
+   "leg2": "ltd",
+   "len": 64786
+  },
+  {
+   "leg1": "pc",
+   "leg2": "",
+   "len": 48892
+  },
+  {
+   "leg1": "corp",
+   "leg2": "",
+   "len": 46740
+  },
+  {
+   "leg1": "pllc",
+   "leg2": "pllc",
+   "len": 45859
+  },
+  {
+   "leg1": "",
+   "leg2": "llc",
+   "len": 44048
+  },
+  {
+   "leg1": "",
+   "leg2": "lp",
+   "len": 39196
+  },
+  {
+   "leg1": "co",
+   "leg2": "",
+   "len": 37396
+  }
+ ]
+}
+EXIT rc=0 after 17 s at 2026-09-25T12:06:11+05:30

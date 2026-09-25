@@ -1,0 +1,16 @@
+{
+ "args": {
+  "split": "test",
+  "tag": "e3",
+  "btag": "b1",
+  "cands": "c2",
+  "epochs": 20,
+  "bs": 8192,
+  "lr": 0.002,
+  "drop": 0.15,
+  "k": 20,
+  "reuse": false
+ },
+ "runtime_s": 78.63353443145752,
+ "gpu": "21.85 GiB peak"
+}

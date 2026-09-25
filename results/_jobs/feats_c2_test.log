@@ -1,0 +1,61 @@
+job 32658.master on master at 2026-09-25T13:05:22+05:30; PBS CUDA_VISIBLE_DEVICES=unset
+CUDA_VISIBLE_DEVICES=MIG-110b5c2d-162d-5ada-814c-2aef6f9812f1
+GPU: NVIDIA H100 PCIe MIG 3g.40gb, 39.5 GiB, SMs 46, torch 2.5.1+cu121, cuda 12.1
+pairs 83085979 S1 1732544 records 9969589
+[13:05:39] tfidf cosines ...
+[13:06:26] tfidf cosines done in 47.7s
+[13:06:26] join OOF pair cosines ...
+[13:06:31] join OOF pair cosines done in 4.0s
+[13:06:31] context features ...
+[13:06:44] context features done in 13.2s
+[13:06:44] labels ...
+[13:06:46] labels done in 1.9s
+[13:06:46] string features (streamed parts) ...
+/tmp/ai_25901334/AmazonML/code/tfidf_fuzzy/pair_features.py:137: DeprecationWarning: the default behavior of `how='horizontal'` for `concat` is deprecated and will require equal heights in the next breaking release. Use `how='horizontal_extend'` to keep the current behavior.
+(Deprecated in version 1.42.1)
+  pl.concat([C[ps:pe], FE], how="horizontal").write_parquet(os.path.join(out_dir, f"part_{pi:03d}.parquet"))
+  part 0: pairs 0-2000000, 92s
+  part 1: pairs 2000000-4000000, 116s
+  part 2: pairs 4000000-6000000, 139s
+  part 3: pairs 6000000-8000000, 162s
+  part 4: pairs 8000000-10000000, 185s
+  part 5: pairs 10000000-12000000, 209s
+  part 6: pairs 12000000-14000000, 233s
+  part 7: pairs 14000000-16000000, 255s
+  part 8: pairs 16000000-18000000, 279s
+  part 9: pairs 18000000-20000000, 302s
+  part 10: pairs 20000000-22000000, 325s
+  part 11: pairs 22000000-24000000, 348s
+  part 12: pairs 24000000-26000000, 370s
+  part 13: pairs 26000000-28000000, 392s
+  part 14: pairs 28000000-30000000, 416s
+  part 15: pairs 30000000-32000000, 439s
+  part 16: pairs 32000000-34000000, 463s
+  part 17: pairs 34000000-36000000, 486s
+  part 18: pairs 36000000-38000000, 509s
+  part 19: pairs 38000000-40000000, 532s
+  part 20: pairs 40000000-42000000, 556s
+  part 21: pairs 42000000-44000000, 580s
+  part 22: pairs 44000000-46000000, 603s
+  part 23: pairs 46000000-48000000, 627s
+  part 24: pairs 48000000-50000000, 651s
+  part 25: pairs 50000000-52000000, 674s
+  part 26: pairs 52000000-54000000, 697s
+  part 27: pairs 54000000-56000000, 720s
+  part 28: pairs 56000000-58000000, 743s
+  part 29: pairs 58000000-60000000, 767s
+  part 30: pairs 60000000-62000000, 790s
+  part 31: pairs 62000000-64000000, 813s
+  part 32: pairs 64000000-66000000, 835s
+  part 33: pairs 66000000-68000000, 858s
+  part 34: pairs 68000000-70000000, 882s
+  part 35: pairs 70000000-72000000, 904s
+  part 36: pairs 72000000-74000000, 926s
+  part 37: pairs 74000000-76000000, 949s
+  part 38: pairs 76000000-78000000, 973s
+  part 39: pairs 78000000-80000000, 997s
+  part 40: pairs 80000000-82000000, 1020s
+  part 41: pairs 82000000-83085979, 1033s
+[13:22:50] string features (streamed parts) done in 964.5s
+{"pairs": 83085979, "cols": ["a", "b", "r_e2f_emb", "r_b1_comb", "r_b1_name", "r_b1_addr", "cos_name", "cos_addr", "cos_sum", "cos_e3", "b_n", "a_n", "b_gap_cos_sum", "b_rank_cos_sum", "a_gap_cos_sum", "a_rank_cos_sum", "b_gap_cos_e3", "b_rank_cos_e3", "a_gap_cos_e3", "a_rank_cos_e3", "b_gap2_cos_sum", "b_gap2_cos_e3", "key_n_s1", "key_n_r", "fold"], "runtime_s": 1033.2472259998322}
+EXIT rc=0 after 1038 s at 2026-09-25T13:22:53+05:30

@@ -1,0 +1,20 @@
+job 32607.master on master at 2026-09-25T11:52:55+05:30
+CUDA_VISIBLE_DEVICES=MIG-569925cc-5048-5da0-9de5-70d720535aba
+GPU: NVIDIA H100 NVL MIG 3g.47gb, 46.4 GiB, SMs 60, torch 2.5.1+cu121, cuda 12.1
+[11:53:00] load lists ...
+[11:53:01] load lists done in 0.7s
+[11:53:01] union ...
+[11:53:11] union done in 9.7s
+pairs 83085979
+{
+ "name": "c1",
+ "lists": "emb/e2f:emb:5,blocking/b1:comb:3,blocking/b1:name:2,blocking/b1:addr:2",
+ "pairs": 83085979,
+ "split": "test",
+ "n_s1": 1732544,
+ "s1_with_candidates": 1732543,
+ "records_with_candidates": 9969589,
+ "cands_per_record_mean": 8.333942251781894,
+ "runtime_s": 12.30419397354126
+}
+EXIT rc=0 after 14 s at 2026-09-25T11:53:13+05:30

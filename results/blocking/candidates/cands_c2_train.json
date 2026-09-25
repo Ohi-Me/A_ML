@@ -1,0 +1,25 @@
+{
+ "name": "c2",
+ "lists": "emb/e3:emb:5,blocking/b1:comb:3,blocking/b1:name:2,blocking/b1:addr:2",
+ "pairs": 84853404,
+ "split": "train",
+ "n_s1": 2206821,
+ "s1_with_candidates": 2206821,
+ "records_with_candidates": 10320219,
+ "cands_per_record_mean": 8.222054590120617,
+ "cand_recall_val": 0.9881905916024166,
+ "cand_recall_all": 0.9881142103054776,
+ "val_recall_r_e3_emb": 0.9841572807999618,
+ "val_recall_r_b1_comb": 0.9825901524138685,
+ "val_recall_r_b1_name": 0.5915474525820976,
+ "val_recall_r_b1_addr": 0.8413254699912909,
+ "val_s1_cands_mean": 38.20498810038699,
+ "val_s1_cands_p50_p90_p99_max": [
+  29.0,
+  63.0,
+  228.0,
+  8451
+ ],
+ "val_s1_all_matches_covered": 0.9591033928592845,
+ "runtime_s": 38.19266223907471
+}

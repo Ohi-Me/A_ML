@@ -1,0 +1,44 @@
+{
+ "history": [],
+ "args": {
+  "mode": "embed",
+  "tag": "e2f",
+  "split": "train",
+  "btag": "b1",
+  "model_from": "e2f",
+  "epochs": 6,
+  "bs": 8192,
+  "lr": 0.002,
+  "k": 20,
+  "final": false,
+  "drop": 0.0,
+  "fit_country": "",
+  "train_only": false
+ },
+ "val": {
+  "recall@1": 0.9804648776756509,
+  "recall@2": 0.9867576015541726,
+  "recall@3": 0.9894626156452414,
+  "recall@5": 0.9919791817299658,
+  "recall@10": 0.9944074128117162,
+  "recall@20": 0.9963429308768786,
+  "union_tfidf_comb@3": 0.9913418610418426,
+  "union_tfidf_comb@5": 0.993253823106212,
+  "union_tfidf_comb@10": 0.9953843325112726,
+  "union_tfidf_comb@20": 0.997186366571941
+ },
+ "train_folds": {
+  "recall@1": 0.9802546344637691,
+  "recall@2": 0.9866548654259216,
+  "recall@3": 0.9893990139592006,
+  "recall@5": 0.9919529853232979,
+  "recall@10": 0.9943897735091386,
+  "recall@20": 0.9963539010541903,
+  "union_tfidf_comb@3": 0.9912718171837674,
+  "union_tfidf_comb@5": 0.9932205603450815,
+  "union_tfidf_comb@10": 0.9953242929893691,
+  "union_tfidf_comb@20": 0.997185639757961
+ },
+ "runtime_s": 507.9568552970886,
+ "gpu": "18.58 GiB peak"
+}

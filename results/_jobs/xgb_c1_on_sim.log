@@ -1,0 +1,10 @@
+job 32638.master on master at 2026-09-25T12:38:18+05:30
+CUDA_VISIBLE_DEVICES=MIG-110b5c2d-162d-5ada-814c-2aef6f9812f1
+GPU: NVIDIA H100 PCIe MIG 3g.40gb, 39.5 GiB, SMs 46, torch 2.5.1+cu121, cuda 12.1
+69 features: ['r_e2_emb', 'r_b1_comb', 'r_b1_name', 'r_b1_addr', 'cos_name', 'cos_addr', 'cos_sum', 'cos_e2', 'b_n', 'a_n', 'b_gap_cos_sum', 'b_rank_cos_sum', 'a_gap_cos_sum', 'a_rank_cos_sum', 'b_gap_cos_e2', 'b_rank_cos_e2', 'a_gap_cos_e2', 'a_rank_cos_e2', 'b_gap2_cos_sum', 'b_gap2_cos_e2', 'key_n_s1', 'key_n_r', 'n_ratio', 'n_tsort', 'n_tset', 'n_partial', 'n_jw', 'k_tsort', 'k_tset', 'ns_ratio', 'ns_partial', 'ns_lev', 'a_tset', 'a_tsort', 'a_partial', 'n_jac', 'n_c12', 'n_c21', 'k_jac', 'k_c12', 'k_c21', 'k_eq', 'k_sorted_eq', 'first_tok_eq', 'n_len1', 'n_len2', 'n_ntok1', 'n_ntok2', 'legal_1', 'legal_2', 'legal_jac', 'is_domain', 'nonlatin', 'nonascii_left', 'src3', 'a_empty2', 'a_jac', 'a_c12', 'a_c21', 'a_ntok2', 'num_jac', 'num_c12', 'num_c21', 'num_n1', 'num_n2', 'num_conflict', 'fnum_eq', 'fnum_in', 'state_cmp']
+[12:38:38] out-of-fold scores (streamed) ...
+[12:42:22] out-of-fold scores (streamed) done in 223.1s
+[12:42:22] decision search ...
+[12:43:07] decision search done in 44.9s
+VALIDATION fold 0: {"n_s1": 357966, "macro_f05": 0.9817129788972978, "tp": 1188673, "fp": 6777, "fn": 50489, "n_pred_matches": 1195450, "n_pred_empty": 20665, "n_true_singletons": 19918, "singleton_acc": 0.9769555176222512, "pair_precision": 0.9943310050608557, "pair_recall": 0.9592555291398542, "thr": 0.7, "margin": 0.6, "candidate_recall": 0.9881121273893163}
+EXIT rc=0 after 274 s at 2026-09-25T12:43:08+05:30

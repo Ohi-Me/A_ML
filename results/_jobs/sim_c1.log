@@ -1,0 +1,11 @@
+job 32635.master on master at 2026-09-25T12:36:40+05:30
+CUDA_VISIBLE_DEVICES=MIG-110b5c2d-162d-5ada-814c-2aef6f9812f1
+GPU: NVIDIA H100 PCIe MIG 3g.40gb, 39.5 GiB, SMs 46, torch 2.5.1+cu121, cuda 12.1
+[12:36:47] slim frame + filter ...
+[12:36:49] slim frame + filter done in 1.4s
+[12:36:49] recompute ranks and context ...
+[12:37:18] recompute ranks and context done in 29.3s
+[12:37:18] write parts ...
+[12:37:37] write parts done in 18.4s
+{"pairs_before": 84783006, "pairs_after": 68469431, "dropped_s1": 418853, "drop": 0.19, "records_with_true_s1_after": 6139323, "runtime_s": 49.882670164108276}
+EXIT rc=0 after 53 s at 2026-09-25T12:37:38+05:30

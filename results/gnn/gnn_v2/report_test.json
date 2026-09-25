@@ -1,0 +1,15 @@
+{
+ "args": {
+  "feats": "c2_test",
+  "s1": "test_stage1_final_v2.parquet",
+  "tag": "gnn_v2",
+  "split": "test",
+  "epochs": 4,
+  "batch_s1": 1500,
+  "lr": 0.002,
+  "extra": ""
+ },
+ "edges": 83108284,
+ "runtime_s": 160.02971291542053,
+ "gpu": "13.57 GiB peak"
+}

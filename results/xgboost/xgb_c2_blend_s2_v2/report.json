@@ -1,0 +1,475 @@
+{
+ "val": {
+  "n_s1": 357966,
+  "macro_f05": 0.9869057479415028,
+  "tp": 1201547,
+  "fp": 3915,
+  "fn": 37615,
+  "n_pred_matches": 1205462,
+  "n_pred_empty": 20807,
+  "n_true_singletons": 19918,
+  "singleton_acc": 0.9900592428958731,
+  "pair_precision": 0.9967522825273629,
+  "pair_recall": 0.9696448083462856,
+  "thr": 0.7,
+  "margin": 0.5,
+  "candidate_recall": 0.988268684804731
+ },
+ "best": {
+  "thr": 0.7,
+  "margin": 0.5,
+  "f05_tune": 0.9867855003275353,
+  "p": 0.996788641195625,
+  "r": 0.9689670616083093
+ },
+ "rounds": 448,
+ "importance_gain": [
+  [
+   "s1_p",
+   104357.3359375
+  ],
+  [
+   "s2_b_margin",
+   11507.0498046875
+  ],
+  [
+   "b_gap2_cos_sum",
+   2367.92333984375
+  ],
+  [
+   "cnum_conflict",
+   928.9005126953125
+  ],
+  [
+   "s2_b_p1",
+   514.289306640625
+  ],
+  [
+   "a_empty2",
+   479.214111328125
+  ],
+  [
+   "s2_a_rank",
+   226.9664306640625
+  ],
+  [
+   "num_c12",
+   147.4913787841797
+  ],
+  [
+   "s2_a_claimed",
+   137.7247314453125
+  ],
+  [
+   "num_conflict",
+   134.33258056640625
+  ],
+  [
+   "tok_minbest_21",
+   128.2205047607422
+  ],
+  [
+   "s2_b_gap",
+   98.8306884765625
+  ],
+  [
+   "s2_b_p2",
+   95.29524230957031
+  ],
+  [
+   "tok_unm_21",
+   91.18096923828125
+  ],
+  [
+   "s2_b_rank",
+   66.96062469482422
+  ],
+  [
+   "k_c21",
+   64.359130859375
+  ],
+  [
+   "cnum_c21",
+   54.859771728515625
+  ],
+  [
+   "first_tok_eq",
+   51.23719787597656
+  ],
+  [
+   "k_tset",
+   46.37717819213867
+  ],
+  [
+   "sib_addr_max",
+   45.336341857910156
+  ],
+  [
+   "b_gap_cos_sum",
+   44.46555709838867
+  ],
+  [
+   "cnum_jac",
+   41.189144134521484
+  ],
+  [
+   "n_c12",
+   36.90843200683594
+  ],
+  [
+   "legal_added",
+   34.16815948486328
+  ],
+  [
+   "n_jac",
+   25.91579246520996
+  ],
+  [
+   "sib_n",
+   22.876585006713867
+  ],
+  [
+   "k_c12",
+   22.502004623413086
+  ],
+  [
+   "s2_a_psum",
+   22.277626037597656
+  ],
+  [
+   "a_ntok2",
+   21.373886108398438
+  ],
+  [
+   "s2_a_psum_other",
+   20.449745178222656
+  ],
+  [
+   "state_cmp",
+   19.42867660522461
+  ],
+  [
+   "r_b1_comb",
+   17.651824951171875
+  ],
+  [
+   "a_tset",
+   17.0074462890625
+  ],
+  [
+   "s2_a_nconf",
+   16.758262634277344
+  ],
+  [
+   "a_rank_cos_sum",
+   16.293272018432617
+  ],
+  [
+   "cos_addr",
+   15.63377857208252
+  ],
+  [
+   "cnum_c12",
+   15.3273286819458
+  ],
+  [
+   "a_jac",
+   15.195342063903809
+  ],
+  [
+   "legal_2",
+   14.786376953125
+  ],
+  [
+   "fnum_lev",
+   14.749701499938965
+  ],
+  [
+   "tok_minbest_12",
+   14.09566593170166
+  ],
+  [
+   "a_tsort",
+   13.563190460205078
+  ],
+  [
+   "nonlatin",
+   13.527519226074219
+  ],
+  [
+   "fnum_reldiff",
+   13.50389575958252
+  ],
+  [
+   "n_ntok2",
+   13.175214767456055
+  ],
+  [
+   "n_c21",
+   12.823465347290039
+  ],
+  [
+   "a_c12",
+   12.781189918518066
+  ],
+  [
+   "a_c21",
+   12.484403610229492
+  ],
+  [
+   "k_jac",
+   12.123974800109863
+  ],
+  [
+   "ns_lev",
+   11.696649551391602
+  ],
+  [
+   "fnum1_in_r",
+   11.449134826660156
+  ],
+  [
+   "cos_sum",
+   11.43269157409668
+  ],
+  [
+   "key_n_s1",
+   11.369080543518066
+  ],
+  [
+   "k_eq",
+   10.628643989562988
+  ],
+  [
+   "fnum_eq",
+   10.627334594726562
+  ],
+  [
+   "n_tset",
+   10.35870361328125
+  ],
+  [
+   "fnum_in",
+   9.937226295471191
+  ],
+  [
+   "cos_name",
+   8.979260444641113
+  ],
+  [
+   "s2_a_other_max",
+   8.973651885986328
+  ],
+  [
+   "n_tsort",
+   8.816267967224121
+  ],
+  [
+   "legal_jac",
+   8.719830513000488
+  ],
+  [
+   "is_domain",
+   8.61469841003418
+  ],
+  [
+   "r_b1_name",
+   8.463760375976562
+  ],
+  [
+   "b_rank_cos_sum",
+   8.434820175170898
+  ],
+  [
+   "key_n_r",
+   8.424571990966797
+  ],
+  [
+   "a_gap_cos_sum",
+   8.247289657592773
+  ],
+  [
+   "ns_ratio",
+   8.208196640014648
+  ],
+  [
+   "b_n",
+   8.203954696655273
+  ],
+  [
+   "sib_name_max",
+   8.1639986038208
+  ],
+  [
+   "num_jac",
+   8.120097160339355
+  ],
+  [
+   "a_partial",
+   7.9823431968688965
+  ],
+  [
+   "n_jw",
+   7.926100730895996
+  ],
+  [
+   "n_ratio",
+   7.713146209716797
+  ],
+  [
+   "num_c21",
+   7.549197196960449
+  ],
+  [
+   "k_tsort",
+   7.440269470214844
+  ],
+  [
+   "ns_partial",
+   7.353899002075195
+  ],
+  [
+   "legal_dropped",
+   7.243740081787109
+  ],
+  [
+   "num_n2",
+   7.108447074890137
+  ],
+  [
+   "r_b1_addr",
+   7.043638229370117
+  ],
+  [
+   "n_len2",
+   7.000893592834473
+  ]
+ ],
+ "params": {
+  "objective": "binary:logistic",
+  "eval_metric": [
+   "logloss",
+   "aucpr"
+  ],
+  "tree_method": "hist",
+  "device": "cuda",
+  "max_depth": 8,
+  "eta": 0.05,
+  "subsample": 0.8,
+  "colsample_bytree": 0.8,
+  "min_child_weight": 5,
+  "lambda": 2.0,
+  "max_bin": 256
+ },
+ "features": [
+  "r_b1_comb",
+  "r_b1_name",
+  "r_b1_addr",
+  "cos_name",
+  "cos_addr",
+  "cos_sum",
+  "b_n",
+  "a_n",
+  "b_gap_cos_sum",
+  "b_rank_cos_sum",
+  "a_gap_cos_sum",
+  "a_rank_cos_sum",
+  "b_gap2_cos_sum",
+  "key_n_s1",
+  "key_n_r",
+  "n_ratio",
+  "n_tsort",
+  "n_tset",
+  "n_partial",
+  "n_jw",
+  "k_tsort",
+  "k_tset",
+  "ns_ratio",
+  "ns_partial",
+  "ns_lev",
+  "a_tset",
+  "a_tsort",
+  "a_partial",
+  "n_jac",
+  "n_c12",
+  "n_c21",
+  "k_jac",
+  "k_c12",
+  "k_c21",
+  "k_eq",
+  "k_sorted_eq",
+  "first_tok_eq",
+  "n_len1",
+  "n_len2",
+  "n_ntok1",
+  "n_ntok2",
+  "legal_1",
+  "legal_2",
+  "legal_jac",
+  "is_domain",
+  "nonlatin",
+  "nonascii_left",
+  "src3",
+  "a_empty2",
+  "a_jac",
+  "a_c12",
+  "a_c21",
+  "a_ntok2",
+  "num_jac",
+  "num_c12",
+  "num_c21",
+  "num_n1",
+  "num_n2",
+  "num_conflict",
+  "fnum_eq",
+  "fnum_in",
+  "state_cmp",
+  "fnum_lev",
+  "fnum_reldiff",
+  "fnum1_in_r",
+  "cnum_jac",
+  "cnum_c12",
+  "cnum_c21",
+  "cnum_conflict",
+  "legal_fam_cmp",
+  "legal_added",
+  "legal_dropped",
+  "tok_unm_12",
+  "tok_unm_21",
+  "tok_minbest_12",
+  "tok_minbest_21",
+  "s1_p",
+  "s2_b_p1",
+  "s2_b_rank",
+  "s2_a_psum",
+  "s2_a_nconf",
+  "s2_a_rank",
+  "s2_a_n",
+  "s2_b_p2",
+  "s2_b_gap",
+  "s2_a_other_max",
+  "s2_b_margin",
+  "s2_a_psum_other",
+  "s2_a_claimed",
+  "sib_name_max",
+  "sib_addr_max",
+  "sib_n"
+ ],
+ "args": {
+  "feats": "c2_train_sim19",
+  "s1tag": "xgb_c2_blend_v2",
+  "tag": "xgb_c2_blend_s2_v2",
+  "etag": "e2f",
+  "btag": "b1",
+  "split": "train",
+  "rounds": 3000,
+  "depth": 8,
+  "eta": 0.05,
+  "keep_stage1": "all",
+  "drop_feats": "cos_e3,b_gap_cos_e3,b_rank_cos_e3,a_gap_cos_e3,a_rank_cos_e3,b_gap2_cos_e3,r_e3_emb,sib_emb_max,sib_emb_mean",
+  "extra": "",
+  "simdrop": 19
+ },
+ "runtime_s": 972.1312761306763,
+ "gpu": "27.43 GiB peak"
+}

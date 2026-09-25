@@ -1,0 +1,65 @@
+{
+ "results": [
+  {
+   "n_s1": 441611,
+   "macro_f05": 0.3431849209697495,
+   "pair_precision": 0.8032729192327995,
+   "pair_recall": 0.28078098611962654,
+   "tp": 429110,
+   "fp": 105092,
+   "fn": 1099163,
+   "n_pred_matches": 534202,
+   "n_pred_empty": 259982,
+   "n_true_singletons": 24706,
+   "singleton_acc": 0.7320488950052619,
+   "pair_f05": 0.5854031602575769,
+   "rule": "R1 name key"
+  },
+  {
+   "n_s1": 441611,
+   "macro_f05": 0.33985025152220644,
+   "pair_precision": 0.8288987548792645,
+   "pair_recall": 0.26497621825419937,
+   "tp": 404956,
+   "fp": 83591,
+   "fn": 1123317,
+   "n_pred_matches": 488547,
+   "n_pred_empty": 262138,
+   "n_true_singletons": 24706,
+   "singleton_acc": 0.7456488302436655,
+   "pair_f05": 0.5814221609373371,
+   "rule": "R2 name key + address agreement"
+  },
+  {
+   "n_s1": 441611,
+   "macro_f05": 0.6405642673140929,
+   "pair_precision": 0.9726621489668034,
+   "pair_recall": 0.4340925999477842,
+   "tp": 663412,
+   "fp": 18646,
+   "fn": 864861,
+   "n_pred_matches": 682058,
+   "n_pred_empty": 125532,
+   "n_true_singletons": 24706,
+   "singleton_acc": 0.96272160608759,
+   "pair_f05": 0.7792919308211783,
+   "rule": "R3 name core + first number"
+  },
+  {
+   "n_s1": 441611,
+   "macro_f05": 0.5942803024597448,
+   "pair_precision": 0.8919816338614198,
+   "pair_recall": 0.47019871449669004,
+   "tp": 718592,
+   "fp": 87021,
+   "fn": 809681,
+   "n_pred_matches": 805613,
+   "n_pred_empty": 130741,
+   "n_true_singletons": 24706,
+   "singleton_acc": 0.7360964947785963,
+   "pair_f05": 0.756297196743655,
+   "rule": "R4 R2 + (same address, name overlap)"
+  }
+ ],
+ "runtime_s": 25.25525140762329
+}

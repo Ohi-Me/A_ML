@@ -1,0 +1,27 @@
+job 32683.master on master at 2026-09-25T13:29:18+05:30; PBS CUDA_VISIBLE_DEVICES=unset
+CUDA_VISIBLE_DEVICES=MIG-c747c071-8b61-5993-a5e0-33f4b566bd6e
+GPU: NVIDIA H100 PCIe MIG 3g.40gb, 39.5 GiB, SMs 46, torch 2.5.1+cu121, cuda 12.1
+76 features: ['r_b1_comb', 'r_b1_name', 'r_b1_addr', 'cos_name', 'cos_addr', 'cos_sum', 'b_n', 'a_n', 'b_gap_cos_sum', 'b_rank_cos_sum', 'a_gap_cos_sum', 'a_rank_cos_sum', 'b_gap2_cos_sum', 'key_n_s1', 'key_n_r', 'n_ratio', 'n_tsort', 'n_tset', 'n_partial', 'n_jw', 'k_tsort', 'k_tset', 'ns_ratio', 'ns_partial', 'ns_lev', 'a_tset', 'a_tsort', 'a_partial', 'n_jac', 'n_c12', 'n_c21', 'k_jac', 'k_c12', 'k_c21', 'k_eq', 'k_sorted_eq', 'first_tok_eq', 'n_len1', 'n_len2', 'n_ntok1', 'n_ntok2', 'legal_1', 'legal_2', 'legal_jac', 'is_domain', 'nonlatin', 'nonascii_left', 'src3', 'a_empty2', 'a_jac', 'a_c12', 'a_c21', 'a_ntok2', 'num_jac', 'num_c12', 'num_c21', 'num_n1', 'num_n2', 'num_conflict', 'fnum_eq', 'fnum_in', 'state_cmp', 'fnum_lev', 'fnum_reldiff', 'fnum1_in_r', 'cnum_jac', 'cnum_c12', 'cnum_c21', 'cnum_conflict', 'legal_fam_cmp', 'legal_added', 'legal_dropped', 'tok_unm_12', 'tok_unm_21', 'tok_minbest_12', 'tok_minbest_21']
+[13:29:30] model A: train folds 1,2 / early stop fold 3 ...
+train rows 109049236 pos 9777864
+[0]	fold3-logloss:0.24347	fold3-aucpr:0.99240
+[250]	fold3-logloss:0.00730	fold3-aucpr:0.99890
+[500]	fold3-logloss:0.00661	fold3-aucpr:0.99909
+[750]	fold3-logloss:0.00640	fold3-aucpr:0.99914
+[1000]	fold3-logloss:0.00630	fold3-aucpr:0.99917
+[1250]	fold3-logloss:0.00624	fold3-aucpr:0.99918
+[1500]	fold3-logloss:0.00621	fold3-aucpr:0.99918
+[1750]	fold3-logloss:0.00620	fold3-aucpr:0.99919
+[2000]	fold3-logloss:0.00619	fold3-aucpr:0.99919
+[2250]	fold3-logloss:0.00619	fold3-aucpr:0.99919
+[2320]	fold3-logloss:0.00619	fold3-aucpr:0.99919
+[13:35:38] model A: train folds 1,2 / early stop fold 3 done in 367.8s
+rounds 2171 0.00 GiB peak
+[13:35:38] model B: train folds 3,4 ...
+[13:40:41] model B: train folds 3,4 done in 303.6s
+[13:40:42] out-of-fold scores (streamed) ...
+[13:41:58] out-of-fold scores (streamed) done in 75.6s
+[13:41:58] decision search ...
+[13:42:39] decision search done in 41.2s
+VALIDATION fold 0: {"n_s1": 357966, "macro_f05": 0.9844319695271139, "tp": 1193289, "fp": 4918, "fn": 45873, "n_pred_matches": 1198207, "n_pred_empty": 20503, "n_true_singletons": 19918, "singleton_acc": 0.9797168390400642, "pair_precision": 0.9958955339102509, "pair_recall": 0.962980627230338, "thr": 0.7, "margin": 0.5, "candidate_recall": 0.9881960550759303}
+EXIT rc=0 after 792 s at 2026-09-25T13:42:40+05:30

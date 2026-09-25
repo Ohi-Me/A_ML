@@ -1,0 +1,8 @@
+job 32553.master on master at 2026-09-25T09:59:19+05:30
+CUDA_VISIBLE_DEVICES=MIG-2f219700-5dc6-59eb-81ef-2bb9414d3ec0
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 49.9/49.9 MB 48.6 MB/s  0:00:01
+Installing collected packages: polars-runtime-32
+Successfully installed polars-runtime-32-1.44.2
+polars 1.44.2
+catboost 1.2.10
+EXIT rc=0 after 3 s at 2026-09-25T09:59:25+05:30

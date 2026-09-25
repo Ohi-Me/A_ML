@@ -1,0 +1,25 @@
+job 32646.master on master at 2026-09-25T12:46:20+05:30; PBS CUDA_VISIBLE_DEVICES=unset
+CUDA_VISIBLE_DEVICES=MIG-2f219700-5dc6-59eb-81ef-2bb9414d3ec0
+GPU: NVIDIA H100 NVL MIG 3g.47gb, 46.4 GiB, SMs 60, torch 2.5.1+cu121, cuda 12.1
+69 features: ['r_e2_emb', 'r_b1_comb', 'r_b1_name', 'r_b1_addr', 'cos_name', 'cos_addr', 'cos_sum', 'cos_e2', 'b_n', 'a_n', 'b_gap_cos_sum', 'b_rank_cos_sum', 'a_gap_cos_sum', 'a_rank_cos_sum', 'b_gap_cos_e2', 'b_rank_cos_e2', 'a_gap_cos_e2', 'a_rank_cos_e2', 'b_gap2_cos_sum', 'b_gap2_cos_e2', 'key_n_s1', 'key_n_r', 'n_ratio', 'n_tsort', 'n_tset', 'n_partial', 'n_jw', 'k_tsort', 'k_tset', 'ns_ratio', 'ns_partial', 'ns_lev', 'a_tset', 'a_tsort', 'a_partial', 'n_jac', 'n_c12', 'n_c21', 'k_jac', 'k_c12', 'k_c21', 'k_eq', 'k_sorted_eq', 'first_tok_eq', 'n_len1', 'n_len2', 'n_ntok1', 'n_ntok2', 'legal_1', 'legal_2', 'legal_jac', 'is_domain', 'nonlatin', 'nonascii_left', 'src3', 'a_empty2', 'a_jac', 'a_c12', 'a_c21', 'a_ntok2', 'num_jac', 'num_c12', 'num_c21', 'num_n1', 'num_n2', 'num_conflict', 'fnum_eq', 'fnum_in', 'state_cmp']
+[12:46:36] model A: train folds 1,2 / early stop fold 3 ...
+train rows 107758028 pos 9828244
+[0]	fold3-logloss:0.24640	fold3-aucpr:0.99375
+[250]	fold3-logloss:0.00712	fold3-aucpr:0.99898
+[500]	fold3-logloss:0.00661	fold3-aucpr:0.99911
+[750]	fold3-logloss:0.00648	fold3-aucpr:0.99915
+[1000]	fold3-logloss:0.00642	fold3-aucpr:0.99916
+[1250]	fold3-logloss:0.00639	fold3-aucpr:0.99917
+[1500]	fold3-logloss:0.00637	fold3-aucpr:0.99917
+[1750]	fold3-logloss:0.00636	fold3-aucpr:0.99917
+[1769]	fold3-logloss:0.00636	fold3-aucpr:0.99917
+[12:50:12] model A: train folds 1,2 / early stop fold 3 done in 215.5s
+rounds 1620 0.00 GiB peak
+[12:50:12] model B: train folds 3,4 ...
+[12:53:08] model B: train folds 3,4 done in 175.8s
+[12:53:08] out-of-fold scores (streamed) ...
+[12:54:11] out-of-fold scores (streamed) done in 62.9s
+[12:54:11] decision search ...
+[12:54:53] decision search done in 41.8s
+VALIDATION fold 0: {"n_s1": 357966, "macro_f05": 0.9818021360642826, "tp": 1185279, "fp": 4982, "fn": 53883, "n_pred_matches": 1190261, "n_pred_empty": 20859, "n_true_singletons": 19918, "singleton_acc": 0.9806205442313485, "pair_precision": 0.9958143634043289, "pair_recall": 0.9565165813670852, "thr": 0.7, "margin": 0.5, "candidate_recall": 0.9881121273893163}
+EXIT rc=0 after 500 s at 2026-09-25T12:54:54+05:30

@@ -1,0 +1,42 @@
+{
+ "test_s1": 1732544,
+ "candidate_pairs": 83085979,
+ "pred_matches": 5795193,
+ "s1_with_matches": 1636419,
+ "s1_empty": 96125,
+ "decode": {
+  "gamma": 1.0,
+  "extra": 0.0,
+  "f05_tune": 0.9848412929323604
+ },
+ "by_country": {
+  "France": {
+   "s1": 259452,
+   "with_match": 245212,
+   "matches": 848669
+  },
+  "India": {
+   "s1": 809986,
+   "with_match": 765081,
+   "matches": 2710421
+  },
+  "US": {
+   "s1": 663106,
+   "with_match": 626126,
+   "matches": 2236103
+  }
+ },
+ "args": {
+  "s1_feats": "c2_train_sim19",
+  "s1_tag": "xgb_c2_sim19",
+  "s2_tag": "",
+  "test_feats": "c2_test",
+  "rename": "r_e2f_emb:r_e3_emb",
+  "etag_test": "e2f",
+  "btag": "b1",
+  "out": "final_c2v1",
+  "round_mult": 1.25
+ },
+ "runtime_s": 965.2263848781586,
+ "gpu": "16.24 GiB peak"
+}

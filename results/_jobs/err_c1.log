@@ -1,0 +1,26 @@
+job 32611.master on master at 2026-09-25T12:03:43+05:30
+CUDA_VISIBLE_DEVICES=MIG-2f219700-5dc6-59eb-81ef-2bb9414d3ec0
+GPU: NVIDIA H100 NVL MIG 3g.47gb, 46.4 GiB, SMs 60, torch 2.5.1+cu121, cuda 12.1
+{
+ "fp_categories": {
+  "distractor record (no true S1)": 4073,
+  "record belongs to another S1": 542,
+  "distractor record (no true S1) | empty address": 172,
+  "record belongs to another S1 | empty address": 843
+ },
+ "fn_categories": {
+  "own best but below threshold/margin | empty address": 9712,
+  "own best but below threshold/margin": 21195,
+  "lost to another S1 | empty address": 6236,
+  "blocking miss (not a candidate) | empty address": 14642,
+  "lost to another S1 | native script name": 147,
+  "own best but below threshold/margin | native script name": 1220,
+  "lost to another S1 (other accepted) | empty address": 3352,
+  "blocking miss (not a candidate)": 3367,
+  "lost to another S1": 1569,
+  "lost to another S1 (other accepted)": 1085,
+  "blocking miss (not a candidate) | native script name": 233,
+  "lost to another S1 (other accepted) | native script name": 140
+ }
+}
+EXIT rc=0 after 10 s at 2026-09-25T12:03:56+05:30

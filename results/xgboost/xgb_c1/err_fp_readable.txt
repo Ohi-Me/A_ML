@@ -1,0 +1,2000 @@
+[US] p=1.000 distractor record (no true S1)
+   PRED S1: First Transit Dynamics Company | 570 Quarry Place Court, Reisterstown, MD
+   RECORD : First Transit Dynamics Co. | 570 Quarry Place Ct, Reisterstown, Maryland
+   TRUE S1: none
+   feats: cos_e2=1.00, cos_name=1.00, cos_addr=1.00, b_gap2_cos_e2=0.45, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=1.000 distractor record (no true S1)
+   PRED S1: Guru Trading Private Limited | E-365 F/F Kh. No-823 & 824 Gali No. 4 Jagjeet Nagar Near Nala, Delhi, East Delhi, Delhi
+   RECORD : गुरु ट्रेडिंग प्राइवेट लिमिटेड | E 00365 F/F KH NO-823 & 824 GALI NO- 4, JAGJEET NAGAR, NEW DELHI, EAST DELHI, Delhi
+   TRUE S1: none
+   feats: cos_e2=0.96, cos_name=1.00, cos_addr=0.90, b_gap2_cos_e2=0.25, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=610.00, state_cmp=1.00
+[US] p=1.000 distractor record (no true S1)
+   PRED S1: Adamski, Brandea L., MD | 6007 Fair Lakes Road, De Witt, NY
+   RECORD : Adamski, Brandea L., MX | New York, 6007 Fair Lakes Rd, De Witt
+   TRUE S1: none
+   feats: cos_e2=0.98, cos_name=0.95, cos_addr=1.00, b_gap2_cos_e2=0.44, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=1.000 distractor record (no true S1)
+   PRED S1: Supreme Public School | Village- Muhabat Parsa, Post-Revelganj Ward No.11, Panchayat-Muhabat Parsa, Revelganj, Saran, Bihar
+   RECORD : >> Supreme School | NO 24 VILLAGE- MUHABAT PARSA, POST-REVELGANJ WARD NO.11, PANCHAYAT-MUHABAT PARSA, REVELGANJ, SARAN, Bihar
+   TRUE S1: none
+   feats: cos_e2=0.99, cos_name=1.00, cos_addr=0.99, b_gap2_cos_e2=0.35, n_tset=100.00, a_tset=100.00, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=6.00, state_cmp=1.00
+[India] p=1.000 distractor record (no true S1)
+   PRED S1: RB Infraspace | 1421, Gali Kishan Dutt Maliwara, Nai Sarak, Chandni Chowk, New Delhi, North Delhi, Delhi
+   RECORD : RB INFRASPACE LIMITED | 1421, GALI KISHAN DUTT MALIWARA, NAI SARAK, CHANDNI CHOWK, NEW DELHI, Delhi
+   TRUE S1: none
+   feats: cos_e2=1.00, cos_name=1.00, cos_addr=1.00, b_gap2_cos_e2=0.41, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=1.000 distractor record (no true S1)
+   PRED S1: Ear Nose & Throat Blue Clinic Georgetown | 201 Del Aire Court, TX, Georgetown
+   RECORD : Ear Nose & Throat Blue Clinic Georgetown Inc | GEORRGETOWN CITY, TX, 201 DEL AIRE CT
+   TRUE S1: none
+   feats: cos_e2=0.95, cos_name=1.00, cos_addr=0.68, b_gap2_cos_e2=0.31, n_tset=100.00, a_tset=89.66, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=1.000 distractor record (no true S1)
+   PRED S1: City Of Waukesha Diamond Imperial | 2300 Broken Hill Road, City Of Waukesha, WI
+   RECORD : City Of Waukesha Diamond Imperial Inc | 2300 Broken Hill Road, City Of Waukesha, Wisconsin
+   TRUE S1: none
+   feats: cos_e2=1.00, cos_name=1.00, cos_addr=1.00, b_gap2_cos_e2=0.44, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=1.000 distractor record (no true S1)
+   PRED S1: Family Ace Partners LLC | 2860 Yankee Hill Road, Mechanicsburg, OH
+   RECORD : Fami1y Ace Partners (Partners) | 2860 Yankee Hill Rd, Mechanicsburg, Ohio
+   TRUE S1: none
+   feats: cos_e2=0.99, cos_name=0.98, cos_addr=1.00, b_gap2_cos_e2=0.36, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=11.00, state_cmp=1.00
+[US] p=1.000 distractor record (no true S1)
+   PRED S1: Rona A. Briggs, MD, DDS PC PC | 13615 Thistlewood Drive, Carmel, IN
+   RECORD : Rona Briggs MR DDS PC PC Center | 13615 THISTLEWOOD DRIVE, CARMEL, IN
+   TRUE S1: none
+   feats: cos_e2=0.89, cos_name=0.84, cos_addr=1.00, b_gap2_cos_e2=0.23, n_tset=85.71, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=2.00, state_cmp=1.00
+[US] p=1.000 distractor record (no true S1)
+   PRED S1: Daniels Engineering Inc. | 304 Main Street, Unit 304, Brownfield, TX
+   RECORD : Daniels Engineering Inc | #317 Main St, Unit 304, Brownfield, Texas
+   TRUE S1: none
+   feats: cos_e2=0.95, cos_name=1.00, cos_addr=0.85, b_gap2_cos_e2=0.26, n_tset=100.00, a_tset=100.00, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=4.00, state_cmp=1.00
+[India] p=1.000 distractor record (no true S1)
+   PRED S1: Jain Estate Private Limited | 23/1 Principal Khudiram Boseroad, Kolkata, Calcutta, West Bengal
+   RECORD : Jain Estate Limited | 23/1 Principal Khudiram Boseroad, Calcutta, Beadon Street, WB
+   TRUE S1: none
+   feats: cos_e2=0.97, cos_name=1.00, cos_addr=0.88, b_gap2_cos_e2=0.31, n_tset=100.00, a_tset=91.11, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.50, key_n_s1=55.00, state_cmp=1.00
+[India] p=1.000 distractor record (no true S1)
+   PRED S1: Sankhala House Private Limited | 4656 G/F Deputy Ganj, Delhi, North Delhi, Delhi
+   RECORD : Sankhala House Holdings Private | Door No G/f Deputy Ganj, Delhi, North Delhi, DL
+   TRUE S1: none
+   feats: cos_e2=0.89, cos_name=0.90, cos_addr=0.80, b_gap2_cos_e2=0.30, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.50, key_n_s1=2.00, state_cmp=1.00
+[US] p=1.000 distractor record (no true S1)
+   PRED S1: Slate | 1015 South Avenue, Independence, MO
+   RECORD : Slate Co | 1015 South Avenue, Missouri, Independence
+   TRUE S1: none
+   feats: cos_e2=1.00, cos_name=1.00, cos_addr=1.00, b_gap2_cos_e2=0.34, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=322.00, state_cmp=1.00
+[India] p=1.000 distractor record (no true S1)
+   PRED S1: PU Infrastructure Private Limited | Pl.198 Siddhivinayak Town Ship H'Wadi Rd Nashik, Nashik, Maharashtra
+   RECORD : Infrastructure PU Limited | Pl.198 Siddhivinayak Town Ship H'wadi Rd Nashik, Nashik, MH
+   TRUE S1: none
+   feats: cos_e2=1.00, cos_name=1.00, cos_addr=1.00, b_gap2_cos_e2=0.46, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.50, key_n_s1=1.00, state_cmp=1.00
+[India] p=1.000 record belongs to another S1
+   PRED S1: Black Consultants Private Limited | 899 - 905(Basement Right Side)Joshi Path (Lane), Karol Bagh Near Main Joshi Road, New Delhi, Delhi
+   RECORD : Mr Black Consultants  Private Ltd | #899. - 905(Basement Rmght Side)joshi Path (Lane), New Delhi, DL
+   TRUE S1: Black Consultants Private Limited Enterprises | 899 - 905(Basement Right Side)Joshi Path (Lane), Karol Bagh Near Main Joshi Road, New Delhi, Delhi
+   feats: cos_e2=0.92, cos_name=1.00, cos_addr=0.65, b_gap2_cos_e2=0.03, n_tset=100.00, a_tset=92.11, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=68.00, state_cmp=1.00
+[US] p=1.000 distractor record (no true S1)
+   PRED S1: Katee Chung, DMD | 2689 Highway 355, AR, Fulton
+   RECORD : Katee Chung, DMD LLC | 2689 Highway 355, Fulton, Arkansas
+   TRUE S1: none
+   feats: cos_e2=1.00, cos_name=1.00, cos_addr=1.00, b_gap2_cos_e2=0.37, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=3.00, state_cmp=1.00
+[US] p=1.000 distractor record (no true S1)
+   PRED S1: Colonial Program | 3912 Ignacio Drive, Austin, TX
+   RECORD : Colonial Program Co | 3912 IGNACIO DRIVE, AUSTIN, TX
+   TRUE S1: none
+   feats: cos_e2=1.00, cos_name=1.00, cos_addr=1.00, b_gap2_cos_e2=0.35, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=55.00, state_cmp=1.00
+[US] p=1.000 distractor record (no true S1)
+   PRED S1: Internal Medicine Care Center | 14 Augusta Court, Maryville, IL
+   RECORD : Internal Médicine Care Center Midtown | 14 Augusta Court, Maryville, Illinois
+   TRUE S1: none
+   feats: cos_e2=0.92, cos_name=0.81, cos_addr=1.00, b_gap2_cos_e2=0.35, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=471.00, state_cmp=1.00
+[US] p=1.000 distractor record (no true S1)
+   PRED S1: Chiropractic Empire Partners | 1800 Stuyvesant Avenue, Hempstead, NY
+   RECORD : Chiropractic Empire Partners Partners | 1800 STUYVESANT AVENUE, HEMPSTEAD, NY
+   TRUE S1: none
+   feats: cos_e2=0.99, cos_name=0.98, cos_addr=1.00, b_gap2_cos_e2=0.39, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=6.00, state_cmp=1.00
+[US] p=1.000 distractor record (no true S1)
+   PRED S1: Upper Veterinary Clinic | 16719 Rippling Mill Drive, Sugar Land, TX
+   RECORD : Upper Veterinary Clinic Ltd | 16719 RIPPLING MILL DR, SUGAR LAND, TX
+   TRUE S1: none
+   feats: cos_e2=1.00, cos_name=1.00, cos_addr=1.00, b_gap2_cos_e2=0.33, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=15.00, state_cmp=1.00
+[US] p=1.000 distractor record (no true S1)
+   PRED S1: Cami R. Ramirez, D.C. | 15 1/2 La Grange Road, La Grange, IL
+   RECORD : Corp Cami R. Ramirez, D.C. | 15 1/2 La Grange Road, La Grange, Illinois
+   TRUE S1: none
+   feats: cos_e2=1.00, cos_name=1.00, cos_addr=1.00, b_gap2_cos_e2=0.45, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=1.000 distractor record (no true S1)
+   PRED S1: Metro Bay Dime | 8256 Beard Road, Bloomington, MN
+   RECORD : Metro 8ay Dime Corp | 8256 BEARD ROAD, BLOOMINGTON, MN
+   TRUE S1: none
+   feats: cos_e2=1.00, cos_name=1.00, cos_addr=1.00, b_gap2_cos_e2=0.47, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=1.000 distractor record (no true S1)
+   PRED S1: Vision Group | 1323 Boston Avenue, Nederland, TX
+   RECORD : Vision Group Co | 1323 Boston Avenue, Nederland, Texas
+   TRUE S1: none
+   feats: cos_e2=1.00, cos_name=1.00, cos_addr=1.00, b_gap2_cos_e2=0.29, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=991.00, state_cmp=1.00
+[US] p=1.000 distractor record (no true S1)
+   PRED S1: Oncology Associates | 35502 Walter Street, Accomack County, VA
+   RECORD : Oncology Associates Inc | 35502 WALTER STREET, ACCOMACK COUNTY, VA
+   TRUE S1: none
+   feats: cos_e2=1.00, cos_name=1.00, cos_addr=1.00, b_gap2_cos_e2=0.27, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=789.00, state_cmp=1.00
+[India] p=1.000 distractor record (no true S1)
+   PRED S1: Kundli Dream Private Limited | 514, Near Haryana Power House Shivpuri Colony, Kundli, Sonepat, Haryana
+   RECORD : Kundli Dream Limited | 514, Near Haryana Power House Shivpuri Colony, Kundli, Sonepat, HR
+   TRUE S1: none
+   feats: cos_e2=1.00, cos_name=1.00, cos_addr=1.00, b_gap2_cos_e2=0.45, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.50, key_n_s1=1.00, state_cmp=1.00
+[US] p=1.000 distractor record (no true S1)
+   PRED S1: Internal Medicine Frontier Group | 3699 Broadbridge Avenue, Unit Unit 120, Stratford, CT
+   RECORD : Internal Medicine Frontier Group Group | 3699 Broadbridge Avenue, # Unit 120, Stratford, Connecticut
+   TRUE S1: none
+   feats: cos_e2=0.99, cos_name=0.98, cos_addr=1.00, b_gap2_cos_e2=0.36, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=6.00, state_cmp=1.00
+[US] p=1.000 distractor record (no true S1)
+   PRED S1: Massie Pgim Inc | 107 White Road, King, NC
+   RECORD : Cirawex | 107 WHITE RD, <NULL>, KING, NC
+   TRUE S1: none
+   feats: cos_e2=0.74, cos_name=0.00, cos_addr=1.00, b_gap2_cos_e2=0.16, n_tset=22.22, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=1.000 distractor record (no true S1)
+   PRED S1: Rvr Finance Limited | C/O Misbahuddin Sikrori Near Andhe Ki Chauki Hardoi Road Lucknow Lucknow Up I, N, Lucknow, Uttar Pradesh
+   RECORD : Dr Rvr Finance Private Limited | C/o Misbahuddin Sikrori Near Andhe Ki Chauki Hardoi Road Lucknow Lucknow Up I, Lucknow, UP
+   TRUE S1: none
+   feats: cos_e2=1.00, cos_name=1.00, cos_addr=1.00, b_gap2_cos_e2=0.34, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.50, key_n_s1=7.00, state_cmp=1.00
+[India] p=0.999 distractor record (no true S1)
+   PRED S1: Kanaka Educational Society | Sataya Prakesh, 85 Zakati, Bareilly, Uttar Pradesh
+   RECORD : Kanaka Educational Society Public Limited | #85 SATAYA PRAKESH, 85 ZAKATI, BAREILLY, Uttar Pradesh
+   TRUE S1: none
+   feats: cos_e2=0.99, cos_name=1.00, cos_addr=0.99, b_gap2_cos_e2=0.42, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.999 distractor record (no true S1)
+   PRED S1: The Dent Tattoo | 59 Bell Street, Staten Island, NY
+   RECORD : The-Dent Tattoo Co | 59 Bell St, Staten Island, New York
+   TRUE S1: none
+   feats: cos_e2=1.00, cos_name=1.00, cos_addr=1.00, b_gap2_cos_e2=0.26, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=73.00, state_cmp=1.00
+[US] p=0.999 distractor record (no true S1)
+   PRED S1: Pediatric Physicians LLC | 935 Boardman Canfield Road, Youngstown, OH
+   RECORD : Xylojaxtavo | N/A, Yonugstown, Ohio, 935 Boardman Canfield Rd
+   TRUE S1: none
+   feats: cos_e2=0.65, cos_name=0.00, cos_addr=0.73, b_gap2_cos_e2=0.11, n_tset=19.35, a_tset=97.14, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=220.00, state_cmp=1.00
+[US] p=0.999 distractor record (no true S1) | empty address
+   PRED S1: Geraghty Better House | 10176 Springfield Pike, Cincinnati, OH
+   RECORD : geraghty better house | 
+   TRUE S1: none
+   feats: cos_e2=0.83, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.27, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=0.00
+[US] p=0.999 distractor record (no true S1)
+   PRED S1: Pediatric Dental Medicine | Norridgewock, ME, 766 Winding Hill Road
+   RECORD : Pediatric Dental Medicine Inc | 766 Winding Hill Rd, Norridewock, Maine
+   TRUE S1: none
+   feats: cos_e2=0.94, cos_name=1.00, cos_addr=0.53, b_gap2_cos_e2=0.29, n_tset=100.00, a_tset=98.41, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=218.00, state_cmp=1.00
+[US] p=0.999 distractor record (no true S1)
+   PRED S1: Diamond Staffing Company | 100 243, Phenix City, AL
+   RECORD : Diamond Diamond Staffing Company Co. | 10 243, PHENIX CITY, AL
+   TRUE S1: none
+   feats: cos_e2=0.91, cos_name=0.97, cos_addr=0.85, b_gap2_cos_e2=0.22, n_tset=100.00, a_tset=97.30, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=10.00, state_cmp=1.00
+[India] p=0.999 distractor record (no true S1)
+   PRED S1: Karan Sangh | Ananth Nagar Syndicate Circle Manipal Manipal Karnataka India, Karnataka, Manipal, Udupi
+   RECORD : Karan Sangh Limited | ANANTH NAGAR SYNDICATE CIRCLE MANIPAL MANIPAL KARNATAKA INDIA, MANIPAL, Karnataka
+   TRUE S1: none
+   feats: cos_e2=0.99, cos_name=1.00, cos_addr=0.95, b_gap2_cos_e2=0.39, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.999 distractor record (no true S1)
+   PRED S1: Nannette Basinger, DDS Group | 106 Harvard Street, Unit 1, Medford, MA
+   RECORD : Nannette Basinger, DDK Group | 106 Harvard St, # 1, Medford, Massachusetts
+   TRUE S1: none
+   feats: cos_e2=0.95, cos_name=0.80, cos_addr=1.00, b_gap2_cos_e2=0.40, n_tset=96.30, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=3.00, state_cmp=1.00
+[US] p=0.999 distractor record (no true S1) | empty address
+   PRED S1: Kim School of Medicine | 858 Cleveland Road, Unit A, Ravenna, OH
+   RECORD : KIM SCHOOL OF MDCINE | 
+   TRUE S1: none
+   feats: cos_e2=0.70, cos_name=0.69, cos_addr=0.00, b_gap2_cos_e2=0.10, n_tset=95.24, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=0.00
+[India] p=0.999 distractor record (no true S1)
+   PRED S1: Al Builders Limited | Vkk Nagar Vallakadavu P O, Thiruvananthapuram, Trivandrum, Kerala
+   RECORD : Al Builders Private Limited | VKK NAGAR VALLAKADAVU P O, THIRUVANANTHAPURAM, Kerala
+   TRUE S1: none
+   feats: cos_e2=0.99, cos_name=1.00, cos_addr=0.95, b_gap2_cos_e2=0.36, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.50, key_n_s1=53.00, state_cmp=1.00
+[India] p=0.999 record belongs to another S1
+   PRED S1: Gold & Sons Private Limited | Site No. 1, 1St Floor, Sfhs Nandini Layout, Bengaluru, Bengaluru, Bangalore, Karnataka
+   RECORD : Gold & Sons Pvt. (Limited) | KA, Site No. 1, Bangalore, Bengaluru
+   TRUE S1: Gold & Sons Pvt. Ltd. | Site No. 1, 2 & 3, Survey No. 52/2, Nagasandra Village, Yeswantpur Hobli, Bengaluru North Taluk, Bangalore, Karnataka
+   feats: cos_e2=0.84, cos_name=1.00, cos_addr=0.66, b_gap2_cos_e2=0.05, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=4.00, state_cmp=1.00
+[India] p=0.999 record belongs to another S1
+   PRED S1: Haveli Abrasives Pvt Ltd | Shastri Campus S No 85, N D A Road Shivane, Haveli, Pune, Maharashtra
+   RECORD : Solhalo | Shastri Campus S. No 85 N D A Road, Haveli, Pune, MH
+   TRUE S1: Haveli Agro Ltd | Shastri Campus S. No 85 N D A Road, Shivane (Uttamnagar), Shivane (Uttamnagar) (N.V.) Ta Haveli, Haveli, Pune, Maharashtra
+   feats: cos_e2=0.65, cos_name=0.00, cos_addr=0.84, b_gap2_cos_e2=0.17, n_tset=34.78, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.999 distractor record (no true S1) | empty address
+   PRED S1: Vivie Gomez Platinum Term | 2733 Minerva Street, City Of Oshkosh, WI
+   RECORD : Vivie Ghoedz Platinum Term | 
+   TRUE S1: none
+   feats: cos_e2=0.65, cos_name=0.63, cos_addr=0.00, b_gap2_cos_e2=0.10, n_tset=94.12, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=0.00
+[India] p=0.999 record belongs to another S1
+   PRED S1: Blue Finance Pvt Ltd | Room No 140, Gajanan Colony, Govnandi, Mumbai, Mumbai City, Maharashtra
+   RECORD : Smt Blue Finance  Private | No 140, Mumbai, Mumbai City, MH
+   TRUE S1: Blue Finance Private Limited | Flat No 1402, 14Th Floor, Green Ridge Tower-Ii Link Road, Off Simpoli Tele Ex, Borivali W, Est, Mumbai, Mumbai City, Maharashtra
+   feats: cos_e2=0.91, cos_name=1.00, cos_addr=0.50, b_gap2_cos_e2=0.13, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.50, key_n_s1=61.00, state_cmp=1.00
+[US] p=0.999 record belongs to another S1
+   PRED S1: FC Petroleum Inc | 3458 Richards Boulevard, Roanoke County, VA
+   RECORD : FC | 3458 Richards Boulevard, Roanoke County, VA
+   TRUE S1: First Communications LLC | 3458 Richards Boulevard, Roanoke County, VA
+   feats: cos_e2=0.85, cos_name=0.63, cos_addr=1.00, b_gap2_cos_e2=0.08, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.999 distractor record (no true S1)
+   PRED S1: Cati W. Licht, CPA | 1904 Marshall St, Boone, IA
+   RECORD : Cati Licht, W. FPA | 1904 Marshall St, Boone CCDP, Iowa
+   TRUE S1: none
+   feats: cos_e2=0.89, cos_name=0.72, cos_addr=0.85, b_gap2_cos_e2=0.29, n_tset=93.75, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.999 distractor record (no true S1)
+   PRED S1: Heritage Education Works LLC | 2000 Dayton Ave, Ames, IA
+   RECORD : Heritage Education Works LLC | 2000 Daid Ave, Kenai Peninsula Borough, Alaska
+   TRUE S1: none
+   feats: cos_e2=0.78, cos_name=1.00, cos_addr=0.31, b_gap2_cos_e2=0.17, n_tset=100.00, a_tset=57.14, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=-1.00
+[US] p=0.999 distractor record (no true S1)
+   PRED S1: Cascade American Partners | 247 Millville Avenue, Hamilton, OH
+   RECORD : Cascade American Partners Co | 247 MILLVILLE AVE, HAMILTON, OH
+   TRUE S1: none
+   feats: cos_e2=1.00, cos_name=1.00, cos_addr=1.00, b_gap2_cos_e2=0.37, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=17.00, state_cmp=1.00
+[India] p=0.999 distractor record (no true S1)
+   PRED S1: Jain Trading Private Limited | 612-A, Iind Floor, Kohli Complex Sri Nagar, Rani Bagh, Main Road, New Delhi, North West, Delhi
+   RECORD : जैन ट्रेडिंग प्राइवेट लिमिटेड | ##612, NEW DELHI, CENTRAL DELHI, Delhi
+   TRUE S1: none
+   feats: cos_e2=0.75, cos_name=1.00, cos_addr=0.29, b_gap2_cos_e2=0.08, n_tset=100.00, a_tset=42.86, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=608.00, state_cmp=1.00
+[US] p=0.999 distractor record (no true S1)
+   PRED S1: North Branch Youth Global Alliance P.C. | 7870 385th Street, North Branch, MN
+   RECORD : northbranchyouth.com | Minnesota, North Branch, 656 Granby Street
+   TRUE S1: none
+   feats: cos_e2=0.65, cos_name=0.38, cos_addr=0.24, b_gap2_cos_e2=0.15, n_tset=48.00, a_tset=66.67, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.999 distractor record (no true S1)
+   PRED S1: Ram Finance Pvt Ltd | 503, Vastu Prestige, New Link Rd, Andheri W, Mumbai, Maharashtra
+   RECORD : राम फाइनेंस प्राइवेट लिमिटेड | 503, MUMBAI CITY, MUMBAI, महाराष्ट्र
+   TRUE S1: none
+   feats: cos_e2=0.84, cos_name=1.00, cos_addr=0.40, b_gap2_cos_e2=0.10, n_tset=100.00, a_tset=80.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=56.00, state_cmp=1.00
+[US] p=0.999 distractor record (no true S1)
+   PRED S1: Primary Care Partners, Inc. | 1996 Cherry Lane, Northbrook, IL
+   RECORD : Primary Csr Partners, Inc | 2000 CHERRY LANE, NORTHBROOK, IL
+   TRUE S1: none
+   feats: cos_e2=0.84, cos_name=0.65, cos_addr=0.63, b_gap2_cos_e2=0.21, n_tset=92.68, a_tset=88.89, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=1101.00, state_cmp=1.00
+[US] p=0.999 distractor record (no true S1) | empty address
+   PRED S1: Tri-State Superior Bulkers Inc | 2619 Cambridge Street, West Lafayette, IN
+   RECORD : TRI-STATE SUPERIOR BULKERS INC | 
+   TRUE S1: none
+   feats: cos_e2=0.72, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.12, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=0.00
+[US] p=0.999 distractor record (no true S1) | empty address
+   PRED S1: C & O Crown LLC | 1229 86 Street, Brooklyn, NY
+   RECORD : C & Ó Crown Llc | 
+   TRUE S1: none
+   feats: cos_e2=0.80, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.19, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=0.00
+[US] p=0.999 record belongs to another S1
+   PRED S1: Drayify Maintenance Inc | Unit APT 101, VA, Chesterfield County, 600 Fern Meadow Loop
+   RECORD : Vi0lumhalo | Midlothain, 0600 Fern Meadow Loop, Virginia, Unit APT 101
+   TRUE S1: Colonial Clean | 600 Fern Meadow Loop, Unit APT 101, Chesterfield County, VA
+   feats: cos_e2=0.67, cos_name=0.00, cos_addr=0.67, b_gap2_cos_e2=0.15, n_tset=20.69, a_tset=81.36, num_conflict=0.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=6.00, state_cmp=1.00
+[India] p=0.999 distractor record (no true S1)
+   PRED S1: Indo Krishna Consultants Private Limited | Plot No 12-P1-A & 12-P1-B, Hi-Tech Defence And Aerospace Park (It Sector), Jala Hobli, Bk Palya, Bengaluru, Bangalore, Karnataka
+   RECORD : Indo Krishna Consultants Limited | #12-P12-A & 12-P1-B, Bengaluru, Bangalore, ಕರ್ನಾಟಕ
+   TRUE S1: none
+   feats: cos_e2=0.81, cos_name=1.00, cos_addr=0.41, b_gap2_cos_e2=0.12, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.50, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.999 distractor record (no true S1) | empty address
+   PRED S1: Ornelas Trusted Works L.L.C. | 6759 2300, Cedar City, UT
+   RECORD : Ornelas Trusted Works | 
+   TRUE S1: none
+   feats: cos_e2=0.76, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.20, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=0.00
+[India] p=0.999 distractor record (no true S1)
+   PRED S1: Neera (india) Center | Viii/20A, Ergo Heights, Mangayil Lawns Vikram Sarabhai Road, Maradu P.O., Ernakulam, Kerala
+   RECORD : Neera  India | VIII/33A, ERGO HEIGHTS, MANGAYIL LAWNS VIKRAM SARABHAI ROAD, MARADU P.O., Keralam
+   TRUE S1: none
+   feats: cos_e2=0.93, cos_name=0.87, cos_addr=0.93, b_gap2_cos_e2=0.31, n_tset=100.00, a_tset=97.03, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=13.00, state_cmp=1.00
+[India] p=0.999 distractor record (no true S1)
+   PRED S1: Bina (india)private Private Limited | Zicom House, 45, Chimbai Road, Off Hill Road, Bandra (West), Mumbai, Mumbai City, Maharashtra
+   RECORD : Bina (india)private Limited | NO 12 ZICOM HOUSE, 45, CHIMBAI ROAD, OFF HILL ROAD, BANDRA (WEST), MUMBAI, महाराष्ट्र
+   TRUE S1: none
+   feats: cos_e2=0.97, cos_name=1.00, cos_addr=0.96, b_gap2_cos_e2=0.38, n_tset=100.00, a_tset=96.70, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=4.00, state_cmp=1.00
+[India] p=0.999 distractor record (no true S1)
+   PRED S1: Smart Group | F 01 A 64 Plot No 88 To 91 Sect 19A Nerul, Nerul, Mumbai City, Maharashtra
+   RECORD : Smart Group Private Limited | F 01 A 64 Plot No 88 To 91 Sect 19A Nerul, Nerul, महाराष्ट्र, Mumbai City
+   TRUE S1: none
+   feats: cos_e2=1.00, cos_name=1.00, cos_addr=1.00, b_gap2_cos_e2=0.38, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=651.00, state_cmp=1.00
+[US] p=0.999 distractor record (no true S1) | empty address
+   PRED S1: Vazquez and Garfield Inc | 31 Rogers Ridge Road, Ridgeley, WV
+   RECORD : Vazquez and Garfield Inc. | 
+   TRUE S1: none
+   feats: cos_e2=0.81, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.14, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=0.00
+[US] p=0.999 distractor record (no true S1)
+   PRED S1: Twisted Grill | 4919 Windmill Lane, Mcneal, AZ
+   RECORD : twisted grill partners | 4919 Windmill Lane, N/A, Mcneal, Arizona
+   TRUE S1: none
+   feats: cos_e2=0.97, cos_name=0.88, cos_addr=1.00, b_gap2_cos_e2=0.28, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=91.00, state_cmp=1.00
+[India] p=0.999 distractor record (no true S1) | empty address
+   PRED S1: Top Bang LLP | F 81Khanpur Extention, New Delhi, South Delhi, Delhi
+   RECORD : Top  Bang LLP | 
+   TRUE S1: none
+   feats: cos_e2=0.78, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.14, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=0.00
+[US] p=0.999 distractor record (no true S1) | empty address
+   PRED S1: Cicily Mapes Mid LLC | 519 Edgewater Lane, Bend, OR
+   RECORD : cicily mapes mid llc | 
+   TRUE S1: none
+   feats: cos_e2=0.78, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.24, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=0.00
+[India] p=0.999 distractor record (no true S1) | empty address
+   PRED S1: Solutions Elite Alloys Pvt. Ltd. | 10/A, Hira Shiva Colony, Khote Nagar, Jalgaon, Maharashtra
+   RECORD : solutions elite alloys pvt. ltd. | 
+   TRUE S1: none
+   feats: cos_e2=0.78, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.16, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=0.00
+[US] p=0.999 distractor record (no true S1)
+   PRED S1: Zamora Total Sumitomo L.L.C. | 155 Old Petersburg Pike, Petersburg, TN
+   RECORD : Belonovi | 155 Old Petersburg Pike, Petersburg, Tennessee
+   TRUE S1: none
+   feats: cos_e2=0.61, cos_name=0.00, cos_addr=1.00, b_gap2_cos_e2=0.09, n_tset=13.79, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=2.00, state_cmp=1.00
+[India] p=0.999 distractor record (no true S1)
+   PRED S1: Dew Polytechnic | Ambala City, H.No.2125 C, Ambala, Haryana, Baldev Nagar
+   RECORD : Mr Dew Polytechnic Pvt Ltd | DOOR NO C, BALDEV NAGAR, AMBALA CITY, Haryana
+   TRUE S1: none
+   feats: cos_e2=0.94, cos_name=1.00, cos_addr=0.86, b_gap2_cos_e2=0.37, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=2.00, state_cmp=1.00
+[US] p=0.999 distractor record (no true S1) | empty address
+   PRED S1: Antoine Patriot Live LLC | 2979 Dover Avenue, Albany, OR
+   RECORD : Antoine Patriot Live  LLC | 
+   TRUE S1: none
+   feats: cos_e2=0.76, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.14, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=0.00
+[US] p=0.999 distractor record (no true S1)
+   PRED S1: Town Of Eagle Cultural Fund Group | S102W34986 Highview Road, Town Of Eagle, WI
+   RECORD : >> Town Of Eagle Cultural Fund Group | S102w34988 Highview Rd, Eagle CCDP, Wisconsin
+   TRUE S1: none
+   feats: cos_e2=0.92, cos_name=1.00, cos_addr=0.41, b_gap2_cos_e2=0.40, n_tset=100.00, a_tset=84.38, num_conflict=1.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.999 distractor record (no true S1)
+   PRED S1: Style Stud Pvt Ltd | Qtr No Pvt-1, 2Nd Flr, Shakti Enclave Street, Delhi, North Delhi, Delhi
+   RECORD : Dr Style Services Pvt Ltd. | Qtr No Pvt-2, 2Nd Flr, Shakti Enclave Street, North Delhi, Delhi, DL
+   TRUE S1: none
+   feats: cos_e2=0.90, cos_name=0.62, cos_addr=0.96, b_gap2_cos_e2=0.27, n_tset=66.67, a_tset=100.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.999 distractor record (no true S1)
+   PRED S1: Heritage Prairie Tire Shop Inc. | 7700 Creekbend Drive, Houston, TX
+   RECORD : Heritage Prgaire Tire Shop Inc | 770 CREEKBEND DR, HOUSTON, TX
+   TRUE S1: none
+   feats: cos_e2=0.82, cos_name=0.70, cos_addr=0.64, b_gap2_cos_e2=0.29, n_tset=96.15, a_tset=97.96, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.999 record belongs to another S1
+   PRED S1: Vicky (india) Pvt. Ltd. | No.2, 2Nd Main, 2Nd Cross, Vinayaka Nagar, Adugodi P, Bangalore South, Bangalore, Karnataka
+   RECORD : Vicky (India) Limited Center | Bangalore, <NULL>, No 2, KA
+   TRUE S1: Vicky (India) Solutions Limited | No 2, Sy.No.62/6, 3Rd Cross, Nagamuneswara Layout Parappana Agrahara, Electronics City Pos, T, Bangalore, Karnataka
+   feats: cos_e2=0.78, cos_name=0.89, cos_addr=0.50, b_gap2_cos_e2=0.08, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.50, key_n_s1=11.00, state_cmp=1.00
+[India] p=0.999 record belongs to another S1
+   PRED S1: Bombay Engineering Private Limited | Delhi, R.G Square Mall, Plot No. 2, 1St Floor, Local Shopping Mall, I.P Extension, Patp, Arganj, Delhi, East Delhi, 104
+   RECORD : BOMBAY ENGINEERING PRIVATE LIMITED | दिल्ली, 104, R.G SQUARE MALL, PLOT NO. 2, 1ST FLOOR, LOCAL SHOPPING MALL, I.P EXTENSION, PATP, ARGANJ, DELHI, N/A
+   TRUE S1: Bombay Engineering Private Limited Enterprises | 104, R.G Square Mall, Plot No. 2, 1St Floor, Local Shopping Mall, I.P Extension, Patp, Arganj, Delhi, East Delhi, Delhi
+   feats: cos_e2=0.99, cos_name=1.00, cos_addr=0.99, b_gap2_cos_e2=0.05, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=65.00, state_cmp=1.00
+[US] p=0.999 distractor record (no true S1)
+   PRED S1: Mcsorley Group | 2113 Meadowlane Drive, Raleigh, NC
+   RECORD : Mcsorley Group | 2126 MEADOWLANE DR, RALEIGH, NC
+   TRUE S1: none
+   feats: cos_e2=0.88, cos_name=1.00, cos_addr=0.68, b_gap2_cos_e2=0.35, n_tset=100.00, a_tset=92.31, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.999 distractor record (no true S1)
+   PRED S1: Vedanta Logistics Ltd | Rawatpur Gaon, 102A, Kanpur Nagar, Uttar Pradesh, Surendra Nagar Rawatpur Gaon
+   RECORD : Vedanta India Limited | Uttar Pradesh, 102A, SURENDRA NAGAR RAWATPUR GAON, RAWATPUR GAON
+   TRUE S1: none
+   feats: cos_e2=0.82, cos_name=0.67, cos_addr=0.96, b_gap2_cos_e2=0.14, n_tset=70.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.999 distractor record (no true S1)
+   PRED S1: Fine Business Pvt. Ltd. | Seacroft Building, Flat 404, 1St Floor, 104 - Wodehouse Road, Colaba, Mumbai, Maharashtra
+   RECORD : Fine Service Pvt. Ltd. | H.no 32 Seacroft Buildng, Flat 404, 1St Floor, 104 - Wodehouse Road, Colaba, Mumbai, MH
+   TRUE S1: none
+   feats: cos_e2=0.93, cos_name=0.71, cos_addr=0.85, b_gap2_cos_e2=0.30, n_tset=100.00, a_tset=100.00, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=32.00, state_cmp=1.00
+[US] p=0.999 distractor record (no true S1)
+   PRED S1: Grand Hospitality Systems LLC | Lake Oswego, 2 Jefferson Parkway, Unit #C1, OR
+   RECORD : Grand Hospitality Systems Partners LLC | 2 Jefferson Pkwy, Unit #C1, Lake Oswego, Oregon
+   TRUE S1: none
+   feats: cos_e2=0.98, cos_name=0.91, cos_addr=1.00, b_gap2_cos_e2=0.40, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=7.00, state_cmp=1.00
+[US] p=0.999 distractor record (no true S1)
+   PRED S1: Malinda G. Connors, MD, M.D., P.C. PC | 14 Glenbrook Drive, Perinton, NY
+   RECORD : Pc Malinda G. Connors, Mj, M.D., P.C. | 14 GLENBROOK DRIVE, FAIRPORT, NY
+   TRUE S1: none
+   feats: cos_e2=0.91, cos_name=0.84, cos_addr=0.60, b_gap2_cos_e2=0.26, n_tset=100.00, a_tset=79.17, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=6.00, state_cmp=1.00
+[India] p=0.999 distractor record (no true S1)
+   PRED S1: Ambegaon Budruk Center | S. No. 8 Flat No. 301, Devraj Complex, Ambegaon Budruk, Pune, Maharashtra
+   RECORD : Ambegaon-Budruk Business | MH, S. No. 8 Flat No. 302, Pune, Ambegaon Budruk
+   TRUE S1: none
+   feats: cos_e2=0.89, cos_name=0.96, cos_addr=0.68, b_gap2_cos_e2=0.13, n_tset=100.00, a_tset=91.67, num_conflict=1.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.999 distractor record (no true S1)
+   PRED S1: Oncology Physicians Clinic | 50 Sherman Street, New Bedford, MA
+   RECORD : ONCOLOGY PHYSICIANS CLINIC LTD | 50 Sherman Street, New Bedford, Massachusetts
+   TRUE S1: none
+   feats: cos_e2=1.00, cos_name=1.00, cos_addr=1.00, b_gap2_cos_e2=0.37, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=7.00, state_cmp=1.00
+[US] p=0.999 distractor record (no true S1)
+   PRED S1: Keystone Supply Corporation Clinic | 1980 Quasar Avenue, Lake Saint Croix Beach, MN
+   RECORD : Keystone Supply Corporation Clinic Corp | 198 QUASAR AVENUE, LAKE SAINT CROIX BEACH, MN
+   TRUE S1: none
+   feats: cos_e2=0.92, cos_name=1.00, cos_addr=0.83, b_gap2_cos_e2=0.25, n_tset=100.00, a_tset=98.55, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.999 record belongs to another S1
+   PRED S1: Kolkata (india) Private Limited | 23A N S Rd, Kolkata, Calcutta, West Bengal
+   RECORD : Kolkata India Private Ltd | 23A, Calcutta, Howrah, WB
+   TRUE S1: Kolkata India Private Limited | 23A, N.S.Road 1St Floor, Room No.10, Kolkata, Howrah, West Bengal
+   feats: cos_e2=0.90, cos_name=1.00, cos_addr=0.71, b_gap2_cos_e2=0.12, n_tset=100.00, a_tset=75.86, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=516.00, state_cmp=1.00
+[India] p=0.999 distractor record (no true S1) | empty address
+   PRED S1: Pali Fruits Pvt. Ltd. | 643, Pratap Nagar Vistar, Murlipura, Jaipur, Rajasthan
+   RECORD : Pali Fruits Ltd. Pvt. | 
+   TRUE S1: none
+   feats: cos_e2=0.80, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.16, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=0.00
+[India] p=0.999 distractor record (no true S1) | empty address
+   PRED S1: CU Parkash | No.16, 13Th Cross, S D Road R S Palya, Bangalore, Karnataka
+   RECORD : CU Párkash | 
+   TRUE S1: none
+   feats: cos_e2=0.79, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.19, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=0.00
+[US] p=0.999 distractor record (no true S1)
+   PRED S1: Boling, Olive & Mitchell Inc. | 2231 14th Street, Unit Unit 116, City Of Wisconsin Rapids, WI
+   RECORD : BOLING, OLIVE & MTCEHLL INC | 242 FOURTEENTH STREET, WI, WISCONSIN RAPIDS
+   TRUE S1: none
+   feats: cos_e2=0.78, cos_name=0.56, cos_addr=0.28, b_gap2_cos_e2=0.26, n_tset=93.88, a_tset=56.00, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.999 distractor record (no true S1)
+   PRED S1: Keystone Prime Fuels, Inc | 4898 Cr 314, Millersburg, OH
+   RECORD : Lumevoiri | 4898 Cr 314, Millersburg, Ohio
+   TRUE S1: none
+   feats: cos_e2=0.61, cos_name=0.00, cos_addr=1.00, b_gap2_cos_e2=0.10, n_tset=34.48, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.999 distractor record (no true S1)
+   PRED S1: Burnham Beacon Purecycle PLLC | 317 Rurel Court, Burlington, KY
+   RECORD : Burnham Beacon  Inc Purecycle | 317 RUREL COURT, BOONE COUNTY, KY
+   TRUE S1: none
+   feats: cos_e2=0.91, cos_name=1.00, cos_addr=0.74, b_gap2_cos_e2=0.30, n_tset=100.00, a_tset=69.57, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=4.00, state_cmp=1.00
+[India] p=0.999 distractor record (no true S1)
+   PRED S1: Shrinath Agro (India) Public Limited | 204-A-4- Kalkaji Extn New Delhi, New Delhi, Delhi
+   RECORD : Shrinath Agro (India) LLP | 204-A-4- KALKAJI EXTN NEW DELHI, NEW DELHI, दिल्ली
+   TRUE S1: none
+   feats: cos_e2=1.00, cos_name=1.00, cos_addr=1.00, b_gap2_cos_e2=0.30, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=11.00, state_cmp=1.00
+[US] p=0.999 distractor record (no true S1)
+   PRED S1: Arts Project | 7 8th Avenue, Conrad, MT
+   RECORD : Arts Project Ltd | 8 8nd Ave, Conrad CDP, Montana
+   TRUE S1: none
+   feats: cos_e2=0.96, cos_name=1.00, cos_addr=0.83, b_gap2_cos_e2=0.28, n_tset=100.00, a_tset=92.31, num_conflict=0.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=39.00, state_cmp=1.00
+[US] p=0.999 distractor record (no true S1)
+   PRED S1: Better Continental System Inc | 9210 Heather Drive, Tempe, AZ
+   RECORD : Better  Continental System LLC | TEMPE, 9210 HEATHER DR, AZ
+   TRUE S1: none
+   feats: cos_e2=1.00, cos_name=1.00, cos_addr=1.00, b_gap2_cos_e2=0.31, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=2.00, state_cmp=1.00
+[India] p=0.999 distractor record (no true S1)
+   PRED S1: Fida (India) (india) Private Limited | Delhi, West Delhi, Delhi, House No1-C163 2Ndfloor Namdhari Colony Ramesh Nagar City Delhi
+   RECORD : Fida (India) (india) Limited | HOUSE NO1-C163 2NDFLOOR NAMDHARI COLONY RAMESH NAGAR CITY DELHI, DELHI, Delhi
+   TRUE S1: none
+   feats: cos_e2=0.99, cos_name=1.00, cos_addr=0.97, b_gap2_cos_e2=0.44, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.50, key_n_s1=3.00, state_cmp=1.00
+[US] p=0.999 distractor record (no true S1)
+   PRED S1: Surgical Partners LLC | North Attleborough, 15 Brookside Way, MA
+   RECORD : Surgical Partners Inc | N ATTLEBORO, 15 Brookside Way, MA
+   TRUE S1: none
+   feats: cos_e2=0.93, cos_name=1.00, cos_addr=0.60, b_gap2_cos_e2=0.25, n_tset=100.00, a_tset=94.55, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=908.00, state_cmp=1.00
+[US] p=0.998 distractor record (no true S1)
+   PRED S1: Sweet Pilates | Dayton, 805 Manhattan Avenue, OH
+   RECORD : The Sweet Pilates Holdings | 805 Manhattan Ave, Daytton, Ohio
+   TRUE S1: none
+   feats: cos_e2=0.87, cos_name=0.87, cos_addr=0.63, b_gap2_cos_e2=0.22, n_tset=100.00, a_tset=97.96, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=87.00, state_cmp=1.00
+[US] p=0.998 distractor record (no true S1) | empty address
+   PRED S1: South Innovative Liquor Inc. | 2431 Wilton Avenue, Dallas, TX
+   RECORD : South Innovative Liquor | 
+   TRUE S1: none
+   feats: cos_e2=0.75, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.20, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=0.00
+[US] p=0.998 distractor record (no true S1)
+   PRED S1: Ferne Hudson United Tungsten | 200 Farber Lane, Unit 203, Berlin, MD
+   RECORD : ferne hudson united tungsten inc | 00203 FARBER LANE, BERLIN, MD
+   TRUE S1: none
+   feats: cos_e2=0.96, cos_name=1.00, cos_addr=0.92, b_gap2_cos_e2=0.41, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.998 distractor record (no true S1)
+   PRED S1: My Consulting Private Limited | 49/26, Ist Floor Ramasamy Kovil Agraharam, Palayamkottai, Tirunelveli, Tamil Nadu
+   RECORD : மை கன்சல்டிங் பிரைவேட் லிமிடெட் | 49/35, IST FLOOR RAMASAMY KOVIL AGRAHARAM, TIRUNELVELI, PALAYAMKOTTAI, Tamil Nadu
+   TRUE S1: none
+   feats: cos_e2=0.95, cos_name=1.00, cos_addr=0.94, b_gap2_cos_e2=0.25, n_tset=100.00, a_tset=97.44, num_conflict=1.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=63.00, state_cmp=1.00
+[US] p=0.998 distractor record (no true S1) | empty address
+   PRED S1: Candida L. Stanford, DPM | 7762 La Fiesta Way, Sacramento, CA
+   RECORD : Candida L. L. Stanford, Center | 
+   TRUE S1: none
+   feats: cos_e2=0.77, cos_name=0.84, cos_addr=0.00, b_gap2_cos_e2=0.21, n_tset=90.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=0.00
+[India] p=0.998 distractor record (no true S1)
+   PRED S1: Bkp & Brothers Private Limited | H.No. 2-3-3/2 Manikonda, Gandipet, Hyderabad, Telangana
+   RECORD : PRIVATE BKP + BROTHERS ENTERPRISES LTD | H.NO. 2-3-3/3 MANIKONDA, GANDIPET, HYDERABAD, తెలంగాణ
+   TRUE S1: none
+   feats: cos_e2=0.92, cos_name=0.83, cos_addr=0.99, b_gap2_cos_e2=0.34, n_tset=85.71, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=2.00, state_cmp=1.00
+[India] p=0.998 distractor record (no true S1)
+   PRED S1: Anekal Diagnostics Private Limited | No 5/3, Shop No 1, Zariz Enclave, 3Rd Floor, Anekal, Bangalore, Karnataka
+   RECORD : Limited Anekal Diagnostics | 5/5, SHOP NO 1, ZARIZ ENCLAVE, 3RD FLOOR, ANEKAL, NULL, Karnataka
+   TRUE S1: none
+   feats: cos_e2=0.99, cos_name=1.00, cos_addr=0.96, b_gap2_cos_e2=0.41, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.50, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.998 distractor record (no true S1)
+   PRED S1: Brant Harbor Paper L.L.C. | 5515 Morris Street, Indianapolis, IN
+   RECORD : Brant Paper Harbor LLC | 551 Morris St, Indianapolis, Indiana
+   TRUE S1: none
+   feats: cos_e2=0.87, cos_name=1.00, cos_addr=0.57, b_gap2_cos_e2=0.31, n_tset=100.00, a_tset=98.11, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.998 distractor record (no true S1)
+   PRED S1: Mulcahy Packaging Partners | 4126 Wenonah Avenue, Stickney, IL
+   RECORD : Mulcahy Packaging Partners Corp | STICKNEY, IL, 4126 WENONAH AVENUE
+   TRUE S1: none
+   feats: cos_e2=1.00, cos_name=1.00, cos_addr=1.00, b_gap2_cos_e2=0.39, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=5.00, state_cmp=1.00
+[US] p=0.998 distractor record (no true S1)
+   PRED S1: RNR Grand Spa LLC | 12360 Knoll Drive, Tigard, OR
+   RECORD : RNR Gda Spa Holdings | 12360 Knoll Dr, Tigard, Oregon
+   TRUE S1: none
+   feats: cos_e2=0.91, cos_name=0.64, cos_addr=1.00, b_gap2_cos_e2=0.35, n_tset=70.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.998 distractor record (no true S1) | empty address
+   PRED S1: Mamta Energy Private Limited | Off312A Aswastik Disha Corporate Park Kohi Compound Lbs Marg, Ghatkopar(W), Opp Shrey, As Cinema, Mumbai, Mumbai City, Maharashtra
+   RECORD : MAMTA ENERGY PRIVATE LIMITED | 
+   TRUE S1: none
+   feats: cos_e2=0.81, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.17, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=0.00
+[India] p=0.998 distractor record (no true S1)
+   PRED S1: South Consulting Private Limited | C/O Banaras Kala 4 Diwanpara Road, Rajkot, Gujarat
+   RECORD : સાઉથ કન્સલ્ટિંગ પ્રા. લિ. | #A-4St Floor, Rajkot, <NULL>, GJ
+   TRUE S1: none
+   feats: cos_e2=0.75, cos_name=1.00, cos_addr=0.36, b_gap2_cos_e2=0.02, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=56.00, state_cmp=1.00
+[US] p=0.998 distractor record (no true S1)
+   PRED S1: Elite Valley Fifth L.L.C. | 512 Mockingbird Rd Road, Fordland, MO
+   RECORD : Elite Valley Fth [LLC] | 52 MOCKINGBIRD RD RD, FORDLAND, MO
+   TRUE S1: none
+   feats: cos_e2=0.85, cos_name=0.69, cos_addr=0.82, b_gap2_cos_e2=0.29, n_tset=94.12, a_tset=98.11, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.998 distractor record (no true S1)
+   PRED S1: 87/27 Services Group | 494 Frenchmans Knob Road, Bonnieville, KY
+   RECORD : 87/27 Services Group | 501 Frenchmans Knob Road, Bonnieville, Kentucky
+   TRUE S1: none
+   feats: cos_e2=0.94, cos_name=1.00, cos_addr=0.86, b_gap2_cos_e2=0.47, n_tset=100.00, a_tset=93.75, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.998 distractor record (no true S1)
+   PRED S1: Holleran Integrated Private Inc. | 1607 5th Street, Mcalester, OK
+   RECORD : Holleran Intelaretd Private Inc | OK, 160 5ST STREET, MCALESTER, <NULL>
+   TRUE S1: none
+   feats: cos_e2=0.70, cos_name=0.48, cos_addr=0.64, b_gap2_cos_e2=0.22, n_tset=84.21, a_tset=97.30, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.998 distractor record (no true S1) | empty address
+   PRED S1: Beauregard & Morales LLC | Graham, WA, 24006 96th Avenue
+   RECORD : Beauregard & Mora1es LLC | 
+   TRUE S1: none
+   feats: cos_e2=0.79, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.21, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=0.00
+[US] p=0.998 distractor record (no true S1) | empty address
+   PRED S1: Mahnke Hcm Corp | 342 Back Street, Hebron, ME
+   RECORD : Mahnke Corp Hcm | 
+   TRUE S1: none
+   feats: cos_e2=0.73, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.17, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=0.00
+[US] p=0.998 distractor record (no true S1)
+   PRED S1: Western Navios | 221 Lamp And Lantern Village, Fl 1, Chesterfield, MO
+   RECORD : Yumaaria | LAMP AND LANTERN VILLAGE, NULL, CHESTERFIELD, MO
+   TRUE S1: none
+   feats: cos_e2=0.64, cos_name=0.00, cos_addr=0.91, b_gap2_cos_e2=0.17, n_tset=18.18, a_tset=100.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=2.00, state_cmp=1.00
+[India] p=0.998 distractor record (no true S1)
+   PRED S1: Accord Cad Clinic | Gala No.01 Om Ind Est. Bldg No. 1 S. No. 91, H. No.5/2 6A, Vasai, Thane, Maharashtra
+   RECORD : Sri Accord Services [Clinic] | GALA NO.5 OM IND EST. BLDG NO. 1 S. NO. 91, H. NO.5/2 6A, VASAI, महाराष्ट्र
+   TRUE S1: none
+   feats: cos_e2=0.93, cos_name=0.76, cos_addr=0.96, b_gap2_cos_e2=0.30, n_tset=86.67, a_tset=100.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.998 distractor record (no true S1) | empty address
+   PRED S1: Renelle Meeker Clean Vertical, Inc | 43 Glenn Drive, Wilbraham, MA
+   RECORD : Renelle Meeker Clean Vertical, | 
+   TRUE S1: none
+   feats: cos_e2=0.83, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.24, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=0.00
+[India] p=0.998 distractor record (no true S1)
+   PRED S1: Tube Polytechnic | 50-A/1, Second Floor, Plot No. 1, Prop. No. 50, Gali No.5, Shankar Nagar, Krishna Nagar, Delhi, East Delhi, Delhi
+   RECORD : Tube India | दिल्ली, 50-A/1, SECOND FLOOR, PLOT NO. 1, PROP. NO. 50, GALI NO.5, SHANKAR NAGAR, KRISHNA NAGAR, DELHI
+   TRUE S1: none
+   feats: cos_e2=0.81, cos_name=0.61, cos_addr=0.98, b_gap2_cos_e2=0.25, n_tset=57.14, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.998 distractor record (no true S1) | empty address
+   PRED S1: Elkay Pharma Private Limited | Fl D 502, S No 83/1/2 Rajas Residency Nr Dangat Patil Nagar Shivane Pune 23, Pune, Maharashtra
+   RECORD : Elkay Pharma  Private Ltd | 
+   TRUE S1: none
+   feats: cos_e2=0.71, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.15, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=0.00
+[India] p=0.998 distractor record (no true S1)
+   PRED S1: MS City Private Limited | D 19 Radhey Puri, New Delhi, South Delhi, Delhi
+   RECORD : MSF CITY PRIVATE LTD | D #19 RADHEY PURI, NEW DELHI, Delhi
+   TRUE S1: none
+   feats: cos_e2=0.82, cos_name=0.50, cos_addr=1.00, b_gap2_cos_e2=0.32, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=613.00, state_cmp=1.00
+[US] p=0.998 record belongs to another S1
+   PRED S1: Mcateer, Alvarado & Roark Esports LLC | 1356 Federal Street, Chicago, IL
+   RECORD : Evobrixveo | Federal Street, Chicago, Illinois
+   TRUE S1: Education Guild | 640 Federal Street, Chicago, IL
+   feats: cos_e2=0.69, cos_name=0.00, cos_addr=0.73, b_gap2_cos_e2=0.12, n_tset=22.73, a_tset=100.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.998 distractor record (no true S1)
+   PRED S1: Prince Charitable Trust | 6-2-746/1, Siddavatam Main Road, Badvel, Badvel, Cuddapah, Andhra Pradesh
+   RECORD : Prince Charitable Trust Limited | 6-2-746/1, Siddavatam Main Road, Badvel, Badvel, AP
+   TRUE S1: none
+   feats: cos_e2=0.99, cos_name=1.00, cos_addr=0.95, b_gap2_cos_e2=0.28, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=5.00, state_cmp=1.00
+[US] p=0.998 distractor record (no true S1)
+   PRED S1: DR Classic Spring Inc | 31 Travis Drive, Cameron, NC
+   RECORD : Cerritos Classic Spring Inc | #31 TRAVIS DRIVE, CAMERON, NC
+   TRUE S1: none
+   feats: cos_e2=0.89, cos_name=0.70, cos_addr=1.00, b_gap2_cos_e2=0.32, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=2.00, state_cmp=1.00
+[India] p=0.998 distractor record (no true S1)
+   PRED S1: East Consulting Private Limited | Tola- Barbonna, Ward No.-10, H. No.- 05, Plot No.- 229/4614-4615, Panch- Kanhauli, Madhubani, Bihar
+   RECORD : East Consulting Limited | Ward No.-10, H. No.- 05, Plot No.- 229/4614-4615, Panch- Kanhauli, Madhubani, BR, No 5 Tola- Barbonna
+   TRUE S1: none
+   feats: cos_e2=1.00, cos_name=1.00, cos_addr=1.00, b_gap2_cos_e2=0.30, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.50, key_n_s1=45.00, state_cmp=1.00
+[US] p=0.998 distractor record (no true S1)
+   PRED S1: First Baptist Church | 403 7th Street, Hays, KS
+   RECORD : First Baptist Church Ltd | 07 7nd St, Hays, Kansas
+   TRUE S1: none
+   feats: cos_e2=0.92, cos_name=1.00, cos_addr=0.82, b_gap2_cos_e2=0.26, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=65.00, state_cmp=1.00
+[India] p=0.998 distractor record (no true S1)
+   PRED S1: Four Pharmaceuticals Private Limited | Flat No 3 A 2Nd Flr Nagindas Mansion 57/67 J.S.S. Road Opera House, Mumbai, Mumbai City, Maharashtra
+   RECORD : Four Solutions Private Limited | No 3 A 2Nd Flr Nagindas Mansion 57/67 J.s.s. Road Opera House, Mumbai, Mumbai City, MH
+   TRUE S1: none
+   feats: cos_e2=0.78, cos_name=0.41, cos_addr=1.00, b_gap2_cos_e2=0.26, n_tset=52.94, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.998 distractor record (no true S1)
+   PRED S1: Retail Group of Companies | Ram Bag Road, Ramana Post Office, Keotsa Niwas Mithanpura, Muzaffarpur, Muzaffarpur, Bihar
+   RECORD : Sri Retail Group of Companies | No 26 Ram Bag Road, Ramana Post Office, Keotsa Niwas Mithanpura, Muzaffarpur, Muzaffarpur Region, Muzaffarpur, BR
+   TRUE S1: none
+   feats: cos_e2=0.98, cos_name=1.00, cos_addr=0.96, b_gap2_cos_e2=0.30, n_tset=100.00, a_tset=100.00, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=6.00, state_cmp=1.00
+[India] p=0.998 distractor record (no true S1)
+   PRED S1: Fortune Management Private Limited | 14 Navjeevan Vihar, Geetanjali Marg, New Delhi, South Delhi, Delhi
+   RECORD : फॉर्च्यून मैनेजमेंट प्राइवेट लिमिटेड | 14, New Delhi, South Delhi, दिल्ली
+   TRUE S1: none
+   feats: cos_e2=0.79, cos_name=1.00, cos_addr=0.31, b_gap2_cos_e2=0.12, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=70.00, state_cmp=1.00
+[India] p=0.998 distractor record (no true S1)
+   PRED S1: Tech It Pvt Ltd | Pentagon-2, P2- P003/P004, Magarpatta, Pune, Maharashtra
+   RECORD : Thc It Pvt Ltd | Pune, Sr.no.4/3, MH, Pune City
+   TRUE S1: none
+   feats: cos_e2=0.72, cos_name=0.36, cos_addr=0.43, b_gap2_cos_e2=0.12, n_tset=76.92, a_tset=66.67, num_conflict=0.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=61.00, state_cmp=1.00
+[US] p=0.998 distractor record (no true S1)
+   PRED S1: Gaye Peterson Federal Pbc | 3734 Windmill Drive, Clarksville, TN
+   RECORD : Peterson Peterson Pbc Center | 3734 WINDMILL DR, CLARKSVILLE, TN
+   TRUE S1: none
+   feats: cos_e2=0.87, cos_name=0.67, cos_addr=1.00, b_gap2_cos_e2=0.26, n_tset=77.42, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.998 distractor record (no true S1)
+   PRED S1: Indo Producer | Belgaum, Plat No. D 90, Karnataka, Industrial Estate, Belgaum
+   RECORD : Indo Producer  Electronics | Plat No. D 90, Industrial Estate, Belgaum, Belagavi, KA
+   TRUE S1: none
+   feats: cos_e2=0.86, cos_name=0.72, cos_addr=0.84, b_gap2_cos_e2=0.31, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=46.00, state_cmp=1.00
+[US] p=0.998 distractor record (no true S1)
+   PRED S1: Enva Holdings | 11585 Waikiki Ranch Lane, Spokane, WA
+   RECORD : Enva Holdings | 11598 Waikiki Ranhc Ln, Spokane, Washington
+   TRUE S1: none
+   feats: cos_e2=0.92, cos_name=1.00, cos_addr=0.45, b_gap2_cos_e2=0.24, n_tset=100.00, a_tset=93.33, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=23.00, state_cmp=1.00
+[India] p=0.998 distractor record (no true S1)
+   PRED S1: Ckb Advisors Private Limited | 2042 Sadashiv Pethratna-Deep Tilak Road, Pune, Maharashtra
+   RECORD : Ckb Advisors Limited | Sadashiv Pethratna-deep Tilak Road, Sirathu, Pune, महाराष्ट्र
+   TRUE S1: none
+   feats: cos_e2=0.94, cos_name=1.00, cos_addr=0.74, b_gap2_cos_e2=0.37, n_tset=100.00, a_tset=93.67, num_conflict=0.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.50, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.998 distractor record (no true S1)
+   PRED S1: Direct Talon L.L.C. | 1 San Marcos Place, Unit 320, Chandler, AZ
+   RECORD : Direct Talon LLC | 4 SAN MARCOS PL, CHANDLER, AZ
+   TRUE S1: none
+   feats: cos_e2=0.93, cos_name=1.00, cos_addr=0.83, b_gap2_cos_e2=0.31, n_tset=100.00, a_tset=95.65, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.998 distractor record (no true S1)
+   PRED S1: Ariella P. Sanchez, DMD | 8165 Starting Gate Lane, Cincinnati, OH
+   RECORD : Ariella P. Sánchez, DMD LLC | 816 Starting Gate Ln, Cincinnati, Ohio
+   TRUE S1: none
+   feats: cos_e2=0.92, cos_name=1.00, cos_addr=0.73, b_gap2_cos_e2=0.31, n_tset=100.00, a_tset=98.41, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=3.00, state_cmp=1.00
+[India] p=0.998 distractor record (no true S1)
+   PRED S1: Ganga Hospitality | Daultani House, No.4, Sector 3, Khandu Colony, Banswara, Rajasthan
+   RECORD : Shri Ganga Hospitality Public Limited | #4 Daultani House, Banswara, RJ
+   TRUE S1: none
+   feats: cos_e2=0.91, cos_name=1.00, cos_addr=0.78, b_gap2_cos_e2=0.22, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=2.00, state_cmp=1.00
+[India] p=0.998 distractor record (no true S1)
+   PRED S1: Sbm Infratech Limited | No. 97 Lig, 3Rd Stage, Kuvempunagar, Mysuru, Mysore, Karnataka
+   RECORD : Novievo | # 0097, Lig 3Rd Stage Kuvempu Nagar, Mysuru, Mysore, KA
+   TRUE S1: none
+   feats: cos_e2=0.63, cos_name=0.00, cos_addr=0.74, b_gap2_cos_e2=0.14, n_tset=20.00, a_tset=98.80, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.998 distractor record (no true S1)
+   PRED S1: Foot & Ankle Heartland Center | 86 Alpheus Road, Boston, MA
+   RECORD : Foot & Ankle Heartland Cneer Co | 86 Alpheus Road, Roslindale, Massachusetts
+   TRUE S1: none
+   feats: cos_e2=0.94, cos_name=0.78, cos_addr=0.75, b_gap2_cos_e2=0.34, n_tset=95.08, a_tset=78.79, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=5.00, state_cmp=1.00
+[India] p=0.998 distractor record (no true S1)
+   PRED S1: Ganga Packers Private Limited | R/496/1, Midc, Rabale Ttc Industrial Area, Rabale, Navi Mumbai, Thane, Maharashtra
+   RECORD : Ganga Packers Limited | R/496, Thane, Navi Mumbai, MH
+   TRUE S1: none
+   feats: cos_e2=0.87, cos_name=1.00, cos_addr=0.54, b_gap2_cos_e2=0.30, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.50, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.998 distractor record (no true S1)
+   PRED S1: Patriot Ministries | 97 Belle Street, Unit 3L, Springfield, MA
+   RECORD : Inc Patriot Ministries | 97 BELLE STREET, SPRINGFIELD, MA
+   TRUE S1: none
+   feats: cos_e2=0.96, cos_name=1.00, cos_addr=0.96, b_gap2_cos_e2=0.29, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=39.00, state_cmp=1.00
+[India] p=0.998 distractor record (no true S1)
+   PRED S1: Royal (india) Ltd | C/O Arbind Kumar, Sahatpur, Rupaipur, Kadipur, Sultanpur, Uttar Pradesh
+   RECORD : Royal India Ltd | No ##93 C/o Arbind Kumar, Sahatpur, Rupaipur, Kadipur, UP
+   TRUE S1: none
+   feats: cos_e2=0.96, cos_name=1.00, cos_addr=0.92, b_gap2_cos_e2=0.23, n_tset=100.00, a_tset=96.55, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=733.00, state_cmp=1.00
+[India] p=0.997 distractor record (no true S1) | empty address
+   PRED S1: UW Finance Private Limited | C-17/3 Wazirpur Industrial Area, New Delhi, North West, Delhi
+   RECORD : UW Finance Private Límited | 
+   TRUE S1: none
+   feats: cos_e2=0.80, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.14, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=0.00
+[US] p=0.997 distractor record (no true S1)
+   PRED S1: JYL Pinnacle Center | 4216 Z, Emden, MO
+   RECORD : Umbrairifaye | 4216 Z, EMDEN, MO
+   TRUE S1: none
+   feats: cos_e2=0.64, cos_name=0.00, cos_addr=1.00, b_gap2_cos_e2=0.12, n_tset=25.81, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=4.00, state_cmp=1.00
+[India] p=0.997 distractor record (no true S1)
+   PRED S1: Jay Media Pvt Ltd | 7Th Flr, 701, Dhukka Chambers, Opp Poddar Road, Nr Gurudwara, Malad East, Mumbai, Maharashtra
+   RECORD : जय मीडिया प्राइवेट लिमिटेड | 7TH FLOOR, MUMBAI, Maharashtra
+   TRUE S1: none
+   feats: cos_e2=0.80, cos_name=1.00, cos_addr=0.25, b_gap2_cos_e2=0.08, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=55.00, state_cmp=1.00
+[US] p=0.997 distractor record (no true S1) | empty address
+   PRED S1: Ashlie Barnes, MD | 6450 Double Eagle Drive, Unit 315, Woodridge, IL
+   RECORD : Ashlie Barnes, | 
+   TRUE S1: none
+   feats: cos_e2=0.75, cos_name=0.92, cos_addr=0.00, b_gap2_cos_e2=0.16, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=0.00
+[India] p=0.997 distractor record (no true S1)
+   PRED S1: Shree Solutions Limited | Samruddhi Residency Diamond A/903 Zadeshwar Bharuch, Bharuch, Gujarat
+   RECORD : LÍMITED SHREE BUSINESS | SAMRUDDHI RESIDENCY DIAMOND A/903 ZADESHWAR BHARUCH, BHARUCH, Gujarat
+   TRUE S1: none
+   feats: cos_e2=0.68, cos_name=0.00, cos_addr=1.00, b_gap2_cos_e2=0.10, n_tset=33.33, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=215.00, state_cmp=1.00
+[India] p=0.997 distractor record (no true S1) | empty address
+   PRED S1: Arjay Marketing Private Limited | 87/A, F.No.G-1, Sri Devi Nilayam, Vengalrao Nagar, Hyderabad, Telangana
+   RECORD : arjay marketing private limited | 
+   TRUE S1: none
+   feats: cos_e2=0.74, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.06, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=0.00
+[India] p=0.997 record belongs to another S1
+   PRED S1: Kolkata Counsellors Private Limited | 5, J. B. S Halden Avenue, Silver Arcade, Kolkata, Kolkata, Howrah, West Bengal
+   RECORD : Ectojax | Silver Arcade, Kolkata, WB
+   TRUE S1: India Star Goods Private Limited | Howrah, West Bengal, Shop No. G - 4, 5, J .B.S. Halden Avenue, Silver Arcade, Kolkata
+   feats: cos_e2=0.63, cos_name=0.00, cos_addr=0.59, b_gap2_cos_e2=0.12, n_tset=23.08, a_tset=100.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.997 distractor record (no true S1) | empty address
+   PRED S1: Prock Precision Telecommunication Inc | 1141 Water Street, Mount Vernon, IN
+   RECORD : Prock Precision Telecommunication Incorporated | 
+   TRUE S1: none
+   feats: cos_e2=0.81, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.07, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=0.00
+[US] p=0.997 distractor record (no true S1) | empty address
+   PRED S1: Select Auto Repair, LLC | 6335 Brown Road, Unit 1092, Mesa, AZ
+   RECORD : Select Auto LLC Repair | 
+   TRUE S1: none
+   feats: cos_e2=0.74, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.07, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=0.00
+[India] p=0.997 distractor record (no true S1)
+   PRED S1: Deepak Ai | Rp 1697, Rang Puri Exten Nh.8, Near Telco Service Station, New Delhi, Delhi
+   RECORD : deepak industries | Delhi, RP 1697, RANG PURI EXTEN NH.8, NEAR TELCO SERVICE STATION, NEW DELHI
+   TRUE S1: none
+   feats: cos_e2=0.87, cos_name=0.70, cos_addr=1.00, b_gap2_cos_e2=0.18, n_tset=80.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.997 distractor record (no true S1)
+   PRED S1: Dental United Care Associates L.L.C. | 1200 Autumnwood Circle, Unit 1200, Columbia, TN
+   RECORD : Dental United Care Associates (LLC) | Unit 1200, Columbia, #1209 Autumnwood Circle, Tennessee
+   TRUE S1: none
+   feats: cos_e2=0.95, cos_name=1.00, cos_addr=0.86, b_gap2_cos_e2=0.38, n_tset=100.00, a_tset=100.00, num_conflict=1.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=8.00, state_cmp=1.00
+[US] p=0.997 distractor record (no true S1)
+   PRED S1: Vaix LLC | 12400 Norwich Street, Fort Smith, AR
+   RECORD : Co Vaix | 12400 Norwich Street, FT Mith, Arkansas
+   TRUE S1: none
+   feats: cos_e2=0.94, cos_name=1.00, cos_addr=0.75, b_gap2_cos_e2=0.30, n_tset=100.00, a_tset=97.96, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=17.00, state_cmp=1.00
+[India] p=0.997 distractor record (no true S1)
+   PRED S1: Sonu Seva Samiti | Chamunda Society At Kherva Ta Mehsana Village Kherva District Mahesana, Gujarat, Mahesana
+   RECORD : Sonu Seva Samiti Limited | Chamunda Society At Kherva Ta Mehsana Village Kherva District Mahesana, Mahesana, ગુજરાત
+   TRUE S1: none
+   feats: cos_e2=1.00, cos_name=1.00, cos_addr=1.00, b_gap2_cos_e2=0.46, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.997 distractor record (no true S1)
+   PRED S1: Meex Equity Partners Co | 10726 600, Poland, IN
+   RECORD : Meex Equity Partners | 0010729 600, POLAND, IN
+   TRUE S1: none
+   feats: cos_e2=0.87, cos_name=1.00, cos_addr=0.51, b_gap2_cos_e2=0.18, n_tset=100.00, a_tset=93.75, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=2.00, state_cmp=1.00
+[US] p=0.997 distractor record (no true S1)
+   PRED S1: Ear Nose & Throat Care Inc. | 5804 Bayport Landing Court, Chesterfield County, VA
+   RECORD : EAR NOSE AND TROT CARE INC | 5807 BAYPORT LANDING COURT, MIDLOTHIAN, VA
+   TRUE S1: none
+   feats: cos_e2=0.82, cos_name=0.63, cos_addr=0.52, b_gap2_cos_e2=0.24, n_tset=95.65, a_tset=69.33, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=441.00, state_cmp=1.00
+[US] p=0.997 distractor record (no true S1)
+   PRED S1: Mountain Investments LLC | 364 Third Avenue, West Haven, CT
+   RECORD : Mountain Investments  Corp | 364 3st Ave, West Haven, Connecticut
+   TRUE S1: none
+   feats: cos_e2=1.00, cos_name=1.00, cos_addr=1.00, b_gap2_cos_e2=0.36, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=17.00, state_cmp=1.00
+[US] p=0.997 record belongs to another S1
+   PRED S1: Orthopedic Center Inc. | 3615 Diane Lane, Lebanon, IN
+   RECORD : QUOSOLVEO | 3615 DIANE LN, LEBANON, IN
+   TRUE S1: Gomez Pioneer Co | 3617 Diane Lane, Lebanon, IN
+   feats: cos_e2=0.75, cos_name=0.00, cos_addr=1.00, b_gap2_cos_e2=0.11, n_tset=23.08, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=976.00, state_cmp=1.00
+[US] p=0.997 distractor record (no true S1)
+   PRED S1: Messerly, Macri and Tan of El Paso County | 12190 Atacama Lane, El Paso County, TX
+   RECORD : >> Messerly, Macri & Tan of Paso County Partners Services | 12190 Atacama Lane, El Paso County, Texas
+   TRUE S1: none
+   feats: cos_e2=0.95, cos_name=0.89, cos_addr=1.00, b_gap2_cos_e2=0.43, n_tset=96.10, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.997 distractor record (no true S1)
+   PRED S1: Regional Investment Networks P.C. | 6695 St Rte 15, Unit 22, Bryan, OH
+   RECORD : Regional Investment Investment Networks Llc | 6695 St Rte 15, Unit 22, Bryan, Ohio
+   TRUE S1: none
+   feats: cos_e2=0.99, cos_name=0.97, cos_addr=1.00, b_gap2_cos_e2=0.41, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.997 record belongs to another S1
+   PRED S1: Southern Producer Private Limited | Pl No. B-103, Madhura Nagar, Khairatabad, Hyderabad, Telangana
+   RECORD : సదర్న్ ప్రొడ్యూసర్ ప్రైవేట్ లిమిటెడ్ | 103, Hyderabad, TG
+   TRUE S1: Southern Producer Private Limited | Flat No. 103, Navya Residency, Prashanthi Hills, Meerpet, Hyderabad, Rangareddy, Telangana
+   feats: cos_e2=0.81, cos_name=1.00, cos_addr=0.50, b_gap2_cos_e2=0.04, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=67.00, state_cmp=1.00
+[US] p=0.997 distractor record (no true S1)
+   PRED S1: Youth Ministries III Inc | 928 Eighth Street, Newark, DE
+   RECORD : Youth Ministries IJII  Inc | Delaware, 928 8th Sreet, Newark CDP
+   TRUE S1: none
+   feats: cos_e2=0.84, cos_name=0.63, cos_addr=0.73, b_gap2_cos_e2=0.20, n_tset=97.56, a_tset=88.89, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=8.00, state_cmp=1.00
+[US] p=0.997 distractor record (no true S1)
+   PRED S1: Grace Lutheran Church | 8 Head Of The Bay Road, Unit 12, Bourne, MA
+   RECORD : L.L.C. Grace Lutheran Church | 12 HEAD OF THE BAY RD, BOURNE, MA
+   TRUE S1: none
+   feats: cos_e2=0.97, cos_name=1.00, cos_addr=0.96, b_gap2_cos_e2=0.31, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=52.00, state_cmp=1.00
+[India] p=0.997 distractor record (no true S1)
+   PRED S1: Sree Software Pvt Ltd | A-301, Divyapunj Shalom, Opp. Parmeshwar-3 Chandkheda, Ahmedabad, Gujarat
+   RECORD : Shree Sotfware Private Limited | E/3, Ahmedabad Hq Region, Ahmedabad, GJ
+   TRUE S1: none
+   feats: cos_e2=0.74, cos_name=0.18, cos_addr=0.19, b_gap2_cos_e2=0.07, n_tset=87.50, a_tset=68.75, num_conflict=0.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=262.00, state_cmp=1.00
+[India] p=0.997 record belongs to another S1
+   PRED S1: Shivam Power Private Limited | Jalna, Madhukar Achyutrao C/O Satona Bk., Jalna, Maharashtra, Tal.-Partur
+   RECORD : शिवम पावर प्राइवेट लिमिटेड | C/o, Jalna, Jalana, MH
+   TRUE S1: Shivam Power Private Limited | C/O, Bhagwan Laxman Shinde, H. No. 293, Pokhari, Tq. Jafrabad, Jalna, Maharashtra
+   feats: cos_e2=0.82, cos_name=1.00, cos_addr=0.26, b_gap2_cos_e2=0.08, n_tset=100.00, a_tset=72.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=55.00, state_cmp=1.00
+[India] p=0.997 record belongs to another S1 | empty address
+   PRED S1: New Delhi Lifescience Pvt Ltd | 511 Hotel Le Meridien Commercial Tower Windsor Place Janpath, New Delhi, Central Delhi, Delhi
+   RECORD : New Delhi Lifescience Private (Limited) | 
+   TRUE S1: New Delhi Lifesciences Private Limited | House No. 280, Floor Ground, Block - B Pkt - 9, Sec - 5, Rohini, New Delhi, North West, Delhi
+   feats: cos_e2=0.78, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.00, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=0.00
+[US] p=0.997 distractor record (no true S1)
+   PRED S1: Gilligan P. Yeater, DDS, M.D., P.C. | 301 Minocqua Street, Park Forest, IL
+   RECORD : Gilligan P. Yeater, P.C. M.D., DDR, | IL, 301 MINOCQUA STREET, PARK FOREST
+   TRUE S1: none
+   feats: cos_e2=0.97, cos_name=0.85, cos_addr=1.00, b_gap2_cos_e2=0.34, n_tset=95.83, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.997 distractor record (no true S1)
+   PRED S1: Coleman South Inc. | 6599 1026, Coleman, TX
+   RECORD : Coleman Inc South | 6610-A 1026, COLEMMAN, TX
+   TRUE S1: none
+   feats: cos_e2=0.87, cos_name=1.00, cos_addr=0.24, b_gap2_cos_e2=0.24, n_tset=100.00, a_tset=80.00, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=2.00, state_cmp=1.00
+[US] p=0.997 distractor record (no true S1)
+   PRED S1: Candi's Nails Inc. | 4486 Village Green Drive, Birmingham, AL
+   RECORD : Inc Candi's Nails | 448 VILLAGE GREEN DR, BIRMINGHAM, AL
+   TRUE S1: none
+   feats: cos_e2=0.86, cos_name=1.00, cos_addr=0.56, b_gap2_cos_e2=0.22, n_tset=100.00, a_tset=98.18, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=5.00, state_cmp=1.00
+[India] p=0.997 distractor record (no true S1)
+   PRED S1: Marc Bridge Private Limited | 40/4 Strand Road, Kolkata, Calcutta, West Bengal
+   RECORD : marc bridge limited | 40/ STRAND ROAD, KOLKATA, West Bengal
+   TRUE S1: none
+   feats: cos_e2=0.94, cos_name=1.00, cos_addr=0.85, b_gap2_cos_e2=0.38, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.50, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.997 distractor record (no true S1)
+   PRED S1: Pic (india) | 36, Strand Road 1St Floor, Kolkata, Howrah, West Bengal
+   RECORD : Pic India | 40, Strand Road 1St Floor, Howrah, Kolkata, পশ্চিমবঙ্গ
+   TRUE S1: none
+   feats: cos_e2=0.88, cos_name=1.00, cos_addr=0.80, b_gap2_cos_e2=0.24, n_tset=100.00, a_tset=94.55, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.997 distractor record (no true S1)
+   PRED S1: Midwest Infrastructure LLC | 1086 25th Place, Pleasantville, IA
+   RECORD : Midwest-Infrastructure  Corp | 1086 25th Pl, Pleasant Grove, Iowa
+   TRUE S1: none
+   feats: cos_e2=0.94, cos_name=1.00, cos_addr=0.62, b_gap2_cos_e2=0.37, n_tset=100.00, a_tset=77.55, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=2.00, state_cmp=1.00
+[India] p=0.997 record belongs to another S1
+   PRED S1: Shakti Services Limited | A Wing, Flat No 1305, Sanskar New Neelam Nagar Phase Ii, Gavandpada Road, Mulund East, Mumbai, Mumbai City, Maharashtra
+   RECORD : Shakti Pvt Ltd Services | A Wing, Mumbai Ii, Mumbai, MH
+   TRUE S1: Shakti Technology Pvt Ltd | A Wing, Avion 1601, Aaradhya One Earth, Naidu Colony, Pantnagar, Ghatkopar (East), Mumbai, Mumbai, Maharashtra
+   feats: cos_e2=0.79, cos_name=1.00, cos_addr=0.42, b_gap2_cos_e2=0.11, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.50, key_n_s1=587.00, state_cmp=1.00
+[India] p=0.997 distractor record (no true S1)
+   PRED S1: South Energy Private Limited | Flat No. 303, 2Nd Floor, Siri Annex Apts, No. 05-6, Vasanthapura Main Road, Bangalore South, Bangalore, Karnataka
+   RECORD : South Energy Private Limited | P1 303, Bangalore, ಕರ್ನಾಟಕ
+   TRUE S1: none
+   feats: cos_e2=0.76, cos_name=1.00, cos_addr=0.41, b_gap2_cos_e2=0.03, n_tset=100.00, a_tset=92.86, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=48.00, state_cmp=1.00
+[India] p=0.997 distractor record (no true S1) | empty address
+   PRED S1: Maa Medical Centre Private Limited | C/O Niranjan Prasad, Ward-6, Jamunia, Sahodara, Bettiah, West Champaran, Bihar
+   RECORD : Maa Medical Centre Private Ltd | 
+   TRUE S1: none
+   feats: cos_e2=0.72, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.12, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=0.00
+[US] p=0.997 distractor record (no true S1) | empty address
+   PRED S1: Vision Trusted Medicine | AZ, Unit 253, Phoenix, 4700 16th Street
+   RECORD : Vision Trusted  Medicine | 
+   TRUE S1: none
+   feats: cos_e2=0.75, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.08, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=0.00
+[US] p=0.997 distractor record (no true S1)
+   PRED S1: Lucky Sutton Blue Stores LLC | 5151 150, Salt Lake City, UT
+   RECORD : Le Sutton Blúe Stores LLC | Salt Lake City, Utah, 5151 150
+   TRUE S1: none
+   feats: cos_e2=0.89, cos_name=0.79, cos_addr=1.00, b_gap2_cos_e2=0.36, n_tset=92.31, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.996 distractor record (no true S1)
+   PRED S1: Eye Prairie Specialists | 10 Jackson Avenue, Unit Unit 13, Greenburgh, NY
+   RECORD : Eye Prairie Specialists Ltd | 13 JACKSNO AVE, GREENBURGH, NY
+   TRUE S1: none
+   feats: cos_e2=0.90, cos_name=1.00, cos_addr=0.55, b_gap2_cos_e2=0.26, n_tset=100.00, a_tset=90.57, num_conflict=0.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=4.00, state_cmp=1.00
+[US] p=0.996 distractor record (no true S1) | empty address
+   PRED S1: Clyex Banco LLC | 41 Candle Tree Lane, Swanton, MD
+   RECORD : Clyex Banco | 
+   TRUE S1: none
+   feats: cos_e2=0.73, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.14, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=0.00
+[US] p=0.996 distractor record (no true S1)
+   PRED S1: Bates Coastal Impact Inc. | 123 Grantham Place, New Bern, NC
+   RECORD : INC BATES COASTAL IMPACT | NC, NEW BERN, 13 Grantham Pl
+   TRUE S1: none
+   feats: cos_e2=0.94, cos_name=1.00, cos_addr=0.87, b_gap2_cos_e2=0.20, n_tset=100.00, a_tset=97.87, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=8.00, state_cmp=1.00
+[India] p=0.996 distractor record (no true S1)
+   PRED S1: United Consultants Private Limited | H.No.7, Khasra No 372, Gf, Asola, Near Shanidham Road, South West Delhi, Delhi
+   RECORD : यूनाइटेड कंसल्टेंट्स प्राइवेट लिमिटेड | D-07, DELHI, SOUTH WEST DELHI, Delhi
+   TRUE S1: none
+   feats: cos_e2=0.81, cos_name=1.00, cos_addr=0.31, b_gap2_cos_e2=0.12, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=61.00, state_cmp=1.00
+[India] p=0.996 distractor record (no true S1)
+   PRED S1: Zeal Group of Companies | No. 109, Ferns Meadows, Avalahalli Main Road, Bileshivale, Bangalore North, Bangalore, Karnataka
+   RECORD : ZEAL GROUP OF COMPANIES | NO. 130, FERNS MEADOWS, AVALAHALLI MAIN ROAD, BILESHIVALE, BANGALORE NORTH, ಕರ್ನಾಟಕ
+   TRUE S1: none
+   feats: cos_e2=0.93, cos_name=1.00, cos_addr=0.90, b_gap2_cos_e2=0.33, n_tset=100.00, a_tset=98.28, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.996 distractor record (no true S1)
+   PRED S1: Adiana's Supreme Group | Dale, 205 Wallace Street, IN
+   RECORD : Adiana's Supreme Group | 209 WALLACE SAINT, DALE, IN
+   TRUE S1: none
+   feats: cos_e2=0.91, cos_name=1.00, cos_addr=0.76, b_gap2_cos_e2=0.24, n_tset=100.00, a_tset=94.74, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.996 distractor record (no true S1)
+   PRED S1: Corrales Light of Lake Villa L.L.C. | Lake Villa, 25480 Lehmann Boulevard, IL
+   RECORD : corrales light of lake villa llc | 2548 Lehmann Boulevard, Lake Villa, Illinois
+   TRUE S1: none
+   feats: cos_e2=0.95, cos_name=1.00, cos_addr=0.62, b_gap2_cos_e2=0.33, n_tset=100.00, a_tset=98.25, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.996 distractor record (no true S1)
+   PRED S1: You Gems Pvt Ltd | First Floor, 970 Sector-21D, Faridabad, Haryana
+   RECORD : You Partners Pvt  Ltd | NO 2 FIRST FLOOR, 970 SECTOR-21D, Haryana
+   TRUE S1: none
+   feats: cos_e2=0.75, cos_name=0.56, cos_addr=0.83, b_gap2_cos_e2=0.22, n_tset=60.00, a_tset=88.89, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.996 distractor record (no true S1)
+   PRED S1: Ss Management Private Limited | 12/10, 3Rd Floor, Vasavi Flats, Sarojini Street, T.Nagar, Chennai, Tamil Nadu
+   RECORD : எஸ்எஸ் மேனேஜ்மெண்ட் பிரைவேட் லிமிடெட் | DOOR NO 12, CHENNAI, Tamil Nadu
+   TRUE S1: none
+   feats: cos_e2=0.79, cos_name=1.00, cos_addr=0.37, b_gap2_cos_e2=0.06, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=56.00, state_cmp=1.00
+[US] p=0.996 distractor record (no true S1)
+   PRED S1: 653-654 South Owners Corp | 51155 Stratford Court, Elkhart, IN
+   RECORD : 653-654 South South Owners Corp | Elkhart, Indiana, 51157. Stratford Court
+   TRUE S1: none
+   feats: cos_e2=0.95, cos_name=0.99, cos_addr=0.45, b_gap2_cos_e2=0.39, n_tset=100.00, a_tset=96.15, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.996 distractor record (no true S1)
+   PRED S1: Sun Systems Private Limited | 15-B, Cycle Market, Jhandewalan, New Delhi, Delhi
+   RECORD : सन सिस्टम्स प्राइवेट लिमिटेड | 25/15, SOUTH DELHI, NEW DELHI, Delhi
+   TRUE S1: none
+   feats: cos_e2=0.77, cos_name=1.00, cos_addr=0.22, b_gap2_cos_e2=0.12, n_tset=100.00, a_tset=57.14, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=679.00, state_cmp=1.00
+[US] p=0.996 distractor record (no true S1) | empty address
+   PRED S1: Blystone, Smith & Rivas Acadia | 2504 Anderson Lakes Drive, Opelika, AL
+   RECORD : Blystone, Smith & Rivas Acadia [LLC] | 
+   TRUE S1: none
+   feats: cos_e2=0.73, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.21, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=0.00
+[India] p=0.996 distractor record (no true S1) | empty address
+   PRED S1: Marketing Cleta Services Limited | No.1D, Padmavathi Puram, 2Nd Cross Street, Gandhi Nagar, Tirupur, Coimbatore, Tamil Nadu
+   RECORD : Marketing Cleta Services Ltd. | 
+   TRUE S1: none
+   feats: cos_e2=0.71, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.09, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=0.00
+[US] p=0.996 distractor record (no true S1)
+   PRED S1: Sabol Group | 6201 Bedstone Drive, Greensboro, NC
+   RECORD : Sabol Group | ##6206 BEDSTONE DR, GREENSBORO, NC
+   TRUE S1: none
+   feats: cos_e2=0.90, cos_name=1.00, cos_addr=0.71, b_gap2_cos_e2=0.35, n_tset=100.00, a_tset=96.30, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.996 distractor record (no true S1)
+   PRED S1: Maryanne W. Prim, CPA, DDS PC | 618 3rd Street, Port Clinton, OH
+   RECORD : Maryanne W. Piiiim, CPAV, DDS PC | #618 3RD ST, PORT CLINTON, OH
+   TRUE S1: none
+   feats: cos_e2=0.92, cos_name=0.62, cos_addr=1.00, b_gap2_cos_e2=0.32, n_tset=89.80, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=3.00, state_cmp=1.00
+[US] p=0.996 distractor record (no true S1)
+   PRED S1: Ann Heitman, DDS | 14229 9N, Unit Unit 1, Jay, NY
+   RECORD : *** Ann DRS Heitman, | 14229 9N, JAY, NY
+   TRUE S1: none
+   feats: cos_e2=0.88, cos_name=0.78, cos_addr=0.98, b_gap2_cos_e2=0.27, n_tset=93.33, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=3.00, state_cmp=1.00
+[US] p=0.996 distractor record (no true S1)
+   PRED S1: Jordain Schoenberger, DDS | 2516 Lake Roesiger Road, Snohomish, WA
+   RECORD : SCHOENBERGER,, JORDAIN DD | 2516 LAKE ROESIGER RD, N/A, SNOHOMISH, WA
+   TRUE S1: none
+   feats: cos_e2=0.94, cos_name=0.90, cos_addr=1.00, b_gap2_cos_e2=0.46, n_tset=97.87, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.996 distractor record (no true S1)
+   PRED S1: Rapid Range | 3120 Delaware Avenue, Klamath Falls, OR
+   RECORD : Rapid Range Co | 3120 DELAWARE AVE, PO BOX 3385, ALTAMONT, OR
+   TRUE S1: none
+   feats: cos_e2=0.93, cos_name=1.00, cos_addr=0.53, b_gap2_cos_e2=0.22, n_tset=100.00, a_tset=68.00, num_conflict=1.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=2.00, state_cmp=1.00
+[India] p=0.996 distractor record (no true S1) | empty address
+   PRED S1: Kalindi (India) Information Private Limited | 962/29, Laxman Vihar Phase 1 Railway Road, Gurgaon, Haryana
+   RECORD : Kalindi  (India) Information Private Limited | 
+   TRUE S1: none
+   feats: cos_e2=0.79, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.06, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=0.00
+[India] p=0.996 record belongs to another S1
+   PRED S1: Block Eu Pitampura Service Private Limited | 45 A, Block Eu Pitampura, New Delhi, Delhi
+   RECORD : #blockeu | 0045 A, <NULL>, Block Eu Pitampura, New Delhi, DL
+   TRUE S1: Block Eu Pitampura Plus Ltd | 45 A, Block Eu Pitampura, New Delhi, Delhi
+   feats: cos_e2=0.84, cos_name=0.34, cos_addr=1.00, b_gap2_cos_e2=0.05, n_tset=42.42, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.996 distractor record (no true S1)
+   PRED S1: Nabco Housing Private Limited | 7-1-24/2/D, Flat No. C2, Greendale, Ameerpet, Hyderabad, Hyderabad, Telangana
+   RECORD : Limited Nabco Housing | 7-1-24/7/D, N/A, Hyderabad, TG
+   TRUE S1: none
+   feats: cos_e2=0.90, cos_name=1.00, cos_addr=0.57, b_gap2_cos_e2=0.13, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.50, key_n_s1=11.00, state_cmp=1.00
+[India] p=0.996 distractor record (no true S1)
+   PRED S1: Prashi College Private Limited | 2-164/1, Inkollu, Gollapalem Colony, Chirala, Prakasam, Andhra Pradesh
+   RECORD : Prashi College Limited | 2-164/2, Chirala, Prakasam, AP
+   TRUE S1: none
+   feats: cos_e2=0.87, cos_name=1.00, cos_addr=0.65, b_gap2_cos_e2=0.28, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.50, key_n_s1=2.00, state_cmp=1.00
+[US] p=0.996 distractor record (no true S1)
+   PRED S1: Mouser's Complete Retail P.C. | 3170 Rocky Road, Gamewell, NC
+   RECORD : mouser's complete partners p.c. | 317 Rocky Rd, Gamewell, North Carolina
+   TRUE S1: none
+   feats: cos_e2=0.80, cos_name=0.77, cos_addr=0.72, b_gap2_cos_e2=0.17, n_tset=82.05, a_tset=97.67, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=2.00, state_cmp=1.00
+[US] p=0.996 record belongs to another S1
+   PRED S1: Gertie Shannon Chimera Partners | 218 S Rolff St, Davenport, IA
+   RECORD : Soldrex | 218 SOUTH RLOFF SAINT, DAVENPORT, IA
+   TRUE S1: Signature Epr LLC | 218 S Rolff St, Davenport, IA
+   feats: cos_e2=0.63, cos_name=0.00, cos_addr=0.43, b_gap2_cos_e2=0.06, n_tset=10.53, a_tset=95.45, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=6.00, state_cmp=1.00
+[US] p=0.996 distractor record (no true S1)
+   PRED S1: Liia Group | 21 Oriole Drive, Chicopee, MA
+   RECORD : Liia Group | 22 ORIOLE DRIVE, CHICOPEE, MA
+   TRUE S1: none
+   feats: cos_e2=0.92, cos_name=1.00, cos_addr=0.85, b_gap2_cos_e2=0.36, n_tset=100.00, a_tset=95.24, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=18.00, state_cmp=1.00
+[India] p=0.996 record belongs to another S1
+   PRED S1: Red Producer Private Limited | Bangalore, Karnataka, No.1, Bangalore., 2Nd Floor, Dinnur Main Road
+   RECORD : RED PRODUCER LIMITED | No .1/2, Bangalore, KA
+   TRUE S1: Red Producer Limited | Bangalore, Panchayath Layout, 8Th Cross Near Ig Circle, J P Nagar 1St Phase, Karnataka, No .1/2, Bangalore
+   feats: cos_e2=0.82, cos_name=1.00, cos_addr=0.55, b_gap2_cos_e2=0.08, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.50, key_n_s1=60.00, state_cmp=1.00
+[US] p=0.996 distractor record (no true S1)
+   PRED S1: Smart Consumer Consultants, Inc. | 1 Huntington Avenue, Unit 604, Boston, MA
+   RECORD : SMART CÓNSUMER CONSULTANTS, INC | MA, 4 HUNTINGTON AVE, BOSTON
+   TRUE S1: none
+   feats: cos_e2=0.89, cos_name=1.00, cos_addr=0.73, b_gap2_cos_e2=0.29, n_tset=100.00, a_tset=95.45, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.996 distractor record (no true S1) | empty address
+   PRED S1: Whitney Institute of Technology | 3941 Piedmont Road, Fort Worth, TX
+   RECORD : Whitney  Institute of Technology Inc. | 
+   TRUE S1: none
+   feats: cos_e2=0.82, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.16, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=0.00
+[US] p=0.996 record belongs to another S1
+   PRED S1: Lumis Disciplined LLC | 8018 Hampton Colony Court, Chesterfield County, VA
+   RECORD : -- Avifaye | 8018 Hampton Station Court, Chesterfield County, Virginia
+   TRUE S1: Murphy & Mahoney Healthy Center | 8030 Hampton Station Court, Chesterfield County, VA
+   feats: cos_e2=0.62, cos_name=0.00, cos_addr=0.90, b_gap2_cos_e2=0.01, n_tset=16.67, a_tset=90.41, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.996 distractor record (no true S1)
+   PRED S1: Pediatric Dental First Associates LLC | 13516 196th Avenue, Bonney Lake, WA
+   RECORD : Pediatric  Dental Fifth Associates LLC | WA, 13516-13518 196TH AVE, BONNEY LAKE
+   TRUE S1: none
+   feats: cos_e2=0.80, cos_name=0.73, cos_addr=0.83, b_gap2_cos_e2=0.23, n_tset=93.94, a_tset=100.00, num_conflict=1.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=8.00, state_cmp=1.00
+[US] p=0.996 distractor record (no true S1) | empty address
+   PRED S1: Certified Apparel Worldwide Company | 10700 Marfa Way, Mckinney, TX
+   RECORD : Certified Apparel  Worldwide | 
+   TRUE S1: none
+   feats: cos_e2=0.79, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.14, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=0.00
+[India] p=0.996 distractor record (no true S1)
+   PRED S1: Shift India Private Limited | 11/5, South Tukoganj The Horijan Building, Indore, Madhya Pradesh
+   RECORD : Shri Shift India Limited | 11/, SOUTH TUKOGANJ THE HORIJAN BUILDING, INDORE, Madhya Pradesh
+   TRUE S1: none
+   feats: cos_e2=0.98, cos_name=1.00, cos_addr=0.97, b_gap2_cos_e2=0.39, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.50, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.996 distractor record (no true S1) | empty address
+   PRED S1: Al Anand Hospitality Private Limited | Bangalore, Ahuja Chambers Kumara Krupa Road, Bangalore, 1/108, Karnataka
+   RECORD : Al Anand Hospitality Private Limited | 
+   TRUE S1: none
+   feats: cos_e2=0.73, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.01, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=0.00
+[US] p=0.996 distractor record (no true S1)
+   PRED S1: Murray States L.L.C. | 59 Old Landing Way, Unit A, Boston, MA
+   RECORD : LLC Murray States | 70 Old Landing Way, # A, Chralestown CITY, Massachusetts
+   TRUE S1: none
+   feats: cos_e2=0.88, cos_name=1.00, cos_addr=0.48, b_gap2_cos_e2=0.27, n_tset=100.00, a_tset=77.27, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.996 distractor record (no true S1)
+   PRED S1: Confiance Chaitanya Pvt Ltd | 120/2, Shikargarh Palace Shikargarh, Jodhpur, Rajasthan
+   RECORD : Confiance-Chaitanya Limited | Jodhpur, राजस्थान, Shikargarh Palace Shikargarh, Jodhpur, 120
+   TRUE S1: none
+   feats: cos_e2=0.99, cos_name=1.00, cos_addr=0.98, b_gap2_cos_e2=0.43, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.50, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.996 distractor record (no true S1)
+   PRED S1: Brueggeman's Engineering | 12701 Excelsior Lane, Keller, TX
+   RECORD : Brueggeman's  Services | 1270 Excelsior Ln, Keller, Texas
+   TRUE S1: none
+   feats: cos_e2=0.83, cos_name=0.78, cos_addr=0.62, b_gap2_cos_e2=0.34, n_tset=70.97, a_tset=97.96, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.996 distractor record (no true S1)
+   PRED S1: Zephis Fox | 212 Quincy Street, Albuquerque, NM
+   RECORD : ZEFIS FOX | 212 QUINCY ST, ALBUQUERQUE, NM
+   TRUE S1: none
+   feats: cos_e2=0.90, cos_name=0.47, cos_addr=1.00, b_gap2_cos_e2=0.32, n_tset=84.21, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.996 record belongs to another S1
+   PRED S1: New Town Business Limited | 36Al Sanjeeva Garden, Action Area I New Town Dhapa, New Town, North 24 Parganas, West Bengal
+   RECORD : New Town | Unit No. Dk1104, New Town, North 24 Parganas, WB
+   TRUE S1: New Town Nirmiti | Unit No. Dk1104, 11Th Floor, The Galeria, Premise No. 02-0124, Newtown, New Town, North 24 Parganas, West Bengal
+   feats: cos_e2=0.84, cos_name=1.00, cos_addr=0.44, b_gap2_cos_e2=0.09, n_tset=100.00, a_tset=88.89, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.996 distractor record (no true S1)
+   PRED S1: Clear Digital Worldwide Inc. | 10524 1/2 River Plantation Drive, TX, Austin
+   RECORD : Clear Dígital Worldwide Inc | 10524 1/15 River Plantation Drive, Austin, Texas
+   TRUE S1: none
+   feats: cos_e2=0.97, cos_name=1.00, cos_addr=0.94, b_gap2_cos_e2=0.39, n_tset=100.00, a_tset=97.14, num_conflict=1.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.996 distractor record (no true S1)
+   PRED S1: Prakritik & Sons Limited | No. 1, Tamil Nadu, 2Nd Floor, Sunkurama Chetty Street, Mannady, Chennai, Tondiarpet Fort St George
+   RECORD : Pvt Prakritik & Sons Ltd | N/A, Tamil Nadu, TONDIARPET FORT ST GEORGE, DOOR NO 2
+   TRUE S1: none
+   feats: cos_e2=0.87, cos_name=1.00, cos_addr=0.59, b_gap2_cos_e2=0.25, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.50, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.996 record belongs to another S1
+   PRED S1: Infinity It Private Limited | A-76, First Floor, New Delhi, South Delhi, Delhi
+   RECORD : Orbiveo | G-76/A. FIRST FLOOR, DELHI, SOUTH DELHI, Delhi
+   TRUE S1: Green Legal Pvt Ltd | G-76/A First Floor, Road No. 13, Saheen Bagh, Abul Fazal Part - 11 Jamia Nagar, Delhi, South Delhi, Delhi
+   feats: cos_e2=0.71, cos_name=0.00, cos_addr=1.00, b_gap2_cos_e2=0.13, n_tset=11.11, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.996 distractor record (no true S1)
+   PRED S1: Sky Hospitality Private Limited | No. 41, Second Floor, 3Rd Main J.C. Industrial Estate, Kanakapura Road, Bangalore, Karnataka
+   RECORD : સ્કાય હોસ્પિટાલિટી પ્રાઇવેટ લિમિટેડ | Door No 41/2, G.i.d.c. Estate, Ahmedabad, GJ
+   TRUE S1: none
+   feats: cos_e2=0.79, cos_name=1.00, cos_addr=0.34, b_gap2_cos_e2=0.13, n_tset=100.00, a_tset=59.46, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=50.00, state_cmp=-1.00
+[India] p=0.996 distractor record (no true S1)
+   PRED S1: Acp Solutions Pvt Ltd | Krm Centre, 9Th Floor, East Wing, No.2, Harrington Road, Chetpet, Chennai, Tamil Nadu
+   RECORD : Acp Solutions Limited | Door No 9 Krm Centre, 9Th Floor, East Wing, No.2, Harrington Road, Chetpet, Chennai, தமிழ்நாடு
+   TRUE S1: none
+   feats: cos_e2=1.00, cos_name=1.00, cos_addr=0.99, b_gap2_cos_e2=0.46, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.50, key_n_s1=2.00, state_cmp=1.00
+[US] p=0.996 distractor record (no true S1) | empty address
+   PRED S1: Beacon Cargo Alliance Inc | 244 Mountain View Avenue, Newburgh, NY
+   RECORD : Beacon Cárgo Alliance | 
+   TRUE S1: none
+   feats: cos_e2=0.75, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.11, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=0.00
+[India] p=0.996 distractor record (no true S1)
+   PRED S1: Ace Business Limited | House No. 506, Bhoi Galli, Kallam, Latur, Maharashtra
+   RECORD : एस बिजनेस Limited | FLAT NO- A-506, PUNE, Maharashtra
+   TRUE S1: none
+   feats: cos_e2=0.80, cos_name=1.00, cos_addr=0.31, b_gap2_cos_e2=0.07, n_tset=100.00, a_tset=54.55, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=627.00, state_cmp=1.00
+[US] p=0.996 distractor record (no true S1)
+   PRED S1: Oncology Complete Clinic Inc. | Bettendorf, 1002 Chateau Knl, Bldg CHALET 10, IA
+   RECORD : Oncology Complete Clinic Inc | 1004 Chateau Knl, Building Chalet 10, Bettendorf, Iowa
+   TRUE S1: none
+   feats: cos_e2=0.95, cos_name=1.00, cos_addr=0.88, b_gap2_cos_e2=0.36, n_tset=100.00, a_tset=97.30, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=2.00, state_cmp=1.00
+[India] p=0.996 distractor record (no true S1)
+   PRED S1: TD India Pvt Ltd | Shrirang Society, 3/122/15 Thane West, Thane, Maharashtra
+   RECORD : TD Services Pvt Ltd | NO 92 SHRIRANG SOCIETY, 3/122/15 THANE WEST, Maharashtra
+   TRUE S1: none
+   feats: cos_e2=0.86, cos_name=0.67, cos_addr=0.91, b_gap2_cos_e2=0.24, n_tset=42.11, a_tset=100.00, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=14.00, state_cmp=1.00
+[US] p=0.995 distractor record (no true S1)
+   PRED S1: Interfaith Committee III L.L.C. | 1077 Largo Road, Unit 417, Upper Marlboro, MD
+   RECORD : INTERFAITH COIIMTTE III LLC | 1079 LARGO ROAD, UPPER MARLBORO, MD
+   TRUE S1: none
+   feats: cos_e2=0.85, cos_name=0.57, cos_addr=0.66, b_gap2_cos_e2=0.22, n_tset=89.36, a_tset=90.20, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=12.00, state_cmp=1.00
+[US] p=0.995 distractor record (no true S1) | empty address
+   PRED S1: Urology Clear Clinic | 6210 6th Avenue, Unit E-3, Spokane Valley, WA
+   RECORD : THE UROLOGY CLEAR CLINIC | 
+   TRUE S1: none
+   feats: cos_e2=0.75, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.07, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=0.00
+[US] p=0.995 distractor record (no true S1)
+   PRED S1: Rhona's Partners | 421 Austin Avenue, Lebanon, TN
+   RECORD : Rhona's Partners | 430 AUSTIN AVENUE, LEBANON, TN
+   TRUE S1: none
+   feats: cos_e2=0.86, cos_name=1.00, cos_addr=0.63, b_gap2_cos_e2=0.34, n_tset=100.00, a_tset=90.91, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.995 distractor record (no true S1)
+   PRED S1: Param Exhibition Private Limited | 2454, Sector-1 Huda, Rohtak, Haryana
+   RECORD : Param Exhibition Holdings Private | Sector-1 Huda, Rohtak, HR
+   TRUE S1: none
+   feats: cos_e2=0.87, cos_name=0.91, cos_addr=0.75, b_gap2_cos_e2=0.21, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.50, key_n_s1=3.00, state_cmp=1.00
+[India] p=0.995 record belongs to another S1
+   PRED S1: Creative Producer Private Limited | Flat No 401, C Wing, Firdaus Baug, S V Road, Jogeshwari(West), Mumbai, Mumbai City, Maharashtra
+   RECORD : Creative Pvt Ltd Center | 401, Mumbai City, महाराष्ट्र
+   TRUE S1: Creative Management Pvt Ltd | Mumbai City, Mumbai, Maharashtra, Bl No.1/E, Oshiwara, Patliputra Nagar Nr.Oshiwara Bus Depot, Jogeshwari (W), 401
+   feats: cos_e2=0.76, cos_name=0.62, cos_addr=0.44, b_gap2_cos_e2=0.09, n_tset=75.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=64.00, state_cmp=1.00
+[India] p=0.995 distractor record (no true S1)
+   PRED S1: Solutions Rajput It | Ramanagara, Plot No. 53 & 54, Ramanagar, Karnataka, Vishnodevi Industrial Layout
+   RECORD : Solutions Rajput It Limited | ###54 & 54, Ramanagara, KA
+   TRUE S1: none
+   feats: cos_e2=0.86, cos_name=1.00, cos_addr=0.51, b_gap2_cos_e2=0.31, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.995 distractor record (no true S1)
+   PRED S1: DQ Sumitomo Inc. | 25237 Fm 1847, Rio Hondo, TX
+   RECORD : DQ Sumitomo Inc | 5242 Fm 1847, Rio Hondo, Texas
+   TRUE S1: none
+   feats: cos_e2=0.96, cos_name=1.00, cos_addr=0.67, b_gap2_cos_e2=0.35, n_tset=100.00, a_tset=88.89, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.995 distractor record (no true S1) | empty address
+   PRED S1: Martin's Signs LLC | 11216 Sixth Street, Bridgeville, DE
+   RECORD : MARTIN'S [SÍGNS] | 
+   TRUE S1: none
+   feats: cos_e2=0.85, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.18, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=0.00
+[US] p=0.995 distractor record (no true S1)
+   PRED S1: Safe Digital Services Inc. | 19112 Hempstone Avenue, Poolesville, MD
+   RECORD : Safe Dligal  Services Inc | 19116 Hempstone Ave, Poolesville, Maryland
+   TRUE S1: none
+   feats: cos_e2=0.80, cos_name=0.51, cos_addr=0.67, b_gap2_cos_e2=0.21, n_tset=92.68, a_tset=96.77, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=9.00, state_cmp=1.00
+[India] p=0.995 record belongs to another S1
+   PRED S1: Block Eu Pitampura Service Private Limited | 45 A, Block Eu Pitampura, New Delhi, Delhi
+   RECORD : Block Eu Pitampura | H.no 0045 A, <NULL>, Block Eu Pitampura, New Delhi, DL
+   TRUE S1: Block Eu Pitampura Finance LLP | 45 A, Block Eu Pitampura, New Delhi, Delhi
+   feats: cos_e2=0.99, cos_name=0.93, cos_addr=1.00, b_gap2_cos_e2=0.06, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.995 distractor record (no true S1)
+   PRED S1: Balaji Healthcare Private Limited | House No.1268, Sector-17, Faridabad, Faridabad, Haryana
+   RECORD : बालाजी हेल्थकेयर प्राइवेट लिमिटेड | Haryana, PLOT NO- 17, FARIDABAD
+   TRUE S1: none
+   feats: cos_e2=0.92, cos_name=1.00, cos_addr=0.75, b_gap2_cos_e2=0.10, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=59.00, state_cmp=1.00
+[US] p=0.995 distractor record (no true S1)
+   PRED S1: Celoex Group | 975 N Foothills Drive, Unit A-136, Spokane, WA
+   RECORD : Celoex Group | 976 North Foothills Dr, SPOKANE, WA
+   TRUE S1: none
+   feats: cos_e2=0.88, cos_name=1.00, cos_addr=0.61, b_gap2_cos_e2=0.31, n_tset=100.00, a_tset=90.91, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=2.00, state_cmp=1.00
+[US] p=0.995 distractor record (no true S1)
+   PRED S1: Brunswick City, Township Of | OH, Brunswick City, 1881 Pearl Road
+   RECORD : Brunswick City, | 388 PEARL ROAD, BRUNSWICK CITY, OH
+   TRUE S1: none
+   feats: cos_e2=0.72, cos_name=0.80, cos_addr=0.62, b_gap2_cos_e2=0.11, n_tset=100.00, a_tset=94.55, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.995 distractor record (no true S1)
+   PRED S1: Prosperity Makers Private Limited | 26-5/1A, Andhra Pradesh, Visakhapatnam, Mallayyapalem, Madhurawada, Visakhapatnam (Rural), Vishakhapatnam
+   RECORD : Prosperity Makers Limited | 26-5/5A, Visakhapatnam, Vishakhapatnam, AP
+   TRUE S1: none
+   feats: cos_e2=0.87, cos_name=1.00, cos_addr=0.57, b_gap2_cos_e2=0.33, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.50, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.995 distractor record (no true S1)
+   PRED S1: LA Preferred Alternative Center | 975 Ross Road, Holly Grove-belle Eagle, TN
+   RECORD : IA Preferred Center Alternative | Holly Grove-Belle Eagle, Tennessee, 975 Ross Road
+   TRUE S1: none
+   feats: cos_e2=0.88, cos_name=0.83, cos_addr=1.00, b_gap2_cos_e2=0.33, n_tset=96.77, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=10.00, state_cmp=1.00
+[India] p=0.995 record belongs to another S1
+   PRED S1: New Delhi Services Pvt. Ltd. | Delhi, New Delhi, South West Delhi, Office No. 814-815 West End Mall District Centre Janak Puri New Delhi -58
+   RECORD : #NEWDELHI | OFFICE NO. 814-815 WEST END MALL DISTRICT CENTRE JANAK PURI NEW DELHI -58, NEW DELHI, N/A, Delhi
+   TRUE S1: New Delhi Technology Pvt Ltd | Office No. 814-815 West End Mall District Centre Janak Puri New Delhi -58, New Delhi, South West Delhi, Delhi
+   feats: cos_e2=0.92, cos_name=0.43, cos_addr=0.99, b_gap2_cos_e2=0.09, n_tset=38.46, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=793.00, state_cmp=1.00
+[US] p=0.995 distractor record (no true S1)
+   PRED S1: Qumoex Holdings | 3103 Connor Way, Lake Saint Louis, MO
+   RECORD : Qumoex Holdings | 3105 Connor Way, Lake Saint Louis, Missouri
+   TRUE S1: none
+   feats: cos_e2=0.87, cos_name=1.00, cos_addr=0.69, b_gap2_cos_e2=0.31, n_tset=100.00, a_tset=96.55, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=2.00, state_cmp=1.00
+[US] p=0.995 distractor record (no true S1)
+   PRED S1: Farmington Veterans Network | 4400 Sandia Court, Farmington, NM
+   RECORD : Farmington Viozeta Network | New Mexico, Farmington, #4400 Sandia Court
+   TRUE S1: none
+   feats: cos_e2=0.87, cos_name=0.66, cos_addr=1.00, b_gap2_cos_e2=0.37, n_tset=86.79, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.995 distractor record (no true S1)
+   PRED S1: Lusa Benfield, MD Associates | VA, Fairfax County, 13208 Kilby Landing Court
+   RECORD : LUSA BENFIELD, MDB ASSOCIATES | 13208-13212 KILBY LANDING CT, FAIRFAX COUNTY, VA
+   TRUE S1: none
+   feats: cos_e2=0.92, cos_name=0.84, cos_addr=0.87, b_gap2_cos_e2=0.43, n_tset=98.18, a_tset=100.00, num_conflict=1.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=2.00, state_cmp=1.00
+[US] p=0.995 record belongs to another S1
+   PRED S1: Anvil Origin LLC | 410 Federal Ferry Circle, Vonore, TN
+   RECORD : Novisol | Federal Ferry Cir, Vonore, Tennessee
+   TRUE S1: Armstrong & Yates, Inc | TN, 203 Federal Ferry Circle, Vonore
+   feats: cos_e2=0.69, cos_name=0.00, cos_addr=0.91, b_gap2_cos_e2=0.16, n_tset=42.11, a_tset=100.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=3.00, state_cmp=1.00
+[India] p=0.995 distractor record (no true S1)
+   PRED S1: Good Finance | 48B/39, New Street, Chidambaram, Cuddalore, Tamil Nadu
+   RECORD : Shri Good Finance LLP | 48B/48, NEW STREET, CHIDAMBARAM, Tamil Nadu
+   TRUE S1: none
+   feats: cos_e2=0.90, cos_name=1.00, cos_addr=0.76, b_gap2_cos_e2=0.22, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=65.00, state_cmp=1.00
+[US] p=0.995 distractor record (no true S1)
+   PRED S1: Pediatric Dental Optimal Clinic Inc. | 122 Laredo Avenue, Fl 0, Saint Louis, MO
+   RECORD : Pediatric Dgtl Optimal Clinic Inc | 129 Laredo Ave, Saint Louis, Missouri
+   TRUE S1: none
+   feats: cos_e2=0.82, cos_name=0.70, cos_addr=0.70, b_gap2_cos_e2=0.19, n_tset=93.33, a_tset=91.67, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=8.00, state_cmp=1.00
+[US] p=0.995 record belongs to another S1 | empty address
+   PRED S1: Fresh Bio LLC | 404 Blue Sage Drive, Leander, TX
+   RECORD : Fresh Bío! LLC | 
+   TRUE S1: Fresh Bistro! LLC | Richmond City, 1419 Greystone Avenue, VA
+   feats: cos_e2=0.73, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.03, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=0.00
+[India] p=0.995 record belongs to another S1 | empty address
+   PRED S1: Consulting Sekhar Resources Private Limited | Maharashtra, Pune, 397 Sinde Co-Operativehousing Society
+   RECORD : CONSULTING SEKHAR RESOURCES | 
+   TRUE S1: Consulting Sekhar Resources of Varanasi | S-8/392-A-1 Khajuri Gola, Varanasi, Uttar Pradesh
+   feats: cos_e2=0.80, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.11, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=0.00
+[US] p=0.995 distractor record (no true S1)
+   PRED S1: Surgical Care Associates of Houston | 6134 Linnhaven Drive, Houston, TX
+   RECORD : Surgical Care Associates of  Houston | 10203 KIRKASPEN DRIVE, HOUSTON, TX
+   TRUE S1: none
+   feats: cos_e2=0.83, cos_name=1.00, cos_addr=0.11, b_gap2_cos_e2=0.16, n_tset=100.00, a_tset=70.59, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.995 record belongs to another S1
+   PRED S1: Arihant Projects Limited | First Floor 1, Milan Tower, Kursi Road, Gaytripuram, Lucknow, Uttar Pradesh
+   RECORD : Arihant Praojects (Limited) | ##1, Lucknow, UP
+   TRUE S1: Arihant Projects Limited | 1, Shivaji Marg, Hewett Road, Lucknow, Uttar Pradesh
+   feats: cos_e2=0.79, cos_name=0.63, cos_addr=0.35, b_gap2_cos_e2=0.06, n_tset=96.97, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=70.00, state_cmp=1.00
+[India] p=0.995 distractor record (no true S1)
+   PRED S1: Breaking Seeds Limited | 1St Floor, 2-2-1075/20/6/1 Batakammakunta, Amberpet, Hyderabad, Telangana
+   RECORD : Private Breaking Seeds Limited | 6St Flor, 2-2-1075/20/6/1 Batakammakunta, Amberpet, Hyderabad, Boduppalap, Andhra Pradesh
+   TRUE S1: none
+   feats: cos_e2=0.97, cos_name=1.00, cos_addr=0.81, b_gap2_cos_e2=0.39, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.50, key_n_s1=1.00, state_cmp=-1.00
+[India] p=0.995 distractor record (no true S1)
+   PRED S1: Inception Tours | H No 5, Plot No 6, Greenfield Senthan Homes Lane 1, Ramachandrapuram, Medak, Telangana
+   RECORD : Inception Global | NO 5 , PLOT NO 6, GREENFIELD SENTHAN HOMES LANE 1, RAMACHANDRAPURAM, Telangana
+   TRUE S1: none
+   feats: cos_e2=0.79, cos_name=0.64, cos_addr=0.93, b_gap2_cos_e2=0.07, n_tset=75.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.995 distractor record (no true S1)
+   PRED S1: Chemicals & Sons Partners | Sector No.2, Plot No.Lc.2, Shop No. 6 Sundaram Resi, Indrayaninagar, Bhosari, Pune, Maharashtra
+   RECORD : Chemicals & Sons Limited Partners | Sector No.6, Plot No.lc.2, Shop No. 6 Sundaram Resi, Indrayaninagar, Bhosari, Pune, MH
+   TRUE S1: none
+   feats: cos_e2=1.00, cos_name=1.00, cos_addr=0.99, b_gap2_cos_e2=0.40, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=7.00, state_cmp=1.00
+[India] p=0.995 distractor record (no true S1)
+   PRED S1: Sanghavi Brothers Private Limited | Plot No. 22/4, Room No. 5, New Timber Yard Layout Mysore Road, Bangalore, Karnataka
+   RECORD : Smt Sanghavi-Brothers Limited | Bangalore, H.no 22/5., Bangalore, KA
+   TRUE S1: none
+   feats: cos_e2=0.79, cos_name=1.00, cos_addr=0.44, b_gap2_cos_e2=0.13, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.50, key_n_s1=2.00, state_cmp=1.00
+[US] p=0.995 distractor record (no true S1) | empty address
+   PRED S1: Bay Cambridge Inc. | 6314 Old Davis Road, Sims, NC
+   RECORD : Bay Cambridge-Inc. | 
+   TRUE S1: none
+   feats: cos_e2=0.76, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.06, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=0.00
+[US] p=0.995 record belongs to another S1 | empty address
+   PRED S1: Stace Crick, P.A. | 306 Lyceum Street, NY, Rochester, Unit Unit 2
+   RECORD : Stace Crick, P.A. | 
+   TRUE S1: Stace Crick, P.A. Care | 175 Main Street, Oxford, MA
+   feats: cos_e2=0.80, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.08, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=0.00
+[US] p=0.994 distractor record (no true S1)
+   PRED S1: West College, Inc. | 609 Meadow Heath Circle, Dallas, TX
+   RECORD : West Cllere, Inc | 613A Meadow Heath Cir, Dallas, Texas
+   TRUE S1: none
+   feats: cos_e2=0.81, cos_name=0.35, cos_addr=0.76, b_gap2_cos_e2=0.20, n_tset=86.96, a_tset=92.59, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=27.00, state_cmp=1.00
+[India] p=0.994 distractor record (no true S1)
+   PRED S1: Shrinath Agro (India) Public Limited | 204-A-4- Kalkaji Extn New Delhi, New Delhi, Delhi
+   RECORD : Shrinath Agro (India) Private Limited | 204-A-4- KALKAJI EXTN NEW DELHI, NEW DELHI, Delhi
+   TRUE S1: none
+   feats: cos_e2=1.00, cos_name=1.00, cos_addr=1.00, b_gap2_cos_e2=0.30, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.33, key_n_s1=11.00, state_cmp=1.00
+[India] p=0.994 distractor record (no true S1)
+   PRED S1: High Solutions Private Limited | Dwarika Bhawan, Viveknagar, Titagarh, Titagarh], North 24 Parganas, West Bengal
+   RECORD : হাই সলিউশনস প্রাইভেট লিমিটেড | Uttar Hazipur, South 24 Parganas, Parganas South, WB
+   TRUE S1: none
+   feats: cos_e2=0.76, cos_name=1.00, cos_addr=0.21, b_gap2_cos_e2=0.12, n_tset=100.00, a_tset=61.11, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=594.00, state_cmp=1.00
+[India] p=0.994 distractor record (no true S1)
+   PRED S1: Nirvi & Brothers Private Limited | No. 109, 11Th Cross, 7Th Main, Malleshwaram, Bangalore, Karnataka
+   RECORD : Dr Nirvi & Brothers Limited | #11, Bangalore, KA
+   TRUE S1: none
+   feats: cos_e2=0.80, cos_name=1.00, cos_addr=0.42, b_gap2_cos_e2=0.15, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.50, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.994 distractor record (no true S1)
+   PRED S1: Kittie Eriksson, DPM | 210 Washington Avenue, Elyria, OH
+   RECORD : Kittie Eriksson DFM | 210 Washington Avenue, Elyria, Ohio
+   TRUE S1: none
+   feats: cos_e2=0.86, cos_name=0.72, cos_addr=0.82, b_gap2_cos_e2=0.28, n_tset=94.74, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=-1.00
+[US] p=0.994 distractor record (no true S1)
+   PRED S1: Wetzel, Wilde & Evans Oaktree Inc. | WI, Village Of Merton, W278N6263 Serenity Drive
+   RECORD : Wetzel, Wilde & Evans Oaktree Inc | ##W278n6272 Serenity Dr, Village Of Merton, Wisconsin
+   TRUE S1: none
+   feats: cos_e2=0.94, cos_name=1.00, cos_addr=0.71, b_gap2_cos_e2=0.25, n_tset=100.00, a_tset=93.55, num_conflict=1.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=4.00, state_cmp=1.00
+[US] p=0.994 distractor record (no true S1)
+   PRED S1: Lesley Wilson, MD | Ridott, 8849 Weber Road, IL
+   RECORD : Lesley Wilson, MR | 8860 Weber Rd, Ridott, Illinois
+   TRUE S1: none
+   feats: cos_e2=0.88, cos_name=0.92, cos_addr=0.68, b_gap2_cos_e2=0.23, n_tset=100.00, a_tset=90.00, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=3.00, state_cmp=1.00
+[US] p=0.994 distractor record (no true S1)
+   PRED S1: Division of Education | 27-20 203 Street, Bayside, NY
+   RECORD : Division of Education Ltd | 0027-27 203 St, Bayside, New York
+   TRUE S1: none
+   feats: cos_e2=0.94, cos_name=1.00, cos_addr=0.90, b_gap2_cos_e2=0.25, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=83.00, state_cmp=1.00
+[US] p=0.994 distractor record (no true S1)
+   PRED S1: Allianora Padilla, DDS, PC | 715 Elm Street, Ponca City, OK
+   RECORD : Allianora Padilla, DXDS, PC | 715 ELM STREET, PONCA CITY, OK
+   TRUE S1: none
+   feats: cos_e2=0.92, cos_name=0.68, cos_addr=1.00, b_gap2_cos_e2=0.36, n_tset=97.67, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.994 distractor record (no true S1) | empty address
+   PRED S1: Shree Tradelink Private Limited | Indore, Madhya Pradesh, Indore, 104, Kanchan Bagh
+   RECORD : Shree Traelink Private Limited | 
+   TRUE S1: none
+   feats: cos_e2=0.70, cos_name=0.54, cos_addr=0.00, b_gap2_cos_e2=0.05, n_tset=94.12, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=1.00, key_n_s1=12.00, state_cmp=0.00
+[US] p=0.994 distractor record (no true S1)
+   PRED S1: Dermody Elite Solutions Inc | 4731 Black Oak Road, Chesterfield County, VA
+   RECORD : Dermody Elite Solutions Co | 4731 BLACK OAK ROAD, CHESTERFIELD COUNTY, VA
+   TRUE S1: none
+   feats: cos_e2=1.00, cos_name=1.00, cos_addr=1.00, b_gap2_cos_e2=0.36, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=4.00, state_cmp=1.00
+[India] p=0.994 distractor record (no true S1)
+   PRED S1: Ace Super Hospitality Private Limited | Mumbai, Maharashtra, 307 & 308, 3Rd Floor, Kuber Complex New Link Road, Opp Laxmi Industries, And, Heri (W), Office No. 306, Mumbai City
+   RECORD : Ace Super Hospitality [Limited] | Office No. 307, Mumbai, Navi Mumbai, MH
+   TRUE S1: none
+   feats: cos_e2=0.78, cos_name=1.00, cos_addr=0.36, b_gap2_cos_e2=0.19, n_tset=100.00, a_tset=87.18, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.50, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.994 distractor record (no true S1)
+   PRED S1: Petal Constech Limited | B-1221 Sangam Vihar, New Delhi, South Delhi, Delhi
+   RECORD : Dr Petal Constech Pvt Ltd | B SANGAM VIHAR, NEW DELHI, N/A, Delhi
+   TRUE S1: none
+   feats: cos_e2=0.81, cos_name=1.00, cos_addr=0.66, b_gap2_cos_e2=0.17, n_tset=100.00, a_tset=92.31, num_conflict=0.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.50, key_n_s1=4.00, state_cmp=1.00
+[US] p=0.994 distractor record (no true S1)
+   PRED S1: Piotrowski Pioneer Liberty LP | IL, 616 Atrium Drive, Unit SUITE 200, Vernon Hills
+   RECORD : Piotrowski Pioneer Ltd  Liberty | 616 Atrium Dr, Unit Suite 200, Vernon Hills, Illinois
+   TRUE S1: none
+   feats: cos_e2=1.00, cos_name=1.00, cos_addr=1.00, b_gap2_cos_e2=0.35, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=3.00, state_cmp=1.00
+[US] p=0.994 distractor record (no true S1)
+   PRED S1: Elita Ramirez Hovnanian Inc | 209 Norris Street, Burlington, WA
+   RECORD : Ramirez Ramirez Hovnanian | 209 Norris St, Burlington, Washington
+   TRUE S1: none
+   feats: cos_e2=0.91, cos_name=0.85, cos_addr=1.00, b_gap2_cos_e2=0.38, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.994 distractor record (no true S1)
+   PRED S1: B 8 Creative Mfa | 273 Monarch Drive, Unit C27, Houma, LA
+   RECORD : B 8 Creative Mfa Llc | 27 Monarch Dr, Bayou Cane, Louisiana
+   TRUE S1: none
+   feats: cos_e2=0.91, cos_name=1.00, cos_addr=0.45, b_gap2_cos_e2=0.43, n_tset=100.00, a_tset=72.34, num_conflict=0.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.994 distractor record (no true S1)
+   PRED S1: (india) Aakash International | 11/14, 1St D Main Road, 2Nd Phase, Girinagar, Bangalore, Karnataka
+   RECORD : (india) Aakash International Public Limited | 11/1, Bangalore, KA
+   TRUE S1: none
+   feats: cos_e2=0.81, cos_name=1.00, cos_addr=0.46, b_gap2_cos_e2=0.20, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=13.00, state_cmp=1.00
+[US] p=0.994 distractor record (no true S1)
+   PRED S1: Martguerita L. Lindsey, CPA | 2209 Aberdeen Drive, League City, TX
+   RECORD : Martguerita-L. Lindsey, CPAA | 2209 Aberdeen Dr, League City, Texas
+   TRUE S1: none
+   feats: cos_e2=0.96, cos_name=0.86, cos_addr=1.00, b_gap2_cos_e2=0.46, n_tset=98.04, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.994 distractor record (no true S1)
+   PRED S1: National Four Clinic | 17935 Western Pass Lane, Houston, TX
+   RECORD : National Five Clinic | 0017935 WESTERN PASS LN, HOUSTON, TX
+   TRUE S1: none
+   feats: cos_e2=0.84, cos_name=0.63, cos_addr=1.00, b_gap2_cos_e2=0.29, n_tset=85.71, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.994 distractor record (no true S1)
+   PRED S1: Supreme Suma Corporation | 999 Stonebridge Road, Village Of Kronenwetter, WI
+   RECORD : Supreme Suma Corp | 1008 STONEBRIDGE RD, VILLAGE OF KRONENWETTER, WI
+   TRUE S1: none
+   feats: cos_e2=0.92, cos_name=1.00, cos_addr=0.76, b_gap2_cos_e2=0.31, n_tset=100.00, a_tset=93.94, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=2.00, state_cmp=1.00
+[India] p=0.994 distractor record (no true S1)
+   PRED S1: Vrinda Heritage Private Limited | D No.33/2440-H, 6Th Floor, Compass Commercial Complex, Thammanam, Ernakulam, Kerala
+   RECORD : Avifaye #46354 | H.NO 33/2440 E, Kerala, ERNAKULAM
+   TRUE S1: none
+   feats: cos_e2=0.61, cos_name=0.00, cos_addr=0.56, b_gap2_cos_e2=0.11, n_tset=36.36, a_tset=94.44, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.994 record belongs to another S1
+   PRED S1: Velox Ventures | 115V, Parui Paddy Road Sakuntala Park Main Road, Kolkata, Nadia, West Bengal
+   RECORD : Sree Center | পশ্চিমবঙ্গ, 115V, PARUI PADDY ROAD SAKUNTALA PARK MAIN ROAD, KOLKATA
+   TRUE S1: Sree Academy | 115V, Parui Paddy Road Sakuntala Park Main Road, Kolkata, Nadia, West Bengal
+   feats: cos_e2=0.78, cos_name=0.05, cos_addr=0.93, b_gap2_cos_e2=0.06, n_tset=40.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=4.00, state_cmp=1.00
+[US] p=0.994 record belongs to another S1
+   PRED S1: Kelila Stengel, D.D.S. | 120 Birch Drive, Mount Pleasant, NY
+   RECORD : Halowex | #120 Birch Drive, Pleasantville, New York
+   TRUE S1: Desert Foundation | 120 Birch Drive, Mount Pleasant, NY
+   feats: cos_e2=0.67, cos_name=0.00, cos_addr=0.56, b_gap2_cos_e2=0.09, n_tset=16.00, a_tset=84.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.994 distractor record (no true S1)
+   PRED S1: Sheetz Capital Capital Inc | Newfane, NY, 1568 Clinton Street
+   RECORD : Sheetz  Capital | New York, 1573a Clinton St, Olcott
+   TRUE S1: none
+   feats: cos_e2=0.80, cos_name=0.98, cos_addr=0.21, b_gap2_cos_e2=0.28, n_tset=100.00, a_tset=62.50, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.994 distractor record (no true S1)
+   PRED S1: Caex Interests, Inc. | 954 Franklintown Road, Baltimore, MD
+   RECORD : Caex Interests,  Inc | 95 Franklintown Rd, Baltimore, Maryland
+   TRUE S1: none
+   feats: cos_e2=0.92, cos_name=1.00, cos_addr=0.77, b_gap2_cos_e2=0.39, n_tset=100.00, a_tset=98.25, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.994 distractor record (no true S1)
+   PRED S1: V E & B Eagle, Inc. | 21 Kenmar Drive, Unit 26, Billerica, MA
+   RECORD : V E & B ÉAGLE, INC | 22- KENMAR DR, BILLERICA, MA
+   TRUE S1: none
+   feats: cos_e2=0.91, cos_name=1.00, cos_addr=0.83, b_gap2_cos_e2=0.30, n_tset=100.00, a_tset=93.62, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.994 distractor record (no true S1)
+   PRED S1: Mae Miller, DMD | 1340 Roberts Road, Newport, NC
+   RECORD : Mae Miller, DFD | 134 Roberts Road, Newport, North Carolina
+   TRUE S1: none
+   feats: cos_e2=0.76, cos_name=0.55, cos_addr=0.66, b_gap2_cos_e2=0.16, n_tset=92.86, a_tset=97.78, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=3.00, state_cmp=1.00
+[India] p=0.994 record belongs to another S1
+   PRED S1: Tirupati Constructions Pvt Ltd | 52/2/1 Flor Lekh Ram Park, New Delhi, West Delhi, C/O Upendra Kr Rai Kh No., Delhi
+   RECORD : तिरुपति कंस्ट्रक्शंस प्रा. लि. | NEW DELHI, Delhi, 52
+   TRUE S1: Tirupati Constructions Pvt Ltd | 520, New Delhi, Delhi, 5Th Floor, Osian Building 12, Nehru Place
+   feats: cos_e2=0.68, cos_name=1.00, cos_addr=0.26, b_gap2_cos_e2=0.03, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=46.00, state_cmp=1.00
+[US] p=0.994 distractor record (no true S1) | empty address
+   PRED S1: Rios and Bishop LLC | 8909 La Crosse Avenue, Skokie, IL
+   RECORD : Rios and Bishop | 
+   TRUE S1: none
+   feats: cos_e2=0.80, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.20, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=0.00
+[US] p=0.994 distractor record (no true S1)
+   PRED S1: Family Ace Partners LLC | 2860 Yankee Hill Road, Mechanicsburg, OH
+   RECORD : family ace partners corp | 2860 Yankee Hill Road, Ohio, Mechanicsburg
+   TRUE S1: none
+   feats: cos_e2=1.00, cos_name=1.00, cos_addr=1.00, b_gap2_cos_e2=0.36, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=11.00, state_cmp=1.00
+[US] p=0.994 distractor record (no true S1)
+   PRED S1: Grand Illumination L.L.C. | 801 Gail Drive, Ashland, KY
+   RECORD : Grand Iltlmuisgation LLC | KY, 0812 GAIL DR, ASHLAND, null
+   TRUE S1: none
+   feats: cos_e2=0.77, cos_name=0.28, cos_addr=0.73, b_gap2_cos_e2=0.22, n_tset=84.21, a_tset=94.74, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=4.00, state_cmp=1.00
+[India] p=0.994 distractor record (no true S1) | empty address
+   PRED S1: Viral & Brothers Private Limited | Unit No.6 Basement Floor, Star Trade Centre Near Chamunda Circle, Sodawala Lane, Bor, Ivali West, Mumbai, Mumbai City, Maharashtra
+   RECORD : Smt Viral & Br0thers Private Límited | 
+   TRUE S1: none
+   feats: cos_e2=0.73, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.05, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=0.00
+[India] p=0.994 distractor record (no true S1)
+   PRED S1: Gold Raj Services | House No.-3 Manish Bhagh Colony, Indore, Madhya Pradesh
+   RECORD : Gold Raj Services Pvt Ltd | House No.-b3/10 Mainsh Bhagh Colony, Indore, MP
+   TRUE S1: none
+   feats: cos_e2=0.91, cos_name=1.00, cos_addr=0.59, b_gap2_cos_e2=0.30, n_tset=100.00, a_tset=91.53, num_conflict=1.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=3.00, state_cmp=1.00
+[India] p=0.994 distractor record (no true S1)
+   PRED S1: Nagraj Solutions Pvt Ltd | 12/469, Rayaroth Parambil Thachankunnu, Kilur Po, Payyoli, Kozhikode, Kerala
+   RECORD : Naggraj Naggraj Solutions Pvt Ltd. | #12/469, RAYAROTH PARAMBIL THACHANKUNNU, KILUR PO, PAYYOLI, Kerala
+   TRUE S1: none
+   feats: cos_e2=0.94, cos_name=0.59, cos_addr=0.97, b_gap2_cos_e2=0.34, n_tset=96.97, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=8.00, state_cmp=1.00
+[India] p=0.994 distractor record (no true S1)
+   PRED S1: Gujarat Foods Private Limited | C/O Bhimanand Siddappa Chougala Apmc, Dharwad, Dharwar, Karnataka
+   RECORD : Gujarat Foods Private Limited | Plot No. #78 C, Dharwad, Dharwar, ಕರ್ನಾಟಕ
+   TRUE S1: none
+   feats: cos_e2=0.81, cos_name=1.00, cos_addr=0.34, b_gap2_cos_e2=0.13, n_tset=100.00, a_tset=85.71, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=69.00, state_cmp=1.00
+[US] p=0.993 distractor record (no true S1)
+   PRED S1: Nedyne of Pekin, L.L.C. | 2013 State Street, Pekin, IL
+   RECORD : Nedyne of Pekin, LLC | 201 State Street, Pekin, Illinois
+   TRUE S1: none
+   feats: cos_e2=0.91, cos_name=1.00, cos_addr=0.69, b_gap2_cos_e2=0.28, n_tset=100.00, a_tset=97.30, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.993 distractor record (no true S1)
+   PRED S1: Ridge Council Inc. | 3311 Foster Avenue, Chicago, IL
+   RECORD : RIDGE COHTCL INC | 3324 FOSTER AVE, CHICAGO, IL
+   TRUE S1: none
+   feats: cos_e2=0.72, cos_name=0.33, cos_addr=0.57, b_gap2_cos_e2=0.12, n_tset=80.00, a_tset=91.30, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=40.00, state_cmp=1.00
+[India] p=0.993 record belongs to another S1
+   PRED S1: Greenview Memorial Trust Clinic | Door No 33/914/6 Chiyyaram, Thrissur, Kerala
+   RECORD : Quofayeavi | DOOR NO C-33/914/6 CHIYYARAM, THRISSUR, TIRUCHIRAPPALLI, Kerala
+   TRUE S1: Sath Foods | Door No 33/914/6 Chiyyaram, Thrissur, Kerala, Thrissur
+   feats: cos_e2=0.71, cos_name=0.00, cos_addr=0.91, b_gap2_cos_e2=0.08, n_tset=14.63, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.993 distractor record (no true S1)
+   PRED S1: Kamrup (india)private Private Limited | Ahmedabad, Ahmadabad City, Gujarat, Pramukh Residency, Nr. P.N.T. Colony, Maulik Tenament, Jodhpur, 403-A
+   RECORD : Shri Kamrup (india)private Limited | 407-A, Pramukh Residency, Nr. P.n.t. Colony, Maulik Tenament, Jodhpur, Prahaladnagar, Ahmadabad City, GJ
+   TRUE S1: none
+   feats: cos_e2=0.95, cos_name=1.00, cos_addr=0.85, b_gap2_cos_e2=0.43, n_tset=100.00, a_tset=92.05, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=3.00, state_cmp=1.00
+[US] p=0.993 distractor record (no true S1)
+   PRED S1: Hyacinthia Doyle, MD, M.D., P.C. | 288 Cumberland Drive, Tusculum, TN
+   RECORD : Hyacinthia Doyle, XD, M.D., P.C. | 288 Cumberland Drive, Greeneville, Tennessee
+   TRUE S1: none
+   feats: cos_e2=0.88, cos_name=0.87, cos_addr=0.58, b_gap2_cos_e2=0.35, n_tset=100.00, a_tset=79.07, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.993 distractor record (no true S1)
+   PRED S1: Innovative Construction Pvt Ltd | A-2/76, Site-4 Sahibabad, Ghaziabad, Uttar Pradesh
+   RECORD : इनोवेटिव कंस्ट्रक्शन प्राइवेट लिमिटेड | FLTA NO SF-4, GHAZIABAD, Uttar Pradesh
+   TRUE S1: none
+   feats: cos_e2=0.85, cos_name=1.00, cos_addr=0.31, b_gap2_cos_e2=0.11, n_tset=100.00, a_tset=81.48, num_conflict=0.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=50.00, state_cmp=1.00
+[US] p=0.993 distractor record (no true S1)
+   PRED S1: Jackson & Samaniego, Inc. | 1141 Stone Road, Unit Unit 4, Greece, NY
+   RECORD : Jackson & Sámaniego, Inc | # Unit 4, New York, 1154 Stone Road, Rochester
+   TRUE S1: none
+   feats: cos_e2=0.91, cos_name=1.00, cos_addr=0.33, b_gap2_cos_e2=0.39, n_tset=100.00, a_tset=76.60, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.993 distractor record (no true S1) | empty address
+   PRED S1: Internal Medicine Liberty Clinic L.L.C. | 11641 Midlothian Turnpike, VA, Chesterfield County
+   RECORD : Internal  Medicine Liberty Clinic LLC | 
+   TRUE S1: none
+   feats: cos_e2=0.63, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=-0.00, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=0.00
+[US] p=0.993 distractor record (no true S1)
+   PRED S1: Pediatric Dentistry Premier Health LLC | 20 Child Street, Unit 405, Cambridge, MA
+   RECORD : L.L.C. PEDIATRIC DENTISTRY CENTER | ##20 CHILD ST, CAMBRIDGE, MA
+   TRUE S1: none
+   feats: cos_e2=0.74, cos_name=0.71, cos_addr=0.90, b_gap2_cos_e2=0.03, n_tset=84.44, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=10.00, state_cmp=1.00
+[India] p=0.993 distractor record (no true S1)
+   PRED S1: Keystone (india) | Door No. 28/280, Ground Floor, Perinthalmanna, Malappuram, Malapuram, Kerala
+   RECORD : KEYSTONE (ÍNDÍA) LLP | Kerala, DOOR NO. 28/28 , GROUND FLOOR, PERINTHALMANNA, MALAPPURAM
+   TRUE S1: none
+   feats: cos_e2=0.92, cos_name=1.00, cos_addr=0.77, b_gap2_cos_e2=0.32, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=13.00, state_cmp=1.00
+[India] p=0.993 distractor record (no true S1)
+   PRED S1: Aakashdeep Clothing Ltd | Delhi, New Delhi, First Floor (Rhs) Kh No. 108, Begumpur, Plot No. 107, North West
+   RECORD : Aakashdeep Clothing Pvt Ltd | PLOT NO. 00108 , FIRST FLOOR (RHS) KH NO. 108, BEGUMPUR, NEW DELHI, Delhi
+   TRUE S1: none
+   feats: cos_e2=0.97, cos_name=1.00, cos_addr=0.90, b_gap2_cos_e2=0.26, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.50, key_n_s1=4.00, state_cmp=1.00
+[US] p=0.993 distractor record (no true S1)
+   PRED S1: Lopez's Textiles | Streetsboro, 8780 Stoneman Road, OH
+   RECORD : Co Lopez's Textiles | 878 Stoneman Rd, Streetsboro, Ohio
+   TRUE S1: none
+   feats: cos_e2=0.94, cos_name=1.00, cos_addr=0.69, b_gap2_cos_e2=0.34, n_tset=100.00, a_tset=98.18, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.993 record belongs to another S1
+   PRED S1: Jai Services Limited | Door No. 2/15-1316/2, Ground Floor Bejai Kavoor Road, Mangaluru, Karnataka, Dakshina Kannada
+   RECORD : Services Jai Limited | Dakshina Kannada, Mangaluru, #A-3, ಕರ್ನಾಟಕ
+   TRUE S1: Jai Software Limited | No 3, D.No 4-8-739/26(1), Divya Enclave 1St Floor, Mangalore, Dakshina Kannada, Karnataka
+   feats: cos_e2=0.82, cos_name=1.00, cos_addr=0.57, b_gap2_cos_e2=0.14, n_tset=100.00, a_tset=96.30, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=731.00, state_cmp=1.00
+[US] p=0.993 distractor record (no true S1)
+   PRED S1: Supreme Jpmorgan | 5045 58th Avenue, Unit 26C, Glendale, AZ
+   RECORD : Ltd. Supreme Jpmorgan | 058 58th Ave, Glendale, Arizona
+   TRUE S1: none
+   feats: cos_e2=0.88, cos_name=1.00, cos_addr=0.63, b_gap2_cos_e2=0.34, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=4.00, state_cmp=1.00
+[US] p=0.993 distractor record (no true S1) | empty address
+   PRED S1: Anchor Magna | 304 Sailway Road, Winston-salem, NC
+   RECORD : ANCHOR MAGNA | 
+   TRUE S1: none
+   feats: cos_e2=0.77, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.11, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=0.00
+[India] p=0.993 distractor record (no true S1)
+   PRED S1: Sanav (India) Facility Private Limited | Punjab, Patiala, H 5 7 Adarsh Colonyrajpura Distt Patiala, Punjab
+   RECORD : Pyranylakor | PATIALA, PUNJAB, H 5 7 ADARSH COLONYRAJPURA DISTT PATIALA, Punjab
+   TRUE S1: none
+   feats: cos_e2=0.59, cos_name=0.00, cos_addr=1.00, b_gap2_cos_e2=0.14, n_tset=25.81, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.993 distractor record (no true S1) | empty address
+   PRED S1: Taj College Private Limited | Plot No.65, Krishnapuri Colony West Marredpally, Secunderabad, Hyderabad, Telangana
+   RECORD : Taj College | 
+   TRUE S1: none
+   feats: cos_e2=0.74, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.12, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=0.00
+[India] p=0.993 distractor record (no true S1)
+   PRED S1: Sky Estate Private Limited | Trinity Tower, No 83, Topsia Road (South) 8Th Floor, Po- Gobindo Khatik, Kolkata, Kolkata, Howrah, West Bengal
+   RECORD : Sky Systems Private Limited | No 8 Trinity Toter, No 83, Topsia Road (South) 8Th Floor, Po- Gobindo Khatik, Kolkata, Kolkata, Howrah, WB
+   TRUE S1: none
+   feats: cos_e2=0.77, cos_name=0.45, cos_addr=0.87, b_gap2_cos_e2=0.06, n_tset=66.67, a_tset=98.28, num_conflict=0.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=62.00, state_cmp=1.00
+[US] p=0.993 distractor record (no true S1)
+   PRED S1: Young Health Center | 1 Redwood Boulevard, Unit Rv1, Prescott Valley, AZ
+   RECORD : Young Health Center Co | Unit Rv1, Dewye, Arizona, 5 Redwood Boulevard
+   TRUE S1: none
+   feats: cos_e2=0.87, cos_name=1.00, cos_addr=0.46, b_gap2_cos_e2=0.19, n_tset=100.00, a_tset=77.78, num_conflict=1.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=2.00, state_cmp=1.00
+[India] p=0.993 distractor record (no true S1)
+   PRED S1: Mianwali Nagar Rohtak Road Equipments Co | C-7/6, Mianwali Nagar Rohtak Road, New Delhi, Delhi
+   RECORD : Mianwali Nagar Rohtak Road  Services Co | C-7/7, Mianwali Nagar Rohtak Road, New Delhi, दिल्ली
+   TRUE S1: none
+   feats: cos_e2=0.91, cos_name=0.83, cos_addr=0.94, b_gap2_cos_e2=0.32, n_tset=86.11, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.993 distractor record (no true S1) | empty address
+   PRED S1: Empire Trg LLC | 400 Pelletier Drive, Sioux City, IA
+   RECORD : Empire LLC Trg | 
+   TRUE S1: none
+   feats: cos_e2=0.74, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.07, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=0.00
+[US] p=0.993 distractor record (no true S1)
+   PRED S1: Ninnetta Gramling, DPM | 170 8th Avenue, Hartley, IA
+   RECORD : NINNETTA GRAMLING, DLPM | 170 EIGHTH AVE, IA, HARTLEY CITY
+   TRUE S1: none
+   feats: cos_e2=0.92, cos_name=0.73, cos_addr=0.97, b_gap2_cos_e2=0.43, n_tset=97.67, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.993 record belongs to another S1
+   PRED S1: Black Consultants Private Limited | 899 - 905(Basement Right Side)Joshi Path (Lane), Karol Bagh Near Main Joshi Road, New Delhi, Delhi
+   RECORD : ब्लैक कंसल्टेंट्स प्राइवेट लिमिटेड | NO 99 - 905(BASEMENT RIGHT SIDE)JOSHI PATH (LANE), NEW DELHI, दिल्ली
+   TRUE S1: Black Consultants Private Limited Enterprises | 899 - 905(Basement Right Side)Joshi Path (Lane), Karol Bagh Near Main Joshi Road, New Delhi, Delhi
+   feats: cos_e2=0.89, cos_name=1.00, cos_addr=0.76, b_gap2_cos_e2=0.04, n_tset=100.00, a_tset=96.10, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=68.00, state_cmp=1.00
+[India] p=0.993 distractor record (no true S1)
+   PRED S1: Bediadanga Traders Pvt. Ltd. | Nature Nest 1419, Picnic Garden, Laskarhat, Bediadanga, South 24 Parganas, West Bengal
+   RECORD : bediadangaindia.com | 2Nd-Fr, South 24 Parganas, Bediadanga, WB
+   TRUE S1: none
+   feats: cos_e2=0.70, cos_name=0.56, cos_addr=0.51, b_gap2_cos_e2=0.13, n_tset=66.67, a_tset=95.65, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.993 distractor record (no true S1)
+   PRED S1: Pradip & Co Co | Navin'S, Sf No.21-26, 45, Thiruvalluvar Street Vadakkupattu, Medavakkam, Chennai, Tamil Nadu
+   RECORD : Pradip Co & Limited | 0045 NAVIN'S, SF NO.21-26, 45, THIRUVALLUVAR STREET VADAKKUPATTU, MEDAVAKKAM, தமிழ்நாடு
+   TRUE S1: none
+   feats: cos_e2=0.99, cos_name=1.00, cos_addr=0.97, b_gap2_cos_e2=0.29, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.50, key_n_s1=11.00, state_cmp=1.00
+[US] p=0.993 distractor record (no true S1)
+   PRED S1: Pediatric Dental Center Partners | 2150 Infinity Drive, Unit APT 205, Chesterfield County, VA
+   RECORD : Pediatric Dental-Center Partners | 215 Infinity Dr, Unit APT 205, Midlothian, Virginia
+   TRUE S1: none
+   feats: cos_e2=0.86, cos_name=1.00, cos_addr=0.49, b_gap2_cos_e2=0.27, n_tset=100.00, a_tset=67.65, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=966.00, state_cmp=1.00
+[US] p=0.993 distractor record (no true S1)
+   PRED S1: Platinum Financial Concepts Group | 2003 Bell Avenue, Rockford, IL
+   RECORD : Platinum Financial Concepts Group | 2004 BELL AVENUE, ROCKFORD, IL
+   TRUE S1: none
+   feats: cos_e2=0.87, cos_name=1.00, cos_addr=0.62, b_gap2_cos_e2=0.31, n_tset=100.00, a_tset=95.45, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=2.00, state_cmp=1.00
+[US] p=0.992 distractor record (no true S1)
+   PRED S1: Glypheus Elm Group | 13757 Pali Street, Lincoln County, OR
+   RECORD : GROUP GLYPHEIQUE ELM | ##13757 Pali Street, Lincoln County, Oregon
+   TRUE S1: none
+   feats: cos_e2=0.88, cos_name=0.64, cos_addr=1.00, b_gap2_cos_e2=0.34, n_tset=89.47, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.992 distractor record (no true S1)
+   PRED S1: BOP For Pvt Ltd | Flat 101, Leelawati Kunj, Khajpura, Phulwari, Patna, Bihar
+   RECORD : BP BP For-Pvt-Ltd | FLAT 101, LEELAWATI KUNJ, KHAJPURA, PHULWARI, Bihar
+   TRUE S1: none
+   feats: cos_e2=0.80, cos_name=0.21, cos_addr=0.96, b_gap2_cos_e2=0.24, n_tset=92.31, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=3.00, state_cmp=1.00
+[US] p=0.992 distractor record (no true S1)
+   PRED S1: Strawbridge Desert Blue Inc. | 560 Apple Street, Village Of Dickeyville, WI
+   RECORD : Inc Strawbridge Desert Blue | 56 Apple Street, Village Of Dickeyville, Wisconsin
+   TRUE S1: none
+   feats: cos_e2=0.87, cos_name=1.00, cos_addr=0.82, b_gap2_cos_e2=0.25, n_tset=100.00, a_tset=98.18, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=2.00, state_cmp=1.00
+[US] p=0.992 distractor record (no true S1) | empty address
+   PRED S1: Reliable Krakacquisition Corp | 110 Holts Road, Russellville, AR
+   RECORD : Reliable Krakacquisition Córp | 
+   TRUE S1: none
+   feats: cos_e2=0.76, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.05, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=0.00
+[US] p=0.992 distractor record (no true S1)
+   PRED S1: Anchor Business Group | 739 Ellwood Avenue, Dekalb, IL
+   RECORD : Anchor Business Group | 752 ELLWOOD AVE, DEKALB, IL
+   TRUE S1: none
+   feats: cos_e2=0.89, cos_name=1.00, cos_addr=0.73, b_gap2_cos_e2=0.30, n_tset=100.00, a_tset=90.91, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=332.00, state_cmp=1.00
+[US] p=0.992 distractor record (no true S1) | empty address
+   PRED S1: Oliver Animal Hospital | 5529 Coral Tide Avenue, Wilmington, NC
+   RECORD : Oliver Animal Hóspital | 
+   TRUE S1: none
+   feats: cos_e2=0.77, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.06, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=0.00
+[India] p=0.992 record belongs to another S1 | empty address
+   PRED S1: Dsp Solution Ltd | Plot No 33, G.F Road No 43 Wset Punjabi Bagh, Delhi, West Delhi, Delhi
+   RECORD : Dsp 5olution Limited | 
+   TRUE S1: Dsp Solutions Limited | C-1/107 Janak Puri, South West Delhi, Delhi
+   feats: cos_e2=0.75, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.05, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=0.00
+[US] p=0.992 distractor record (no true S1)
+   PRED S1: Physical Therapy Empire Partners Inc. | 261 O`brien Terrace, Bigfork, MT
+   RECORD : Physical Therapy Empire Partners Inc | 263 O`BRIEN TER, BIGFORK, MT
+   TRUE S1: none
+   feats: cos_e2=0.94, cos_name=1.00, cos_addr=0.82, b_gap2_cos_e2=0.30, n_tset=100.00, a_tset=95.65, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=4.00, state_cmp=1.00
+[US] p=0.992 distractor record (no true S1)
+   PRED S1: Brown & Ramirez Inc. | 10923 Thousand Oaks Drive, NC, Huntersville
+   RECORD : Brown & Raimrz Inc | 10925-D THOUSAND OAKS DR, HUNTERSVILLE, NC
+   TRUE S1: none
+   feats: cos_e2=0.79, cos_name=0.37, cos_addr=0.59, b_gap2_cos_e2=0.22, n_tset=90.91, a_tset=97.14, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.992 record belongs to another S1
+   PRED S1: Alpha Tech Private Limited | A-1/162 Ground Floor Paschim Vihar, Delhi, West Delhi, Delhi
+   RECORD : अल्फा टेक Private Limited | F-9-0/1, South Delhi, New Delhi, DL
+   TRUE S1: Alpha Tech Private Limited | F-90/1, Okhla Ind Area Phase-1, New Delhi, South Delhi, Delhi
+   feats: cos_e2=0.71, cos_name=1.00, cos_addr=0.32, b_gap2_cos_e2=0.03, n_tset=100.00, a_tset=75.00, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=49.00, state_cmp=1.00
+[US] p=0.992 distractor record (no true S1)
+   PRED S1: Scaife, Kelly P., DDS, M.D., P.C. | 30 Southwood Lane, Brighton, NY
+   RECORD : Scaife, Keblyl P., DS, M.D., P.C. | 30 SOUTHWOOD LANE, ROCHESTER, NY
+   TRUE S1: none
+   feats: cos_e2=0.79, cos_name=0.55, cos_addr=0.72, b_gap2_cos_e2=0.28, n_tset=90.48, a_tset=77.55, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.992 distractor record (no true S1)
+   PRED S1: AG Nexus Private Limited | Promoter, A-44 Hauz Khas, New Delhi, Delhi
+   RECORD : AG NÉXÚS LLP | DOOR NO 044 PROMOTER, A-44 HAUZ KHAS, Delhi
+   TRUE S1: none
+   feats: cos_e2=0.99, cos_name=1.00, cos_addr=0.98, b_gap2_cos_e2=0.37, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.25, key_n_s1=28.00, state_cmp=1.00
+[US] p=0.992 distractor record (no true S1)
+   PRED S1: Direct Environmental Holdings | 3415 36th Street, Unit 6, Phoenix, AZ
+   RECORD : Direct Environmental Holdings | 3424 36TH ST, ARCADIA, AZ
+   TRUE S1: none
+   feats: cos_e2=0.79, cos_name=1.00, cos_addr=0.21, b_gap2_cos_e2=0.23, n_tset=100.00, a_tset=52.63, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=3.00, state_cmp=1.00
+[US] p=0.992 distractor record (no true S1)
+   PRED S1: QUQ Generating Inc | 1049 Taplin Drive, City Of Wautoma, WI
+   RECORD : QUQ Generating Corp | 1049 Taplin Drive, Wautoma Township, Wisconsin
+   TRUE S1: none
+   feats: cos_e2=0.98, cos_name=1.00, cos_addr=0.96, b_gap2_cos_e2=0.28, n_tset=100.00, a_tset=91.67, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=8.00, state_cmp=1.00
+[India] p=0.992 record belongs to another S1
+   PRED S1: Balaji My Systems Private Limited | 02, Avdhoot Avenue, Opposite Narmada Collage Tavra Road, Shukal Tirth Road, Bharuch, Gujarat
+   RECORD : Lumiriflux | C-301/2, Bharuch, GJ
+   TRUE S1: Guru Consulting Pvt Ltd | C-302/2, Saykha Gidc, Village Sayakha, Taluka Vagra, Bharuch, Gujarat
+   feats: cos_e2=0.57, cos_name=0.00, cos_addr=0.24, b_gap2_cos_e2=0.03, n_tset=14.81, a_tset=81.82, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=2.00, state_cmp=1.00
+[India] p=0.992 distractor record (no true S1)
+   PRED S1: Krishna Exports | No.1161/1, B-108, 3Rd Floor, Jinan Tower, 24Thcross, 24Thmain, 2Nd Sector, Hsr Layout, Bangalore, Karnataka
+   RECORD : Krishna Exports Pvt Ltd | H.no 1161/2, Bangalore, N/A, KA
+   TRUE S1: none
+   feats: cos_e2=0.80, cos_name=1.00, cos_addr=0.45, b_gap2_cos_e2=0.08, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=57.00, state_cmp=1.00
+[India] p=0.992 distractor record (no true S1)
+   PRED S1: United Software Private Limited | Mms Chambers 4A, Kolkata, Council House Street, Kolkata, Howrah, West Bengal
+   RECORD : ইউনাইটেড সফটওয়্যার প্রাইভেট লিমিটেড | H.NO A-4, KOLKATA, HOWRAH, West Bengal
+   TRUE S1: none
+   feats: cos_e2=0.85, cos_name=1.00, cos_addr=0.51, b_gap2_cos_e2=0.10, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=59.00, state_cmp=1.00
+[India] p=0.992 distractor record (no true S1)
+   PRED S1: Eastern Business Private Limited | Ameya, 12812, Navaketan Soct., Kothrud, Pune, Maharashtra
+   RECORD : Eastern Bssinfses Limited | H.NO 7 AMEYA, 12812, NAVAKETAN SOCT., KOTHRUD, Maharashtra
+   TRUE S1: none
+   feats: cos_e2=0.88, cos_name=0.46, cos_addr=0.97, b_gap2_cos_e2=0.24, n_tset=100.00, a_tset=97.14, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.50, key_n_s1=587.00, state_cmp=1.00
+[US] p=0.992 distractor record (no true S1) | empty address
+   PRED S1: H+ Dpc Inc | 1420 221, Lanett, AL
+   RECORD : H+ Dpc [Inc] | 
+   TRUE S1: none
+   feats: cos_e2=0.79, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.11, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=0.00
+[US] p=0.992 distractor record (no true S1)
+   PRED S1: June T. Allen, CPA | 915 Hiawatha Drive, Brightwaters, NY
+   RECORD : June T. Allen,  PA Co | Brightwaters, 915 Hiawatha Dr, New York
+   TRUE S1: none
+   feats: cos_e2=0.93, cos_name=0.85, cos_addr=1.00, b_gap2_cos_e2=0.36, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.992 distractor record (no true S1) | empty address
+   PRED S1: Madhubani Agency Private Limited | H/No.-23, Snq Nagar, Molvi Tola, Madhubani, Purnea, Bihar
+   RECORD : Madhubani Agency Private | 
+   TRUE S1: none
+   feats: cos_e2=0.77, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.13, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=0.50, key_n_s1=1.00, state_cmp=0.00
+[US] p=0.992 distractor record (no true S1)
+   PRED S1: F L & U Four Inc. | 110 Wallace Trailer Park Lane, Wallace, NC
+   RECORD : F L & U Four Inc | North Carolina, Wallace, 111 Wallace Trailer Park Ln
+   TRUE S1: none
+   feats: cos_e2=0.96, cos_name=1.00, cos_addr=0.88, b_gap2_cos_e2=0.41, n_tset=100.00, a_tset=96.30, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.992 record belongs to another S1
+   PRED S1: Gurugram Solutions | Plot 838 Sector 38, Gurgaon, Gurugram, Haryana
+   RECORD : Jaxvera | Plot 838 Sector 38, Gurgaon, Gurugram, हरियाणा
+   TRUE S1: Arrow Link Corp | Plot 838 Sector 38, Opposite Huda Market, Gurugram, Gurgaon, Haryana
+   feats: cos_e2=0.62, cos_name=0.00, cos_addr=1.00, b_gap2_cos_e2=0.00, n_tset=16.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=32.00, state_cmp=1.00
+[India] p=0.992 record belongs to another S1
+   PRED S1: Red Producer Private Limited | Bangalore, Karnataka, No.1, Bangalore., 2Nd Floor, Dinnur Main Road
+   RECORD : Red Producer  Pvt Ltd | #1 H Road, Bangalore, Bengaluru, KA
+   TRUE S1: Red Producer Pvt Ltd | No 28K H Road, Bangalore, Karnataka
+   feats: cos_e2=0.83, cos_name=1.00, cos_addr=0.37, b_gap2_cos_e2=0.11, n_tset=100.00, a_tset=73.68, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=60.00, state_cmp=1.00
+[US] p=0.992 distractor record (no true S1) | empty address
+   PRED S1: Family Highland Health | 811 Fox Berry Drive, Yorktown, IN
+   RECORD : Family Highland Health Llc | 
+   TRUE S1: none
+   feats: cos_e2=0.73, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.06, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=0.00
+[India] p=0.992 distractor record (no true S1)
+   PRED S1: Maa Projects Limited | Shop No. M-6, Madhya Pradesh, Indore, Rafel Tower, 8/2 Old Palasiya, Indore
+   RECORD : माँ प्रोजेक्ट्स लिमिटेड | Indore, MP, Indore, 307/2
+   TRUE S1: none
+   feats: cos_e2=0.72, cos_name=1.00, cos_addr=0.38, b_gap2_cos_e2=0.03, n_tset=100.00, a_tset=80.00, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=57.00, state_cmp=1.00
+[India] p=0.992 distractor record (no true S1)
+   PRED S1: MB Ventures Private Limited | No.1, 4Th Avenue Harrington Road, Chennai Chetpet, Chennai, Tamil Nadu
+   RECORD : MB Limited Ventures | No #4, Chennai, TN, Chennai
+   TRUE S1: none
+   feats: cos_e2=0.83, cos_name=1.00, cos_addr=0.52, b_gap2_cos_e2=0.23, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.50, key_n_s1=18.00, state_cmp=-1.00
+[US] p=0.992 record belongs to another S1 | empty address
+   PRED S1: Mesa Project LLC | 177 Wagon Way, Galt, CA
+   RECORD : Mesa As Project (LLC) | 
+   TRUE S1: Mesa Arts Project LLC | Mesa, 1251 Mesa Drive, AZ, Unit 32
+   feats: cos_e2=0.73, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.06, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=0.00
+[US] p=0.992 distractor record (no true S1)
+   PRED S1: I X & R Premium L.L.C. | Unit UNIT 1022, Scottsdale, 16510 92nd Street, AZ
+   RECORD : I  X & R Premium LLC | 16531 92st St, # UNIT 1022, Scottsdale, Arizona
+   TRUE S1: none
+   feats: cos_e2=0.88, cos_name=1.00, cos_addr=0.55, b_gap2_cos_e2=0.39, n_tset=100.00, a_tset=96.30, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.992 record belongs to another S1
+   PRED S1: Jay Producer Private Limited | 8, 3Rd Block, 9Th Phase Jp Nagar, Bangalore South, Bangalore, Karnataka
+   RECORD : Private Jay Producer Limited | #8, Bangalore, KA, Bangalore
+   TRUE S1: Jay Producer Private Limited | No. 8, Bellary Main Road Ganganagar, Bangalore, Karnataka
+   feats: cos_e2=0.84, cos_name=1.00, cos_addr=0.54, b_gap2_cos_e2=0.04, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=59.00, state_cmp=1.00
+[India] p=0.992 distractor record (no true S1) | empty address
+   PRED S1: Sapient (india) Private Limited | C/O Sanju Devi W/O Dinesh Yadav, Bhujadi Gauri Bhujadi, Saidpur, Ghazipur, Uttar Pradesh
+   RECORD : Sapient India (India) Limited Services | 
+   TRUE S1: none
+   feats: cos_e2=0.78, cos_name=0.88, cos_addr=0.00, b_gap2_cos_e2=0.15, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=0.50, key_n_s1=6.00, state_cmp=0.00
+[India] p=0.992 distractor record (no true S1) | empty address
+   PRED S1: Psm Clinic Pvt. Ltd. | 103 B Wing P No 30 To 33, Maharashtra, Nashik, Vnp Vrindavan Apartment
+   RECORD : Psm  Clinic Pvt. Ltd. | 
+   TRUE S1: none
+   feats: cos_e2=0.74, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.07, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=0.00
+[US] p=0.992 distractor record (no true S1)
+   PRED S1: Nunez, Lynnell, CPA | 203 Main Street, Genoa, OH
+   RECORD : Nunez, Lynnell, CYPA | 203. MAIN ST, GENAO, OH
+   TRUE S1: none
+   feats: cos_e2=0.86, cos_name=0.75, cos_addr=0.35, b_gap2_cos_e2=0.33, n_tset=97.14, a_tset=94.12, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.991 distractor record (no true S1)
+   PRED S1: XZG Desert Disciplined Inc. | 618 Harborside Drive, Unit F, Joppa, MD
+   RECORD : XZG Desert Diciplnied Inc | 627 Harborside Drive, Unit F, Joppa CTY, Maryland
+   TRUE S1: none
+   feats: cos_e2=0.87, cos_name=0.69, cos_addr=0.73, b_gap2_cos_e2=0.35, n_tset=93.02, a_tset=91.30, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.991 distractor record (no true S1) | empty address
+   PRED S1: Houser and Jones | 214 Thomas Drive, Marshalltown, IA
+   RECORD : Houser and Jones Inc | 
+   TRUE S1: none
+   feats: cos_e2=0.79, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.12, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=0.00
+[India] p=0.991 record belongs to another S1 | empty address
+   PRED S1: Propitious Services | Mumbai City, 501, Mumbai, Pooja, S.V.Road, Plot No 155A, Khar (West), Maharashtra
+   RECORD : PROPITIOU5 PRIVATE LIMITED SERVICES | 
+   TRUE S1: Propitious Products Private Limited | 180, Rahaina Anshik Rathaina, Domariyaganj, Siddharth Nagar, Uttar Pradesh
+   feats: cos_e2=0.75, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.03, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=0.00
+[US] p=0.991 distractor record (no true S1)
+   PRED S1: Bright Hypnosis Group | 211 94 Street, New York, NY
+   RECORD : Bright Hypnosis Group | 222 94 St, New York
+   TRUE S1: none
+   feats: cos_e2=0.84, cos_name=1.00, cos_addr=0.52, b_gap2_cos_e2=0.18, n_tset=100.00, a_tset=77.78, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=87.00, state_cmp=1.00
+[US] p=0.991 distractor record (no true S1) | empty address
+   PRED S1: Better Otg | 20833 Five Island Ridge Road, Cook, MN
+   RECORD : Better Ótg PLLC | 
+   TRUE S1: none
+   feats: cos_e2=0.83, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.19, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=0.00
+[US] p=0.991 distractor record (no true S1)
+   PRED S1: IQ Star, L.L.C. | 841 Hedgerow Drive, State College, PA
+   RECORD : IQ Star, LLC | 84 HEDGEROW DR, STATE COLLEGE, PA
+   TRUE S1: none
+   feats: cos_e2=0.90, cos_name=1.00, cos_addr=0.78, b_gap2_cos_e2=0.41, n_tset=100.00, a_tset=98.25, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.991 distractor record (no true S1)
+   PRED S1: Tomato (India) Centre | Ghanshyam Enclave - 1203, 1204 Link Road Lalji Pada, Kandivali West, Mumbai, Maharashtra
+   RECORD : Tomato (India) Centre  Limited | Ghanshyam Enclave - 1204, MH, Kandivali West, Mumbai
+   TRUE S1: none
+   feats: cos_e2=0.88, cos_name=1.00, cos_addr=0.70, b_gap2_cos_e2=0.42, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=5.00, state_cmp=1.00
+[India] p=0.991 distractor record (no true S1)
+   PRED S1: Nest Nursing Home | 1003 Blue Horizon Off Linking Road, Malad West, Mumbai, Mumbai City, Maharashtra
+   RECORD : Shri Nest Nursing Home Private Limited | Blue Horizon Off Linking Road, Malad West, Mumbai, Malad West Orlem, MH
+   TRUE S1: none
+   feats: cos_e2=0.93, cos_name=1.00, cos_addr=0.79, b_gap2_cos_e2=0.29, n_tset=100.00, a_tset=93.33, num_conflict=0.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.991 record belongs to another S1
+   PRED S1: Hotel Solutions Private Limited | Tf 01, Swastik House, Radhavallabh Society, Ahmadabad City, Ahmedabad, Gujarat
+   RECORD : હોટેલ સોલ્યુશન્સ પ્રાઇવેટ લિમિટેડ | ##1, AHMEDABAD, AHMADABAD, Gujarat
+   TRUE S1: Hotel Solutions Private Limited | Ahmedabad, Ahmadabad City, G.F. Gyankunj Society, Opp. St. Xavier College, 1, Gujarat
+   feats: cos_e2=0.76, cos_name=1.00, cos_addr=0.44, b_gap2_cos_e2=0.03, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=581.00, state_cmp=1.00
+[US] p=0.991 distractor record (no true S1)
+   PRED S1: Custom Transit Company | 5434 Lincoln Drive, Unit 68, Paradise Valley, AZ
+   RECORD : Co. Custom Transit Company | 5441-5443 LINCOLN DR, PARADISE VALLY TOWNSHIP, AZ
+   TRUE S1: none
+   feats: cos_e2=0.84, cos_name=1.00, cos_addr=0.32, b_gap2_cos_e2=0.15, n_tset=100.00, a_tset=80.00, num_conflict=2.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=3.00, state_cmp=1.00
+[US] p=0.991 distractor record (no true S1)
+   PRED S1: Housing Association III | 907 Orchard Drive, North Manchester, IN
+   RECORD : Housing Association TIII | 907. ORCHARD DRIVE, NORTH MANCHESTER, IN
+   TRUE S1: none
+   feats: cos_e2=0.95, cos_name=0.77, cos_addr=1.00, b_gap2_cos_e2=0.29, n_tset=97.87, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=3.00, state_cmp=1.00
+[US] p=0.991 distractor record (no true S1)
+   PRED S1: Hernandez Acquisitions LLC | 2001 590, Zephyr, TX
+   RECORD : HERNANDEZ ACQUISITIONS  CO. | 2001 590, TX, ZEPHYR
+   TRUE S1: none
+   feats: cos_e2=1.00, cos_name=1.00, cos_addr=1.00, b_gap2_cos_e2=0.45, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.991 record belongs to another S1
+   PRED S1: Blue Traders Limited | #18, Thambchetty Road Cox Town, Bangalore, Bangalore, Karnataka
+   RECORD : Cénter Blue Limited | # 18, Bangalore, Bengaluru Urban, KA
+   TRUE S1: Blue Foundation Limited | # 18, Sy No - 171, Ambalipura, Bangalore, Karnataka
+   feats: cos_e2=0.71, cos_name=0.55, cos_addr=0.27, b_gap2_cos_e2=0.04, n_tset=69.57, a_tset=60.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=747.00, state_cmp=1.00
+[India] p=0.991 distractor record (no true S1)
+   PRED S1: Custom Estates Private Limited | No.1, 1St Floor, 29Th Main, 3Rd Cross, 2Nd Stage, Btm Layout, Bangalore, Karnataka
+   RECORD : Custom Estates Limited | NO.3, 1ST FLOOR, 29TH MAIN, 3RD CROSS, 2ND STAGE, BTM LAYOUT, BANGALORE, Karnataka
+   TRUE S1: none
+   feats: cos_e2=0.99, cos_name=1.00, cos_addr=0.99, b_gap2_cos_e2=0.45, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.50, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.991 distractor record (no true S1)
+   PRED S1: Cascade Council III PLLC | 318 Smith Road, Fremont, OH
+   RECORD : Cascade Council MIII PLLC | FREMONT, 318D SMITH ROAD, OH
+   TRUE S1: none
+   feats: cos_e2=0.96, cos_name=0.78, cos_addr=1.00, b_gap2_cos_e2=0.31, n_tset=97.44, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=7.00, state_cmp=1.00
+[India] p=0.991 distractor record (no true S1)
+   PRED S1: Jay Constructions | Promoter, 51 Satya Niketan, New Delhi, Delhi
+   RECORD : Jay Constructions Public Limited | 51 Satya Niketan, No A-29 Promoter, DL, Shantiniketan
+   TRUE S1: none
+   feats: cos_e2=0.93, cos_name=1.00, cos_addr=0.83, b_gap2_cos_e2=0.24, n_tset=100.00, a_tset=100.00, num_conflict=1.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=67.00, state_cmp=1.00
+[US] p=0.991 distractor record (no true S1) | empty address
+   PRED S1: Lorene W. Sinclair, M.D. | 3937 46th Avenue, Minneapolis, MN
+   RECORD : Lorene-W. Lorene-W. 5inclair, | 
+   TRUE S1: none
+   feats: cos_e2=0.72, cos_name=0.92, cos_addr=0.00, b_gap2_cos_e2=0.17, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=0.00
+[India] p=0.991 distractor record (no true S1) | empty address
+   PRED S1: Prasad Products Private Limited | Kerala, Malappuram, Malapuram, No. 14/585, Karovally Tower, Pandikkad Road, Manjeri
+   RECORD : PRASAD PRODUCTS LIMITED SERVICE | 
+   TRUE S1: none
+   feats: cos_e2=0.75, cos_name=0.89, cos_addr=0.00, b_gap2_cos_e2=0.13, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=0.50, key_n_s1=1.00, state_cmp=0.00
+[US] p=0.991 distractor record (no true S1) | empty address
+   PRED S1: Premier Aerospace Consultants Inc | 5753 Hoover Avenue, Columbine, CO
+   RECORD : Premier Aerospace Consultants | 
+   TRUE S1: none
+   feats: cos_e2=0.80, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.10, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=0.00
+[India] p=0.991 distractor record (no true S1)
+   PRED S1: Purbasha (India) City | D-14/1, G/F, Okhla Indust, Phase-1, New Delhi, Delhi, New Delhi, South Delhi, Delhi
+   RECORD : Shri Purbasha (India) City Public Limited | D-14/2, G/F, OKHLA INDUST, PHASE-1, NEW DELHI, DELHI, NEW DELHI, Delhi
+   TRUE S1: none
+   feats: cos_e2=0.98, cos_name=1.00, cos_addr=0.97, b_gap2_cos_e2=0.41, n_tset=100.00, a_tset=100.00, num_conflict=1.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.991 distractor record (no true S1)
+   PRED S1: NL Wrappers LLP | Flat No.3, Mount Prospect Chs 20 Union Park, 3Rd Road Khar West, Mumbai, Mumbai City, Maharashtra
+   RECORD : NL LLP Service | Mumbai City, Flat No.010, Mumbai, Mount Prospect Chs 20 Union Park, 3Rd Road Khar West, MH
+   TRUE S1: none
+   feats: cos_e2=0.82, cos_name=0.48, cos_addr=0.97, b_gap2_cos_e2=0.17, n_tset=47.62, a_tset=100.00, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.991 distractor record (no true S1)
+   PRED S1: Chiropractic Creative Group | DE, 31151 Victor Road, Millville
+   RECORD : Chiropractic Creative Group | Delaware, Millville, 31164 Victor Road
+   TRUE S1: none
+   feats: cos_e2=0.94, cos_name=1.00, cos_addr=0.51, b_gap2_cos_e2=0.25, n_tset=100.00, a_tset=92.00, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=8.00, state_cmp=1.00
+[US] p=0.991 distractor record (no true S1)
+   PRED S1: UFA Continental Rice Center | 215 Macarthur Drive, Unit APARTMENT 23, Midwest City, OK
+   RECORD : UWFA Continental [Center] Rice | 215- Macarthur Drive, Unit Apartment 23, Oklahoma City, Oklahoma
+   TRUE S1: none
+   feats: cos_e2=0.88, cos_name=0.58, cos_addr=0.84, b_gap2_cos_e2=0.33, n_tset=98.18, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=3.00, state_cmp=1.00
+[India] p=0.991 distractor record (no true S1)
+   PRED S1: Noida Projects Pvt Ltd | Prateek Pro-Menage, A-42 Sector 67, Noida, Gautam Buddha Nagar, Uttar Pradesh
+   RECORD : Noida Project Pvt Ltd | Uttar Pradesh, #11 PRATEEK PRO-MENAGE, A-42 SECTOR 67, NOIDA
+   TRUE S1: none
+   feats: cos_e2=0.90, cos_name=0.85, cos_addr=0.90, b_gap2_cos_e2=0.32, n_tset=96.30, a_tset=96.10, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=2.00, state_cmp=1.00
+[US] p=0.991 distractor record (no true S1)
+   PRED S1: Hanson and Devore L.L.C. | 22790 Firwood Lane, Elkhart, IN
+   RECORD : Hanson and Dvbosre LLC | 22799 FIRWOOD LANE, ELKHART, IN
+   TRUE S1: none
+   feats: cos_e2=0.77, cos_name=0.35, cos_addr=0.52, b_gap2_cos_e2=0.22, n_tset=91.43, a_tset=95.83, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.990 distractor record (no true S1)
+   PRED S1: Vision Partners Clinic | 105 Sequoia Drive, Springfield, TN
+   RECORD : Vision (Partners) | 107 Sequoia Drive, null, Springfield CDP, Tennessee
+   TRUE S1: none
+   feats: cos_e2=0.80, cos_name=0.81, cos_addr=0.71, b_gap2_cos_e2=0.10, n_tset=100.00, a_tset=91.67, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=243.00, state_cmp=1.00
+[US] p=0.990 distractor record (no true S1)
+   PRED S1: Urbina, Simone F., DDS | 2516 Carmichael Way, Unit APT 20, Carmichael, CA
+   RECORD : Urbina, Simone-F., DLS | 2516-B Carmichael Way, # APT 20, Carmichael, California
+   TRUE S1: none
+   feats: cos_e2=0.93, cos_name=0.76, cos_addr=1.00, b_gap2_cos_e2=0.35, n_tset=94.74, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=2.00, state_cmp=1.00
+[US] p=0.990 distractor record (no true S1)
+   PRED S1: Rea Perez National Stone L.L.C. | 1043 1000, American Fork, UT
+   RECORD : Rea Perez National Stone LLC | 1047 1000, AMERICAN FORK, UT
+   TRUE S1: none
+   feats: cos_e2=0.89, cos_name=1.00, cos_addr=0.69, b_gap2_cos_e2=0.42, n_tset=100.00, a_tset=95.65, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.990 distractor record (no true S1) | empty address
+   PRED S1: Hathin Trading Private Limited | C/O Rukseena, Alishair, Vill. Babupur, Hathin, Faridabad, Haryana
+   RECORD : Hathin Private Limited-Center | 
+   TRUE S1: none
+   feats: cos_e2=0.66, cos_name=0.73, cos_addr=0.00, b_gap2_cos_e2=0.11, n_tset=66.67, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=0.00
+[India] p=0.990 record belongs to another S1
+   PRED S1: New Delhi Homes Group | Innov8 Ras Vilas, Lower Ground Floor, D-1, New Delhi, South Delhi, Delhi
+   RECORD : New Delhi-Partners | Innov8 Ras Vilas Lower Ground Floor, South Delhi, New Delhi, DL
+   TRUE S1: New Delhi Peak | Innov8 Ras Vilas Lower Ground Floor, Salcon Rasvilas, D-1, Saket District Centre, New Delhi, South Delhi, Delhi
+   feats: cos_e2=0.84, cos_name=0.59, cos_addr=0.98, b_gap2_cos_e2=0.04, n_tset=66.67, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=9.00, state_cmp=1.00
+[US] p=0.990 distractor record (no true S1) | empty address
+   PRED S1: Mehl Calamos LLC | 35081 Pin Oak Drive, Accomack County, VA
+   RECORD : Mehl Calamos  LLC | 
+   TRUE S1: none
+   feats: cos_e2=0.81, cos_name=1.00, cos_addr=0.00, b_gap2_cos_e2=0.16, n_tset=100.00, a_tset=0.00, num_conflict=0.00, fnum_eq=0.00, a_empty2=1.00, legal_jac=1.00, key_n_s1=2.00, state_cmp=0.00
+[US] p=0.990 distractor record (no true S1)
+   PRED S1: Peak Defense Products Inc. | 363 Twin K Drive, Rutherfordton, NC
+   RECORD : Peak Dfhfese Products Inc | 367 TWIN K DR, RUTHERFORDTON, NC
+   TRUE S1: none
+   feats: cos_e2=0.83, cos_name=0.45, cos_addr=0.74, b_gap2_cos_e2=0.28, n_tset=90.48, a_tset=96.30, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=2.00, state_cmp=1.00
+[US] p=0.990 distractor record (no true S1)
+   PRED S1: Industrial Creative Collective Group | 2925 Madison Avenue, Murfreesboro, TN
+   RECORD : Industrial  Creative Collective Group | TN, 2928 Madison Ave, MURFREESBORO
+   TRUE S1: none
+   feats: cos_e2=0.90, cos_name=1.00, cos_addr=0.53, b_gap2_cos_e2=0.20, n_tset=100.00, a_tset=96.55, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=6.00, state_cmp=1.00
+[India] p=0.990 distractor record (no true S1)
+   PRED S1: Jindal Consulting Private Limited | Advantage Tower En-27, Sector-V Saltlake, Kolkata, Kolkata, Howrah, West Bengal
+   RECORD : >> Xylobeloyuma | En-27 Advantage Tower Saltlake Sector-v, Kolkata, Parganas North, WB
+   TRUE S1: none
+   feats: cos_e2=0.55, cos_name=0.00, cos_addr=0.91, b_gap2_cos_e2=0.01, n_tset=20.69, a_tset=92.63, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.990 record belongs to another S1
+   PRED S1: PKQ Magnesium Partners | Patparganj, Delhi, 303, Ashirwad Enclave, Plot No.-104 I.P.Extension, New Delhi
+   RECORD : Beloevodova+ | 303, Ashirwad Enclave, Plot No.-104 I.P.Extension, Patparganj, New Delhi, Delhi
+   TRUE S1: Lakshmi Industries Pvt Ltd | 303, Ashirwad Enclave, Plot No.-104 I.P.Extension, Patparganj, New Delhi, Delhi
+   feats: cos_e2=0.80, cos_name=0.00, cos_addr=1.00, b_gap2_cos_e2=0.06, n_tset=12.12, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=2.00, state_cmp=1.00
+[US] p=0.990 distractor record (no true S1)
+   PRED S1: 93 Jefferson Way Company | 6729 16th Street, Unit 21, Phoenix, AZ
+   RECORD : 93 Jefferson Way Company Co | 6731 16TH STREET, NORTHEAST, AZ
+   TRUE S1: none
+   feats: cos_e2=0.88, cos_name=1.00, cos_addr=0.16, b_gap2_cos_e2=0.31, n_tset=100.00, a_tset=58.82, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.990 distractor record (no true S1)
+   PRED S1: Trusted Equity Works Inc. | 103654 4610 Road, Sallisaw, OK
+   RECORD : Trusted Elctiy Works Inc | 103655- 4610 RD, SALLISAW CITTY, OK
+   TRUE S1: none
+   feats: cos_e2=0.79, cos_name=0.49, cos_addr=0.43, b_gap2_cos_e2=0.24, n_tset=85.00, a_tset=84.62, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.990 distractor record (no true S1)
+   PRED S1: I+ Advantage L.L.C. | 6 Centre Street, Natick, MA
+   RECORD : LLC I+ Ádvantage | 27 Centre Street, Natck, Massachusetts
+   TRUE S1: none
+   feats: cos_e2=0.86, cos_name=1.00, cos_addr=0.20, b_gap2_cos_e2=0.27, n_tset=100.00, a_tset=86.67, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.990 record belongs to another S1
+   PRED S1: IKL C&i LLP | D 62/4-C, Varanasi, Uttar Pradesh
+   RECORD : Ectofayeorbi (ID: 21866) | D-D/62/43-D-4, VARANASI, उत्तर प्रदेश
+   TRUE S1: Bharat Finance Private Limited | D-62/43-D-4, Sonia, Varanasi, Uttar Pradesh
+   feats: cos_e2=0.69, cos_name=0.00, cos_addr=0.86, b_gap2_cos_e2=0.12, n_tset=17.39, a_tset=100.00, num_conflict=1.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=2.00, state_cmp=1.00
+[US] p=0.990 distractor record (no true S1)
+   PRED S1: Ridge Midwest Championsgate, L.L.C. | 220 Indian Park Drive, Unit 2808, Murfreesboro, TN
+   RECORD : Ridge Midwest Championsgate, LLC | 227 Indian Park Dr, Murfreesboro, Tennessee
+   TRUE S1: none
+   feats: cos_e2=0.87, cos_name=1.00, cos_addr=0.59, b_gap2_cos_e2=0.22, n_tset=100.00, a_tset=93.10, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=5.00, state_cmp=1.00
+[US] p=0.990 distractor record (no true S1)
+   PRED S1: Nexon Concord Group | 1423 19th Street, Sioux City, IA
+   RECORD : CÓNCORD NEKSON GROUP | 1423 19ND STREET, SIOUX CITY, IA
+   TRUE S1: none
+   feats: cos_e2=0.86, cos_name=0.58, cos_addr=1.00, b_gap2_cos_e2=0.22, n_tset=92.31, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=7.00, state_cmp=1.00
+[US] p=0.990 distractor record (no true S1)
+   PRED S1: Jennie B. Colman, DO, PC | 551 Cooper Lane, TX, Joshua
+   RECORD : Jennie DKO, Colman, B. PC | TX, 0551 COOPER LANE, JOHSUA
+   TRUE S1: none
+   feats: cos_e2=0.82, cos_name=0.75, cos_addr=0.69, b_gap2_cos_e2=0.33, n_tset=97.30, a_tset=95.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.990 distractor record (no true S1)
+   PRED S1: Sun Management Pvt Ltd | Flat No 2B 1, 2Nd Floor, Sahid Colony Kolkata, Kolkata, Kolkata, Howrah, West Bengal
+   RECORD : Dr sun management limited | #3B. 1, 2Nd Floor, Sahid Colony Kolkata, Kolkata, Calcutta, Howrah, WB
+   TRUE S1: none
+   feats: cos_e2=0.95, cos_name=1.00, cos_addr=0.89, b_gap2_cos_e2=0.21, n_tset=100.00, a_tset=100.00, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.50, key_n_s1=54.00, state_cmp=1.00
+[India] p=0.990 distractor record (no true S1)
+   PRED S1: Technology India (India) Ltd | #25, 1St Flr, 3Rd Main, Shakambarinagar, Jp Nagar, Bangalore South, Bangalore, Karnataka
+   RECORD : TECHNOLOGY (INDIA)  (INDIA) | ##28 , 1ST FLR, 3RD MAIN, SHAKAMBARINAGAR, JP NAGAR, BANGALORE SOUTH, Karnataka
+   TRUE S1: none
+   feats: cos_e2=0.94, cos_name=1.00, cos_addr=0.90, b_gap2_cos_e2=0.32, n_tset=100.00, a_tset=97.83, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=257.00, state_cmp=1.00
+[US] p=0.990 record belongs to another S1
+   PRED S1: Anna-Diane Crespo, DO, PC | UT, Millcreek, 475 Brandt Court
+   RECORD : # 9 | 475 BRANDT COURT, MILLCREEK, UT
+   TRUE S1: # 9 SU Wen | 477 Brandt Court, Unit 20, Millcreek, UT
+   feats: cos_e2=0.65, cos_name=0.00, cos_addr=1.00, b_gap2_cos_e2=0.03, n_tset=0.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.990 distractor record (no true S1)
+   PRED S1: Regional Staffing Technologies Inc. | TX, Unit Ste 402, Mckinney, 8951 Collin Mckin Parkway
+   RECORD : Regional Staffing Technologies ((Inc)) | 8953 Collin Mckin Pkwy, # Ste 402, Mckinney CITY, Texas
+   TRUE S1: none
+   feats: cos_e2=0.93, cos_name=1.00, cos_addr=0.76, b_gap2_cos_e2=0.34, n_tset=100.00, a_tset=92.31, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=2.00, state_cmp=1.00
+[India] p=0.990 record belongs to another S1
+   PRED S1: Seven Services Pvt Ltd | Pillaiyar Koil Street, Kasbapuram, Chennai, Tamil Nadu, No. 5/93, Chennai
+   RECORD : M/s Seven Private Limited Services | 5, Chennai, TN
+   TRUE S1: Seven Agro Private Limited | Gf, Pushpanagar Mainroad, Valluvar Kottam, 5, Tamil Nadu, Chennai
+   feats: cos_e2=0.83, cos_name=1.00, cos_addr=0.40, b_gap2_cos_e2=0.11, n_tset=100.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=602.00, state_cmp=-1.00
+[US] p=0.990 distractor record (no true S1)
+   PRED S1: Business Marine Innovations Group | 54 West Avenue, Fairport, NY
+   RECORD : Business Marine Innovations Group | 59. WEST AVENUE, PMB 2144, FAIRPORT, NY
+   TRUE S1: none
+   feats: cos_e2=0.89, cos_name=1.00, cos_addr=0.59, b_gap2_cos_e2=0.24, n_tset=100.00, a_tset=90.32, num_conflict=2.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=3.00, state_cmp=1.00
+[India] p=0.990 distractor record (no true S1)
+   PRED S1: Coastal Sciences Private Limited | C/O Dr S B Triar, S K Nagar Road No.12 New Capital Patna, Patna, Bihar
+   RECORD : Coastal Limited Private Services | H.no 99 C/o Dr S B Triar, S K Nagar Road No.12 New Capital Patna, Patna, BR
+   TRUE S1: none
+   feats: cos_e2=0.82, cos_name=0.54, cos_addr=0.96, b_gap2_cos_e2=0.22, n_tset=81.25, a_tset=100.00, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.990 distractor record (no true S1)
+   PRED S1: Prompt (India) Technology Limited | C/O Arjun Kumar, C-6/4314, Rjp, Lucknow, Uttar Pradesh
+   RECORD : Prompt (India) Limited Services | Door No 21 C/o Arjun Kmar, C-6/4314, Rjp, Lucknow, UP
+   TRUE S1: none
+   feats: cos_e2=0.85, cos_name=0.71, cos_addr=0.80, b_gap2_cos_e2=0.16, n_tset=72.73, a_tset=94.29, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.990 distractor record (no true S1)
+   PRED S1: Brehm Capital Partners Partners | 291 Arlington Avenue, Village Of North Prairie, WI
+   RECORD : Brehm Capital Partners (Partners) | 302 Arlington Avenue, North Prairie, Wisconsin
+   TRUE S1: none
+   feats: cos_e2=0.81, cos_name=1.00, cos_addr=0.62, b_gap2_cos_e2=0.19, n_tset=100.00, a_tset=91.30, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.990 distractor record (no true S1)
+   PRED S1: Spr Group of Companies | Bangalore, B-602, Alembic Urban Forest A B Vajapayee Road, Kadugodi, Karnataka
+   RECORD : Shri Spr Group of Companies | B-13, Alembic Urban Forest A B Vajapayee Road, Kadugodi, Bangalore, ಕರ್ನಾಟಕ
+   TRUE S1: none
+   feats: cos_e2=0.95, cos_name=1.00, cos_addr=0.93, b_gap2_cos_e2=0.34, n_tset=100.00, a_tset=97.39, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=2.00, state_cmp=1.00
+[US] p=0.990 distractor record (no true S1)
+   PRED S1: Prime Bankshares L.L.C. | 2109 Estrada Parkway, Unit 1814, Irving, TX
+   RECORD : Prime Bankshares LLC | 2114 Estrada Pkwy, Unit 1814, Irving, Texas
+   TRUE S1: none
+   feats: cos_e2=0.93, cos_name=1.00, cos_addr=0.78, b_gap2_cos_e2=0.40, n_tset=100.00, a_tset=93.10, num_conflict=1.00, fnum_eq=0.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=1.00
+[US] p=0.989 distractor record (no true S1)
+   PRED S1: Summit Guild | 897 Redwell Lane, Apple Valley, MN
+   RECORD : Fluxiri | 897 Golding Ln, Apple Valley, Minnesota
+   TRUE S1: none
+   feats: cos_e2=0.59, cos_name=0.00, cos_addr=0.52, b_gap2_cos_e2=0.06, n_tset=31.58, a_tset=80.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=19.00, state_cmp=1.00
+[US] p=0.989 distractor record (no true S1)
+   PRED S1: Joe, Lia H., DMD | 333 County Road 1050, Lampasas, TX
+   RECORD : JOE,  LIA DD H., | 333 COUNTY ROAD 1050, LAMPASAS, TX
+   TRUE S1: none
+   feats: cos_e2=0.90, cos_name=0.72, cos_addr=1.00, b_gap2_cos_e2=0.39, n_tset=96.00, a_tset=100.00, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=0.00, key_n_s1=1.00, state_cmp=1.00
+[India] p=0.989 distractor record (no true S1)
+   PRED S1: Siliguri Zone Private Limited | M-Square, 2Nd Floor. Opp-Sachitra Hotel Sevoke Road, Siliguri, Jalpaiguri, West Bengal
+   RECORD : Siliguri Services Pvt Limited | M-square, 2Nd Floor. Opp-sachitra Sevoke Road, Darjeeling, Siliguri, WB
+   TRUE S1: none
+   feats: cos_e2=0.76, cos_name=0.68, cos_addr=0.85, b_gap2_cos_e2=0.10, n_tset=76.19, a_tset=88.42, num_conflict=0.00, fnum_eq=1.00, a_empty2=0.00, legal_jac=1.00, key_n_s1=1.00, state_cmp=1.00

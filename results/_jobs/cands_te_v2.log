@@ -1,0 +1,20 @@
+job 32668.master on master at 2026-09-25T15:11:50+05:30; PBS CUDA_VISIBLE_DEVICES=unset
+CUDA_VISIBLE_DEVICES=MIG-c747c071-8b61-5993-a5e0-33f4b566bd6e
+GPU: NVIDIA H100 PCIe MIG 3g.40gb, 39.5 GiB, SMs 46, torch 2.5.1+cu121, cuda 12.1
+[15:12:00] load lists ...
+[15:12:01] load lists done in 0.8s
+[15:12:01] union ...
+[15:12:12] union done in 11.1s
+pairs 83108284
+{
+ "name": "c2",
+ "lists": "emb/e2f:emb:5,blocking/b1:comb:3,blocking/b1:name:2,blocking/b1:addr:2",
+ "pairs": 83108284,
+ "split": "test",
+ "n_s1": 1732544,
+ "s1_with_candidates": 1732543,
+ "records_with_candidates": 9969589,
+ "cands_per_record_mean": 8.336179555646677,
+ "runtime_s": 13.834053754806519
+}
+EXIT rc=0 after 16 s at 2026-09-25T15:12:14+05:30

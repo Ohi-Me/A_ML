@@ -1,0 +1,16 @@
+{
+ "args": {
+  "name": "hard",
+  "split": "train",
+  "epochs": 2,
+  "max_train": 1500000,
+  "score_only": false
+ },
+ "pairs": 911280,
+ "val_auc_xenc": 0.6631599865464295,
+ "val_auc_stage1": 0.9069305808260204,
+ "val_ap_xenc": 0.55791777354464,
+ "val_ap_stage1": 0.8760556614409641,
+ "runtime_s": 408.98814058303833,
+ "gpu": "6.17 GiB peak"
+}

@@ -1,0 +1,32 @@
+#!/bin/bash
+#PBS -N er_xgb_c1
+#PBS -q workq
+#PBS -l select=1:ncpus=16:ngpus=1:mem=32gb
+#PBS -l walltime=01:00:00
+#PBS -j oe
+#PBS -o /tmp/ai_25901334/AmazonML/results/_jobs/xgb_c1_on_sim.out
+
+exec >> /tmp/ai_25901334/AmazonML/results/_jobs/xgb_c1_on_sim.log 2>&1
+cd /tmp/ai_25901334/AmazonML
+export PYTHONNOUSERSITE=1
+export NCPUS=16
+export OMP_NUM_THREADS=16
+export POLARS_MAX_THREADS=16
+export RAYON_NUM_THREADS=16
+export PYTHONPATH=/tmp/ai_25901334/AmazonML/pkgs:/tmp/ai_25901334/AmazonML/code
+export HF_HOME=/tmp/ai_25901334/AmazonML/hf_cache
+export TOKENIZERS_PARALLELISM=false
+source /apps/compilers/anaconda3/etc/profile.d/conda.sh
+conda activate refused_h100
+echo "job $PBS_JOBID on $(hostname) at $(date -Iseconds)"
+MIG=""
+sleep $((RANDOM % 20)); for try in $(seq 1 120); do MIG=$(python run_h100.py pick-mig 2>/dev/null) && break; MIG=""; echo "no free MIG slice yet (try $try), waiting 60 s"; sleep 60; done
+[ -z "$MIG" ] && { echo "no free MIG slice after 2 hours"; exit 3; }
+export CUDA_VISIBLE_DEVICES="$MIG"
+echo "CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES"
+trap "rm -f /tmp/ai_25901334/AmazonML/results/_jobs/mig_locks/$MIG" EXIT
+T0=$(date +%s)
+python -u code/xgboost/train_xgb.py --feats c1_train_sim19 --tag xgb_c1_on_sim19 --models_from xgb_c1 --simdrop 19
+RC=$?
+echo "EXIT rc=$RC after $(( $(date +%s) - T0 )) s at $(date -Iseconds)"
+exit $RC

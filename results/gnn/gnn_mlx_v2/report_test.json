@@ -1,0 +1,15 @@
+{
+ "args": {
+  "feats": "c2_test",
+  "s1": "test_stage1_final_v2.parquet",
+  "tag": "gnn_mlx_v2",
+  "split": "test",
+  "epochs": 4,
+  "batch_s1": 1500,
+  "lr": 0.002,
+  "extra": "xenc/ml_hardv2_test_scores.parquet:mlxenc"
+ },
+ "edges": 83108284,
+ "runtime_s": 171.27883195877075,
+ "gpu": "13.89 GiB peak"
+}

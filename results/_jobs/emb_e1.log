@@ -1,0 +1,26 @@
+job 32576.master on master at 2026-09-25T10:24:15+05:30
+CUDA_VISIBLE_DEVICES=MIG-c747c071-8b61-5993-a5e0-33f4b566bd6e
+GPU: NVIDIA H100 PCIe MIG 3g.40gb, 39.5 GiB, SMs 46, torch 2.5.1+cu121, cuda 12.1
+[10:24:20] load inputs to GPU ...
+[10:24:22] load inputs to GPU done in 2.3s
+rows 12527040 S1 2206821 3.79 GiB peak
+training pairs 6110092
+{'epoch': 0, 'loss': 0.12421835244166064, 'temp': 0.04679357168785642, 'time_s': 29.313374996185303}
+{'epoch': 1, 'loss': 0.03562520216862133, 'temp': 0.044746939066915035, 'time_s': 37.6910765171051}
+{'epoch': 2, 'loss': 0.022329198877662958, 'temp': 0.04314513896654415, 'time_s': 46.03765892982483}
+{'epoch': 3, 'loss': 0.015964965083196742, 'temp': 0.04184461927715462, 'time_s': 54.36785340309143}
+{'epoch': 4, 'loss': 0.011881148840400252, 'temp': 0.04075449716508286, 'time_s': 62.697166442871094}
+{'epoch': 5, 'loss': 0.009588037982045628, 'temp': 0.03979902453850856, 'time_s': 71.0017101764679}
+[10:25:33] embed all rows ...
+[10:25:43] embed all rows done in 9.5s
+[10:25:43] dense retrieval per country ...
+[10:27:50] dense retrieval per country done in 127.5s
+Traceback (most recent call last):
+  File "/tmp/ai_25901334/AmazonML/code/embeddings/ngram_biencoder.py", line 230, in <module>
+    main()
+  File "/tmp/ai_25901334/AmazonML/code/embeddings/ngram_biencoder.py", line 196, in main
+    idx, sc = topk_dense(Q, E1, args.k)
+  File "/tmp/ai_25901334/AmazonML/code/embeddings/ngram_biencoder.py", line 81, in topk_dense
+    S = Q[s:s + B] @ E.T
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 10.10 GiB. GPU 0 has a total capacity of 39.50 GiB of which 8.60 GiB is free. Including non-PyTorch memory, this process has 30.85 GiB memory in use. Of the allocated memory 24.93 GiB is allocated by PyTorch, and 5.57 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+EXIT rc=1 after 213 s at 2026-09-25T10:27:51+05:30

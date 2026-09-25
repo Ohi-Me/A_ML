@@ -1,0 +1,11 @@
+job 32739.master on master at 2026-09-25T18:02:19+05:30; PBS CUDA_VISIBLE_DEVICES=unset
+CUDA_VISIBLE_DEVICES=MIG-110b5c2d-162d-5ada-814c-2aef6f9812f1
+ML Challenge 2026 — submission validator
+  test dir: data/dataset/test
+  required S1 entities: 1732544
+  valid S2/S3 match IDs: 9969589
+  matching_results.tsv: 1732544 rows (98849 empty, 1633695 non-empty).
+  candidate_pairs.tsv: 1732544 rows (1 empty, 1732543 non-empty).
+
+PASS — no blocking issues found. Safe to submit.
+EXIT rc=0 after 84 s at 2026-09-25T18:03:53+05:30

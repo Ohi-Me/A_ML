@@ -1,0 +1,16 @@
+job 32773.master on master at 2026-09-25T17:37:01+05:30; PBS CUDA_VISIBLE_DEVICES=unset
+CUDA_VISIBLE_DEVICES=MIG-004fd09c-9a79-5488-bc35-54fb8de861f1
+GPU: NVIDIA H100 NVL MIG 1g.24gb, 21.6 GiB, SMs 26, torch 2.5.1+cu121, cuda 12.1
+[17:37:15] context + sibling features ...
+fusion feature gnn coverage 1.0
+fusion feature mlxenc coverage 0.014314698761512822
+[17:38:52] context + sibling features done in 96.8s
+Traceback (most recent call last):
+  File "/tmp/ai_25901334/AmazonML/code/xgboost/stage2.py", line 139, in <module>
+    main()
+  File "/tmp/ai_25901334/AmazonML/code/xgboost/stage2.py", line 73, in main
+    D = sibling_features(D, E, NAME, ADDR, n1, dev)
+  File "/tmp/ai_25901334/AmazonML/code/common/stage2_feats.py", line 51, in sibling_features
+    ce[t:t + 8_000_000] = (E[x].float() * E[y].float()).sum(1).cpu().numpy()
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 7.12 GiB. GPU 0 has a total capacity of 21.62 GiB of which 4.68 GiB is free. Process 1769605 has 470.00 MiB memory in use. Process 1843060 has 508.00 MiB memory in use. Process 2155602 has 16.84 GiB memory in use. Including non-PyTorch memory, this process has 16.92 GiB memory in use. Of the allocated memory 16.76 GiB is allocated by PyTorch, and 20.93 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+EXIT rc=1 after 101 s at 2026-09-25T17:38:54+05:30

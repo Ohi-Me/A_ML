@@ -1,0 +1,24 @@
+job 32764.master on master at 2026-09-25T17:13:10+05:30; PBS CUDA_VISIBLE_DEVICES=unset
+CUDA_VISIBLE_DEVICES=MIG-004fd09c-9a79-5488-bc35-54fb8de861f1
+GPU: NVIDIA H100 NVL MIG 1g.24gb, 21.6 GiB, SMs 26, torch 2.5.1+cu121, cuda 12.1
+[17:13:26] load edges to the GPU ...
+edges 68536196 S1 2206821 records 10320219 6.78 GiB peak
+[17:13:58] load edges to the GPU done in 32.1s
+[17:14:03] GNN A: train on 714547 S1 ...
+    epoch 0 loss 0.02090
+    epoch 1 loss 0.00468
+    epoch 2 loss 0.00417
+    epoch 3 loss 0.00399
+[17:18:40] GNN A: train on 714547 S1 done in 276.9s
+[17:18:40] GNN A: score ...
+[17:19:25] GNN A: score done in 45.4s
+[17:19:25] GNN B: train on 715452 S1 ...
+    epoch 0 loss 0.02256
+    epoch 1 loss 0.00459
+    epoch 2 loss 0.00427
+    epoch 3 loss 0.00411
+[17:24:03] GNN B: train on 715452 S1 done in 277.5s
+[17:24:03] GNN B: score ...
+[17:24:34] GNN B: score done in 31.3s
+{"args": {"feats": "c2_train_sim19", "s1": "oof_xgb_c2_blend_v2.parquet", "tag": "gnn_v2", "split": "train", "epochs": 4, "batch_s1": 1500, "lr": 0.002}, "edges": 68536196, "val_auc_gnn": 0.9999658527889117, "val_ap_gnn": 0.9996657146162381, "val_ap_stage1": 0.9993317282845148, "runtime_s": 695.6751964092255, "gpu": "12.47 GiB peak"}
+EXIT rc=0 after 698 s at 2026-09-25T17:25:03+05:30

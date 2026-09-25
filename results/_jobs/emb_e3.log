@@ -1,0 +1,117 @@
+job 32624.master on master at 2026-09-25T12:20:38+05:30
+CUDA_VISIBLE_DEVICES=MIG-2f219700-5dc6-59eb-81ef-2bb9414d3ec0
+GPU: NVIDIA H100 NVL MIG 3g.47gb, 46.4 GiB, SMs 60, torch 2.5.1+cu121, cuda 12.1
+[12:20:54] load inputs ...
+[12:21:27] load inputs done in 32.9s
+[12:21:35] fold model 0 ...
+    epoch 0 loss 0.2799
+    epoch 1 loss 0.1144
+    epoch 2 loss 0.0827
+    epoch 3 loss 0.0661
+    epoch 4 loss 0.0563
+    epoch 5 loss 0.0497
+    epoch 6 loss 0.0444
+    epoch 7 loss 0.0416
+    epoch 8 loss 0.0390
+    epoch 9 loss 0.0372
+    epoch 10 loss 0.0352
+    epoch 11 loss 0.0336
+    epoch 12 loss 0.0318
+    epoch 13 loss 0.0309
+    epoch 14 loss 0.0293
+    epoch 15 loss 0.0286
+    epoch 16 loss 0.0278
+    epoch 17 loss 0.0266
+    epoch 18 loss 0.0261
+    epoch 19 loss 0.0253
+[12:25:09] fold model 0 done in 214.2s
+[12:25:09] fold model 1 ...
+    epoch 0 loss 0.2721
+    epoch 1 loss 0.1134
+    epoch 2 loss 0.0817
+    epoch 3 loss 0.0650
+    epoch 4 loss 0.0554
+    epoch 5 loss 0.0489
+    epoch 6 loss 0.0449
+    epoch 7 loss 0.0415
+    epoch 8 loss 0.0385
+    epoch 9 loss 0.0369
+    epoch 10 loss 0.0345
+    epoch 11 loss 0.0331
+    epoch 12 loss 0.0316
+    epoch 13 loss 0.0304
+    epoch 14 loss 0.0292
+    epoch 15 loss 0.0285
+    epoch 16 loss 0.0272
+    epoch 17 loss 0.0266
+    epoch 18 loss 0.0261
+    epoch 19 loss 0.0254
+[12:28:40] fold model 1 done in 210.2s
+[12:28:40] fold model 2 ...
+    epoch 0 loss 0.2690
+    epoch 1 loss 0.1125
+    epoch 2 loss 0.0816
+    epoch 3 loss 0.0651
+    epoch 4 loss 0.0559
+    epoch 5 loss 0.0489
+    epoch 6 loss 0.0449
+    epoch 7 loss 0.0405
+    epoch 8 loss 0.0383
+    epoch 9 loss 0.0363
+    epoch 10 loss 0.0353
+    epoch 11 loss 0.0333
+    epoch 12 loss 0.0318
+    epoch 13 loss 0.0305
+    epoch 14 loss 0.0293
+    epoch 15 loss 0.0279
+    epoch 16 loss 0.0275
+    epoch 17 loss 0.0264
+    epoch 18 loss 0.0257
+    epoch 19 loss 0.0252
+[12:32:10] fold model 2 done in 210.3s
+[12:32:10] fold model 3 ...
+    epoch 0 loss 0.2726
+    epoch 1 loss 0.1137
+    epoch 2 loss 0.0815
+    epoch 3 loss 0.0652
+    epoch 4 loss 0.0555
+    epoch 5 loss 0.0489
+    epoch 6 loss 0.0450
+    epoch 7 loss 0.0408
+    epoch 8 loss 0.0389
+    epoch 9 loss 0.0363
+    epoch 10 loss 0.0349
+    epoch 11 loss 0.0330
+    epoch 12 loss 0.0315
+    epoch 13 loss 0.0300
+    epoch 14 loss 0.0296
+    epoch 15 loss 0.0283
+    epoch 16 loss 0.0278
+    epoch 17 loss 0.0265
+    epoch 18 loss 0.0258
+    epoch 19 loss 0.0255
+[12:35:39] fold model 3 done in 209.5s
+[12:35:39] fold model 4 ...
+    epoch 0 loss 0.2707
+    epoch 1 loss 0.1128
+    epoch 2 loss 0.0816
+    epoch 3 loss 0.0657
+    epoch 4 loss 0.0559
+    epoch 5 loss 0.0496
+    epoch 6 loss 0.0444
+    epoch 7 loss 0.0414
+    epoch 8 loss 0.0391
+    epoch 9 loss 0.0367
+    epoch 10 loss 0.0348
+    epoch 11 loss 0.0332
+    epoch 12 loss 0.0316
+    epoch 13 loss 0.0301
+    epoch 14 loss 0.0294
+    epoch 15 loss 0.0280
+    epoch 16 loss 0.0274
+    epoch 17 loss 0.0266
+    epoch 18 loss 0.0259
+    epoch 19 loss 0.0254
+[12:39:10] fold model 4 done in 211.2s
+{"args": {"split": "train", "tag": "e3", "btag": "b1", "cands": "", "epochs": 20, "bs": 8192, "lr": 0.002, "drop": 0.15, "k": 20, "reuse": false}, "val": {"recall@1": 0.9686109746099029, "recall@3": 0.9806768816827883, "recall@5": 0.984379754140785, "recall@10": 0.9878608075913139, "recall@20": 0.9908635433590727}, "train_folds_oof": {"recall@1": 0.9685086574801165, "recall@3": 0.9806452996125099, "recall@5": 0.984276014174582, "recall@10": 0.9878234239353515, "recall@20": 0.990824360746123}}
+EXIT rc=0 after 1102 s at 2026-09-25T12:39:15+05:30

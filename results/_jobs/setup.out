@@ -1,0 +1,38 @@
+job 32552.master on master at 2026-09-25T09:58:28+05:30
+CUDA_VISIBLE_DEVICES=MIG-2f219700-5dc6-59eb-81ef-2bb9414d3ec0
+/tmp/ai_25901334/AmazonML/pkgs/polars/meta/build.py:5: UserWarning: Polars binary is missing!
+  from polars._utils.polars_version import get_polars_version
+[LightGBM] [Fatal] CUDA Tree Learner was not enabled in this build.
+Please recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)
+{
+ "time": "2026-09-25 09:58:31",
+ "python": "3.10.21 (main, Aug 27 2026, 14:42:07) [GCC 14.3.0]",
+ "torch": "2.5.1+cu121",
+ "torch_cuda": "12.1",
+ "cuda_available": true,
+ "gpu": "NVIDIA H100 NVL MIG 3g.47gb",
+ "gpu_mem_gib": 46.4,
+ "fp16_tflops": 70.4,
+ "numpy": "2.2.6",
+ "pandas": "2.3.3",
+ "pyarrow": "25.0.1",
+ "polars": "",
+ "rapidfuzz": "3.14.5",
+ "anyascii": "0.3.3",
+ "jellyfish": "ok",
+ "sklearn": "1.7.2",
+ "scipy": "1.15.3",
+ "lightgbm": "4.7.0",
+ "xgboost": "3.2.0",
+ "catboost": "FAIL ValueError: invalid literal for int() with base 10: ''",
+ "transformers": "5.3.0",
+ "sentence_transformers": "6.1.0",
+ "optuna": "5.0.0",
+ "xgboost_cuda": "ok",
+ "catboost_gpu": "FAIL invalid literal for int() with base 10: ''",
+ "lightgbm_cuda": "FAIL CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+ "lightgbm_opencl": "ok",
+ "ncpus_job": "8",
+ "cpu_count": 128
+}
+EXIT rc=0 after 5 s at 2026-09-25T09:58:36+05:30

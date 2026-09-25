@@ -1,0 +1,36 @@
+job 32625.master on master at 2026-09-25T12:39:17+05:30
+CUDA_VISIBLE_DEVICES=MIG-2f219700-5dc6-59eb-81ef-2bb9414d3ec0
+GPU: NVIDIA H100 NVL MIG 3g.47gb, 46.4 GiB, SMs 60, torch 2.5.1+cu121, cuda 12.1
+[12:39:36] load lists ...
+[12:39:47] load lists done in 10.5s
+[12:39:47] union ...
+[12:40:00] union done in 13.1s
+pairs 84838426
+[12:40:02] candidate recall ...
+[12:40:16] candidate recall done in 14.0s
+{
+ "name": "c2",
+ "lists": "emb/e3:emb:5,blocking/b1:comb:3,blocking/b1:name:2,blocking/b1:addr:2",
+ "pairs": 84838426,
+ "split": "train",
+ "n_s1": 2206821,
+ "s1_with_candidates": 2206821,
+ "records_with_candidates": 10320219,
+ "cands_per_record_mean": 8.220603264329952,
+ "cand_recall_val": 0.988148059934318,
+ "cand_recall_all": 0.9880842300675603,
+ "val_recall_r_e3_emb": 0.984379754140785,
+ "val_recall_r_b1_comb": 0.9824645204096388,
+ "val_recall_r_b1_name": 0.5915474525820976,
+ "val_recall_r_b1_addr": 0.8399461352781865,
+ "val_s1_cands_mean": 38.17957886012803,
+ "val_s1_cands_p50_p90_p99_max": [
+  29.0,
+  62.0,
+  228.0,
+  7968
+ ],
+ "val_s1_all_matches_covered": 0.9590098463678776,
+ "runtime_s": 39.62934923171997
+}
+EXIT rc=0 after 42 s at 2026-09-25T12:40:17+05:30

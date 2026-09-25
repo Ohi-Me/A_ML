@@ -1,0 +1,19 @@
+job 32669.master on master at 2026-09-25T15:11:19+05:30; PBS CUDA_VISIBLE_DEVICES=unset
+CUDA_VISIBLE_DEVICES=MIG-2f219700-5dc6-59eb-81ef-2bb9414d3ec0
+GPU: NVIDIA H100 NVL MIG 3g.47gb, 46.4 GiB, SMs 60, torch 2.5.1+cu121, cuda 12.1
+[15:11:34] load inputs ...
+[15:11:57] load inputs done in 22.3s
+[15:12:05] fold model 0 ...
+/tmp/ai_25901334/AmazonML/code/embeddings/oof_biencoder.py:161: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(mp_, map_location=dev))
+[15:12:12] fold model 0 done in 7.8s
+[15:12:12] fold model 1 ...
+[15:12:20] fold model 1 done in 7.5s
+[15:12:20] fold model 2 ...
+[15:12:28] fold model 2 done in 7.6s
+[15:12:28] fold model 3 ...
+[15:12:35] fold model 3 done in 7.9s
+[15:12:35] fold model 4 ...
+[15:12:43] fold model 4 done in 8.0s
+{"args": {"split": "train", "tag": "e3", "btag": "b1", "cands": "c2", "epochs": 20, "bs": 8192, "lr": 0.002, "drop": 0.15, "k": 20, "reuse": true}, "val": {"recall@1": 0.9683832666022366, "recall@3": 0.9804773100094027, "recall@5": 0.9841572807999618, "recall@10": 0.9876690879181926, "recall@20": 0.990766702022479}, "train_folds_oof": {"recall@1": 0.9686261679856867, "recall@3": 0.9806660848969213, "recall@5": 0.9842791237840609, "recall@10": 0.9878221146260973, "recall@20": 0.9907998111976055}}
+EXIT rc=0 after 74 s at 2026-09-25T15:12:47+05:30

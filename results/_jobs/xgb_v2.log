@@ -1,0 +1,26 @@
+job 32733.master on master at 2026-09-25T15:57:13+05:30; PBS CUDA_VISIBLE_DEVICES=unset
+CUDA_VISIBLE_DEVICES=MIG-c747c071-8b61-5993-a5e0-33f4b566bd6e
+GPU: NVIDIA H100 PCIe MIG 3g.40gb, 39.5 GiB, SMs 46, torch 2.5.1+cu121, cuda 12.1
+83 features: ['r_e3_emb', 'r_b1_comb', 'r_b1_name', 'r_b1_addr', 'cos_name', 'cos_addr', 'cos_sum', 'cos_e3', 'b_n', 'a_n', 'b_gap_cos_sum', 'b_rank_cos_sum', 'a_gap_cos_sum', 'a_rank_cos_sum', 'b_gap_cos_e3', 'b_rank_cos_e3', 'a_gap_cos_e3', 'a_rank_cos_e3', 'b_gap2_cos_sum', 'b_gap2_cos_e3', 'key_n_s1', 'key_n_r', 'n_ratio', 'n_tsort', 'n_tset', 'n_partial', 'n_jw', 'k_tsort', 'k_tset', 'ns_ratio', 'ns_partial', 'ns_lev', 'a_tset', 'a_tsort', 'a_partial', 'n_jac', 'n_c12', 'n_c21', 'k_jac', 'k_c12', 'k_c21', 'k_eq', 'k_sorted_eq', 'first_tok_eq', 'n_len1', 'n_len2', 'n_ntok1', 'n_ntok2', 'legal_1', 'legal_2', 'legal_jac', 'is_domain', 'nonlatin', 'nonascii_left', 'src3', 'a_empty2', 'a_jac', 'a_c12', 'a_c21', 'a_ntok2', 'num_jac', 'num_c12', 'num_c21', 'num_n1', 'num_n2', 'num_conflict', 'fnum_eq', 'fnum_in', 'state_cmp', 'fnum_lev', 'fnum_reldiff', 'fnum1_in_r', 'cnum_jac', 'cnum_c12', 'cnum_c21', 'cnum_conflict', 'legal_fam_cmp', 'legal_added', 'legal_dropped', 'tok_unm_12', 'tok_unm_21', 'tok_minbest_12', 'tok_minbest_21']
+[15:57:22] model A: train folds 1,2 / early stop fold 3 ...
+train rows 109003160 pos 9777920
+[0]	fold3-logloss:0.24321	fold3-aucpr:0.99344
+[250]	fold3-logloss:0.00672	fold3-aucpr:0.99907
+[500]	fold3-logloss:0.00608	fold3-aucpr:0.99923
+[750]	fold3-logloss:0.00590	fold3-aucpr:0.99927
+[1000]	fold3-logloss:0.00582	fold3-aucpr:0.99929
+[1250]	fold3-logloss:0.00577	fold3-aucpr:0.99930
+[1500]	fold3-logloss:0.00574	fold3-aucpr:0.99931
+[1750]	fold3-logloss:0.00573	fold3-aucpr:0.99931
+[2000]	fold3-logloss:0.00572	fold3-aucpr:0.99931
+[2107]	fold3-logloss:0.00572	fold3-aucpr:0.99931
+[16:03:54] model A: train folds 1,2 / early stop fold 3 done in 391.7s
+rounds 1958 0.00 GiB peak
+[16:03:54] model B: train folds 3,4 ...
+[16:09:16] model B: train folds 3,4 done in 322.8s
+[16:09:17] out-of-fold scores (streamed) ...
+[16:11:34] out-of-fold scores (streamed) done in 136.8s
+[16:11:34] decision search ...
+[16:12:18] decision search done in 44.1s
+VALIDATION fold 0: {"n_s1": 357966, "macro_f05": 0.9852074485872115, "tp": 1195600, "fp": 4728, "fn": 43562, "n_pred_matches": 1200328, "n_pred_empty": 20468, "n_true_singletons": 19918, "singleton_acc": 0.9808213676071895, "pair_precision": 0.996061076639052, "pair_recall": 0.9648455972665398, "thr": 0.7, "margin": 0.4, "candidate_recall": 0.988268684804731}
+EXIT rc=0 after 900 s at 2026-09-25T16:12:19+05:30

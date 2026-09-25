@@ -1,0 +1,13 @@
+job 32666.master on master at 2026-09-25T15:07:01+05:30; PBS CUDA_VISIBLE_DEVICES=unset
+CUDA_VISIBLE_DEVICES=MIG-c747c071-8b61-5993-a5e0-33f4b566bd6e
+GPU: NVIDIA H100 PCIe MIG 3g.40gb, 39.5 GiB, SMs 46, torch 2.5.1+cu121, cuda 12.1
+[15:07:20] load inputs to GPU ...
+[15:07:23] load inputs to GPU done in 2.2s
+rows 11702133 S1 1732544 3.56 GiB peak
+/tmp/ai_25901334/AmazonML/code/embeddings/ngram_biencoder.py:190: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(mpath, map_location=dev))
+[15:07:27] embed all rows ...
+[15:07:49] embed all rows done in 22.1s
+[15:07:49] dense retrieval per country ...
+[15:11:48] dense retrieval per country done in 238.5s
+EXIT rc=0 after 270 s at 2026-09-25T15:11:49+05:30

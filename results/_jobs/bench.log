@@ -1,0 +1,15 @@
+job 32574.master on master at 2026-09-25T10:19:45+05:30
+CUDA_VISIBLE_DEVICES=MIG-2f219700-5dc6-59eb-81ef-2bb9414d3ec0
+GPU: NVIDIA H100 NVL MIG 3g.47gb, 46.4 GiB, SMs 60, torch 2.5.1+cu121, cuda 12.1
+index (883188, 1048576) 14746157 queries (20000, 1048576)
+/tmp/ai_25901334/AmazonML/code/blocking/bench_spmm.py:27: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at ../aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
+  return torch.sparse_csr_tensor(torch.from_numpy(m.indptr.astype(np.int64)), torch.from_numpy(m.indices.astype(np.int64)),
+512 topk_dim0 {'build': 7.63, 'mm': 24.54, 'topk': 199.57} us/query
+512 topk_T {'build': 3.07, 'mm': 20.31, 'topk': 74.79} us/query
+1024 topk_dim0 {'build': 2.9, 'mm': 20.36, 'topk': 202.0} us/query
+1024 topk_T {'build': 2.7, 'mm': 20.31, 'topk': 72.79} us/query
+2048 topk_dim0 {'build': 2.61, 'mm': 20.27, 'topk': 206.28} us/query
+2048 topk_T {'build': 2.48, 'mm': 20.23, 'topk': 39.53} us/query
+fp16 spmm 26.04 us/query
+dense 256-d matmul+topk 23.85 us/query
+EXIT rc=0 after 14 s at 2026-09-25T10:20:02+05:30

@@ -1,0 +1,18 @@
+{
+ "args": {
+  "feats": "c2_train_sim19",
+  "s1": "oof_xgb_c2_blend_v2.parquet",
+  "tag": "gnn_mlx_v2",
+  "split": "train",
+  "epochs": 4,
+  "batch_s1": 1500,
+  "lr": 0.002,
+  "extra": "xenc/ml_hardv2_train_scores.parquet:mlxenc"
+ },
+ "edges": 68536196,
+ "val_auc_gnn": 0.9999774125183349,
+ "val_ap_gnn": 0.9997776644111536,
+ "val_ap_stage1": 0.9993317282845148,
+ "runtime_s": 620.9437141418457,
+ "gpu": "12.74 GiB peak"
+}

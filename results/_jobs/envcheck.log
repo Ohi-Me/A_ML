@@ -1,0 +1,48 @@
+job 32643.master on master at 2026-09-25T12:44:49+05:30; PBS CUDA_VISIBLE_DEVICES=unset
+CUDA_VISIBLE_DEVICES=MIG-2f219700-5dc6-59eb-81ef-2bb9414d3ec0
+PBS-provided CUDA_VISIBLE_DEVICES (before our override): unset
+CUDA_VISIBLE_DEVICES=MIG-2f219700-5dc6-59eb-81ef-2bb9414d3ec0
+LD_LIBRARY_PATH=/usr/local/cuda-11.8/lib64
+PATH=/Data3/ai_25901334/.conda/envs/refused_h100/bin:/apps/compilers/anaconda3/condabin:/usr/local/cuda-11.8/bin:/bin:/usr/bin:/snap/bin:/opt/pbs/bin
+PBS_CUDA_ORIG=unset
+PBS_ENVIRONMENT=PBS_BATCH
+PBS_JOBCOOKIE=7C1BBFD37220135C0413ECFF5149346A
+PBS_JOBDIR=/Data3/ai_25901334
+PBS_JOBID=32643.master
+PBS_JOBNAME=er_envche
+PBS_MOMPORT=15003
+PBS_NODEFILE=/var/spool/pbs/aux/32643.master
+PBS_NODENUM=0
+PBS_O_HOME=/Data3/ai_25901334
+PBS_O_HOST=master
+PBS_O_LANG=en_IN
+PBS_O_LOGNAME=ai_25901334
+PBS_O_PATH=/opt/pbs/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+PBS_O_QUEUE=workq
+PBS_O_SHELL=/bin/bash
+PBS_O_SYSTEM=Linux
+PBS_O_WORKDIR=/Data3/ai_25901334
+PBS_QUEUE=workq
+PBS_TASKNUM=1
+GPU 0: NVIDIA H100 NVL (UUID: GPU-28bcc0ad-8e90-efc9-645e-b546abe3fefc)
+  MIG 3g.47gb     Device  0: (UUID: MIG-4d38d5cf-c802-5308-80b8-251f3cec7480)
+  MIG 3g.47gb     Device  1: (UUID: MIG-9b919b48-2562-5791-8778-080ddb153351)
+GPU 1: NVIDIA H100 NVL (UUID: GPU-6f505f9b-9b65-a96d-bd8c-8c8671f72cda)
+  MIG 3g.47gb     Device  0: (UUID: MIG-2f219700-5dc6-59eb-81ef-2bb9414d3ec0)
+  MIG 3g.47gb     Device  1: (UUID: MIG-569925cc-5048-5da0-9de5-70d720535aba)
+GPU 2: NVIDIA H100 PCIe (UUID: GPU-63af0eea-3926-506e-5128-9a7f8af88ea6)
+  MIG 3g.40gb     Device  0: (UUID: MIG-c747c071-8b61-5993-a5e0-33f4b566bd6e)
+  MIG 3g.40gb     Device  1: (UUID: MIG-110b5c2d-162d-5ada-814c-2aef6f9812f1)
+GPU 3: NVIDIA H100 PCIe (UUID: GPU-a2ee61d0-205e-2913-d3f8-10c7e81b6304)
+  MIG 3g.40gb     Device  0: (UUID: MIG-5eef67d0-7e58-5016-8973-1bf2618f6d54)
+  MIG 3g.40gb     Device  1: (UUID: MIG-98a11fbb-7fcd-5fc9-b30f-f199445f5ddb)
+GPU 4: NVIDIA H100 NVL (UUID: GPU-f950c0e9-ae75-9970-ac82-b1a4bf5d4299)
+  MIG 1g.24gb     Device  0: (UUID: MIG-004fd09c-9a79-5488-bc35-54fb8de861f1)
+  MIG 1g.24gb     Device  1: (UUID: MIG-32c916d8-1eff-5d16-963e-c216a6b6ba8e)
+  MIG 1g.24gb     Device  2: (UUID: MIG-c7e12075-054a-5bc9-89e9-896eab5f7528)
+  MIG 1g.24gb     Device  3: (UUID: MIG-120f9b9b-0801-5682-9fd3-e1539b9823c6)
+GPU 5: NVIDIA H100 NVL (UUID: GPU-e1df975a-3c1b-ed1f-8803-08f5c22da8ae)
+GPU 6: NVIDIA H100 NVL (UUID: GPU-494e58c5-04f6-cd47-44b4-50803c2dfacb)
+GPU 7: NVIDIA H100 NVL (UUID: GPU-20df829c-b962-445a-1248-1e4e638cbc38)
+0::/system.slice/pbs.service
+EXIT rc=0 after 0 s at 2026-09-25T12:44:53+05:30

@@ -1,0 +1,104 @@
+job 32661.master on master at 2026-09-25T13:40:01+05:30; PBS CUDA_VISIBLE_DEVICES=unset
+CUDA_VISIBLE_DEVICES=MIG-110b5c2d-162d-5ada-814c-2aef6f9812f1
+GPU: NVIDIA H100 PCIe MIG 3g.40gb, 39.5 GiB, SMs 46, torch 2.5.1+cu121, cuda 12.1
+[13:40:09] load normalized ...
+[13:40:09] load normalized done in 0.2s
+[13:40:09] hash features ...
+nc nnz/doc 17.1
+nw nnz/doc 2.6
+aw nnz/doc 5.7
+[13:42:36] hash features done in 146.5s
+[13:42:36] save tfidf matrices ...
+[13:42:39] save tfidf matrices done in 2.8s
+countries in S1: ['India', 'US']
+[13:42:45] India: 4133346 records -> 883188 S1 ...
+/tmp/ai_25901334/AmazonML/code/blocking/sparse_tfidf.py:59: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at ../aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
+  return torch.sparse_csr_tensor(torch.from_numpy(m.indptr.astype(np.int64)), torch.from_numpy(m.indices.astype(np.int64)),
+    0/4133346 queries, 0s, eta 28s
+    409600/4133346 queries, 104s, eta 943s
+    819200/4133346 queries, 207s, eta 839s
+    1228800/4133346 queries, 311s, eta 735s
+    1638400/4133346 queries, 415s, eta 632s
+    2048000/4133346 queries, 518s, eta 528s
+    2457600/4133346 queries, 622s, eta 424s
+    2867200/4133346 queries, 726s, eta 321s
+    3276800/4133346 queries, 830s, eta 217s
+    3686400/4133346 queries, 933s, eta 113s
+    4096000/4133346 queries, 1037s, eta 9s
+[14:00:22] India: 4133346 records -> 883188 S1 done in 1057.1s
+[14:00:23] US: 6186873 records -> 1323633 S1 ...
+    0/6186873 queries, 0s, eta 24s
+    409600/6186873 queries, 127s, eta 1796s
+    819200/6186873 queries, 255s, eta 1669s
+    1228800/6186873 queries, 382s, eta 1542s
+    1638400/6186873 queries, 509s, eta 1414s
+    2048000/6186873 queries, 637s, eta 1287s
+    2457600/6186873 queries, 764s, eta 1160s
+    2867200/6186873 queries, 892s, eta 1032s
+    3276800/6186873 queries, 1019s, eta 905s
+    3686400/6186873 queries, 1146s, eta 778s
+    4096000/6186873 queries, 1274s, eta 650s
+    4505600/6186873 queries, 1401s, eta 523s
+    4915200/6186873 queries, 1528s, eta 395s
+    5324800/6186873 queries, 1656s, eta 268s
+    5734400/6186873 queries, 1783s, eta 141s
+    6144000/6186873 queries, 1910s, eta 13s
+[14:32:38] US: 6186873 records -> 1323633 S1 done in 1935.5s
+gpu 34.69 GiB peak
+[14:32:38] recall analysis ...
+val {
+"rid2s1_name@1": 0.5017788052265532,
+"rid2s1_name@2": 0.5915474525820976,
+"rid2s1_name@3": 0.6366087734324953,
+"rid2s1_name@5": 0.6815824136132745,
+"rid2s1_name@10": 0.7283626681882098,
+"rid2s1_name@20": 0.7788431778877203,
+"rid2s1_addr@1": 0.7919573269958967,
+"rid2s1_addr@2": 0.8413254699912909,
+"rid2s1_addr@3": 0.8618983650172449,
+"rid2s1_addr@5": 0.8829940723941337,
+"rid2s1_addr@10": 0.8999432692980901,
+"rid2s1_addr@20": 0.9094657826186814,
+"rid2s1_comb@1": 0.9717059713807678,
+"rid2s1_comb@2": 0.9793564369716667,
+"rid2s1_comb@3": 0.9825901524138685,
+"rid2s1_comb@5": 0.9856877665181548,
+"rid2s1_comb@10": 0.9884948566126601,
+"rid2s1_comb@20": 0.9908910253599978,
+"rid2s1_union@1": 0.9730061317578731,
+"rid2s1_union@2": 0.9801409826647464,
+"rid2s1_union@3": 0.9832549551029168,
+"rid2s1_union@5": 0.9862158135359324,
+"rid2s1_union@10": 0.9888953086261421,
+"rid2s1_union@20": 0.9912260440379435,
+"n_pairs": 1528273
+}
+all {
+"rid2s1_name@1": 0.5020706656463785,
+"rid2s1_name@2": 0.5917898660249936,
+"rid2s1_name@3": 0.6364974703356019,
+"rid2s1_name@5": 0.6811842586731585,
+"rid2s1_name@10": 0.7281280745290386,
+"rid2s1_name@20": 0.7786521068317631,
+"rid2s1_addr@1": 0.7919796972257807,
+"rid2s1_addr@2": 0.8410650708626781,
+"rid2s1_addr@3": 0.8617417470885458,
+"rid2s1_addr@5": 0.8828203417878041,
+"rid2s1_addr@10": 0.8997034051135289,
+"rid2s1_addr@20": 0.9092733850765183,
+"rid2s1_comb@1": 0.971657416214072,
+"rid2s1_comb@2": 0.9792662434958267,
+"rid2s1_comb@3": 0.9825144517183978,
+"rid2s1_comb@5": 0.9856073911105322,
+"rid2s1_comb@10": 0.9884735804062781,
+"rid2s1_comb@20": 0.9908680718975854,
+"rid2s1_union@1": 0.9729413297217402,
+"rid2s1_union@2": 0.9800681166715652,
+"rid2s1_union@3": 0.9831734932803028,
+"rid2s1_union@5": 0.9861317179789131,
+"rid2s1_union@10": 0.9888629307449959,
+"rid2s1_union@20": 0.9911965453339818,
+"n_pairs": 7638365
+}
+[14:32:45] recall analysis done in 6.5s
+EXIT rc=0 after 3159 s at 2026-09-25T14:32:46+05:30

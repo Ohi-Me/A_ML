@@ -1,0 +1,31 @@
+{
+ "pairs": 83085979,
+ "cols": [
+  "a",
+  "b",
+  "r_e2f_emb",
+  "r_b1_comb",
+  "r_b1_name",
+  "r_b1_addr",
+  "cos_name",
+  "cos_addr",
+  "cos_sum",
+  "cos_e2",
+  "b_n",
+  "a_n",
+  "b_gap_cos_sum",
+  "b_rank_cos_sum",
+  "a_gap_cos_sum",
+  "a_rank_cos_sum",
+  "b_gap_cos_e2",
+  "b_rank_cos_e2",
+  "a_gap_cos_e2",
+  "a_rank_cos_e2",
+  "b_gap2_cos_sum",
+  "b_gap2_cos_e2",
+  "key_n_s1",
+  "key_n_r",
+  "fold"
+ ],
+ "runtime_s": 473.4018437862396
+}

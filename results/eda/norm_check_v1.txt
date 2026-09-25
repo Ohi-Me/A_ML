@@ -1,0 +1,941 @@
+S3-850159575 [US]
+  N1 'Cooper Silver Renewable Inc' -> core='cooper silver renewable' key='cooper silver renewable' legal='inc'
+  N2 '#Cóopersilver' -> core='coopersilver' key='coopersilver' legal='' dom=False
+  A1 '225 Philadelphia Avenue, Pinebluff, NC' -> '225 philadelphia ave pinebluff' nums='225' st='nc' m=['225', 'philadelphia', 'ave', 'pinebluff']
+  A2 '225 Philadelphia Avenue, Pinebluff, North Carolina' -> '225 philadelphia ave pinebluff' nums='225' st='nc' m=['225', 'philadelphia', 'ave', 'pinebluff']
+
+S2-189324047 [US]
+  N1 'OSA Mountain Token LLC' -> core='osa mountain token' key='osa mountain token' legal='llc'
+  N2 '0SA MOUNTAIN TOKEN (LLC)' -> core='osa mountain token' key='osa mountain token' legal='llc' dom=False
+  A1 '13021 Percival Road, Walton Ky, KY' -> '13021 percival rd walton ky' nums='13021' st='ky' m=['13021', 'percival', 'rd', 'walton', 'ky']
+  A2 '13021 Percival Rd, WALTON KY, KY' -> '13021 percival rd walton ky' nums='13021' st='ky' m=['13021', 'percival', 'rd', 'walton', 'ky']
+
+S2-377787205 [US]
+  N1 'Hyacinthie Harris, D.C.' -> core='hyacinthie harris dc' key='hyacinthie harris dc' legal=''
+  N2 'Hyacinthie Haemhis D.C.' -> core='hyacinthie haemhis dc' key='hyacinthie haemhis dc' legal='' dom=False
+  A1 '700 Corporate Center Drive, Unit 537, Raleigh, NC' -> '700 corporate ctr dr unit 537 raleigh' nums='537 700' st='nc' m=['700', 'corporate', 'ctr', 'dr', '537', 'raleigh']
+  A2 '700. CORPORATE CENTER DR, RALEIGH, NC' -> '700 corporate ctr dr raleigh' nums='700' st='nc' m=['700', 'corporate', 'ctr', 'dr', 'raleigh']
+
+S2-54566850 [US]
+  N1 'Ericksen School of Medicine' -> core='ericksen school of medicine' key='ericksen school medicine' legal=''
+  N2 'ERICKSEN SCHOOL OF MEDICINE' -> core='ericksen school of medicine' key='ericksen school medicine' legal='' dom=False
+  A1 '6445 Sonoma Way, Florence, AZ' -> '6445 sonoma way florence' nums='6445' st='az' m=['6445', 'sonoma', 'way', 'florence']
+  A2 '6445 Sonoma Way, FLORENCE ITY, AZ' -> '6445 sonoma way florence ity' nums='6445' st='az' m=['6445', 'sonoma', 'way', 'florence', 'ity']
+
+S3-554370616 [US]
+  N1 'Housing Charities' -> core='housing charities' key='housing charities' legal=''
+  N2 'Housing-Charities Corporation' -> core='housing charities' key='housing charities' legal='corp' dom=False
+  A1 '2338 19th Court, Gresham, OR' -> '2338 19 ct gresham' nums='19 2338' st='or' m=['2338', '19', 'ct', 'gresham']
+  A2 'Gresham, Oregon, 2338 19th Ct' -> 'gresham 2338 19 ct' nums='19 2338' st='or' m=['gresham', '2338', '19', 'ct']
+
+S3-842793589 [India]
+  N1 'Lakshmi Construction Limited' -> core='lakshmi construction' key='lakshmi construction' legal='ltd'
+  N2 'Lakshmi Limited Services' -> core='lakshmi services' key='lakshmi' legal='ltd' dom=False
+  A1 'B602, Floor 6, Vikas Apartment, Dadabhai Chamarbaug Road, Near Kem Hospit, Al, Parel, Mumbai City, Maharashtra' -> 'b602 fl 6 vikas apt dadabhai chamarbaug rd near kem hospit al parel mumbai city' nums='6 602' st='in_mh' m=['602', '6', 'vikas', 'dadabhai', 'chamarbaug', 'rd', 'near', 'kem', 'hospit', 'al', 'parel', 'mumbai', 'city']
+  A2 'Floor 6, Vikas Apartment, Dadabhai Chamarbaug Road, Near Kem Hospit, Al, Mumbai City, MH, B602, Parel' -> 'fl 6 vikas apt dadabhai chamarbaug rd near kem hospit mumbai city mh b602 parel' nums='6 602' st='al' m=['6', 'vikas', 'dadabhai', 'chamarbaug', 'rd', 'near', 'kem', 'hospit', 'mumbai', 'city', 'mh', '602', 'parel']
+
+S3-152582423 [US]
+  N1 'Jones Jaws Inc' -> core='jones jaws' key='jones jaws' legal='inc'
+  N2 'Jones Jaws' -> core='jones jaws' key='jones jaws' legal='' dom=False
+  A1 '3516 Pinetree Terrace, Fairfax County, VA' -> '3516 pinetree ter fairfax cnty' nums='3516' st='va' m=['3516', 'pinetree', 'ter', 'fairfax', 'cnty']
+  A2 'Pinetree Terrace, Fairfax County, Virginia' -> 'pinetree ter fairfax cnty' nums='' st='va' m=['pinetree', 'ter', 'fairfax', 'cnty']
+
+S2-57162911 [India]
+  N1 'Golden Engineers' -> core='golden engineers' key='golden engineers' legal=''
+  N2 'GOLDEN  ENGINEERS' -> core='golden engineers' key='golden engineers' legal='' dom=False
+  A1 'Plot No 157, Siri Valley, Qutubullapur, Hyderabad, Telangana' -> 'plot no 157 siri vly qutubullapur hyderabad' nums='157' st='in_tg' m=['157', 'siri', 'vly', 'qutubullapur', 'hyderabad']
+  A2 'PLOT NO 157, SIRI VALLEY, QUTUBULLAPUR, Telangana' -> 'plot no 157 siri vly qutubullapur' nums='157' st='in_tg' m=['157', 'siri', 'vly', 'qutubullapur']
+
+S3-795890282 [US]
+  N1 'Joan Donahue, DMD' -> core='joan donahue dmd' key='joan donahue dmd' legal=''
+  N2 'Orbinex formerly Joan Donahue, DMD' -> core='orbinex joan donahue dmd' key='orbinex joan donahue dmd' legal='' dom=False
+  A1 '6214 Big Horn Drive, Granbury, TX' -> '6214 big horn dr granbury' nums='6214' st='tx' m=['6214', 'big', 'horn', 'dr', 'granbury']
+  A2 '6214 Big Horn Drive, Granbury, TX' -> '6214 big horn dr granbury' nums='6214' st='tx' m=['6214', 'big', 'horn', 'dr', 'granbury']
+
+S2-869989987 [US]
+  N1 'Jordan Keystone Rice LLC' -> core='jordan keystone rice' key='jordan keystone rice' legal='llc'
+  N2 'Jordan Keystone Risoce LLC' -> core='jordan keystone risoce' key='jordan keystone risoce' legal='llc' dom=False
+  A1 '1640 Fountain Avenue, Baton Rouge, LA' -> '1640 fountain ave baton rouge' nums='1640' st='la' m=['1640', 'fountain', 'ave', 'baton', 'rouge']
+  A2 '1640-C FOUNTAIN AVENUE, BATON ROUGE, LA' -> '1640-c fountain ave baton rouge' nums='1640' st='la' m=['1640', 'fountain', 'ave', 'baton', 'rouge']
+
+S3-661903980 [US]
+  N1 'Vision Medicine Company' -> core='vision medicine' key='vision medicine' legal='co'
+  N2 'Vision Merdicine Company' -> core='vision merdicine' key='vision merdicine' legal='co' dom=False
+  A1 '4629 Arlington Park Drive, Unit 1, West Valley City, UT' -> '4629 arlington park dr unit 1 w vly city' nums='1 4629' st='ut' m=['4629', 'arlington', 'park', 'dr', '1', 'w', 'vly', 'city']
+  A2 '4629 Arlington Park Drive, Unit 1, West Valley City, Utah' -> '4629 arlington park dr unit 1 w vly city' nums='1 4629' st='ut' m=['4629', 'arlington', 'park', 'dr', '1', 'w', 'vly', 'city']
+
+S2-807972889 [India]
+  N1 'Saj Ventures Private Limited' -> core='saj ventures' key='saj' legal='ltd pvt'
+  N2 'Saj Ventures Private' -> core='saj ventures' key='saj' legal='pvt' dom=False
+  A1 'N-204, City Avenue, Near Sayaji Hotel Bhumkar Chowk, Wakad, Pune, Maharashtra' -> 'n-204 city ave near sayaji hotel bhumkar chowk wakad pune' nums='204' st='in_mh' m=['204', 'city', 'ave', 'near', 'sayaji', 'hotel', 'bhumkar', 'chowk', 'wakad', 'pune']
+  A2 'N-204, CITY AVENUE, NEAR SAYAJI HOTEL BHUMKAR CHOWK, WAKAD, PUNE, N/A, Maharashtra' -> 'n-204 city ave near sayaji hotel bhumkar chowk wakad pune' nums='204' st='in_mh' m=['204', 'city', 'ave', 'near', 'sayaji', 'hotel', 'bhumkar', 'chowk', 'wakad', 'pune']
+
+S2-873791787 [US]
+  N1 'Bryson, Golden & Darnell LLC' -> core='bryson golden and darnell' key='bryson golden darnell' legal='llc'
+  N2 'BRYSON, GOLDEN & DARNELL LLC' -> core='bryson golden and darnell' key='bryson golden darnell' legal='llc' dom=False
+  A1 'Amarillo, TX, 18701 Tucumcari Drive' -> 'amarillo 18701 tucumcari dr' nums='18701' st='tx' m=['amarillo', '18701', 'tucumcari', 'dr']
+  A2 '18701 Tucumcari Drive, AMARILLO, TX' -> '18701 tucumcari dr amarillo' nums='18701' st='tx' m=['18701', 'tucumcari', 'dr', 'amarillo']
+
+S3-780901681 [US]
+  N1 'Hassell and Amador Series' -> core='hassell and amador series' key='hassell amador series' legal=''
+  N2 'Hassell And Amador Series' -> core='hassell and amador series' key='hassell amador series' legal='' dom=False
+  A1 '8100 Scott Street, Dugger, IN' -> '8100 scott st dugger' nums='8100' st='in' m=['8100', 'scott', 'st', 'dugger']
+  A2 'Dugger, Indiana, Scott St' -> 'dugger scott st' nums='' st='in' m=['dugger', 'scott', 'st']
+
+S2-122489427 [India]
+  N1 'Ivana (India) Advertising Pvt Ltd' -> core='ivana india advertising' key='ivana advertising' legal='ltd pvt'
+  N2 'Ivana (India) Advertising Pvt Limited' -> core='ivana india advertising' key='ivana advertising' legal='ltd pvt' dom=False
+  A1 '20 B T Road, Kolkata, Howrah, West Bengal' -> '20 b t rd kolkata howrah' nums='20' st='in_wb' m=['20', 'b', 't', 'rd', 'kolkata', 'howrah']
+  A2 'NO 20 B T ROAD, KOLKATA, KOLKATA, West Bengal' -> 'no 20 b t rd kolkata kolkata' nums='20' st='in_wb' m=['20', 'b', 't', 'rd', 'kolkata', 'kolkata']
+
+S3-199530398 [India]
+  N1 'Good Sun Properties Private Limited' -> core='good sun properties' key='good sun properties' legal='ltd pvt'
+  N2 'Good Limited Properties Private Sun' -> core='good properties sun' key='good properties sun' legal='ltd pvt' dom=False
+  A1 'Plot-65 Sector-1, Gandhidham, Gujarat, Kachchh' -> 'plot-65 sector-1 gandhidham kachchh' nums='1 65' st='in_gj' m=['65', '1', 'gandhidham', 'kachchh']
+  A2 'Plot-65 Secdor-1, Kachchh, Gandhidham, GJ' -> 'plot-65 secdor-1 kachchh gandhidham' nums='1 65' st='in_gj' m=['65', '1', 'kachchh', 'gandhidham']
+
+S2-89272361 [US]
+  N1 'Trinity Lutheran Church LLC' -> core='trinity lutheran church' key='trinity lutheran church' legal='llc'
+  N2 'Trinity Lerna Church LLC' -> core='trinity lerna church' key='trinity lerna church' legal='llc' dom=False
+  A1 '238 St Rte 511, Nova, OH' -> '238 st rte 511 nova' nums='238 511' st='oh' m=['238', 'st', 'rte', '511', 'nova']
+  A2 '238 ST RTE 511, NOVA, OH' -> '238 st rte 511 nova' nums='238 511' st='oh' m=['238', 'st', 'rte', '511', 'nova']
+
+S3-440071573 [US]
+  N1 'Gillie Alfaro Industries, Inc.' -> core='gillie alfaro industries' key='gillie alfaro' legal='inc'
+  N2 'Gillie Alfaro Industries Inc.' -> core='gillie alfaro industries' key='gillie alfaro' legal='inc' dom=False
+  A1 '56 Smith Knob Road, Andrews, NC' -> '56 smith knob rd andrews' nums='56' st='nc' m=['56', 'smith', 'knob', 'rd', 'andrews']
+  A2 '56 1/2 Smith Knob Rd, North Carolina, Andrews' -> '56 1/2 smith knob rd andrews' nums='1 2 56' st='nc' m=['56', '1', '2', 'smith', 'knob', 'rd', 'andrews']
+
+S2-343811134 [India]
+  N1 'Radiance Dimensions Private Limited' -> core='radiance dimensions' key='radiance dimensions' legal='ltd pvt'
+  N2 'Mr Radiance  Dimensions Private Limited - 6565975528' -> core='radiance dimensions' key='radiance dimensions' legal='ltd pvt' dom=False
+  A1 '3, 4 T. N. Mishra Marg, Everest Vihar Nirman Nagr, Jaipur, Rajasthan' -> '3 4 t n mishra marg everest vihar nirman nagr jaipur' nums='3 4' st='in_rj' m=['3', '4', 't', 'mishra', 'marg', 'everest', 'vihar', 'nirman', 'nagr', 'jaipur']
+  A2 '3, 4 T. N. MISHRA MARG, EVEREST VIHAR NIRMAN NAGR, JAIPUR, राजस्थान' -> '3 4 t n mishra marg everest vihar nirman nagr jaipur rajsthan' nums='3 4' st='' m=['3', '4', 't', 'mishra', 'marg', 'everest', 'vihar', 'nirman', 'nagr', 'jaipur', 'rajsthan']
+
+S2-13529425 [India]
+  N1 'Himanshu Men' -> core='himanshu men' key='himanshu men' legal=''
+  N2 'Himanshu [Men]' -> core='himanshu men' key='himanshu men' legal='' dom=False
+  A1 '2Nd Floor, Snehi Chs Ltd, Plot No 75 Ambivali, Lokhandwala Rd, Andheri West, Mumbai City, Mumbai, Fl B - 6, Maharashtra' -> '2 fl snehi chs ltd plot no 75 ambivali lokhandwala rd andheri w mumbai city mumbai fl b 6' nums='2 6 75' st='in_mh' m=['2', 'snehi', 'chs', 'ltd', '75', 'ambivali', 'lokhandwala', 'rd', 'andheri', 'w', 'mumbai', 'city', 'mumbai', 'b', '6']
+  A2 'FL B - 6, 2ND FLOOR, SNEHI CHS LTD, PLOT NO 75 AMBIVALI, LOKHANDWALA RD, ANDHERI WEST, MUMBAI, Maharashtra' -> 'fl b 6 2 fl snehi chs ltd plot no 75 ambivali lokhandwala rd andheri w mumbai' nums='2 6 75' st='in_mh' m=['b', '6', '2', 'snehi', 'chs', 'ltd', '75', 'ambivali', 'lokhandwala', 'rd', 'andheri', 'w', 'mumbai']
+
+S3-589195493 [US]
+  N1 'Desert Institute of Technology' -> core='desert institute of technology' key='desert institute technology' legal=''
+  N2 'Desert Institute Of (Technology)' -> core='desert institute of technology' key='desert institute technology' legal='' dom=False
+  A1 '2935 Cavins Drive, Springfield, OH' -> '2935 cavins dr springfield' nums='2935' st='oh' m=['2935', 'cavins', 'dr', 'springfield']
+  A2 '2935 Cavins Dr, Springfield, Ohio' -> '2935 cavins dr springfield' nums='2935' st='oh' m=['2935', 'cavins', 'dr', 'springfield']
+
+S3-414662585 [India]
+  N1 'Consulting Outsourcing Hospital Private Limited' -> core='consulting outsourcing hospital' key='consulting outsourcing hospital' legal='ltd pvt'
+  N2 'Consulting Outsourcing Hospital Private' -> core='consulting outsourcing hospital' key='consulting outsourcing hospital' legal='pvt' dom=False
+  A1 'Ganeshpur Deva Road, Chinhat, Lucknow, Uttar Pradesh' -> 'ganeshpur deva rd chinhat lucknow' nums='' st='in_up' m=['ganeshpur', 'deva', 'rd', 'chinhat', 'lucknow']
+  A2 'Ganeshpur Deva Road, Chinhat, Lucknow, UP' -> 'ganeshpur deva rd chinhat lucknow' nums='' st='in_up' m=['ganeshpur', 'deva', 'rd', 'chinhat', 'lucknow']
+
+S2-565840326 [India]
+  N1 'Golden Care Private Limited' -> core='golden care' key='golden care' legal='ltd pvt'
+  N2 'Golden केयर Private Limited' -> core='golden keyr' key='golden keyr' legal='ltd pvt' dom=False
+  A1 'Microcab Industries & Logistics Private Limited, S.No.39/7, 9, 11, 40, Nasik Highway, Kurund, Thane, Maharashtra' -> 'microcab industries and logistics private limited s no 39/7 9 11 40 nasik hwy kurund thane' nums='11 39 40 7 9' st='in_mh' m=['microcab', 'industries', 'logistics', 'private', 'limited', '39', '7', '9', '11', '40', 'nasik', 'hwy', 'kurund', 'thane']
+  A2 'MICROCAB INDUSTRIES & LOGISTICS PRIVATE LIMITED, S.NO.39/7, 9, 11, 40, NASIK HIGHWAY, KURUND, महाराष्ट्र' -> 'microcab industries and logistics private limited s no 39/7 9 11 40 nasik hwy kurund mharastr' nums='11 39 40 7 9' st='' m=['microcab', 'industries', 'logistics', 'private', 'limited', '39', '7', '9', '11', '40', 'nasik', 'hwy', 'kurund', 'mharastr']
+
+S2-244453245 [US]
+  N1 'Midwest Academy' -> core='midwest academy' key='midwest academy' legal=''
+  N2 'Midwest Center' -> core='midwest center' key='midwest' legal='' dom=False
+  A1 '2735 Gifford Place, New Lenox, IL' -> '2735 gifford pl new lenox' nums='2735' st='il' m=['2735', 'gifford', 'pl', 'new', 'lenox']
+  A2 '2735 Gifford Place, NWE LENOX, IL' -> '2735 gifford pl nwe lenox' nums='2735' st='il' m=['2735', 'gifford', 'pl', 'nwe', 'lenox']
+
+S2-814125860 [India]
+  N1 'Gandhi Healthcare LLP' -> core='gandhi healthcare' key='gandhi healthcare' legal='llp'
+  N2 'Gandhi Htadthcare LLP' -> core='gandhi htadthcare' key='gandhi htadthcare' legal='llp' dom=False
+  A1 '28-59 Quthbullahpur, Rr Nagar, Rangareddy, K.V.Rangareddy, Telangana' -> '28-59 quthbullahpur rr nagar rangareddy kv rangareddy' nums='28 59' st='in_tg' m=['28', '59', 'quthbullahpur', 'rr', 'nagar', 'rangareddy', 'kv', 'rangareddy']
+  A2 '28-59 QUTHBULLAHPUR, RR NAGAR, RANGAREDDY, తెలంగాణ' -> '28-59 quthbullahpur rr nagar rangareddy telmgan' nums='28 59' st='' m=['28', '59', 'quthbullahpur', 'rr', 'nagar', 'rangareddy', 'telmgan']
+
+S2-936076873 [India]
+  N1 'ML Feed Pvt Ltd' -> core='ml feed' key='ml feed' legal='ltd pvt'
+  N2 'ML Feed Pvt Pvt Ltd' -> core='ml feed' key='ml feed' legal='ltd pvt' dom=False
+  A1 'C-25, Ground Floor (Front Portion), Nanagal Dewat Scheme, Vasant Kunj, South West Delhi, Delhi' -> 'c-25 0 fl front portion nanagal dewat scheme vasant kunj s w' nums='0 25' st='in_dl' m=['25', '0', 'front', 'portion', 'nanagal', 'dewat', 'scheme', 'vasant', 'kunj', 'w']
+  A2 'H.NO D/345 C-25, GROUND FLOOR (FONT PORTION), NANAGAL DEWAT SCHEME, VASANT KUNJ, N/A, Delhi' -> 'h no d/345 c-25 0 fl font portion nanagal dewat scheme vasant kunj' nums='0 25 345' st='in_dl' m=['345', '25', '0', 'font', 'portion', 'nanagal', 'dewat', 'scheme', 'vasant', 'kunj']
+
+S2-358157283 [India]
+  N1 'Instyle College Ltd' -> core='instyle college' key='instyle college' legal='ltd'
+  N2 'Instyle College' -> core='instyle college' key='instyle college' legal='' dom=False
+  A1 'E/70/6 Sugnya Co Op H Soc, Ltd, Nrjuhapura, Sarkhej Rd, Ahmadabad City, Ahmedabad, Gujarat' -> 'e/70/6 sugnya co op h soc ltd nrjuhapura sarkhej rd ahmadabad city ahmedabad' nums='6 70' st='in_gj' m=['70', '6', 'sugnya', 'co', 'op', 'soc', 'ltd', 'nrjuhapura', 'sarkhej', 'rd', 'ahmadabad', 'city', 'ahmedabad']
+  A2 'E/70/6 SUGNYA CO OP H SOC, LTD, NRJUHAPURA, SARKHEJ RD, AHMADABAD CITY, Gujarat' -> 'e/70/6 sugnya co op h soc ltd nrjuhapura sarkhej rd ahmadabad city' nums='6 70' st='in_gj' m=['70', '6', 'sugnya', 'co', 'op', 'soc', 'ltd', 'nrjuhapura', 'sarkhej', 'rd', 'ahmadabad', 'city']
+
+S2-806867506 [India]
+  N1 'Mustang (India) Digital Pvt Ltd' -> core='mustang india digital' key='mustang digital' legal='ltd pvt'
+  N2 'MUSTANGINDIA.COM' -> core='mustangindia' key='mustangindia' legal='' dom=True
+  A1 '7Th Floor Corporate Centreopp Hotel Sunshee L M Road Andheri East, Mumbai, Maharashtra' -> '7 fl corporate centreopp hotel sunshee l m rd andheri e mumbai' nums='7' st='in_mh' m=['7', 'corporate', 'centreopp', 'hotel', 'sunshee', 'm', 'rd', 'andheri', 'e', 'mumbai']
+  A2 'Maharashtra, #G-7TH FLOOR CORPORATE CENTREOPP HOTEL SUNSHEE L M ROAD ANDHERI EAS,T MUMBAI' -> 'g-7 fl corporate centreopp hotel sunshee l m rd andheri eas t mumbai' nums='7' st='in_mh' m=['7', 'corporate', 'centreopp', 'hotel', 'sunshee', 'm', 'rd', 'andheri', 'eas', 't', 'mumbai']
+
+S2-544285795 [US]
+  N1 'Cynthie Ricketts Platinum Foods Corp' -> core='cynthie ricketts platinum foods' key='cynthie ricketts platinum foods' legal='corp'
+  N2 'Cynthie Ricetts Platinum Foods Corp' -> core='cynthie ricetts platinum foods' key='cynthie ricetts platinum foods' legal='corp' dom=False
+  A1 '124 Coldwater Lane, Benton, KY' -> '124 coldwater ln benton' nums='124' st='ky' m=['124', 'coldwater', 'ln', 'benton']
+  A2 '124 COLDWATER LN, BENTON, KY' -> '124 coldwater ln benton' nums='124' st='ky' m=['124', 'coldwater', 'ln', 'benton']
+
+S2-902297563 [US]
+  N1 'Vanguard Packaging Products, Inc' -> core='vanguard packaging products' key='vanguard packaging products' legal='inc'
+  N2 'Vanguard Packaging Products, (Inc)' -> core='vanguard packaging products' key='vanguard packaging products' legal='inc' dom=False
+  A1 '1350 Honeysuckle Road, City Of Hartford, WI' -> '1350 honeysuckle rd city of hartford' nums='1350' st='wi' m=['1350', 'honeysuckle', 'rd', 'city', 'hartford']
+  A2 '1350 HONEYSUCLKE ROAD, PMB 9584, CITY OF HARTFORD, WI' -> '1350 honeysuclke rd pmb 9584 city of hartford' nums='1350 9584' st='wi' m=['1350', 'honeysuclke', 'rd', '9584', 'city', 'hartford']
+
+S3-572431748 [India]
+  N1 'Seven Foundation' -> core='seven foundation' key='seven foundation' legal=''
+  N2 'SEVEN FOUNDATION' -> core='seven foundation' key='seven foundation' legal='' dom=False
+  A1 'S-295, Sahara Shopping Centre, Lucknow, Uttar Pradesh' -> 's-295 sahara shopping ctr lucknow' nums='295' st='in_up' m=['295', 'sahara', 'shopping', 'ctr', 'lucknow']
+  A2 'No 56 S-295, Sahara Shopping Centre, Lucknow, Indira Nagar Lucknow, UP' -> 'no 56 s-295 sahara shopping ctr lucknow indira nagar lucknow' nums='295 56' st='in_up' m=['56', '295', 'sahara', 'shopping', 'ctr', 'lucknow', 'indira', 'nagar', 'lucknow']
+
+S2-647096748 [US]
+  N1 'Heart Initiative LLC' -> core='heart initiative' key='heart initiative' legal='llc'
+  N2 'Heart  Initiative LLC' -> core='heart initiative' key='heart initiative' legal='llc' dom=False
+  A1 '114 Hickory Hills Road, Church Hill, TN' -> '114 hickory hills rd church hill' nums='114' st='tn' m=['114', 'hickory', 'hills', 'rd', 'church', 'hill']
+  A2 '114 HICKORY HILLS RD, CHURCH HILL, TN' -> '114 hickory hills rd church hill' nums='114' st='tn' m=['114', 'hickory', 'hills', 'rd', 'church', 'hill']
+
+S2-473759109 [US]
+  N1 'Noa' -> core='noa' key='noa' legal=''
+  N2 'Noa' -> core='noa' key='noa' legal='' dom=False
+  A1 '4116 Chandler Haven Drive, Charlotte, NC' -> '4116 chandler haven dr charlotte' nums='4116' st='nc' m=['4116', 'chandler', 'haven', 'dr', 'charlotte']
+  A2 '4116C CHANDLER HAVEN DR, CHARLOTTE, NC' -> '4116c chandler haven dr charlotte' nums='4116' st='nc' m=['4116', 'chandler', 'haven', 'dr', 'charlotte']
+
+S3-321939525 [US]
+  N1 'Certified Edp' -> core='certified edp' key='certified edp' legal=''
+  N2 'Certified Édp' -> core='certified edp' key='certified edp' legal='' dom=False
+  A1 '144 Decatur Street, Brooklyn, NY' -> '144 decatur st brooklyn' nums='144' st='ny' m=['144', 'decatur', 'st', 'brooklyn']
+  A2 '144 1/2 Decatur St, New York, Brooklyn' -> '144 1/2 decatur st brooklyn' nums='1 144 2' st='ny' m=['144', '1', '2', 'decatur', 'st', 'brooklyn']
+
+S2-738367478 [US]
+  N1 'Crystal Catalyst Inc' -> core='crystal catalyst' key='crystal catalyst' legal='inc'
+  N2 'CRYSTAL CATALYST INC' -> core='crystal catalyst' key='crystal catalyst' legal='inc' dom=False
+  A1 '142 Twin Oaks Lane, Middleburgh, NY' -> '142 twin oaks ln middleburgh' nums='142' st='ny' m=['142', 'twin', 'oaks', 'ln', 'middleburgh']
+  A2 '142 TGIN OAKS LN, MIDDLEBURGH, NY' -> '142 tgin oaks ln middleburgh' nums='142' st='ny' m=['142', 'tgin', 'oaks', 'ln', 'middleburgh']
+
+S2-367643350 [US]
+  N1 'Desert Vanguard Dividend LLC' -> core='desert vanguard dividend' key='desert vanguard dividend' legal='llc'
+  N2 'Desert Vanguard Dividend' -> core='desert vanguard dividend' key='desert vanguard dividend' legal='' dom=False
+  A1 '8974 Coffman Path, Inver Grove Heights, MN' -> '8974 coffman path inver grove hts' nums='8974' st='mn' m=['8974', 'coffman', 'path', 'inver', 'grove', 'hts']
+  A2 None -> '' nums='' st='' m=[]
+
+S3-595480353 [US]
+  N1 'Fadyne Anchor Aviation Corp' -> core='fadyne anchor aviation' key='fadyne anchor aviation' legal='corp'
+  N2 'Fadyne Anchor Avcaton Corp' -> core='fadyne anchor avcaton' key='fadyne anchor avcaton' legal='corp' dom=False
+  A1 '2015 Whitman Avenue, Butte-silver Bow, MT' -> '2015 whitman ave butte-silver bow' nums='2015' st='mt' m=['2015', 'whitman', 'ave', 'butte-silver', 'bow']
+  A2 '2015 Whitman Ave, PMB 8425, Butte, Montana' -> '2015 whitman ave pmb 8425 butte' nums='2015 8425' st='mt' m=['2015', 'whitman', 'ave', '8425', 'butte']
+
+S3-334243859 [India]
+  N1 'Raj Consultants Private Limited' -> core='raj consultants' key='raj consultants' legal='ltd pvt'
+  N2 'Dr Raj Consultants Private  Limited' -> core='raj consultants' key='raj consultants' legal='ltd pvt' dom=False
+  A1 '17-1-470/1 Krishna Nagar, Saidabad, Hyderabad, Telangana' -> '17-1-470/1 krishna nagar saidabad hyderabad' nums='1 17 470' st='in_tg' m=['17', '1', '470', '1', 'krishna', 'nagar', 'saidabad', 'hyderabad']
+  A2 'Door No 17-1-470/1 Krishna Nagar, Saidabad, Hyderabad, L.b.nagar, Andhra Pradesh' -> 'door no 17-1-470/1 krishna nagar saidabad hyderabad lb nagar' nums='1 17 470' st='in_ap' m=['17', '1', '470', '1', 'krishna', 'nagar', 'saidabad', 'hyderabad', 'lb', 'nagar']
+
+S2-647418514 [India]
+  N1 'All Systems Private Limited' -> core='all systems' key='all' legal='ltd pvt'
+  N2 'ऑल सिस्टम्स प्राइवेट लिमिटेड' -> core='ol sistms praivet' key='ol sistms praivet' legal='ltd' dom=False
+  A1 'S-21, Darrya Heights Gandhi Chouk, M.G.Road, Akola, Maharashtra' -> 's-21 darrya hts gandhi chouk mg rd akola' nums='21' st='in_mh' m=['21', 'darrya', 'hts', 'gandhi', 'chouk', 'mg', 'rd', 'akola']
+  A2 'BLOCK E-74 S-21, AKOLA, Maharashtra' -> 'block e-74 s-21 akola' nums='21 74' st='in_mh' m=['block', '74', '21', 'akola']
+
+S2-241947961 [US]
+  N1 'Jones Holding Company L.L.C.' -> core='jones holding' key='jones' legal='co llc'
+  N2 'Jones Holding Company' -> core='jones holding' key='jones' legal='co' dom=False
+  A1 '29 Blueberry Cove Road, Yarmouth, ME' -> '29 blueberry cv rd yarmouth' nums='29' st='me' m=['29', 'blueberry', 'cv', 'rd', 'yarmouth']
+  A2 'PO BOX 8674, 29 BLUEBERRY COVE RD, ME, YARMOUTH' -> 'po box 8674 29 blueberry cv rd yarmouth' nums='29 8674' st='me' m=['8674', '29', 'blueberry', 'cv', 'rd', 'yarmouth']
+
+S3-963010190 [India]
+  N1 'Swastik Public School' -> core='swastik school' key='swastik school' legal='public'
+  N2 'Shri Swastik Public Center' -> core='swastik center' key='swastik' legal='public' dom=False
+  A1 'Madhya Pradesh, Gwalior, Thatipur, Bhadauria Villa Galla Kothar' -> 'gwalior thatipur bhadauria villa galla kothar' nums='' st='in_mp' m=['gwalior', 'thatipur', 'bhadauria', 'villa', 'galla', 'kothar']
+  A2 'Bhadauria Villa Galla Kothar, Thatipur, Gwalior, मध्य प्रदेश' -> 'bhadauria villa galla kothar thatipur gwalior mdhy prdes' nums='' st='' m=['bhadauria', 'villa', 'galla', 'kothar', 'thatipur', 'gwalior', 'mdhy', 'prdes']
+
+S3-942445924 [US]
+  N1 'Rapid Centurion, LLC' -> core='rapid centurion' key='rapid centurion' legal='llc'
+  N2 'Rapid Cneutrtir, LLC' -> core='rapid cneutrtir' key='rapid cneutrtir' legal='llc' dom=False
+  A1 '678 James Madison Highway, VA, Louisa County' -> '678 james madison hwy louisa cnty' nums='678' st='va' m=['678', 'james', 'madison', 'hwy', 'louisa', 'cnty']
+  A2 '678-682 James Madison Hwy, PMB 4100, Louisa County, Virginia' -> '678-682 james madison hwy pmb 4100 louisa cnty' nums='4100 678 682' st='va' m=['678', '682', 'james', 'madison', 'hwy', '4100', 'louisa', 'cnty']
+
+S2-567570623 [US]
+  N1 'Stanford Veterinary Clinic LLC' -> core='stanford veterinary clinic' key='stanford veterinary clinic' legal='llc'
+  N2 'STANFORD VETERINARY' -> core='stanford veterinary' key='stanford veterinary' legal='' dom=False
+  A1 '316 Landon Lane, Sneads Ferry, NC' -> '316 landon ln sneads ferry' nums='316' st='nc' m=['316', 'landon', 'ln', 'sneads', 'ferry']
+  A2 '316 LANDON LN, SNEADS FERRY, NC' -> '316 landon ln sneads ferry' nums='316' st='nc' m=['316', 'landon', 'ln', 'sneads', 'ferry']
+
+S2-196434312 [US]
+  N1 'Avila Preparatory Academy LLC' -> core='avila preparatory academy' key='avila preparatory academy' legal='llc'
+  N2 'Avila Academy Preparatory LLC' -> core='avila academy preparatory' key='avila academy preparatory' legal='llc' dom=False
+  A1 '4300 Newport Rd, Louisville, KY' -> '4300 newport rd louisville' nums='4300' st='ky' m=['4300', 'newport', 'rd', 'louisville']
+  A2 '04300 NEWPORT RD, LOUISVILLE, KY' -> '04300 newport rd louisville' nums='4300' st='ky' m=['4300', 'newport', 'rd', 'louisville']
+
+S2-270707049 [India]
+  N1 'Creative Enterprises Private Limited' -> core='creative enterprises' key='creative' legal='ltd pvt'
+  N2 'Creative Enterprises Private  Limited' -> core='creative enterprises' key='creative' legal='ltd pvt' dom=False
+  A1 'S. No. 667P2, Neknam Paddhari Road, At Neknam, Taluka Tankara, Dist Morbi, Tankara, Rajkot, Gujarat' -> 's no 667p2 neknam paddhari rd at neknam taluka tankara district morbi tankara rajkot' nums='2 667' st='in_gj' m=['667', '2', 'neknam', 'paddhari', 'rd', 'at', 'neknam', 'taluka', 'tankara', 'district', 'morbi', 'tankara', 'rajkot']
+  A2 '###75 S. NO. 667P2, NEKNAM PADDHARI ROAD, AT NEKNAM, TALUKA TANKARA, DIST MORBI, TANKARA, Gujarat' -> '75 s no 667p2 neknam paddhari rd at neknam taluka tankara district morbi tankara' nums='2 667 75' st='in_gj' m=['75', '667', '2', 'neknam', 'paddhari', 'rd', 'at', 'neknam', 'taluka', 'tankara', 'district', 'morbi', 'tankara']
+
+S2-312329066 [India]
+  N1 'High Infrastructure Private Limited' -> core='high infrastructure' key='high infrastructure' legal='ltd pvt'
+  N2 'हाई इंफ्रास्ट्रक्चर प्राइवेट लिमिटेड' -> core='hai imphrastrkcr praivet' key='hai imphrastrkcr praivet' legal='ltd' dom=False
+  A1 '104, Ganga Vihar, Mahesh Nagar, Tonk Phatak, Jaipur, Rajasthan' -> '104 ganga vihar mahesh nagar tonk phatak jaipur' nums='104' st='in_rj' m=['104', 'ganga', 'vihar', 'mahesh', 'nagar', 'tonk', 'phatak', 'jaipur']
+  A2 '104, GANGA VIHAR, MAHESH NAGAR, JAIPUR, Rajasthan' -> '104 ganga vihar mahesh nagar jaipur' nums='104' st='in_rj' m=['104', 'ganga', 'vihar', 'mahesh', 'nagar', 'jaipur']
+
+S3-358787474 [US]
+  N1 'Burton Pacific Truist LLC' -> core='burton pacific truist' key='burton pacific truist' legal='llc'
+  N2 'Burton Pacific Tiruist LLC' -> core='burton pacific tiruist' key='burton pacific tiruist' legal='llc' dom=False
+  A1 '120 Haven Lane, Murphy, NC' -> '120 haven ln murphy' nums='120' st='nc' m=['120', 'haven', 'ln', 'murphy']
+  A2 '120 Haven Ln, Murphy, North Carolina' -> '120 haven ln murphy' nums='120' st='nc' m=['120', 'haven', 'ln', 'murphy']
+
+S2-12802345 [US]
+  N1 'Avon Homecare' -> core='avon homecare' key='avon homecare' legal=''
+  N2 'Avon Homecare' -> core='avon homecare' key='avon homecare' legal='' dom=False
+  A1 '71 New Road, Avon, CT' -> '71 new rd avon' nums='71' st='ct' m=['71', 'new', 'rd', 'avon']
+  A2 '71 NEW ROAD, AVON, CT' -> '71 new rd avon' nums='71' st='ct' m=['71', 'new', 'rd', 'avon']
+
+S3-964316419 [India]
+  N1 'Century Industries Group Limited' -> core='century industries group' key='century' legal='ltd'
+  N2 'Century  Industries' -> core='century industries' key='century' legal='' dom=False
+  A1 'Road No 3 Kazipur Quarters, Bihar, Patna, Opp To Quarter No 11, Patna' -> 'rd no 3 kazipur quarters patna opp to quarter no 11 patna' nums='11 3' st='in_br' m=['rd', '3', 'kazipur', 'quarters', 'patna', 'opp', 'to', 'quarter', '11', 'patna']
+  A2 'Opp To Quarter No #11, Patna, बिहार' -> 'opp to quarter no 11 patna' nums='11' st='in_br' m=['opp', 'to', 'quarter', '11', 'patna']
+
+S3-905250863 [US]
+  N1 "Kristina's Keystone Technologies" -> core='kristinas keystone technologies' key='kristinas keystone technologies' legal=''
+  N2 "Kristina's  Keystone Technologies" -> core='kristinas keystone technologies' key='kristinas keystone technologies' legal='' dom=False
+  A1 '160 204 Pintail Loop, Hamilton, MT' -> '160 204 pintail loop hamilton' nums='160 204' st='mt' m=['160', '204', 'pintail', 'loop', 'hamilton']
+  A2 '160 204 Pintail Loop, Hamilton, Montana' -> '160 204 pintail loop hamilton' nums='160 204' st='mt' m=['160', '204', 'pintail', 'loop', 'hamilton']
+
+S2-504604520 [US]
+  N1 'Youth Association V' -> core='youth association v' key='youth association v' legal=''
+  N2 'Y0uth Association V LLC' -> core='youth association v' key='youth association v' legal='llc' dom=False
+  A1 '96 Alton Lane, King William County, VA' -> '96 alton ln king william cnty' nums='96' st='va' m=['96', 'alton', 'ln', 'king', 'william', 'cnty']
+  A2 'VA, 96  ALTON LANE, KING WILLIAM' -> '96 alton ln king william' nums='96' st='va' m=['96', 'alton', 'ln', 'king', 'william']
+
+S2-186066097 [US]
+  N1 'Patriot Coastal LLC' -> core='patriot coastal' key='patriot coastal' legal='llc'
+  N2 'Patriot Coastal L.L.C.' -> core='patriot coastal' key='patriot coastal' legal='llc' dom=False
+  A1 '100 Pine Street, Unit 146, City Of Wilson, NC' -> '100 pine st unit 146 city of wilson' nums='100 146' st='nc' m=['100', 'pine', 'st', '146', 'city', 'wilson']
+  A2 '100D PINE STREET, CITY OF WILSON, NC' -> '100d pine st city of wilson' nums='100' st='nc' m=['100', 'pine', 'st', 'city', 'wilson']
+
+S3-615185138 [US]
+  N1 'Stewart Kimco of Springdale' -> core='stewart kimco of springdale' key='stewart kimco springdale' legal=''
+  N2 'Stewart Kimco' -> core='stewart kimco' key='stewart kimco' legal='' dom=False
+  A1 '19778 Bennington, Springdale, AR' -> '19778 bennington springdale' nums='19778' st='ar' m=['19778', 'bennington', 'springdale']
+  A2 '19778 Bennington, Springdale, AR' -> '19778 bennington springdale' nums='19778' st='ar' m=['19778', 'bennington', 'springdale']
+
+S2-329681108 [India]
+  N1 'Kala Technologies Pvt. Ltd.' -> core='kala technologies' key='kala technologies' legal='ltd pvt'
+  N2 'kalatechnologies.com' -> core='kalatechnologies' key='kalatechnologies' legal='' dom=True
+  A1 '7/H/23, Raicharan Pal Ln Kolkata, Kolkata, Kolkata, Howrah, West Bengal' -> '7/h/23 raicharan pal ln kolkata kolkata kolkata howrah' nums='23 7' st='in_wb' m=['7', '23', 'raicharan', 'pal', 'ln', 'kolkata', 'kolkata', 'kolkata', 'howrah']
+  A2 '7/H/23, RAICHARAN PAL LN KOLKATA, KOLKATA, KOLKATA, West Bengal' -> '7/h/23 raicharan pal ln kolkata kolkata kolkata' nums='23 7' st='in_wb' m=['7', '23', 'raicharan', 'pal', 'ln', 'kolkata', 'kolkata', 'kolkata']
+
+S3-644264610 [India]
+  N1 'Seven Shiva Infrastructure Limited' -> core='seven shiva infrastructure' key='seven shiva infrastructure' legal='ltd'
+  N2 'Seven  Shiva Infrastructure' -> core='seven shiva infrastructure' key='seven shiva infrastructure' legal='' dom=False
+  A1 'House.No.7-124/1/C1 Sagar Ring Road, Manneguda Village, Hyderabad, Telangana' -> 'house no 7-124/1/c1 sagar ring rd manneguda vlg hyderabad' nums='1 124 7' st='in_tg' m=['7', '124', '1', '1', 'sagar', 'ring', 'rd', 'manneguda', 'vlg', 'hyderabad']
+  A2 'House.no.7-124/1/c1 Sagar Ring Road, Manneguda Village, Hyderabad, తెలంగాణ' -> 'house no 7-124/1/c1 sagar ring rd manneguda vlg hyderabad telmgan' nums='1 124 7' st='' m=['7', '124', '1', '1', 'sagar', 'ring', 'rd', 'manneguda', 'vlg', 'hyderabad', 'telmgan']
+
+S3-402312163 [US]
+  N1 'Bush Piedmont Sui' -> core='bush piedmont sui' key='bush piedmont sui' legal=''
+  N2 'Bush  Piedmont Sui' -> core='bush piedmont sui' key='bush piedmont sui' legal='' dom=False
+  A1 '561 950, Norris City, IL' -> '561 950 norris city' nums='561 950' st='il' m=['561', '950', 'norris', 'city']
+  A2 '##561 950, Norris City, Illinois' -> '561 950 norris city' nums='561 950' st='il' m=['561', '950', 'norris', 'city']
+
+S2-771927923 [India]
+  N1 'Akshat Traders Corp' -> core='akshat traders' key='akshat' legal='corp'
+  N2 'Akshat (Traders)' -> core='akshat traders' key='akshat' legal='' dom=False
+  A1 'Viii396 B4 Ktk Tower, Second Floor, Nadapuram, Kozhikode, Kerala' -> 'viii396 b4 ktk tower 2 fl nadapuram kozhikode' nums='2 396 4' st='in_kl' m=['396', '4', 'ktk', 'tower', '2', 'nadapuram', 'kozhikode']
+  A2 'VIII96 B4 KTK TOWER, SECOND FLOOR, NADAPURAM, Keralam' -> 'viii96 b4 ktk tower 2 fl nadapuram' nums='2 4 96' st='in_kl' m=['96', '4', 'ktk', 'tower', '2', 'nadapuram']
+
+S2-983649961 [India]
+  N1 'Basa Communications Private Limited' -> core='basa communications' key='basa communications' legal='ltd pvt'
+  N2 'Mr basa communications private limited' -> core='basa communications' key='basa communications' legal='ltd pvt' dom=False
+  A1 'No.567, Beml Embcs Layout 5Th Stage, Rr Nagar, Bangalore, Karnataka' -> 'no 567 beml embcs layout 5 stage rr nagar bangalore' nums='5 567' st='in_ka' m=['567', 'beml', 'embcs', 'layout', '5', 'stage', 'rr', 'nagar', 'bangalore']
+  A2 'NO.567  , BEML EMBCS LAYOUT 5TH STAGE, RR NAGAR, BANGALORE, ಕರ್ನಾಟಕ' -> 'no 567 beml embcs layout 5 stage rr nagar bangalore krnatk' nums='5 567' st='' m=['567', 'beml', 'embcs', 'layout', '5', 'stage', 'rr', 'nagar', 'bangalore', 'krnatk']
+
+S2-313001001 [India]
+  N1 'Shree Scrap Private Limited' -> core='scrap' key='scrap' legal='ltd pvt'
+  N2 'Shree Scrap  Private Limited' -> core='scrap' key='scrap' legal='ltd pvt' dom=False
+  A1 'Shop No 2, Chetak Chs Ltd, Nargis Dutt Road, 41, Pali Hill, Bandra West, Mumbai, Mumbai City, Maharashtra' -> 'shop no 2 chetak chs ltd nargis dutt rd 41 pali hill bandra w mumbai mumbai city' nums='2 41' st='in_mh' m=['2', 'chetak', 'chs', 'ltd', 'nargis', 'dutt', 'rd', '41', 'pali', 'hill', 'bandra', 'w', 'mumbai', 'mumbai', 'city']
+  A2 'SHOP NO C-2 , CHETAK CHS LTD, NARGIS DUTT ROAD, 41, PALI HILL, BANDRA WEST, MUMBAI, Maharashtra' -> 'shop no c-2 chetak chs ltd nargis dutt rd 41 pali hill bandra w mumbai' nums='2 41' st='in_mh' m=['2', 'chetak', 'chs', 'ltd', 'nargis', 'dutt', 'rd', '41', 'pali', 'hill', 'bandra', 'w', 'mumbai']
+
+S2-55983019 [India]
+  N1 'Red Hospitality' -> core='red hospitality' key='red hospitality' legal=''
+  N2 'রেড হসপিটালিটি' -> core='red hspitaliti' key='red hspitaliti' legal='' dom=False
+  A1 '7 Loyans Range, Kolkata, Calcutta, West Bengal' -> '7 loyans range kolkata calcutta' nums='7' st='in_wb' m=['7', 'loyans', 'range', 'kolkata', 'calcutta']
+  A2 '7 LOYANS RANGE, KOLKATA, CALCUTTA, West Bengal' -> '7 loyans range kolkata calcutta' nums='7' st='in_wb' m=['7', 'loyans', 'range', 'kolkata', 'calcutta']
+
+S3-631793971 [US]
+  N1 'Flint Battery Inc' -> core='flint battery' key='flint battery' legal='inc'
+  N2 'flint battery inc' -> core='flint battery' key='flint battery' legal='inc' dom=False
+  A1 '812 Havenwood Lane, Fort Worth, TX' -> '812 havenwood ln ft worth' nums='812' st='tx' m=['812', 'havenwood', 'ln', 'ft', 'worth']
+  A2 '812 Havenwood Ln, Fort Worth, Texas' -> '812 havenwood ln ft worth' nums='812' st='tx' m=['812', 'havenwood', 'ln', 'ft', 'worth']
+
+S3-134787601 [India]
+  N1 'Consultants Saboo Chemicals' -> core='consultants saboo chemicals' key='consultants saboo chemicals' legal=''
+  N2 'Chemicals Sáboo Consultants' -> core='chemicals saboo consultants' key='chemicals saboo consultants' legal='' dom=False
+  A1 'Flat No. T2 604, Kishangarh Pride, Parasiya, Ajmer Road, Kishangarh, Ajmer, Rajasthan' -> 'flat no t2 604 kishangarh pride parasiya ajmer rd kishangarh ajmer' nums='2 604' st='in_rj' m=['2', '604', 'kishangarh', 'pride', 'parasiya', 'ajmer', 'rd', 'kishangarh', 'ajmer']
+  A2 'Flat No. T02 604, Kishangarh Pride, Parasiya, Ajmer Road, Kishangarh, Ajmer, राजस्थान' -> 'flat no t02 604 kishangarh pride parasiya ajmer rd kishangarh ajmer rajsthan' nums='2 604' st='' m=['2', '604', 'kishangarh', 'pride', 'parasiya', 'ajmer', 'rd', 'kishangarh', 'ajmer', 'rajsthan']
+
+S2-508160533 [US]
+  N1 'Cepeda Ventures' -> core='cepeda ventures' key='cepeda' legal=''
+  N2 'Cepeda Ventures' -> core='cepeda ventures' key='cepeda' legal='' dom=False
+  A1 '2390 Pine Hall Road, Belews Creek, NC' -> '2390 pine hall rd belews crk' nums='2390' st='nc' m=['2390', 'pine', 'hall', 'rd', 'belews', 'crk']
+  A2 '2390 PINE HALL RD, BELEWS CREEK, NC' -> '2390 pine hall rd belews crk' nums='2390' st='nc' m=['2390', 'pine', 'hall', 'rd', 'belews', 'crk']
+
+S2-148847539 [India]
+  N1 'Studio Holdings' -> core='studio holdings' key='studio' legal=''
+  N2 'Sbrdfo [Holdings]' -> core='sbrdfo holdings' key='sbrdfo' legal='' dom=False
+  A1 'Delhi, Kh.No. 123/13, 1St Floor, North Delhi, House No Pvt-691, North' -> 'kh no 123/13 1 fl n house no pvt-691 n' nums='1 123 13 691' st='in_dl' m=['123', '13', '1', '691']
+  A2 'HOUE NO PVT-691, NORTH, NORTH DELHI, दिल्ली' -> 'houe no pvt-691 n n dilli' nums='691' st='in_dl' m=['houe', '691', 'dilli']
+
+S3-630425733 [India]
+  N1 'Shree Forwarder Private Limited' -> core='forwarder' key='forwarder' legal='ltd pvt'
+  N2 'Mr Shree Forwarder Private Ltd' -> core='forwarder' key='forwarder' legal='ltd pvt' dom=False
+  A1 'Patna, Kuan, West Lohanipur Near Goria Asthan, Kadam, Bihar, Rajendar Bhawan C/O Rajendra Prasad Yadav' -> 'patna kuan w lohanipur near goria asthan kadam rajendar bhawan c/o rajendra prasad yadav' nums='' st='in_br' m=['patna', 'kuan', 'w', 'lohanipur', 'near', 'goria', 'asthan', 'kadam', 'rajendar', 'bhawan', 'c/o', 'rajendra', 'prasad', 'yadav']
+  A2 'Block B-646 Rajendar Bhawan C/o Rajendra Prasad Yadav, West Lohanipur Near Goria Asthan, Kadam, Kuan, Patna, BR' -> 'block b-646 rajendar bhawan c/o rajendra prasad yadav w lohanipur near goria asthan kadam kuan patna' nums='646' st='in_br' m=['block', '646', 'rajendar', 'bhawan', 'c/o', 'rajendra', 'prasad', 'yadav', 'w', 'lohanipur', 'near', 'goria', 'asthan', 'kadam', 'kuan', 'patna']
+
+S2-371552540 [US]
+  N1 'Carola Chen, DO' -> core='carola chen do' key='carola chen do' legal=''
+  N2 'Carola Chen, DÓ' -> core='carola chen do' key='carola chen do' legal='' dom=False
+  A1 '9 Hughes Street, Unit 1, Quincy, MA' -> '9 hughes st unit 1 quincy' nums='1 9' st='ma' m=['9', 'hughes', 'st', '1', 'quincy']
+  A2 '9 HUGHES STREET, QUINCY, MA' -> '9 hughes st quincy' nums='9' st='ma' m=['9', 'hughes', 'st', 'quincy']
+
+S3-884212721 [US]
+  N1 '2791 Third Place Holdings' -> core='2791 third place holdings' key='2791 third place' legal=''
+  N2 '2791 Third Place Hóldings' -> core='2791 third place holdings' key='2791 third place' legal='' dom=False
+  A1 '1346 8th Street, Noblesville, IN' -> '1346 8 st noblesville' nums='1346 8' st='in' m=['1346', '8', 'st', 'noblesville']
+  A2 '1346 Eighth St, Noblesville, Indiana' -> '1346 8 st noblesville' nums='1346 8' st='in' m=['1346', '8', 'st', 'noblesville']
+
+S3-82076650 [India]
+  N1 'West Champaran Forex Private Limited' -> core='west champaran forex' key='west champaran forex' legal='ltd pvt'
+  N2 'West Champaran Forex Private Límited' -> core='west champaran forex' key='west champaran forex' legal='ltd pvt' dom=False
+  A1 'Bihar, West Champaran, Vill.P.O.- Dumaria Estate, P.S.- Shikarpur, West Champaran' -> 'w champaran villpo dumaria estate ps shikarpur w champaran' nums='' st='in_br' m=['w', 'champaran', 'villpo', 'dumaria', 'estate', 'ps', 'shikarpur', 'w', 'champaran']
+  A2 'Vill.p.o.- Dumaria Estate, BR, West Champaran, P.s.- Shikarpur, West Champaran' -> 'villpo dumaria estate w champaran ps shikarpur w champaran' nums='' st='in_br' m=['villpo', 'dumaria', 'estate', 'w', 'champaran', 'ps', 'shikarpur', 'w', 'champaran']
+
+S3-991004285 [India]
+  N1 'Delta Share LLP' -> core='delta share' key='delta share' legal='llp'
+  N2 'Jaxzeta' -> core='jaxzeta' key='jaxzeta' legal='' dom=False
+  A1 'Gf-14, 15 Swaminarayan Business Park, Opp.Gokulesh Petrol Pump, Near Narol Cross Road, Daskroi, Ahmedabad, Gujarat' -> 'gf-14 15 swaminarayan business park opp gokulesh petrol pump near narol cross rd daskroi ahmedabad' nums='14 15' st='in_gj' m=['14', '15', 'swaminarayan', 'business', 'park', 'opp', 'gokulesh', 'petrol', 'pump', 'near', 'narol', 'cross', 'rd', 'daskroi', 'ahmedabad']
+  A2 'Gf-14, 15 Swaminarayan Business Park, Opp.Gokulesh Petrol Pump, Near Narol Cross Road, Daskroi, Ahmedabad, Gujarat' -> 'gf-14 15 swaminarayan business park opp gokulesh petrol pump near narol cross rd daskroi ahmedabad' nums='14 15' st='in_gj' m=['14', '15', 'swaminarayan', 'business', 'park', 'opp', 'gokulesh', 'petrol', 'pump', 'near', 'narol', 'cross', 'rd', 'daskroi', 'ahmedabad']
+
+S2-142609410 [US]
+  N1 'Uptown Nails, Inc' -> core='uptown nails' key='uptown nails' legal='inc'
+  N2 'Upt0wn Nlna,  Inc' -> core='uptown nlna' key='uptown nlna' legal='inc' dom=False
+  A1 '4010 116th Street, Runnells, IA' -> '4010 116 st runnells' nums='116 4010' st='ia' m=['4010', '116', 'st', 'runnells']
+  A2 '4010 116ND ST, RUNNELLS, IA' -> '4010 116 st runnells' nums='116 4010' st='ia' m=['4010', '116', 'st', 'runnells']
+
+S2-44975227 [India]
+  N1 'North Baba Foundation Private Limited' -> core='north baba foundation' key='north baba foundation' legal='ltd pvt'
+  N2 'NORTH BABA FOUNDATION PRIVATE LIMITED' -> core='north baba foundation' key='north baba foundation' legal='ltd pvt' dom=False
+  A1 'Khata No.2334/117, Sy No., 117/2, 117/3, 117/4, 117/5, Bangalore North, Bangalore, Karnataka' -> 'khata no 2334/117 sy no 117/2 117/3 117/4 117/5 bangalore n bangalore' nums='117 2 2334 3 4 5' st='in_ka' m=['khata', '2334', '117', '117', '2', '117', '3', '117', '4', '117', '5', 'bangalore', 'bangalore']
+  A2 'KHATA NO.2334/117, SY NO., 117/2, 117/3, 117/4, 117/5, BANGALORE NORTH, ಕರ್ನಾಟಕ' -> 'khata no 2334/117 sy no 117/2 117/3 117/4 117/5 bangalore n krnatk' nums='117 2 2334 3 4 5' st='' m=['khata', '2334', '117', '117', '2', '117', '3', '117', '4', '117', '5', 'bangalore', 'krnatk']
+
+S3-599551379 [US]
+  N1 'Claggett, Michelle, MD' -> core='claggett michelle md' key='claggett michelle md' legal=''
+  N2 'Orbiorbi' -> core='orbiorbi' key='orbiorbi' legal='' dom=False
+  A1 '9 Foster Street, Woburn, MA' -> '9 foster st woburn' nums='9' st='ma' m=['9', 'foster', 'st', 'woburn']
+  A2 '9 Foster Street, Massachusetts, Woburn' -> '9 foster st woburn' nums='9' st='ma' m=['9', 'foster', 'st', 'woburn']
+
+S3-799201913 [US]
+  N1 'Mountain Superior Perfect LLC' -> core='mountain superior perfect' key='mountain superior perfect' legal='llc'
+  N2 'Mountain  Superior Perfect' -> core='mountain superior perfect' key='mountain superior perfect' legal='' dom=False
+  A1 '9615 Ford Road, Edwards, IL' -> '9615 ford rd edwards' nums='9615' st='il' m=['9615', 'ford', 'rd', 'edwards']
+  A2 '615 Ford Rd, Edwards, Illinois' -> '615 ford rd edwards' nums='615' st='il' m=['615', 'ford', 'rd', 'edwards']
+
+S3-422324918 [US]
+  N1 'Surgical Center Partners' -> core='surgical center partners' key='surgical' legal=''
+  N2 'Surgical Center  Partners' -> core='surgical center partners' key='surgical' legal='' dom=False
+  A1 'Charlottesville City, Unit # 4, 1410 Grady Avenue, VA' -> 'charlottesville city unit 4 1410 grady ave' nums='1410 4' st='va' m=['charlottesville', 'city', '4', '1410', 'grady', 'ave']
+  A2 '1410 Grady Avenue, Unit # 4, Charlottesville, Virginia' -> '1410 grady ave unit 4 charlottesville' nums='1410 4' st='va' m=['1410', 'grady', 'ave', '4', 'charlottesville']
+
+S2-947080014 [US]
+  N1 'Williams, Nanci, D.D.S. Corp' -> core='williams nanci dds' key='williams nanci dds' legal='corp'
+  N2 'Williams, Nánci, D.D.S. Corp' -> core='williams nanci dds' key='williams nanci dds' legal='corp' dom=False
+  A1 '1722 Garden Point Lane, League City, TX' -> '1722 garden pt ln league city' nums='1722' st='tx' m=['1722', 'garden', 'pt', 'ln', 'league', 'city']
+  A2 '#1722 GARDEN POINT LN, LEAGUE CITY, TX' -> '1722 garden pt ln league city' nums='1722' st='tx' m=['1722', 'garden', 'pt', 'ln', 'league', 'city']
+
+S2-747459570 [US]
+  N1 'Janine Kuykendall Allied Seas Inc.' -> core='janine kuykendall allied seas' key='janine kuykendall allied seas' legal='inc'
+  N2 'JANINE KUYKENDALL SEAS INC. (CENTER)' -> core='janine kuykendall seas center' key='janine kuykendall seas' legal='inc' dom=False
+  A1 'Salt Lake City, UT, 925 Donner Way, Unit 2500' -> 'salt lake city 925 donner way unit 2500' nums='2500 925' st='ut' m=['salt', 'lake', 'city', '925', 'donner', 'way', '2500']
+  A2 '925 DONNER WAY, SALT LAKE CITY, UT' -> '925 donner way salt lake city' nums='925' st='ut' m=['925', 'donner', 'way', 'salt', 'lake', 'city']
+
+S2-450537004 [US]
+  N1 '007 Oncology' -> core='007 oncology' key='007 oncology' legal=''
+  N2 '007 Ootlsoby' -> core='007 ootlsoby' key='007 ootlsoby' legal='' dom=False
+  A1 '6928 Old Sauk Court, City Of Madison, WI' -> '6928 old sauk ct city of madison' nums='6928' st='wi' m=['6928', 'old', 'sauk', 'ct', 'city', 'madison']
+  A2 '6928 OLD SAUK COURT, MADISON, WI' -> '6928 old sauk ct madison' nums='6928' st='wi' m=['6928', 'old', 'sauk', 'ct', 'madison']
+
+S2-792626497 [US]
+  N1 'Prairie Storage L.L.C.' -> core='prairie storage' key='prairie storage' legal='llc'
+  N2 'Prairie 5torage [L.L.C.]' -> core='prairie storage' key='prairie storage' legal='llc' dom=False
+  A1 '7025 Georgetown Road, Walkersville, WV' -> '7025 georgetown rd walkersville' nums='7025' st='wv' m=['7025', 'georgetown', 'rd', 'walkersville']
+  A2 '7025D GEORGETOWN RD, WALKERSIVLLE, WV' -> '7025d georgetown rd walkersivlle' nums='7025' st='wv' m=['7025', 'georgetown', 'rd', 'walkersivlle']
+
+S2-345140643 [US]
+  N1 'Choice Piedmont Rockwool' -> core='choice piedmont rockwool' key='choice piedmont rockwool' legal=''
+  N2 'Pfnedmet Choice Rockwool' -> core='pfnedmet choice rockwool' key='pfnedmet choice rockwool' legal='' dom=False
+  A1 '8447 New Haven Drive, City Of El Paso, TX' -> '8447 new haven dr city of el paso' nums='8447' st='tx' m=['8447', 'new', 'haven', 'dr', 'city', 'el', 'paso']
+  A2 '8447 NEW HAVEN DRIVE, CITY OF EL PASO, TX' -> '8447 new haven dr city of el paso' nums='8447' st='tx' m=['8447', 'new', 'haven', 'dr', 'city', 'el', 'paso']
+
+S3-622027208 [US]
+  N1 'Lambert Music LLC' -> core='lambert music' key='lambert music' legal='llc'
+  N2 'Lambert Music' -> core='lambert music' key='lambert music' legal='' dom=False
+  A1 '1923 6th Avenue, Altoona, PA' -> '1923 6 ave altoona' nums='1923 6' st='pa' m=['1923', '6', 'ave', 'altoona']
+  A2 '1923 6th Avenue, Altoona, PA' -> '1923 6 ave altoona' nums='1923 6' st='pa' m=['1923', '6', 'ave', 'altoona']
+
+S3-647934033 [US]
+  N1 'Michel Plum LLC' -> core='michel plum' key='michel plum' legal='llc'
+  N2 'Miche1 Plum-LLC' -> core='michel plum' key='michel plum' legal='llc' dom=False
+  A1 'N1524 Deer Haven Court, Village Of Greenville, WI' -> 'n1524 deer haven ct vlg of greenville' nums='1524' st='wi' m=['1524', 'deer', 'haven', 'ct', 'vlg', 'greenville']
+  A2 'NULL, Village Of Greenville, Deer Haven Court, Wisconsin' -> 'vlg of greenville deer haven ct' nums='' st='wi' m=['vlg', 'greenville', 'deer', 'haven', 'ct']
+
+S2-841124173 [US]
+  N1 'Demers & Watson Applied PLLC' -> core='demers and watson applied' key='demers watson applied' legal='pllc'
+  N2 'Demers & Watson' -> core='demers and watson' key='demers watson' legal='' dom=False
+  A1 '2860 Coy Kaylor Drive, Unit Apt 3, Fayetteville, AR' -> '2860 coy kaylor dr unit apt 3 fayetteville' nums='2860 3' st='ar' m=['2860', 'coy', 'kaylor', 'dr', '3', 'fayetteville']
+  A2 'AR, 4860 COY KAYLOR DR, FAYETTEVILLE' -> '4860 coy kaylor dr fayetteville' nums='4860' st='ar' m=['4860', 'coy', 'kaylor', 'dr', 'fayetteville']
+
+S3-413065272 [US]
+  N1 'Ariel Lee Precious' -> core='ariel lee precious' key='ariel lee precious' legal=''
+  N2 'Ariel Lee Precious' -> core='ariel lee precious' key='ariel lee precious' legal='' dom=False
+  A1 '2309 Helena Avenue, Oakdale, MN' -> '2309 helena ave oakdale' nums='2309' st='mn' m=['2309', 'helena', 'ave', 'oakdale']
+  A2 '2309 Helena Avenue, Oakdale, Minnesota' -> '2309 helena ave oakdale' nums='2309' st='mn' m=['2309', 'helena', 'ave', 'oakdale']
+
+S3-207817796 [US]
+  N1 'Francis, Rios & Schall Grupo' -> core='francis rios and schall grupo' key='francis rios schall grupo' legal=''
+  N2 'Francis, Rios Sacll & Grupo' -> core='francis rios sacll and grupo' key='francis rios sacll grupo' legal='' dom=False
+  A1 'AK, Anchorage, 12000 Lorraine Street' -> 'anchorage 12000 lorraine st' nums='12000' st='ak' m=['anchorage', '12000', 'lorraine', 'st']
+  A2 '12000d Lorraine St, Ancorage, Alaska' -> '12000d lorraine st ancorage' nums='12000' st='ak' m=['12000', 'lorraine', 'st', 'ancorage']
+
+S2-782091666 [US]
+  N1 'Value Mountain Chadwick LLC' -> core='value mountain chadwick' key='value mountain chadwick' legal='llc'
+  N2 'Value Mountain Ctdaiik  LLC' -> core='value mountain ctdaiik' key='value mountain ctdaiik' legal='llc' dom=False
+  A1 '6 Head Of The Tide Road, Belfast, ME' -> '6 head of the tide rd belfast' nums='6' st='me' m=['6', 'head', 'tide', 'rd', 'belfast']
+  A2 '01 HEAD OF THE TIDE RD, BELFAST, ME' -> '01 head of the tide rd belfast' nums='1' st='me' m=['1', 'head', 'tide', 'rd', 'belfast']
+
+S2-321862053 [India]
+  N1 'Products God Bar Limited' -> core='products god bar' key='products god bar' legal='ltd'
+  N2 'Products God Bar [[Limited]]' -> core='products god bar' key='products god bar' legal='ltd' dom=False
+  A1 'E, Floor- 02, 203, Bejanwala Complex, Opp. West Zone, Rander Road, Tadwadi, Surat, Gujarat' -> 'e fl 02 203 bejanwala complex opp w zone rander rd tadwadi surat' nums='2 203' st='in_gj' m=['e', '2', '203', 'bejanwala', 'complex', 'opp', 'w', 'zone', 'rander', 'rd', 'tadwadi', 'surat']
+  A2 'BLOCK C-497 E, FLOOR- 02, 203, BEJANWALA COMPLEX, OPP. WEST ZONE, RANDER ROAD, TADWADI, SURAT, Gujarat' -> 'block c-497 e fl 02 203 bejanwala complex opp w zone rander rd tadwadi surat' nums='2 203 497' st='in_gj' m=['block', '497', 'e', '2', '203', 'bejanwala', 'complex', 'opp', 'w', 'zone', 'rander', 'rd', 'tadwadi', 'surat']
+
+S2-949183776 [US]
+  N1 'Blue Cascade Apparel LP' -> core='blue cascade apparel' key='blue cascade apparel' legal='lp'
+  N2 'Blue Cascade Alntpaeael LP' -> core='blue cascade alntpaeael' key='blue cascade alntpaeael' legal='lp' dom=False
+  A1 '701 Warren Street, Unit Suite 4B, Hudson, NY' -> '701 warren st unit ste 4b hudson' nums='4 701' st='ny' m=['701', 'warren', 'st', '4', 'hudson']
+  A2 'WARREN ST, HUDSON, NY' -> 'warren st hudson' nums='' st='ny' m=['warren', 'st', 'hudson']
+
+S2-977025597 [India]
+  N1 'Dahisar East System Private Limited' -> core='dahisar east system' key='dahisar east system' legal='ltd pvt'
+  N2 'Dahisar East System System Private' -> core='dahisar east system system' key='dahisar east system system' legal='pvt' dom=False
+  A1 'Gurukul Chs, J S Road, Maharashtra, Mumbai, A/0803, Dahisar East' -> 'gurukul chs j s rd mumbai a/0803 dahisar e' nums='803' st='in_mh' m=['gurukul', 'chs', 'j', 'rd', 'mumbai', '803', 'dahisar', 'e']
+  A2 'A/0803, GURUKUL CHS, J S ROAD, DAHISAR EAST, Maharashtra' -> 'a/0803 gurukul chs j s rd dahisar e' nums='803' st='in_mh' m=['803', 'gurukul', 'chs', 'j', 'rd', 'dahisar', 'e']
+
+S3-58587537 [US]
+  N1 'Thompson and Acres' -> core='thompson and acres' key='thompson acres' legal=''
+  N2 'Thompson ánd Acres' -> core='thompson and acres' key='thompson acres' legal='' dom=False
+  A1 '164 Shinnville Ridge Lane, Mooresville, NC' -> '164 shinnville rdg ln mooresville' nums='164' st='nc' m=['164', 'shinnville', 'rdg', 'ln', 'mooresville']
+  A2 '##164 Shinnville Ridge Ln, Mooresville, North Carolina' -> '164 shinnville rdg ln mooresville' nums='164' st='nc' m=['164', 'shinnville', 'rdg', 'ln', 'mooresville']
+
+S2-13641762 [US]
+  N1 'Liberty Creative Distribution LLC' -> core='liberty creative distribution' key='liberty creative distribution' legal='llc'
+  N2 'LIBERTY CREATIVE DNSTRIMUTLON  LLC' -> core='liberty creative dnstrimutlon' key='liberty creative dnstrimutlon' legal='llc' dom=False
+  A1 'MA, Saugus, 9 Willis Street' -> 'saugus 9 willis st' nums='9' st='ma' m=['saugus', '9', 'willis', 'st']
+  A2 None -> '' nums='' st='' m=[]
+
+S3-917857236 [US]
+  N1 'Deena Torrez Complete Health' -> core='deena torrez complete health' key='deena torrez complete health' legal=''
+  N2 'Deena Torrez Complete Health Inc.' -> core='deena torrez complete health' key='deena torrez complete health' legal='inc' dom=False
+  A1 '2111 91st Street, Lincoln, NE' -> '2111 91 st lincoln' nums='2111 91' st='ne' m=['2111', '91', 'st', 'lincoln']
+  A2 '2111 91st Street, Nebraska, Lincoln' -> '2111 91 st lincoln' nums='2111 91' st='ne' m=['2111', '91', 'st', 'lincoln']
+
+S3-505968125 [India]
+  N1 'Premier Foundation Private Limited' -> core='premier foundation' key='premier foundation' legal='ltd pvt'
+  N2 'Premier Foundation Private Ltd' -> core='premier foundation' key='premier foundation' legal='ltd pvt' dom=False
+  A1 'C-230, Gyan Marg, Tilak Nagar, Jaipur, Rajasthan' -> 'c-230 gyan marg tilak nagar jaipur' nums='230' st='in_rj' m=['230', 'gyan', 'marg', 'tilak', 'nagar', 'jaipur']
+  A2 'C-230, Jaipur, RJ' -> 'c-230 jaipur' nums='230' st='in_rj' m=['230', 'jaipur']
+
+S2-804969974 [US]
+  N1 'Tiffie Christian, Esq.' -> core='tiffie christian esq' key='tiffie christian esq' legal=''
+  N2 'TIFFIE CHRISTIAN,  (ESQ.)' -> core='tiffie christian esq' key='tiffie christian esq' legal='' dom=False
+  A1 '832 62nd Street, City Of Kenosha, WI' -> '832 62 st city of kenosha' nums='62 832' st='wi' m=['832', '62', 'st', 'city', 'kenosha']
+  A2 '832  62ND STREET, CITY OF KENOSHA, WI' -> '832 62 st city of kenosha' nums='62 832' st='wi' m=['832', '62', 'st', 'city', 'kenosha']
+
+S3-790340900 [US]
+  N1 'Valley Piedmont Northwest PLLC' -> core='valley piedmont northwest' key='valley piedmont northwest' legal='pllc'
+  N2 'Valley Piedmont PLLC Service' -> core='valley piedmont service' key='valley piedmont' legal='pllc' dom=False
+  A1 '1994 East Street, Pittsfield, MA' -> '1994 e st pittsfield' nums='1994' st='ma' m=['1994', 'e', 'st', 'pittsfield']
+  A2 '1994 East Street, Pittsfield Township, Massachusetts' -> '1994 e st pittsfield twp' nums='1994' st='ma' m=['1994', 'e', 'st', 'pittsfield', 'twp']
+
+S3-156848001 [India]
+  N1 'US Sustainables Ltd' -> core='us sustainables' key='sustainables' legal='ltd'
+  N2 'US Sustainables-Ltd' -> core='us sustainables' key='sustainables' legal='ltd' dom=False
+  A1 'Pl No 16 & 17, Manikonda, Rangareddy, Telangana' -> 'pl no 16 and 17 manikonda rangareddy' nums='16 17' st='in_tg' m=['pl', '16', '17', 'manikonda', 'rangareddy']
+  A2 'Pl No ##16 & 17, Rangareddy, తెలంగాణ' -> 'pl no 16 and 17 rangareddy telmgan' nums='16 17' st='' m=['pl', '16', '17', 'rangareddy', 'telmgan']
+
+S3-753926980 [US]
+  N1 'Devue Capital Partners LLC' -> core='devue capital partners' key='devue capital' legal='llc'
+  N2 'Devue Capital Pártnérs LLC' -> core='devue capital partners' key='devue capital' legal='llc' dom=False
+  A1 '4600 Cunningham Road, Unit 604, Killeen, TX' -> '4600 cunningham rd unit 604 killeen' nums='4600 604' st='tx' m=['4600', 'cunningham', 'rd', '604', 'killeen']
+  A2 '4600 Cunningham Road, # 604, Killeen, Texas' -> '4600 cunningham rd 604 killeen' nums='4600 604' st='tx' m=['4600', 'cunningham', 'rd', '604', 'killeen']
+
+S3-79117263 [US]
+  N1 'Gibson & Sanchez Arts, LLC' -> core='gibson and sanchez arts' key='gibson sanchez arts' legal='llc'
+  N2 'Gibs0n Sanchez Arts, LLC Service' -> core='gibson sanchez arts service' key='gibson sanchez arts' legal='llc' dom=False
+  A1 '748 Twp Rd 109, South Point, OH' -> '748 twp rd 109 s pt' nums='109 748' st='oh' m=['748', 'twp', 'rd', '109', 'pt']
+  A2 '748 Twp Rd 109, South Point, Ohio' -> '748 twp rd 109 s pt' nums='109 748' st='oh' m=['748', 'twp', 'rd', '109', 'pt']
+
+S2-181678078 [US]
+  N1 'Vion LLC' -> core='vion' key='vion' legal='llc'
+  N2 'VION.COM' -> core='vion' key='vion' legal='' dom=True
+  A1 '1512 State Street Road, Belleville, IL' -> '1512 state st rd belleville' nums='1512' st='il' m=['1512', 'state', 'st', 'rd', 'belleville']
+  A2 '1512 STATE STREET RD, PMB 3295, BELLEVILLE, IL' -> '1512 state st rd pmb 3295 belleville' nums='1512 3295' st='il' m=['1512', 'state', 'st', 'rd', '3295', 'belleville']
+
+S2-591774555 [US]
+  N1 'Patriot Rapid Motors LLC' -> core='patriot rapid motors' key='patriot rapid motors' legal='llc'
+  N2 'Patriot Rapid Mótors LLC' -> core='patriot rapid motors' key='patriot rapid motors' legal='llc' dom=False
+  A1 'TN, Nashville, Unit 306, 3225 Creekwood Drive' -> 'nashville unit 306 3225 creekwood dr' nums='306 3225' st='tn' m=['nashville', '306', '3225', 'creekwood', 'dr']
+  A2 '3224 CREEKWOOD DR, NASHVILLE, TN' -> '3224 creekwood dr nashville' nums='3224' st='tn' m=['3224', 'creekwood', 'dr', 'nashville']
+
+S3-361767049 [US]
+  N1 'Vision Medicine, Inc' -> core='vision medicine' key='vision medicine' legal='inc'
+  N2 'visionmedicine.com' -> core='visionmedicine' key='visionmedicine' legal='' dom=True
+  A1 '400 Saratoga Drive, Elburn, IL' -> '400 saratoga dr elburn' nums='400' st='il' m=['400', 'saratoga', 'dr', 'elburn']
+  A2 '400 Saratoga Dr, Elburn, Illinois' -> '400 saratoga dr elburn' nums='400' st='il' m=['400', 'saratoga', 'dr', 'elburn']
+
+S2-673352042 [US]
+  N1 'Williams, Navarro and Gonzales Supply Corp' -> core='williams navarro and gonzales supply' key='williams navarro gonzales supply' legal='corp'
+  N2 'Williams, Návarro and Gonzales Supply Corp' -> core='williams navarro and gonzales supply' key='williams navarro gonzales supply' legal='corp' dom=False
+  A1 '111 Iroquois Court, Newark, DE' -> '111 iroquois ct newark' nums='111' st='de' m=['111', 'iroquois', 'ct', 'newark']
+  A2 'DE, NEWARK, 00111 IROQUOIS CT' -> 'newark 00111 iroquois ct' nums='111' st='de' m=['newark', '111', 'iroquois', 'ct']
+
+S2-682765521 [India]
+  N1 'International Surya Agro' -> core='international surya agro' key='surya agro' legal=''
+  N2 'ఇంటర్నేషనల్ సూర్య ఆగ్రో' -> core='imtrnesnl sury agro' key='imtrnesnl sury agro' legal='' dom=False
+  A1 'Telangana, Hyderabad, C-22, Electronic Complex, Kushaiguda' -> 'hyderabad c-22 electronic complex kushaiguda' nums='22' st='in_tg' m=['hyderabad', '22', 'electronic', 'complex', 'kushaiguda']
+  A2 'C-22, HYDERABAD, Telangana' -> 'c-22 hyderabad' nums='22' st='in_tg' m=['22', 'hyderabad']
+
+S3-708622510 [US]
+  N1 'Cooperative Supply Union LLC' -> core='cooperative supply union' key='cooperative supply union' legal='llc'
+  N2 'cooperative supply union llc' -> core='cooperative supply union' key='cooperative supply union' legal='llc' dom=False
+  A1 'MO, Saint Louis, 925 Evans Avenue, Fl 0' -> 'st louis 925 evans ave fl 0' nums='0 925' st='mo' m=['st', 'louis', '925', 'evans', 'ave', '0']
+  A2 '925 Evans Avenue, PO Box 7233, Missouri, Saint Louis' -> '925 evans ave po box 7233 st louis' nums='7233 925' st='mo' m=['925', 'evans', 'ave', '7233', 'st', 'louis']
+
+S3-841209989 [India]
+  N1 'Consultants Ramdullari Business Private Limited' -> core='consultants ramdullari' key='consultants ramdullari' legal='ltd pvt'
+  N2 'Consultants Ramdullari Private Limited Partners' -> core='consultants ramdullari partners' key='consultants ramdullari' legal='ltd pvt' dom=False
+  A1 'C/O Rajendra Battuwar, Battuwar Complex, Gadchiroli, Maharashtra' -> 'c/o rajendra battuwar battuwar complex gadchiroli' nums='' st='in_mh' m=['c/o', 'rajendra', 'battuwar', 'battuwar', 'complex', 'gadchiroli']
+  A2 'No A-464 C/o Rajendra Battuwar, Battuwar Complex, Gadchiroli, MH' -> 'no a-464 c/o rajendra battuwar battuwar complex gadchiroli' nums='464' st='in_mh' m=['464', 'c/o', 'rajendra', 'battuwar', 'battuwar', 'complex', 'gadchiroli']
+
+S3-549040012 [US]
+  N1 'Vo Apex Storage Inc' -> core='vo apex storage' key='vo apex storage' legal='inc'
+  N2 'Voapexstorage.Com' -> core='voapexstorage' key='voapexstorage' legal='' dom=True
+  A1 '142 Old Churchmans Road, New Castle, DE' -> '142 old churchmans rd new castle' nums='142' st='de' m=['142', 'old', 'churchmans', 'rd', 'new', 'castle']
+  A2 '142 Old Churchmans Road, New Castle, Delaware' -> '142 old churchmans rd new castle' nums='142' st='de' m=['142', 'old', 'churchmans', 'rd', 'new', 'castle']
+
+S3-895784814 [US]
+  N1 'Urology Partners Inc' -> core='urology partners' key='urology' legal='inc'
+  N2 'Urology Partners-Inc' -> core='urology partners' key='urology' legal='inc' dom=False
+  A1 '6207 Ocean Front Avenue, VA, Virginia Beach City' -> '6207 ocean front ave beach city' nums='6207' st='va' m=['6207', 'ocean', 'front', 'ave', 'beach', 'city']
+  A2 '#6207 Ocean Front Ave, Virginia Beach, Virginia' -> '6207 ocean front ave beach' nums='6207' st='va' m=['6207', 'ocean', 'front', 'ave', 'beach']
+
+S2-568174615 [US]
+  N1 'Pacific Midwest Oyster Corp' -> core='pacific midwest oyster' key='pacific midwest oyster' legal='corp'
+  N2 'Pacific Midwest Otgsyter Corp' -> core='pacific midwest otgsyter' key='pacific midwest otgsyter' legal='corp' dom=False
+  A1 'Madawaska, 291 Golf Course Road, ME' -> 'madawaska 291 golf course rd' nums='291' st='me' m=['madawaska', '291', 'golf', 'course', 'rd']
+  A2 'GOLF COURSE ROAD, N/A, SAINT DAVID, ME' -> 'golf course rd st david' nums='' st='me' m=['golf', 'course', 'rd', 'st', 'david']
+
+S2-948578913 [India]
+  N1 'OGN Strategies Private Limited' -> core='ogn strategies' key='ogn strategies' legal='ltd pvt'
+  N2 'OGN Strategies' -> core='ogn strategies' key='ogn strategies' legal='' dom=False
+  A1 'Sy.No: 480/2 Amtz Campus, Pragati Maidan, Pedagantyada, Visakhapatnam, Vishakhapatnam, Andhra Pradesh' -> 'sy no 480/2 amtz campus pragati maidan pedagantyada visakhapatnam vishakhapatnam' nums='2 480' st='in_ap' m=['480', '2', 'amtz', 'campus', 'pragati', 'maidan', 'pedagantyada', 'visakhapatnam', 'vishakhapatnam']
+  A2 'SY.NO: 480/2 AMTZ CAMPUS, PRAGATI MAIDAN, PEDAGANTYADA, VISAKHAPATNAM, Andhra Pradesh' -> 'sy no 480/2 amtz campus pragati maidan pedagantyada visakhapatnam' nums='2 480' st='in_ap' m=['480', '2', 'amtz', 'campus', 'pragati', 'maidan', 'pedagantyada', 'visakhapatnam']
+
+S3-256907563 [US]
+  N1 'Foundry, LLC' -> core='foundry' key='foundry' legal='llc'
+  N2 'Faonmyr, LLC' -> core='faonmyr' key='faonmyr' legal='llc' dom=False
+  A1 '1705 Tipperary Drive, Middletown, OH' -> '1705 tipperary dr middletown' nums='1705' st='oh' m=['1705', 'tipperary', 'dr', 'middletown']
+  A2 '1705 Tipperary Drive, Middletown, Ohio' -> '1705 tipperary dr middletown' nums='1705' st='oh' m=['1705', 'tipperary', 'dr', 'middletown']
+
+S3-204486964 [US]
+  N1 'Select Marketing Consultants' -> core='select marketing consultants' key='select marketing consultants' legal=''
+  N2 'Select Marketing Consultants LLC' -> core='select marketing consultants' key='select marketing consultants' legal='llc' dom=False
+  A1 'IN, 5400 Cunningham Drive, Evansville' -> '5400 cunningham dr evansville' nums='5400' st='in' m=['5400', 'cunningham', 'dr', 'evansville']
+  A2 '5400 Cunningham Drive, Evansville, Indiana' -> '5400 cunningham dr evansville' nums='5400' st='in' m=['5400', 'cunningham', 'dr', 'evansville']
+
+S2-593918447 [US]
+  N1 'Temple Cathedral' -> core='temple cathedral' key='temple cathedral' legal=''
+  N2 'Temple Cathedral' -> core='temple cathedral' key='temple cathedral' legal='' dom=False
+  A1 '1683 Strong Road, Tyre, NY' -> '1683 strong rd tyre' nums='1683' st='ny' m=['1683', 'strong', 'rd', 'tyre']
+  A2 'NY, TYRE, 1683 STRONG RD' -> 'tyre 1683 strong rd' nums='1683' st='ny' m=['tyre', '1683', 'strong', 'rd']
+
+S3-749765074 [India]
+  N1 'One Foundation Private Limited' -> core='one foundation' key='one foundation' legal='ltd pvt'
+  N2 'One Foundation  Private Limited' -> core='one foundation' key='one foundation' legal='ltd pvt' dom=False
+  A1 'No 25/1, Museum Road Bangalore, Karnataka, Bangalore, Karnataka' -> 'no 25/1 museum rd bangalore bangalore' nums='1 25' st='in_ka' m=['25', '1', 'museum', 'rd', 'bangalore', 'bangalore']
+  A2 'No 25/1, Museum Road Bangalore, Karnataka, Bangalore, ಕರ್ನಾಟಕ' -> 'no 25/1 museum rd bangalore bangalore krnatk' nums='1 25' st='in_ka' m=['25', '1', 'museum', 'rd', 'bangalore', 'bangalore', 'krnatk']
+
+S3-396291523 [India]
+  N1 'Lotus Black Services Private Limited' -> core='lotus black services' key='lotus black' legal='ltd pvt'
+  N2 'Lotus Black Services Services Private Ltd' -> core='lotus black services services' key='lotus black' legal='ltd pvt' dom=False
+  A1 'Shop No 4, Rittika Residency Tapan Mitra Sarani Purbanchal Tentutalla, Kolkata, Parganas North, West Bengal' -> 'shop no 4 rittika residency tapan mitra sarani purbanchal tentutalla kolkata parganas n' nums='4' st='in_wb' m=['4', 'rittika', 'residency', 'tapan', 'mitra', 'sarani', 'purbanchal', 'tentutalla', 'kolkata', 'parganas']
+  A2 None -> '' nums='' st='' m=[]
+
+S3-965244264 [US]
+  N1 'V & G Twelve Inc' -> core='v and g twelve' key='v g twelve' legal='inc'
+  N2 'V & G-Twelve' -> core='v and g twelve' key='v g twelve' legal='' dom=False
+  A1 '275 Sugar Hollow Road, S Irv-wagersville, KY' -> '275 sugar holw rd s irv-wagersville' nums='275' st='ky' m=['275', 'sugar', 'holw', 'rd', 'irv-wagersville']
+  A2 '275 Sugar Hollow Rd, S Irv-Wagersville, Kentucky' -> '275 sugar holw rd s irv-wagersville' nums='275' st='ky' m=['275', 'sugar', 'holw', 'rd', 'irv-wagersville']
+
+S3-849914845 [India]
+  N1 'Ramnath India Private Limited' -> core='ramnath india' key='ramnath' legal='ltd pvt'
+  N2 'Ramnath Infda Private (Limited)' -> core='ramnath infda' key='ramnath infda' legal='ltd pvt' dom=False
+  A1 '16-2-664/1, Third Floor, Press Road, Judges Colony, New Malakpet, Chanchalgud, A, Hyderabad, Telangana' -> '16-2-664/1 3 fl press rd judges colony new malakpet chanchalgud a hyderabad' nums='1 16 2 3 664' st='in_tg' m=['16', '2', '664', '1', '3', 'press', 'rd', 'judges', 'colony', 'new', 'malakpet', 'chanchalgud', 'a', 'hyderabad']
+  A2 'TG, Hyderabad, Third Floor, Press Road, Judges Colony, New Malakpet, Chanchalgud, A, 16-2-664/1' -> 'hyderabad 3 fl press rd judges colony new malakpet chanchalgud a 16-2-664/1' nums='1 16 2 3 664' st='in_tg' m=['hyderabad', '3', 'press', 'rd', 'judges', 'colony', 'new', 'malakpet', 'chanchalgud', 'a', '16', '2', '664', '1']
+
+S3-569339484 [India]
+  N1 'Gangika Web Private Limited' -> core='gangika web' key='gangika web' legal='ltd pvt'
+  N2 'Kornex d/b/a Gangika Web Private Limited' -> core='kornex d b a gangika web' key='kornex b a gangika web' legal='ltd pvt' dom=False
+  A1 'C/O Akhil Chakraborty, Pragati Granthagr, Jamuria, Bardhaman, West Bengal' -> 'c/o akhil chakraborty pragati granthagr jamuria bardhaman' nums='' st='in_wb' m=['c/o', 'akhil', 'chakraborty', 'pragati', 'granthagr', 'jamuria', 'bardhaman']
+  A2 'C/O Akhil Chakraborty, Pragati Granthagr, Jamuria, Bardhaman, West Bengal' -> 'c/o akhil chakraborty pragati granthagr jamuria bardhaman' nums='' st='in_wb' m=['c/o', 'akhil', 'chakraborty', 'pragati', 'granthagr', 'jamuria', 'bardhaman']
+
+S2-93995259 [India]
+  N1 'Ss Industries Limited' -> core='ss industries' key='ss' legal='ltd'
+  N2 'SS INDUSTRIES LIMITED' -> core='ss industries' key='ss' legal='ltd' dom=False
+  A1 'H.No.6-126/1866/G2, Vaishnavi Residency 3Rd Layout, Pragathi Nagar, Hyderabad, Telangana' -> 'h no 6-126/1866/g2 vaishnavi residency 3 layout pragathi nagar hyderabad' nums='126 1866 2 3 6' st='in_tg' m=['6', '126', '1866', '2', 'vaishnavi', 'residency', '3', 'layout', 'pragathi', 'nagar', 'hyderabad']
+  A2 '#6-126/1866/G2 , VAISHNAVI RESIDENCY 3RD LAYOUT, PRAGATHI NAGAR, HYDERABAD, Telangana' -> '6-126/1866/g2 vaishnavi residency 3 layout pragathi nagar hyderabad' nums='126 1866 2 3 6' st='in_tg' m=['6', '126', '1866', '2', 'vaishnavi', 'residency', '3', 'layout', 'pragathi', 'nagar', 'hyderabad']
+
+S2-729305059 [US]
+  N1 'Behavioral Health Physicians LLC' -> core='behavioral health physicians' key='behavioral health physicians' legal='llc'
+  N2 'BEHAVIORAL HEALTH PHYSÍCIANS LLC' -> core='behavioral health physicians' key='behavioral health physicians' legal='llc' dom=False
+  A1 '303 Horseshoe Loop, Liberty Hill, TX' -> '303 horseshoe loop liberty hill' nums='303' st='tx' m=['303', 'horseshoe', 'loop', 'liberty', 'hill']
+  A2 '##303 HORSESHOE LOOP, LIBERTY HILL, TX' -> '303 horseshoe loop liberty hill' nums='303' st='tx' m=['303', 'horseshoe', 'loop', 'liberty', 'hill']
+
+S2-16424142 [India]
+  N1 'Super Software Private Limited' -> core='super software' key='super software' legal='ltd pvt'
+  N2 'SUPER SFOE PRIVATE LIMITED' -> core='super sfoe' key='super sfoe' legal='ltd pvt' dom=False
+  A1 'Instrumentation Ltd.F E/2, Malviya Ind. Area, Jaipur, Rajasthan' -> 'instrumentation ltdf e/2 malviya ind area jaipur' nums='2' st='in_rj' m=['instrumentation', 'ltdf', '2', 'malviya', 'ind', 'area', 'jaipur']
+  A2 'INSTRUMENTATION LTD.F E/2, JAIPUR, Rajasthan' -> 'instrumentation ltdf e/2 jaipur' nums='2' st='in_rj' m=['instrumentation', 'ltdf', '2', 'jaipur']
+
+S2-123736918 [US]
+  N1 'Midwest Program' -> core='midwest program' key='midwest program' legal=''
+  N2 'Midwest Prógram' -> core='midwest program' key='midwest program' legal='' dom=False
+  A1 '960 Merrill Drive, Unit 9202, Leander, TX' -> '960 merrill dr unit 9202 leander' nums='9202 960' st='tx' m=['960', 'merrill', 'dr', '9202', 'leander']
+  A2 'TX, LEANDER, 960 MERRILL DR' -> 'leander 960 merrill dr' nums='960' st='tx' m=['leander', '960', 'merrill', 'dr']
+
+S2-367771183 [India]
+  N1 'Yukti Trading Limited' -> core='yukti trading' key='yukti' legal='ltd'
+  N2 'Yukti Yukti Tllrig Limited' -> core='yukti yukti tllrig' key='yukti yukti tllrig' legal='ltd' dom=False
+  A1 'I 489 Beta 2, Greater Noida Gautam Budh Nagar, Gautambudhnagar, Gautam Buddha Nagar, Uttar Pradesh' -> 'i 489 beta 2 greater noida gautam budh nagar gautambudhnagar gautam buddha nagar' nums='2 489' st='in_up' m=['i', '489', 'beta', '2', 'greater', 'noida', 'gautam', 'budh', 'nagar', 'gautambudhnagar', 'gautam', 'buddha', 'nagar']
+  A2 'I D/489 BETA 2, GREATER NOIDA GAUTAM BUDH NAGAR, GAUTAMBUDHNAGAR, उत्तर प्रदेश' -> 'i d/489 beta 2 greater noida gautam budh nagar gautambudhnagar uttr prdes' nums='2 489' st='' m=['i', '489', 'beta', '2', 'greater', 'noida', 'gautam', 'budh', 'nagar', 'gautambudhnagar', 'uttr', 'prdes']
+
+S3-561482000 [US]
+  N1 'Urgent Care Medicine of Pinehurst' -> core='urgent care medicine of pinehurst' key='urgent care medicine pinehurst' legal=''
+  N2 'Urgent Medicine Of Pinehurst Partners' -> core='urgent medicine of pinehurst partners' key='urgent medicine pinehurst' legal='' dom=False
+  A1 '220 Juniper Creek Boulevard, Pinehurst, NC' -> '220 juniper crk blvd pinehurst' nums='220' st='nc' m=['220', 'juniper', 'crk', 'blvd', 'pinehurst']
+  A2 '220 Juniper Creek Blvd, Pinehurst, North Carolina' -> '220 juniper crk blvd pinehurst' nums='220' st='nc' m=['220', 'juniper', 'crk', 'blvd', 'pinehurst']
+
+S3-271954939 [India]
+  N1 'Laser & Sons Limited' -> core='laser and sons' key='laser sons' legal='ltd'
+  N2 'Limited Laser & Ss' -> core='laser and ss' key='laser ss' legal='ltd' dom=False
+  A1 '45 Vinayagam Street, Venkatesh Nagar, Chennai City Corporation, Chennai, Tamil Nadu' -> '45 vinayagam st venkatesh nagar chennai city corporation chennai' nums='45' st='in_tn' m=['45', 'vinayagam', 'st', 'venkatesh', 'nagar', 'chennai', 'city', 'corporation', 'chennai']
+  A2 'Door No 45 Vinayagam Street, Chennai, Chennai City Corporation, TN' -> 'door no 45 vinayagam st chennai chennai city corporation' nums='45' st='tn' m=['45', 'vinayagam', 'st', 'chennai', 'chennai', 'city', 'corporation']
+
+S2-895793728 [US]
+  N1 'Citadel LLC' -> core='citadel' key='citadel' legal='llc'
+  N2 'Citadel LLC' -> core='citadel' key='citadel' legal='llc' dom=False
+  A1 '15 Littlejohn Road, Jacksonville, AL' -> '15 littlejohn rd jacksonville' nums='15' st='al' m=['15', 'littlejohn', 'rd', 'jacksonville']
+  A2 'AL, 15 LITTLEJOHN ROAD, JACKSOVNILLE' -> '15 littlejohn rd jacksovnille' nums='15' st='al' m=['15', 'littlejohn', 'rd', 'jacksovnille']
+
+S3-494250230 [India]
+  N1 'Skg Processors Private Limited' -> core='skg processors' key='skg processors' legal='ltd pvt'
+  N2 'Skg Processors  Private Limited' -> core='skg processors' key='skg processors' legal='ltd pvt' dom=False
+  A1 'New Delhi, M-76 G.K. 1, South Delhi, Delhi' -> 'm-76 gk 1 s' nums='1 76' st='in_dl' m=['76', 'gk', '1']
+  A2 'M-76 G.k. 1, New Delhi, South Delhi, दिल्ली' -> 'm-76 gk 1 s dilli' nums='1 76' st='in_dl' m=['76', 'gk', '1', 'dilli']
+
+S2-633032319 [India]
+  N1 'Maa Great Exports Private Limited' -> core='maa great exports' key='maa great exports' legal='ltd pvt'
+  N2 'মা গ্রেট এক্সপোর্টস প্রাইভেট লিমিটেড' -> core='ma gret eksports praibhet' key='ma gret eksports praibhet' legal='ltd' dom=False
+  A1 'B 253 Private Roaddum Dum, Kolkata, South 24 Parganas, West Bengal' -> 'b 253 private roaddum dum kolkata s 24 parganas' nums='24 253' st='in_wb' m=['b', '253', 'private', 'roaddum', 'dum', 'kolkata', '24', 'parganas']
+  A2 'H.NO C-742 B 253 PRIVATE ROADDUM DUM, KOLKATA, SOUTH 24 PARGANAS, West Bengal' -> 'h no c-742 b 253 private roaddum dum kolkata s 24 parganas' nums='24 253 742' st='in_wb' m=['742', 'b', '253', 'private', 'roaddum', 'dum', 'kolkata', '24', 'parganas']
+
+S3-261065057 [US]
+  N1 'Hall, Orsini & Johnson' -> core='hall orsini and johnson' key='hall orsini johnson' legal=''
+  N2 'Hall, Orsini & Johnson' -> core='hall orsini and johnson' key='hall orsini johnson' legal='' dom=False
+  A1 'Austin, 6110 Langham Street, TX' -> 'austin 6110 langham st' nums='6110' st='tx' m=['austin', '6110', 'langham', 'st']
+  A2 '6110 Langham Street, Austin, Texas' -> '6110 langham st austin' nums='6110' st='tx' m=['6110', 'langham', 'st', 'austin']
+
+S2-365931021 [US]
+  N1 'Commission on Education' -> core='commission on education' key='commission on education' legal=''
+  N2 'Commission on Ecaeigon' -> core='commission on ecaeigon' key='commission on ecaeigon' legal='' dom=False
+  A1 '11 Burlington Avenue, Dayton, OH' -> '11 burlington ave dayton' nums='11' st='oh' m=['11', 'burlington', 'ave', 'dayton']
+  A2 '011 BURLINGTON AVE, DAYTON, OH' -> '011 burlington ave dayton' nums='11' st='oh' m=['11', 'burlington', 'ave', 'dayton']
+
+S3-470716583 [India]
+  N1 'Kritavi Foods Pvt Ltd' -> core='kritavi foods' key='kritavi foods' legal='ltd pvt'
+  N2 '@kritavifoods' -> core='at kritavifoods' key='at kritavifoods' legal='' dom=False
+  A1 'Building No. 11/362 Chempakamangalam Building, Kochuthovala, Kattappana, Idukki, Kerala' -> 'bldg no 11/362 chempakamangalam bldg kochuthovala kattappana idukki' nums='11 362' st='in_kl' m=['11', '362', 'chempakamangalam', 'kochuthovala', 'kattappana', 'idukki']
+  A2 'Building No. 11/362 Chempakamangalam Building, Kattappana, Idukki, കേരളം' -> 'bldg no 11/362 chempakamangalam bldg kattappana idukki kerlm' nums='11 362' st='' m=['11', '362', 'chempakamangalam', 'kattappana', 'idukki', 'kerlm']
+
+S2-51614826 [India]
+  N1 'Varada Group of Companies' -> core='varada group of companies' key='varada companies' legal=''
+  N2 'Varada Group' -> core='varada group' key='varada' legal='' dom=False
+  A1 'A-25 F/F, New Ashoka Niketan, New Delhi, Delhi' -> 'a-25 f/f new ashoka niketan' nums='25' st='in_dl' m=['25', 'f/f', 'new', 'ashoka', 'niketan']
+  A2 None -> '' nums='' st='' m=[]
+
+S2-834245908 [US]
+  N1 'Department of Transportation of Colonie' -> core='department of transportation of colonie' key='department transportation colonie' legal=''
+  N2 'Department of Transportation of' -> core='department of transportation of' key='department transportation' legal='' dom=False
+  A1 '7 St Thomas Lane, Colonie, NY' -> '7 st thomas ln colonie' nums='7' st='ny' m=['7', 'st', 'thomas', 'ln', 'colonie']
+  A2 '7 ST THOMAS LN, SCHENECTADY, NY' -> '7 st thomas ln schenectady' nums='7' st='ny' m=['7', 'st', 'thomas', 'ln', 'schenectady']
+
+S3-224268783 [India]
+  N1 'Pyramid & Brothers Private Limited' -> core='pyramid and brothers' key='pyramid brothers' legal='ltd pvt'
+  N2 'Pyramid & Brothers  Private Limited' -> core='pyramid and brothers' key='pyramid brothers' legal='ltd pvt' dom=False
+  A1 'Shop No. 3, 2Nd Floor, B.No.E11/8 Prateek Center, Agra, Uttar Pradesh' -> 'shop no 3 2 fl b no e11/8 prateek ctr agra' nums='11 2 3 8' st='in_up' m=['3', '2', 'b', '11', '8', 'prateek', 'ctr', 'agra']
+  A2 'Agra, 2Nd Floor, B.no.e11/8 Prateek Center, Agra, UP, Door No 2-3' -> 'agra 2 fl b no e11/8 prateek ctr agra door no 2-3' nums='11 2 3 8' st='in_up' m=['agra', '2', 'b', '11', '8', 'prateek', 'ctr', 'agra', '2', '3']
+
+S2-156297907 [India]
+  N1 'Dream Exports Limited' -> core='dream exports' key='dream exports' legal='ltd'
+  N2 'ಡ್ರೀಮ್ ಎಕ್ಸ್\u200cಪೋರ್ಟ್ಸ್ ಲಿಮಿಟೆಡ್' -> core='drim eksports' key='drim eksports' legal='ltd' dom=False
+  A1 'C/Otbhuvaneshwari, Bangalore North, No235, Binnamangala 2Nd Stage, Karnataka, Bangalore' -> 'c/otbhuvaneshwari bangalore n no235 binnamangala 2 stage bangalore' nums='2 235' st='in_ka' m=['c/otbhuvaneshwari', 'bangalore', '235', 'binnamangala', '2', 'stage', 'bangalore']
+  A2 'C/OTBHUVANESHWARI, NO235, BINNAMANGALA 2ND STAGE, BANGALORE NORTH, BANGALORE, Karnataka' -> 'c/otbhuvaneshwari no235 binnamangala 2 stage bangalore n bangalore' nums='2 235' st='in_ka' m=['c/otbhuvaneshwari', '235', 'binnamangala', '2', 'stage', 'bangalore', 'bangalore']
+
+S2-526490083 [US]
+  N1 'Neely Enterprises Corp' -> core='neely enterprises' key='neely' legal='corp'
+  N2 'Neely Enterprises Corp' -> core='neely enterprises' key='neely' legal='corp' dom=False
+  A1 '2009 Pulaski Giles Turnpike, Giles County, VA' -> '2009 pulaski giles tpke giles cnty' nums='2009' st='va' m=['2009', 'pulaski', 'giles', 'tpke', 'giles', 'cnty']
+  A2 'PEARISBURG, VA, 2009  PULASKI GILES TURNPIKE' -> 'pearisburg 2009 pulaski giles tpke' nums='2009' st='va' m=['pearisburg', '2009', 'pulaski', 'giles', 'tpke']
+
+S2-639138962 [India]
+  N1 'Mumbai Infrastructure Private Limited' -> core='mumbai infrastructure' key='mumbai infrastructure' legal='ltd pvt'
+  N2 'mumbaiinfrastructure.com' -> core='mumbaiinfrastructure' key='mumbaiinfrastructure' legal='' dom=True
+  A1 '103/104 1St Floor Orbit Plaza New Prabhadevi Marg Prabhadevi, Mumbai, Mumbai City, Maharashtra' -> '103/104 1 fl orbit plz new prabhadevi marg prabhadevi mumbai mumbai city' nums='1 103 104' st='in_mh' m=['103', '104', '1', 'orbit', 'plz', 'new', 'prabhadevi', 'marg', 'prabhadevi', 'mumbai', 'mumbai', 'city']
+  A2 '103/104 1ST FLOOR OBRIT PLAZA NEW PRABHADEVI MARG PRABHADEVI, MUMBAI, Maharashtra' -> '103/104 1 fl obrit plz new prabhadevi marg prabhadevi mumbai' nums='1 103 104' st='in_mh' m=['103', '104', '1', 'obrit', 'plz', 'new', 'prabhadevi', 'marg', 'prabhadevi', 'mumbai']
+
+S3-879314644 [India]
+  N1 'ESA Solutions Private Limited' -> core='esa solutions' key='esa' legal='ltd pvt'
+  N2 'esa solutions private limited' -> core='esa solutions' key='esa' legal='ltd pvt' dom=False
+  A1 'M-17, Pharma Tower, Second Floor, Badli Industrial Area, Badli, North West, Delhi' -> 'm-17 pharma tower 2 fl badli indl area badli n w' nums='17 2' st='in_dl' m=['17', 'pharma', 'tower', '2', 'badli', 'indl', 'area', 'badli', 'w']
+  A2 'Plot 713 M-17, North West, Badli, दिल्ली' -> 'plot 713 m-17 n w badli dilli' nums='17 713' st='' m=['713', '17', 'w', 'badli', 'dilli']
+
+S3-140908534 [US]
+  N1 'Mercado, Luo and Willoughby Industries LLC' -> core='mercado luo and willoughby industries' key='mercado luo willoughby' legal='llc'
+  N2 'Mercado, Luo and Willoughby LLC Center' -> core='mercado luo and willoughby center' key='mercado luo willoughby' legal='llc' dom=False
+  A1 'MA, Shrewsbury, 1 Point Road' -> 'shrewsbury 1 pt rd' nums='1' st='ma' m=['shrewsbury', '1', 'pt', 'rd']
+  A2 '1 Point Rd, Shrewsbury, Massachusetts' -> '1 pt rd shrewsbury' nums='1' st='ma' m=['1', 'pt', 'rd', 'shrewsbury']
+
+S3-11284251 [US]
+  N1 'Interstate Appliance Inc' -> core='interstate appliance' key='interstate appliance' legal='inc'
+  N2 'Interstate Appliance Ínc' -> core='interstate appliance' key='interstate appliance' legal='inc' dom=False
+  A1 '3650 Alton Court, Fairview, OR' -> '3650 alton ct fairview' nums='3650' st='or' m=['3650', 'alton', 'ct', 'fairview']
+  A2 '03650 Alton Ct, Fairview, Oregon' -> '03650 alton ct fairview' nums='3650' st='or' m=['3650', 'alton', 'ct', 'fairview']
+
+S2-100193434 [US]
+  N1 'Vogel Coastal Cross' -> core='vogel coastal cross' key='vogel coastal cross' legal=''
+  N2 'vogelcoastalcross.com' -> core='vogelcoastalcross' key='vogelcoastalcross' legal='' dom=True
+  A1 '3801 Swartout Road, Owasco, NY' -> '3801 swartout rd owasco' nums='3801' st='ny' m=['3801', 'swartout', 'rd', 'owasco']
+  A2 '##3801 SWARTOUT ROAD, AUBURN, NY' -> '3801 swartout rd auburn' nums='3801' st='ny' m=['3801', 'swartout', 'rd', 'auburn']
+
+S3-867686892 [US]
+  N1 'Roberson Safe Generation LLC' -> core='roberson safe generation' key='roberson safe generation' legal='llc'
+  N2 'ROBERSON SÁFE GENERATION LLC' -> core='roberson safe generation' key='roberson safe generation' legal='llc' dom=False
+  A1 '9845 Basil-western Road, Canal Winchester, OH' -> '9845 basil-western rd canal winchester' nums='9845' st='oh' m=['9845', 'basil-western', 'rd', 'canal', 'winchester']
+  A2 '9845 Basil-Western Rd, Canal Winchester, Ohio' -> '9845 basil-western rd canal winchester' nums='9845' st='oh' m=['9845', 'basil-western', 'rd', 'canal', 'winchester']
+
+S2-332501371 [India]
+  N1 'Tdc India Company' -> core='tdc india' key='tdc' legal='co'
+  N2 'Dr Tdc India Co' -> core='tdc india' key='tdc' legal='co' dom=False
+  A1 'Sadashiv Peth, Pune, Maharashtra' -> 'sadashiv peth pune' nums='' st='in_mh' m=['sadashiv', 'peth', 'pune']
+  A2 'BLOCK D-#847 SADASHIV PETH, PUNE, Maharashtra' -> 'block d 847 sadashiv peth pune' nums='847' st='in_mh' m=['block', '847', 'sadashiv', 'peth', 'pune']
+
+S3-357678162 [US]
+  N1 'Complete Continental Hair Studio LLC' -> core='complete continental hair studio' key='complete continental hair studio' legal='llc'
+  N2 'Complete Continental Hair Studio LLC' -> core='complete continental hair studio' key='complete continental hair studio' legal='llc' dom=False
+  A1 '1835 Skyway Street, Salem, OR' -> '1835 skyway st salem' nums='1835' st='or' m=['1835', 'skyway', 'st', 'salem']
+  A2 None -> '' nums='' st='' m=[]
+
+S2-933808814 [US]
+  N1 'Solay Hotel Care' -> core='solay hotel care' key='solay hotel care' legal=''
+  N2 'SOLAY HOTEL  CENTER' -> core='solay hotel center' key='solay hotel' legal='' dom=False
+  A1 '4509 49th Terrace, Kansas City, MO' -> '4509 49 ter city mo' nums='4509 49' st='ks' m=['4509', '49', 'ter', 'city', 'mo']
+  A2 '4509 49TH TER, KANSAS CITY, MO' -> '4509 49 ter city mo' nums='4509 49' st='ks' m=['4509', '49', 'ter', 'city', 'mo']
+
+S2-496103844 [India]
+  N1 'Rajchandra Cement Private Limited' -> core='rajchandra cement' key='rajchandra cement' legal='ltd pvt'
+  N2 'Shri Rajchandra Cement Private' -> core='rajchandra cement' key='rajchandra cement' legal='pvt' dom=False
+  A1 'Vasai, Thane, Subhashini Chs, Sandor, Vasai, 002, Maharashtra' -> 'vasai thane subhashini chs sandor vasai 002' nums='2' st='in_mh' m=['vasai', 'thane', 'subhashini', 'chs', 'sandor', 'vasai', '2']
+  A2 'H.NO B3/584 002, SUBHASHINI CHS, SANDOR, VASAI, VASAI, Maharashtra' -> 'h no b3/584 002 subhashini chs sandor vasai vasai' nums='2 3 584' st='in_mh' m=['3', '584', '2', 'subhashini', 'chs', 'sandor', 'vasai', 'vasai']
+
+S2-811524054 [US]
+  N1 'A 3 Crystal Southwest Inc' -> core='a 3 crystal southwest' key='a 3 crystal southwest' legal='inc'
+  N2 'A Crystal 3  Southwest Inc' -> core='a crystal 3 southwest' key='a crystal 3 southwest' legal='inc' dom=False
+  A1 '813 Jefferson Avenue, Valdese, NC' -> '813 jefferson ave valdese' nums='813' st='nc' m=['813', 'jefferson', 'ave', 'valdese']
+  A2 '813 JEFFERSON AVENUE, VALDESE, NC' -> '813 jefferson ave valdese' nums='813' st='nc' m=['813', 'jefferson', 'ave', 'valdese']
+
+S3-882862858 [US]
+  N1 'Vantent Resolution Inc' -> core='vantent resolution' key='vantent resolution' legal='inc'
+  N2 'Vantent Resolution Inc' -> core='vantent resolution' key='vantent resolution' legal='inc' dom=False
+  A1 '4539 Steadfast Way, Silver Bay, MN' -> '4539 steadfast way silver bay' nums='4539' st='mn' m=['4539', 'steadfast', 'way', 'silver', 'bay']
+  A2 '539 Steadfast Way, Silver BAY CDP, Minnesota' -> '539 steadfast way silver bay cdp' nums='539' st='mn' m=['539', 'steadfast', 'way', 'silver', 'bay', 'cdp']
+
+S2-87511690 [US]
+  N1 'Oncology Specialists Center' -> core='oncology specialists center' key='oncology specialists' legal=''
+  N2 'ONCOLOGY SPECIALISTS  CENTER' -> core='oncology specialists center' key='oncology specialists' legal='' dom=False
+  A1 '630 1st Avenue, Unit Apartment 525, Fargo, ND' -> '630 1 ave unit apt 525 fargo' nums='1 525 630' st='nd' m=['630', '1', 'ave', '525', 'fargo']
+  A2 '630  FIRST AVE, FARGO, ND' -> '630 1 ave fargo' nums='1 630' st='nd' m=['630', '1', 'ave', 'fargo']
+
+S2-188407865 [US]
+  N1 'Silver Diana, LLC' -> core='silver diana' key='silver diana' legal='llc'
+  N2 'silverdiana.com' -> core='silverdiana' key='silverdiana' legal='' dom=True
+  A1 '120 Neilson Road, MA, New Salem' -> '120 neilson rd new salem' nums='120' st='ma' m=['120', 'neilson', 'rd', 'new', 'salem']
+  A2 '0120 NEILSON ROAD, NEW SALEM, MA' -> '0120 neilson rd new salem' nums='120' st='ma' m=['120', 'neilson', 'rd', 'new', 'salem']
+
+S3-977011901 [US]
+  N1 "Rua's Diamond Massage" -> core='ruas diamond massage' key='ruas diamond massage' legal=''
+  N2 "Rua's Diamond  Massage" -> core='ruas diamond massage' key='ruas diamond massage' legal='' dom=False
+  A1 '9225 Central Avenue, Fl 0, Wichita, KS' -> '9225 central ave fl 0 wichita' nums='0 9225' st='ks' m=['9225', 'central', 'ave', '0', 'wichita']
+  A2 '9225 Central Ave, Wichita, Kansas' -> '9225 central ave wichita' nums='9225' st='ks' m=['9225', 'central', 'ave', 'wichita']
+
+S2-372855202 [India]
+  N1 'Creative Priya Limited' -> core='creative priya' key='creative priya' legal='ltd'
+  N2 'Creative Priya-Limited' -> core='creative priya' key='creative priya' legal='ltd' dom=False
+  A1 '403, Ashirvad Paras, Corporate Road, Prahalad Nagar, Ahmedabad, Gujarat' -> '403 ashirvad paras corporate rd prahalad nagar ahmedabad' nums='403' st='in_gj' m=['403', 'ashirvad', 'paras', 'corporate', 'rd', 'prahalad', 'nagar', 'ahmedabad']
+  A2 None -> '' nums='' st='' m=[]
+
+INDIC 'Golden Care Private Limited' <- 'Golden केयर Private Limited' => 'golden keyr private limited' | core 'golden keyr' | addr 'microcab industries & logistics private limited, s.no.39/7, 9, 11, 40, nasik highway, kurund, mharastr'
+INDIC 'All Systems Private Limited' <- 'ऑल सिस्टम्स प्राइवेट लिमिटेड' => 'ol sistms praivet limited' | core 'ol sistms praivet' | addr 'block e-74 s-21, akola, maharashtra'
+INDIC 'High Infrastructure Private Limited' <- 'हाई इंफ्रास्ट्रक्चर प्राइवेट लिमिटेड' => 'hai imphrastrkcr praivet limited' | core 'hai imphrastrkcr praivet' | addr '104, ganga vihar, mahesh nagar, jaipur, rajasthan'
+INDIC 'Red Hospitality' <- 'রেড হসপিটালিটি' => 'red hspitaliti' | core 'red hspitaliti' | addr '7 loyans range, kolkata, calcutta, west bengal'
+INDIC 'International Surya Agro' <- 'ఇంటర్నేషనల్ సూర్య ఆగ్రో' => 'imtrnesnl sury agro' | core 'imtrnesnl sury agro' | addr 'c-22, hyderabad, telangana'
+INDIC 'Maa Great Exports Private Limited' <- 'মা গ্রেট এক্সপোর্টস প্রাইভেট লিমিটেড' => 'ma gret eksports praibhet limited' | core 'ma gret eksports praibhet' | addr 'h.no c-742 b 253 private roaddum dum, kolkata, south 24 parganas, west bengal'
+INDIC 'Dream Exports Limited' <- 'ಡ್ರೀಮ್ ಎಕ್ಸ್\u200cಪೋರ್ಟ್ಸ್ ಲಿಮಿಟೆಡ್' => 'drim eksports limited' | core 'drim eksports' | addr 'c/otbhuvaneshwari, no235, binnamangala 2nd stage, bangalore north, bangalore, karnataka'
+INDIC 'Lotus Engineering Private Limited' <- 'लोटस इंजीनियरिंग प्राइवेट लिमिटेड' => 'lots imjiniyrimg praivet limited' | core 'lots imjiniyrimg praivet' | addr 'c/o umesh tiwari, bistauli, basgaon, gorakhpur, uttar pradesh'
+INDIC 'Gujarat Ventures Private Limited' <- 'குஜராத் வென்ச்சர்ஸ் பிரைவேட் லிமிடெட்' => 'kujrat venccrs piraivet limitet' | core 'kujrat venccrs piraivet limitet' | addr 'palani centre, new no.67old no.32 iind floor ii phase venkatanarayana road, t.nagar, chennai, chennai-17, tn'
+INDIC 'Arihant Healthcare' <- 'अरिहंत हेल्थकेयर' => 'arihmt helthkeyr' | core 'arihmt helthkeyr' | addr 'block d-g-488 23, gali no 1, ashram k pass devipura 1st devipura 1st, bulandshahar, bulandshahar, <null>, uttar pradesh'
+INDIC 'One Premier Foundation Private Limited' <- 'वन प्रीमियर फाउंडेशन प्राइवेट लिमिटेड' => 'vn primiyr phaumdesn praivet limited' | core 'vn primiyr phaumdesn praivet' | addr 'b 21/124-4., varanasi, up'
+INDIC 'Hari Developers Private Limited' <- 'ഹരി ഡെവലപ്പേഴ്സ് പ്രൈവറ്റ് ലിമിറ്റഡ്' => 'hri devlppels praivrr limirrd' | core 'hri devlppels praivrr limirrd' | addr 'thrissur, kerala, 9/105, chaippankuzhy, near church, chaippankuzhy p o, mukundapuram'
+INDIC 'Supreme Foods Private Limited' <- 'सुप्रीम फूड्स प्राइवेट लिमिटेड' => 'suprim phuds praivet limited' | core 'suprim phuds praivet' | addr 'plot no. 15, jaipur, rajsthan'
+INDIC 'Jain Industries Private Limited' <- 'ജൈൻ ഇൻഡസ്ട്രീസ് പ്രൈവറ്റ് ലിമിറ്റഡ്' => 'jain indstris praivrr limirrd' | core 'jain indstris praivrr limirrd' | addr '#5/507, kerala, kozhikode, null, kuttiadi'
+INDIC 'Ss Big Infrastructure LLP' <- 'एसएस बिग इंफ्रास्ट्रक्चर एलएलपी' => 'eses big imphrastrkcr elelpi' | core 'eses big imphrastrkcr elelpi' | addr '00191, anoop nagar, indore, mdhy prdes'
+INDIC 'Anand Investment LLP' <- 'आनंद इन्वेस्टमेंट एलएलपी' => 'anmd investmemt elelpi' | core 'anmd investmemt elelpi' | addr 'c-1076/gf, sector 5 greenwood enclave, wave city, nh-24, ghaziabad, uttr prdes'
+INDIC 'Tirupati Good Developers Private Limited' <- 'திருப்பதி குட் டெவலப்பர்ஸ் பிரைவேட் லிமிடெட்' => 'tiruppti kut tevlpprs piraivet limitet' | core 'tiruppti kut tevlpprs piraivet limitet' | addr 'shriramhouse, no.4, burkitroadt.nagar, chennai, tamil nadu'
+INDIC 'One Hospitality Private Limited' <- 'ওয়ান হসপিটালিটি প্রাইভেট লিমিটেড' => "oy'an hspitaliti praibhet limited" | core 'oyan hspitaliti praibhet' | addr 'burdwan, bardhaman, c/o karunamoy banerjee ashokpally tewari para raniganj, pscimbng'
+INDIC 'Sky Impex Limited' <- 'स्काई इम्पेक्स लिमिटेड' => 'skai impeks limited' | core 'skai impeks' | addr 'house no-342, officer hostel sisana road, mardan colony, baghpat, uttr prdes'
+INDIC 'United Technologies Private Limited' <- 'ಯುನೈಟೆಡ್ ಟೆಕ್ನಾಲಜೀಸ್ ಪ್ರೈವೇಟ್ ಲಿಮಿಟೆಡ್' => 'yunaited teknaljis praivet limited' | core 'yunaited teknaljis praivet' | addr 'no.479, bangalore, <null>, karnataka'
+INDIC 'Krishna Infra Limited' <- 'ಕೃಷ್ಣ ಇನ್\u200cಫ್ರಾ ಲಿಮಿಟೆಡ್' => 'krsn inphra limited' | core 'krsn inphra' | addr 'b0022 mahogany, bangalore, thippasandra, karnataka'
+INDIC 'Fortune Producer LLP' <- 'फॉर्च्यून प्रोड्यूसर एलएलपी' => 'phorcyun prodyusr elelpi' | core 'phorcyun prodyusr elelpi' | addr 'flat no. a 1, nagpur, mh'
+INDIC 'Pioneer Systems Private Limited' <- 'पायोनियर सिस्टम्स प्राइवेट लिमिटेड' => 'payoniyr sistms praivet limited' | core 'payoniyr sistms praivet' | addr 'ram charitra rai, patna sadar, patna, bihar'
+INDIC 'Classic Infra Private Limited' <- 'क्लासिक इंफ्रा प्राइवेट लिमिटेड' => 'klasik imphra praivet limited' | core 'klasik imphra praivet' | addr 'maharashtra, new mumbai, 12 menz house plot no.# 41sector 11 juhugaon vashi, navi mumbai'
+INDIC 'Shiva Infra Private Limited' <- 'சிவா இன்ஃப்ரா பிரைவேட் லிமிடெட்' => 'civa inkpra piraivet limitet' | core 'civa inkpra piraivet limitet' | addr 'sf.#239/1a2&1a3, tiruppur, tn'
+INDIC 'Perfect Investments Private Limited' <- 'পারফেক্ট ইনভেস্টমেন্টস প্রাইভেট লিমিটেড' => 'parphekt inbhestments praibhet limited' | core 'parphekt inbhestments praibhet' | addr 'door no 63/19 b road bamungachi, salkia, howrah, howrah, pscimbng'
+INDIC 'Tech Consultants Private Limited' <- 'టెక్ కన్సల్టెంట్స్ ప్రైవేట్ లిమిటెడ్' => 'tek knsltemts praivet limited' | core 'tek knsltemts praivet' | addr 'telmgan, flat no##102, hyderabad'
+INDIC 'Shakti Services LLP' <- 'ശക്തി സർവീസസ് എൽഎൽപി' => 'skti srviss elelpi' | core 'skti srviss elelpi' | addr 'building no. 406, kannur, kerala'
+INDIC 'Red Estate Private Limited' <- 'ਰੈੱਡ ਇਸਟੇਟ ਪ੍ਰਾਈਵੇਟ ਲਿਮਟਿਡ' => "rai'd istet praivet limtid" | core 'raid istet praivet limtid' | addr '102-a, n/a, chandigarh, patiala, pmjab'
+INDIC 'Shakti Smart Ventures Private Limited' <- 'शक्ति स्मार्ट वेंचर्स प्राइवेट लिमिटेड' => 'skti smart vemcrs praivet limited' | core 'skti smart vemcrs praivet' | addr 'g/f ashoka park main, rohtak road, dl, west delhi, plot no. g-42-a, new delhi'
+INDIC 'Super Tech Private Limited' <- 'సూపర్ టెక్ ప్రైవేట్ లిమిటెడ్' => 'supr tek praivet limited' | core 'supr tek praivet' | addr '4/1/358, hyderabad, koti, tg'
+INDIC 'Aditya It Private Limited' <- 'आदित्य आईटी प्राइवेट लिमिटेड' => 'adity aiti praivet limited' | core 'adity aiti praivet' | addr 'hn 8 a-33, gali-3, ambedkar vihar, johri pur extn., south, east delhi, dl'
+INDIC 'Hari Investment Limited' <- 'हरि इन्वेस्टमेंट लिमिटेड' => 'hri investmemt limited' | core 'hri investmemt' | addr 'door no 263, ghaziabad, uttr prdes'
+INDIC 'Urban Projects Private Limited' <- 'അർബൻ പ്രോജക്ട്സ് പ്രൈവറ്റ് ലിമിറ്റഡ്' => 'arbn projkts praivrr limirrd' | core 'arbn projkts praivrr limirrd' | addr 'kp vi/203-a, kl, trivandrum, thiruvananthapuram, thaliyath, mariya nagar kudappanakunnu, thiruvananthapuram'
+INDIC 'Lotus Products Private Limited' <- 'लोटस प्रोडक्ट्स प्राइवेट लिमिटेड' => 'lots prodkts praivet limited' | core 'lots prodkts praivet' | addr 'door no 36 h-19 neetaji hills, huzur, bhopal, madhya pradesh'
+INDIC 'Al Power Private Limited' <- 'अल पावर प्राइवेट लिमिटेड' => 'al pavr praivet limited' | core 'al pavr praivet' | addr 'c/o radhika apartment, phulwari, patna, bihar'
+INDIC 'Raj Hospitality Private Limited' <- 'రాజ్ హాస్పిటాలిటీ ప్రైవేట్ లిమిటెడ్' => 'raj haspitaliti praivet limited' | core 'raj haspitaliti praivet' | addr 'andhra pradesh, hyderabad, 1100/asg/b1003, aparnagrande, nallagandla serilingampally, hyderabadcentralunive, rsity'
+INDIC 'Sunrise Software Private Limited' <- 'सनराइज सॉफ्टवेयर प्राइवेट लिमिटेड' => 'snraij sophtveyr praivet limited' | core 'snraij sophtveyr praivet' | addr '13, enam, new delhi, delhi'
+INDIC 'Modern Consulting Pvt Ltd' <- 'Modern कंसल्टिंग प्रा. लि.' => 'modern kmsltimg pra. li.' | core 'modern kmsltimg pra li' | addr 'plot no. 116-b & 116-p, gut no. 152 near alok nagar, satara parisar, regional office aurangabad, aurangabad, mharastr'
+INDIC 'Ram Impex Private Limited' <- 'ରାମ ଇମ୍ପେକ୍ସ୍ ପ୍ରାଇଭେଟ୍ ଲିମିଟେଡ୍' => 'ram impeks praibhet limited' | core 'ram impeks praibhet' | addr 'sabitri kunj near ambaji mandir, bolangir chock, kesinga, kalahandi, od'
+speed: name 19.9 us/rec, addr 18.6 us/rec

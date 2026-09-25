@@ -1,0 +1,64 @@
+job 32650.master on master at 2026-09-25T13:20:20+05:30; PBS CUDA_VISIBLE_DEVICES=unset
+CUDA_VISIBLE_DEVICES=MIG-2f219700-5dc6-59eb-81ef-2bb9414d3ec0
+GPU: NVIDIA H100 NVL MIG 3g.47gb, 46.4 GiB, SMs 60, torch 2.5.1+cu121, cuda 12.1
+[13:20:33] context + sibling features ...
+    siblings a<60000: 7463613 record pairs
+    siblings a<120000: 5957736 record pairs
+    siblings a<180000: 6720990 record pairs
+    siblings a<240000: 6449742 record pairs
+    siblings a<300000: 6058935 record pairs
+    siblings a<360000: 6019965 record pairs
+    siblings a<420000: 6000402 record pairs
+    siblings a<480000: 6229992 record pairs
+    siblings a<540000: 6367429 record pairs
+    siblings a<600000: 6713165 record pairs
+    siblings a<660000: 6885341 record pairs
+    siblings a<720000: 6976136 record pairs
+    siblings a<780000: 6854231 record pairs
+    siblings a<840000: 6869857 record pairs
+    siblings a<900000: 6597130 record pairs
+    siblings a<960000: 6490335 record pairs
+    siblings a<1020000: 6283191 record pairs
+    siblings a<1080000: 6141948 record pairs
+    siblings a<1140000: 6051036 record pairs
+    siblings a<1200000: 6001237 record pairs
+    siblings a<1260000: 5847795 record pairs
+    siblings a<1320000: 5891551 record pairs
+    siblings a<1380000: 5845242 record pairs
+    siblings a<1440000: 5891034 record pairs
+    siblings a<1500000: 5850648 record pairs
+    siblings a<1560000: 5835898 record pairs
+    siblings a<1620000: 5827973 record pairs
+    siblings a<1680000: 5835455 record pairs
+    siblings a<1740000: 5955642 record pairs
+    siblings a<1800000: 5871204 record pairs
+    siblings a<1860000: 5961506 record pairs
+    siblings a<1920000: 6025270 record pairs
+    siblings a<1980000: 6049477 record pairs
+    siblings a<2040000: 6063768 record pairs
+    siblings a<2100000: 6191329 record pairs
+    siblings a<2160000: 6266143 record pairs
+    siblings a<2220000: 4816441 record pairs
+[13:26:04] context + sibling features done in 331.1s
+[13:26:04] write stage-2 parts ...
+/tmp/ai_25901334/AmazonML/code/xgboost/stage2.py:79: DeprecationWarning: the default behavior of `how='horizontal'` for `concat` is deprecated and will require equal heights in the next breaking release. Use `how='horizontal_extend'` to keep the current behavior.
+(Deprecated in version 1.42.1)
+  pl.concat([d, add], how="horizontal").write_parquet(os.path.join(out_dir, f"part_{i:03d}.parquet"))
+[13:26:07] write stage-2 parts done in 2.2s
+Traceback (most recent call last):
+  File "/tmp/ai_25901334/AmazonML/code/xgboost/stage2.py", line 132, in <module>
+    main()
+  File "/tmp/ai_25901334/AmazonML/code/xgboost/stage2.py", line 79, in main
+    pl.concat([d, add], how="horizontal").write_parquet(os.path.join(out_dir, f"part_{i:03d}.parquet"))
+  File "/tmp/ai_25901334/AmazonML/pkgs/polars/dataframe/frame.py", line 4375, in write_parquet
+    self.lazy().sink_parquet(
+  File "/tmp/ai_25901334/AmazonML/pkgs/polars/lazyframe/frame.py", line 3021, in sink_parquet
+    return _select_engine(engine).sink_parquet(
+  File "/tmp/ai_25901334/AmazonML/pkgs/polars/lazyframe/engine.py", line 616, in sink_parquet
+    return self._finish_sink(ldf_py, lazy=lazy, optimizations=optimizations)
+  File "/tmp/ai_25901334/AmazonML/pkgs/polars/lazyframe/engine.py", line 522, in _finish_sink
+    self.collect(lf, optimizations=optimizations)
+  File "/tmp/ai_25901334/AmazonML/pkgs/polars/lazyframe/engine.py", line 443, in collect
+    return wrap_df(ldf.collect(self.name, callback))
+polars.exceptions.ComputeError: parquet: File out of specification: underlying IO error: No space left on device (os error 28)
+EXIT rc=1 after 337 s at 2026-09-25T13:26:08+05:30

@@ -1,0 +1,6 @@
+job 32765.master on master at 2026-09-25T17:25:05+05:30; PBS CUDA_VISIBLE_DEVICES=unset
+CUDA_VISIBLE_DEVICES=MIG-110b5c2d-162d-5ada-814c-2aef6f9812f1
+GPU: NVIDIA H100 PCIe MIG 3g.40gb, 39.5 GiB, SMs 46, torch 2.5.1+cu121, cuda 12.1
+stage1_input {'thr': 0.65, 'margin': 0.3, 'f05_tune': 0.9853610582760628, 'f05_val': 0.9852940025392475, 'fp': 5268, 'fn': 41868}
+gnn {'thr': 0.7, 'margin': 0.5, 'f05_tune': 0.9880187733940571, 'f05_val': 0.9882944992377025, 'fp': 2954, 'fn': 34303}
+EXIT rc=0 after 84 s at 2026-09-25T17:26:40+05:30

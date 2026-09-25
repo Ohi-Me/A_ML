@@ -1,0 +1,17 @@
+job 32571.master on master at 2026-09-25T10:16:14+05:30
+CUDA_VISIBLE_DEVICES=MIG-2f219700-5dc6-59eb-81ef-2bb9414d3ec0
+GPU: NVIDIA H100 NVL MIG 3g.47gb, 46.4 GiB, SMs 60, torch 2.5.1+cu121, cuda 12.1
+[10:16:21] normalize test s1 (1732544 rows) ...
+/tmp/ai_25901334/AmazonML/code/common/prep.py:84: DeprecationWarning: the default behavior of `how='horizontal'` for `concat` is deprecated and will require equal heights in the next breaking release. Use `how='horizontal_extend'` to keep the current behavior.
+(Deprecated in version 1.42.1)
+  nd = pl.concat([df.select(pl.col("entity_id").alias("id"), "country"), nd], how="horizontal")
+[10:16:27] normalize test s1 (1732544 rows) done in 6.3s
+{'rows': 1732544, 'nonlatin_names': 0, 'empty_addr': 1, 'no_state': 259253, 'domain': 0, 'empty_core': 0, 'nonascii_core_left': 0}
+[10:16:28] normalize test s2 (4887273 rows) ...
+[10:16:40] normalize test s2 (4887273 rows) done in 12.4s
+{'rows': 4887273, 'nonlatin_names': 546606, 'empty_addr': 129418, 'no_state': 810796, 'domain': 137138, 'empty_core': 25, 'nonascii_core_left': 0}
+[10:16:40] normalize test s3 (5082316 rows) ...
+[10:16:53] normalize test s3 (5082316 rows) done in 12.4s
+{'rows': 5082316, 'nonlatin_names': 320639, 'empty_addr': 136107, 'no_state': 845675, 'domain': 143931, 'empty_core': 21, 'nonascii_core_left': 0}
+total 33s
+EXIT rc=0 after 35 s at 2026-09-25T10:16:54+05:30

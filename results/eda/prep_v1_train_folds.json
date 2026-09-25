@@ -1,0 +1,31 @@
+{
+ "s1": {
+  "rows": 2206821,
+  "nonlatin_names": 0,
+  "empty_addr": 1,
+  "no_state": 0,
+  "domain": 0,
+  "empty_core": 0,
+  "nonascii_core_left": 0
+ },
+ "s2": {
+  "rows": 5034616,
+  "nonlatin_names": 474345,
+  "empty_addr": 168974,
+  "no_state": 168969,
+  "domain": 177460,
+  "empty_core": 38,
+  "nonascii_core_left": 0
+ },
+ "s3": {
+  "rows": 5285603,
+  "nonlatin_names": 278524,
+  "empty_addr": 175925,
+  "no_state": 175916,
+  "domain": 185341,
+  "empty_core": 34,
+  "nonascii_core_left": 0
+ },
+ "translit_words": 1347,
+ "translit_states": 16
+}

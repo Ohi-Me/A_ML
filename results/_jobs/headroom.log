@@ -1,0 +1,5 @@
+job 32700.master on master at 2026-09-25T14:36:05+05:30; PBS CUDA_VISIBLE_DEVICES=unset
+CUDA_VISIBLE_DEVICES=MIG-c747c071-8b61-5993-a5e0-33f4b566bd6e
+GPU: NVIDIA H100 PCIe MIG 3g.40gb, 39.5 GiB, SMs 46, torch 2.5.1+cu121, cuda 12.1
+{"tag": "xgb_c2_sim19", "bins": [0, 0.05, 0.2, 0.4, 0.6, 0.7, 0.8, 0.95, 0.99, 1.0001], "correct_best": [1753, 3427, 5052, 6834, 4387, 5590, 20160, 36608, 1133522], "wrong_best": [784392, 27114, 11522, 7497, 2705, 2235, 2537, 785, 384]}
+EXIT rc=0 after 7 s at 2026-09-25T14:36:27+05:30

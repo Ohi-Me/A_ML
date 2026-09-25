@@ -1,0 +1,154 @@
+2026-09-25 09:56:40	32550.master	setup	python -u code/setup/env_setup.py
+2026-09-25 09:57:22	32551.master	setup	python -u code/setup/env_setup.py
+2026-09-25 09:58:28	32552.master	setup	python -u code/setup/env_setup.py --skip-install
+2026-09-25 09:59:19	32553.master	setup2	bash -c bash code/setup/install_one.sh polars-runtime-32 && python -u code/setup/debug_import.py
+2026-09-25 10:01:10	32556.master	eda	python -u code/eda/eda.py
+2026-09-25 10:03:00	32558.master	eda	python -u code/eda/eda.py
+2026-09-25 10:09:14	32562.master	normchk	python -u code/eda/norm_check.py
+2026-09-25 10:11:33	32563.master	prep_train	python -u code/common/prep.py --split train --dict folds
+2026-09-25 10:11:34	32564.master	prep_test	python -u code/common/prep.py --split test --dict all
+2026-09-25 10:13:33	32565.master	prep_train	python -u code/common/prep.py --split train --dict folds
+2026-09-25 10:13:34	32566.master	prep_test	python -u code/common/prep.py --split test --dict all
+2026-09-25 10:14:07	32567.master	baseline_exact	python -u code/baseline/exact_rules.py
+2026-09-25 10:14:08	32568.master	blk_b1	python -u code/blocking/sparse_tfidf.py --split train --tag b1
+2026-09-25 10:16:13	32570.master	prep_train	python -u code/common/prep.py --split train --dict folds
+2026-09-25 10:16:14	32571.master	prep_test	python -u code/common/prep.py --split test --dict all
+2026-09-25 10:16:15	32572.master	baseline_exact	python -u code/baseline/exact_rules.py
+2026-09-25 10:16:16	32573.master	blk_b1	python -u code/blocking/sparse_tfidf.py --split train --tag b1
+2026-09-25 10:19:46	32574.master	bench	python -u code/blocking/bench_spmm.py
+2026-09-25 10:21:02	32575.master	blk_b1	python -u code/blocking/sparse_tfidf.py --split train --tag b1 --no_s1side --k_rid 20
+2026-09-25 10:24:15	32576.master	emb_e1	python -u code/embeddings/ngram_biencoder.py --mode train --tag e1
+2026-09-25 10:28:17	32579.master	emb_e1_embed	python -u code/embeddings/ngram_biencoder.py --mode embed --tag e1 --model_from e1
+2026-09-25 10:37:49	32581.master	emb_e2	python -u code/embeddings/ngram_biencoder.py --mode train --tag e2 --epochs 20 --drop 0.15
+2026-09-25 10:41:14	32583.master	blk_b1_test	python -u code/blocking/sparse_tfidf.py --split test --tag b1 --no_s1side --k_rid 20
+2026-09-25 10:45:33	32584.master	emb_e2_embed	python -u code/embeddings/ngram_biencoder.py --mode embed --tag e2 --model_from e2
+2026-09-25 10:46:57	32586.master	blk_b1	python -u code/blocking/sparse_tfidf.py --split train --tag b1 --no_s1side --k_rid 20
+2026-09-25 10:52:51	32587.master	cands_c1	python -u code/blocking/build_candidates.py --name c1 --split train --lists emb/e2:emb:5,blocking/b1:comb:3,blocking/b1:name:2,blocking/b1:addr:2
+2026-09-25 10:52:52	32588.master	feats_c1	python -u code/tfidf_fuzzy/pair_features.py --cands c1 --split train --btag b1 --etags e2
+2026-09-25 10:52:53	32589.master	xgb_c1	python -u code/xgboost/train_xgb.py --feats c1_train --tag xgb_c1
+2026-09-25 11:05:22	32594.master	miss_e2	python -u code/embeddings/miss_analysis.py --tag e2 --k 5
+2026-09-25 11:06:15	32595.master	blk_b1_test	python -u code/blocking/sparse_tfidf.py --split test --tag b1 --no_s1side --k_rid 20
+2026-09-25 11:39:03	32599.master	emb_e2f	python -u code/embeddings/ngram_biencoder.py --mode train --tag e2f --epochs 20 --drop 0.15 --final --train_only
+2026-09-25 11:39:04	32600.master	emb_e2f_test	python -u code/embeddings/ngram_biencoder.py --mode embed --split test --tag e2f --model_from e2f
+2026-09-25 11:39:55	32601.master	feats_c1	python -u code/tfidf_fuzzy/pair_features.py --cands c1 --split train --btag b1 --etags e2
+2026-09-25 11:39:56	32602.master	xgb_c1	python -u code/xgboost/train_xgb.py --feats c1_train --tag xgb_c1
+2026-09-25 11:42:35	32604.master	smoke_feat	python -u code/tfidf_fuzzy/smoke_features.py
+2026-09-25 11:43:16	32605.master	feats_c1	python -u code/tfidf_fuzzy/pair_features.py --cands c1 --split train --btag b1 --etags e2
+2026-09-25 11:43:17	32606.master	xgb_c1	python -u code/xgboost/train_xgb.py --feats c1_train --tag xgb_c1
+2026-09-25 11:52:56	32607.master	cands_c1_test	python -u code/blocking/build_candidates.py --name c1 --split test --lists emb/e2f:emb:5,blocking/b1:comb:3,blocking/b1:name:2,blocking/b1:addr:2
+2026-09-25 11:52:57	32608.master	feats_c1_test	python -u code/tfidf_fuzzy/pair_features.py --cands c1 --split test --btag b1 --etags e2f:e2
+2026-09-25 12:03:43	32611.master	err_c1	python -u code/xgboost/error_analysis.py --tag xgb_c1 --feats c1_train
+2026-09-25 12:05:51	32612.master	mine_c1	python -u code/xgboost/mine_confusers.py
+2026-09-25 12:07:06	32614.master	s2_c1	python -u code/xgboost/stage2.py --feats c1_train --s1tag xgb_c1 --tag xgb_c1_s2 --etag e2
+2026-09-25 12:07:07	32615.master	emb_e3	python -u code/embeddings/oof_biencoder.py --split train --tag e3
+2026-09-25 12:08:04	32616.master	smoke_feat2	python -u code/tfidf_fuzzy/smoke_features.py
+2026-09-25 12:09:10	32617.master	final_c1	python -u code/final/predict_test.py --train_feats c1_train --test_feats c1_test --tag final_c1 --features_from xgb_c1 --rounds 1980 --thr 0.7 --margin 0.2 --rename r_e2f_emb:r_e2_emb
+2026-09-25 12:09:11	32618.master	val_c1	bash code/final/validate.sh results/final/final_c1/output
+2026-09-25 12:09:25	32619.master	cands_c2	python -u code/blocking/build_candidates.py --name c2 --split train --lists emb/e3:emb:5,blocking/b1:comb:3,blocking/b1:name:2,blocking/b1:addr:2
+2026-09-25 12:09:26	32620.master	e3_paircos	python -u code/embeddings/oof_biencoder.py --split train --tag e3 --reuse --cands c2
+2026-09-25 12:09:27	32621.master	feats_c2	python -u code/tfidf_fuzzy/pair_features.py --cands c2 --split train --btag b1 --etags  --fset v2 --pairc emb/e3_train/paircos_c2.parquet
+2026-09-25 12:09:28	32622.master	xgb_c2	python -u code/xgboost/train_xgb.py --feats c2_train --tag xgb_c2
+2026-09-25 12:20:38	32624.master	emb_e3	python -u code/embeddings/oof_biencoder.py --split train --tag e3
+2026-09-25 12:20:39	32625.master	cands_c2	python -u code/blocking/build_candidates.py --name c2 --split train --lists emb/e3:emb:5,blocking/b1:comb:3,blocking/b1:name:2,blocking/b1:addr:2
+2026-09-25 12:20:40	32626.master	e3_paircos	python -u code/embeddings/oof_biencoder.py --split train --tag e3 --reuse --cands c2
+2026-09-25 12:20:42	32627.master	feats_c2	python -u code/tfidf_fuzzy/pair_features.py --cands c2 --split train --btag b1 --etags  --fset v2 --pairc emb/e3_train/paircos_c2.parquet
+2026-09-25 12:20:43	32628.master	xgb_c2	python -u code/xgboost/train_xgb.py --feats c2_train --tag xgb_c2
+2026-09-25 12:22:09	32629.master	dec_s2	python -u code/xgboost/decode_eval.py --tag xgb_c1_s2
+2026-09-25 12:23:24	32631.master	dec_s2	python -u code/xgboost/decode_eval.py --tag xgb_c1_s2
+2026-09-25 12:32:48	32632.master	shift	python -u code/eda/shift_check.py
+2026-09-25 12:33:50	32633.master	addrfmt	python -u code/eda/addr_format.py
+2026-09-25 12:36:40	32635.master	sim_c1	python -u code/xgboost/simulate_drop.py --feats c1_train --drop 0.19
+2026-09-25 12:36:41	32636.master	xgb_c1_on_sim	python -u code/xgboost/train_xgb.py --feats c1_train_sim19 --tag xgb_c1_on_sim19 --models_from xgb_c1 --drop 19
+2026-09-25 12:36:42	32637.master	xgb_c1_sim	python -u code/xgboost/train_xgb.py --feats c1_train_sim19 --tag xgb_c1_sim19 --drop 19
+2026-09-25 12:38:19	32638.master	xgb_c1_on_sim	python -u code/xgboost/train_xgb.py --feats c1_train_sim19 --tag xgb_c1_on_sim19 --models_from xgb_c1 --simdrop 19
+2026-09-25 12:38:20	32639.master	xgb_c1_sim	python -u code/xgboost/train_xgb.py --feats c1_train_sim19 --tag xgb_c1_sim19 --simdrop 19
+2026-09-25 12:43:48	32640.master	cands_c2_test	python -u code/blocking/build_candidates.py --name c2 --split test --lists emb/e2f:emb:5,blocking/b1:comb:3,blocking/b1:name:2,blocking/b1:addr:2
+2026-09-25 12:43:49	32641.master	e3_paircos_test	python -u code/embeddings/oof_biencoder.py --split test --tag e3 --cands c2
+2026-09-25 12:43:51	32642.master	feats_c2_test	python -u code/tfidf_fuzzy/pair_features.py --cands c2 --split test --btag b1 --etags  --fset v2 --pairc emb/e3_test/paircos_c2.parquet
+2026-09-25 12:44:50	32643.master	envcheck	bash code/setup/envcheck.sh
+2026-09-25 12:46:18	32644.master	feats_c2	python -u code/tfidf_fuzzy/pair_features.py --cands c2 --split train --btag b1 --etags  --fset v2 --pairc emb/e3_train/paircos_c2.parquet
+2026-09-25 12:46:19	32645.master	sim_c2	python -u code/xgboost/simulate_drop.py --feats c2_train --drop 0.19
+2026-09-25 12:46:20	32646.master	xgb_c1_sim	python -u code/xgboost/train_xgb.py --feats c1_train_sim19 --tag xgb_c1_sim19 --simdrop 19
+2026-09-25 12:46:21	32647.master	cands_c2_test	python -u code/blocking/build_candidates.py --name c2 --split test --lists emb/e2f:emb:5,blocking/b1:comb:3,blocking/b1:name:2,blocking/b1:addr:2
+2026-09-25 12:46:22	32648.master	e3_paircos_test	python -u code/embeddings/oof_biencoder.py --split test --tag e3 --cands c2
+2026-09-25 12:46:33	32649.master	xgb_c2_sim	python -u code/xgboost/train_xgb.py --feats c2_train_sim19 --tag xgb_c2_sim19 --simdrop 19
+2026-09-25 12:46:34	32650.master	s2_c2_sim	python -u code/xgboost/stage2.py --feats c2_train_sim19 --s1tag xgb_c2_sim19 --tag xgb_c2_sim19_s2 --etag e2 --simdrop 19
+2026-09-25 12:46:35	32651.master	dec_c2_sim	python -u code/xgboost/decode_eval.py --tag xgb_c2_sim19_s2 --simdrop 19
+2026-09-25 12:57:03	32656.master	prep_v2_train	python -u code/common/prep.py --split train --dict folds
+2026-09-25 12:57:04	32657.master	prep_v2_test	python -u code/common/prep.py --split test --dict all
+2026-09-25 12:57:13	32658.master	feats_c2_test	python -u code/tfidf_fuzzy/pair_features.py --cands c2 --split test --btag b1 --etags  --fset v2 --pairc emb/e3_test/paircos_c2.parquet
+2026-09-25 13:08:34	32659.master	prep_v2_train	python -u code/common/prep.py --split train --dict folds
+2026-09-25 13:08:35	32660.master	prep_v2_test	python -u code/common/prep.py --split test --dict all
+2026-09-25 13:08:36	32661.master	blk_tr_v2	python -u code/blocking/sparse_tfidf.py --split train --tag b1 --no_s1side --k_rid 20
+2026-09-25 13:08:37	32662.master	blk_te_v2	python -u code/blocking/sparse_tfidf.py --split test --tag b1 --no_s1side --k_rid 20
+2026-09-25 13:08:38	32663.master	e3_v2	python -u code/embeddings/oof_biencoder.py --split train --tag e3
+2026-09-25 13:08:39	32664.master	e2f_v2	python -u code/embeddings/ngram_biencoder.py --mode train --tag e2f --epochs 20 --drop 0.15 --final --train_only
+2026-09-25 13:08:40	32665.master	e2f_tr_v2	python -u code/embeddings/ngram_biencoder.py --mode embed --split train --tag e2f --model_from e2f
+2026-09-25 13:08:42	32666.master	e2f_te_v2	python -u code/embeddings/ngram_biencoder.py --mode embed --split test --tag e2f --model_from e2f
+2026-09-25 13:08:43	32667.master	cands_tr_v2	python -u code/blocking/build_candidates.py --name c2 --split train --lists emb/e3:emb:5,blocking/b1:comb:3,blocking/b1:name:2,blocking/b1:addr:2
+2026-09-25 13:08:44	32668.master	cands_te_v2	python -u code/blocking/build_candidates.py --name c2 --split test --lists emb/e2f:emb:5,blocking/b1:comb:3,blocking/b1:name:2,blocking/b1:addr:2
+2026-09-25 13:08:45	32669.master	pc_tr_v2	python -u code/embeddings/oof_biencoder.py --split train --tag e3 --reuse --cands c2
+2026-09-25 13:08:46	32670.master	pc_te_v2	python -u code/embeddings/oof_biencoder.py --split test --tag e3 --cands c2
+2026-09-25 13:08:47	32671.master	feats_tr_v2	python -u code/tfidf_fuzzy/pair_features.py --cands c2 --split train --btag b1 --etags  --fset v2 --pairc emb/e3_train/paircos_c2.parquet
+2026-09-25 13:08:48	32672.master	feats_te_v2	python -u code/tfidf_fuzzy/pair_features.py --cands c2 --split test --btag b1 --etags  --fset v2 --pairc emb/e3_test/paircos_c2.parquet
+2026-09-25 13:08:49	32673.master	sim_v2	python -u code/xgboost/simulate_drop.py --feats c2_train --drop 0.19
+2026-09-25 13:08:50	32674.master	xgb_v2	python -u code/xgboost/train_xgb.py --feats c2_train_sim19 --tag xgb_c2_sim19_v2 --simdrop 19
+2026-09-25 13:08:52	32675.master	s2_v2	python -u code/xgboost/stage2.py --feats c2_train_sim19 --s1tag xgb_c2_sim19_v2 --tag xgb_c2_sim19_s2_v2 --etag e2f --simdrop 19
+2026-09-25 13:08:53	32676.master	dec_v2	python -u code/xgboost/decode_eval.py --tag xgb_c2_sim19_s2_v2 --simdrop 19
+2026-09-25 13:28:22	32679.master	dec_c2s1	python -u code/xgboost/decode_eval.py --tag xgb_c2_sim19 --simdrop 19
+2026-09-25 13:28:23	32680.master	final_c2v1	python -u code/final/predict_test_v2.py --s1_feats c2_train_sim19 --s1_tag xgb_c2_sim19 --test_feats c2_test --rename r_e2f_emb:r_e3_emb --out final_c2v1
+2026-09-25 13:28:24	32681.master	val_c2v1	bash code/final/validate.sh results/final/final_c2v1/output
+2026-09-25 13:29:18	32683.master	xgb_c2_noemb	python -u code/xgboost/train_xgb.py --feats c2_train_sim19 --tag xgb_c2_sim19_noemb --simdrop 19 --drop cos_e3,b_gap_cos_e3,b_rank_cos_e3,a_gap_cos_e3,a_rank_cos_e3,b_gap2_cos_e3,r_e3_emb
+2026-09-25 13:53:26	32685.master	xgb_c2_d11	python -u code/xgboost/train_xgb.py --feats c2_train_sim19 --tag xgb_c2_sim19_d11 --simdrop 19 --depth 11 --eta 0.05
+2026-09-25 13:54:21	32686.master	agree	python -u code/xgboost/agreement_check.py
+2026-09-25 14:17:12	32688.master	blend	python -u code/xgboost/blend_eval.py
+2026-09-25 14:35:21	32694.master	noemb_v2	python -u code/xgboost/train_xgb.py --feats c2_train_sim19 --tag xgb_c2_sim19_noemb_v2 --simdrop 19 --drop cos_e3,b_gap_cos_e3,b_rank_cos_e3,a_gap_cos_e3,a_rank_cos_e3,b_gap2_cos_e3,r_e3_emb
+2026-09-25 14:35:22	32695.master	blend_v2	python -u code/xgboost/blend_oof.py --full xgb_c2_sim19_v2 --noemb xgb_c2_sim19_noemb_v2 --w 0.75 --out xgb_c2_blend_v2
+2026-09-25 14:35:23	32696.master	s2_v2	python -u code/xgboost/stage2.py --feats c2_train_sim19 --s1tag xgb_c2_blend_v2 --tag xgb_c2_blend_s2_v2 --etag e2f --simdrop 19 --drop_feats cos_e3,b_gap_cos_e3,b_rank_cos_e3,a_gap_cos_e3,a_rank_cos_e3,b_gap2_cos_e3,r_e3_emb,sib_emb_max,sib_emb_mean
+2026-09-25 14:35:25	32697.master	dec_v2	python -u code/xgboost/decode_eval.py --tag xgb_c2_blend_s2_v2 --simdrop 19
+2026-09-25 14:35:26	32698.master	final_v2	python -u code/final/predict_test_v2.py --s1_feats c2_train_sim19 --s1_tag xgb_c2_sim19_v2 --blend_from xgb_c2_blend_v2 --s2_tag xgb_c2_blend_s2_v2 --test_feats c2_test --rename r_e2f_emb:r_e3_emb --etag_test e2f --out final_v2
+2026-09-25 14:35:27	32699.master	val_v2	bash code/final/validate.sh results/final/final_v2/output
+2026-09-25 14:36:06	32700.master	headroom	python -u code/xgboost/headroom.py xgb_c2_sim19
+2026-09-25 14:38:08	32702.master	xenc_prep	python -u code/neural_reranker/prep_pairs.py --split train --scores oof_xgb_c2_sim19.parquet --name hard
+2026-09-25 14:38:09	32703.master	xenc_train	python -u code/neural_reranker/cross_encoder.py --name hard --split train
+2026-09-25 14:38:10	32704.master	xenc_stack	python -u code/neural_reranker/stack_eval.py
+2026-09-25 15:54:32	32731.master	shift_v2	python -u code/eda/shift_check.py --train_feats c2_train --test_feats c2_test --test_scores 
+2026-09-25 15:55:59	32732.master	sim_v2	python -u code/xgboost/simulate_drop.py --feats c2_train --drop 0.19
+2026-09-25 15:56:00	32733.master	xgb_v2	python -u code/xgboost/train_xgb.py --feats c2_train_sim19 --tag xgb_c2_sim19_v2 --simdrop 19
+2026-09-25 15:56:02	32734.master	noemb_v2	python -u code/xgboost/train_xgb.py --feats c2_train_sim19 --tag xgb_c2_sim19_noemb_v2 --simdrop 19 --drop cos_e3,b_gap_cos_e3,b_rank_cos_e3,a_gap_cos_e3,a_rank_cos_e3,b_gap2_cos_e3,r_e3_emb
+2026-09-25 15:56:04	32735.master	blend_v2	python -u code/xgboost/blend_oof.py --full xgb_c2_sim19_v2 --noemb xgb_c2_sim19_noemb_v2 --w 0.75 --out xgb_c2_blend_v2
+2026-09-25 15:56:05	32736.master	s2_v2	python -u code/xgboost/stage2.py --feats c2_train_sim19 --s1tag xgb_c2_blend_v2 --tag xgb_c2_blend_s2_v2 --etag e2f --simdrop 19 --drop_feats cos_e3,b_gap_cos_e3,b_rank_cos_e3,a_gap_cos_e3,a_rank_cos_e3,b_gap2_cos_e3,r_e3_emb,sib_emb_max,sib_emb_mean
+2026-09-25 15:56:06	32737.master	dec_v2	python -u code/xgboost/decode_eval.py --tag xgb_c2_blend_s2_v2 --simdrop 19
+2026-09-25 15:56:08	32738.master	final_v2	python -u code/final/predict_test_v2.py --s1_feats c2_train_sim19 --s1_tag xgb_c2_sim19_v2 --blend_from xgb_c2_blend_v2 --s2_tag xgb_c2_blend_s2_v2 --test_feats c2_test --rename r_e2f_emb:r_e3_emb --etag_test e2f --out final_v2
+2026-09-25 15:56:09	32739.master	val_v2	bash code/final/validate.sh results/final/final_v2/output
+2026-09-25 16:14:45	32744.master	hfcheck	python -u code/neural_reranker/hf_check.py
+2026-09-25 16:16:47	32745.master	gnn_v2	python -u code/gnn/edge_gnn.py --feats c2_train_sim19 --s1 oof_xgb_c2_blend_v2.parquet --tag gnn_v2
+2026-09-25 16:16:48	32746.master	gnn_eval	python -u code/gnn/eval_scores.py --oof oof_xgb_c2_blend_v2.parquet --scores gnn/gnn_v2_train_scores.parquet --col gnn --logit --out gnn_v2
+2026-09-25 16:16:59	32747.master	mlx_prep	python -u code/neural_reranker/prep_pairs.py --split train --scores oof_xgb_c2_blend_v2.parquet --name hardv2 --raw --maxlen 110
+2026-09-25 16:17:01	32748.master	mlx_train	python -u code/neural_reranker/ml_cross_encoder.py --name hardv2 --split train --epochs 2
+2026-09-25 16:17:23	32749.master	mlx_stack	python -u code/neural_reranker/stack_eval.py --oof xgb_c2_blend_v2 --extra xenc/ml_hardv2_train_scores.parquet:mlxenc --out ml_hardv2
+2026-09-25 16:48:28	32754.master	gnn_v2	python -u code/gnn/edge_gnn.py --feats c2_train_sim19 --s1 oof_xgb_c2_blend_v2.parquet --tag gnn_v2
+2026-09-25 16:48:30	32755.master	gnn_eval	python -u code/gnn/eval_scores.py --oof oof_xgb_c2_blend_v2.parquet --scores gnn/gnn_v2_train_scores.parquet --col gnn --logit --out gnn_v2
+2026-09-25 17:04:48	32762.master	gnn_v2	python -u code/gnn/edge_gnn.py --feats c2_train_sim19 --s1 oof_xgb_c2_blend_v2.parquet --tag gnn_v2 --batch_s1 1500
+2026-09-25 17:04:50	32763.master	gnn_eval	python -u code/gnn/eval_scores.py --oof oof_xgb_c2_blend_v2.parquet --scores gnn/gnn_v2_train_scores.parquet --col gnn --logit --out gnn_v2
+2026-09-25 17:13:11	32764.master	gnn_v2	python -u code/gnn/edge_gnn.py --feats c2_train_sim19 --s1 oof_xgb_c2_blend_v2.parquet --tag gnn_v2 --batch_s1 1500
+2026-09-25 17:13:12	32765.master	gnn_eval	python -u code/gnn/eval_scores.py --oof oof_xgb_c2_blend_v2.parquet --scores gnn/gnn_v2_train_scores.parquet --col gnn --logit --out gnn_v2
+2026-09-25 17:27:20	32770.master	gnn_oof	python -u code/gnn/make_oof.py oof_xgb_c2_blend_v2.parquet gnn/gnn_v2_train_scores.parquet gnn_v2
+2026-09-25 17:27:22	32771.master	gnn_dec	python -u code/xgboost/decode_eval.py --tag gnn_v2 --sub gnn --simdrop 19
+2026-09-25 17:37:01	32772.master	fuse_stack	python -u code/neural_reranker/stack_eval.py --oof gnn_v2 --extra xenc/ml_hardv2_train_scores.parquet:mlxenc --out fuse_gnn_mlx
+2026-09-25 17:37:02	32773.master	s2_fuse	python -u code/xgboost/stage2.py --feats c2_train_sim19 --s1tag xgb_c2_blend_v2 --tag xgb_c2_fuse_s2_v2 --etag e2f --simdrop 19 --drop_feats cos_e3,b_gap_cos_e3,b_rank_cos_e3,a_gap_cos_e3,a_rank_cos_e3,b_gap2_cos_e3,r_e3_emb,sib_emb_max,sib_emb_mean --extra gnn/gnn_v2_train_scores.parquet:gnn,xenc/ml_hardv2_train_scores.parquet:mlxenc
+2026-09-25 17:37:04	32774.master	dec_fuse	python -u code/xgboost/decode_eval.py --tag xgb_c2_fuse_s2_v2 --simdrop 19
+2026-09-25 17:37:05	32775.master	gnn_mlx	python -u code/gnn/edge_gnn.py --feats c2_train_sim19 --s1 oof_xgb_c2_blend_v2.parquet --tag gnn_mlx_v2 --batch_s1 1500 --extra xenc/ml_hardv2_train_scores.parquet:mlxenc
+2026-09-25 17:37:06	32776.master	gnn_mlx_oof	python -u code/gnn/make_oof.py oof_xgb_c2_blend_v2.parquet gnn/gnn_mlx_v2_train_scores.parquet gnn_mlx_v2
+2026-09-25 17:37:08	32777.master	gnn_mlx_dec	python -u code/xgboost/decode_eval.py --tag gnn_mlx_v2 --sub gnn --simdrop 19
+2026-09-25 17:39:06	32779.master	mlx_prep_te	python -u code/neural_reranker/prep_pairs.py --split test --scores test_stage1_final_v2.parquet --name hardv2 --raw --maxlen 110
+2026-09-25 17:39:08	32780.master	mlx_score_te	python -u code/neural_reranker/ml_cross_encoder.py --name hardv2 --split test --score_only
+2026-09-25 17:39:09	32781.master	gnn_te	python -u code/gnn/edge_gnn.py --feats c2_test --s1 test_stage1_final_v2.parquet --tag gnn_v2 --split test --batch_s1 1500
+2026-09-25 17:39:34	32782.master	fuse_tr	python -u code/final/fuse.py --mode train --xenc xenc/ml_hardv2_train_scores.parquet --out fuse_v2
+2026-09-25 17:39:36	32783.master	fuse_dec	python -u code/xgboost/decode_eval.py --tag fuse_v2 --sub gnn --simdrop 19
+2026-09-25 17:59:54	32793.master	gnn_mlx_te	python -u code/gnn/edge_gnn.py --feats c2_test --s1 test_stage1_final_v2.parquet --tag gnn_mlx_v2 --split test --batch_s1 1500 --extra xenc/ml_hardv2_test_scores.parquet:mlxenc
+2026-09-25 17:59:56	32794.master	final_v3	python -u code/final/final_from_scores.py --test_scores gnn/gnn_mlx_v2_test_scores.parquet --col gnn --logit --oof oof_gnn_mlx_v2.parquet --decode results/gnn/gnn_mlx_v2/decode_eval.json --out final_v3
+2026-09-25 17:59:57	32795.master	val_v3	bash code/final/validate.sh results/final/final_v3/output
+2026-09-25 19:25:24	32845.master	gap_audit	python -u code/audit/gap_audit.py
+2026-09-25 19:25:33	32846.master	gnn_cfA	python -u code/gnn/edge_gnn.py --feats c2_test --s1 test_stage1_halfA_v2.parquet --tag gnn_mlx_v2 --split test --batch_s1 1500 --extra xenc/ml_hardv2_test_scores.parquet:mlxenc --halves A --out_tag gnn_cfA && python -u code/audit/test_decisions.py --scores gnn/gnn_cfA_test_scores.parquet --col gnn --logit --oof oof_gnn_mlx_v2.parquet --name cfA && python -u code/gnn/edge_gnn.py --feats c2_test --s1 test_stage1_halfB_v2.parquet --tag gnn_mlx_v2 --split test --batch_s1 1500 --extra xenc/ml_hardv2_test_scores.parquet:mlxenc --halves B --out_tag gnn_cfB && python -u code/audit/test_decisions.py --scores gnn/gnn_cfB_test_scores.parquet --col gnn --logit --oof oof_gnn_mlx_v2.parquet --name cfB
+2026-09-25 19:25:48	32847.master	gnn_cfA	bash -c set -e; python -u code/gnn/edge_gnn.py --feats c2_test --s1 test_stage1_halfA_v2.parquet --tag gnn_mlx_v2 --split test --batch_s1 1500 --extra xenc/ml_hardv2_test_scores.parquet:mlxenc --halves A --out_tag gnn_cfA; python -u code/audit/test_decisions.py --scores gnn/gnn_cfA_test_scores.parquet --col gnn --logit --oof oof_gnn_mlx_v2.parquet --name cfA; python -u code/gnn/edge_gnn.py --feats c2_test --s1 test_stage1_halfB_v2.parquet --tag gnn_mlx_v2 --split test --batch_s1 1500 --extra xenc/ml_hardv2_test_scores.parquet:mlxenc --halves B --out_tag gnn_cfB; python -u code/audit/test_decisions.py --scores gnn/gnn_cfB_test_scores.parquet --col gnn --logit --oof oof_gnn_mlx_v2.parquet --name cfB

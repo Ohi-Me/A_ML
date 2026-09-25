@@ -1,0 +1,17 @@
+{
+ "args": {
+  "feats": "c2_train_sim19",
+  "s1": "oof_xgb_c2_blend_v2.parquet",
+  "tag": "gnn_v2",
+  "split": "train",
+  "epochs": 4,
+  "batch_s1": 1500,
+  "lr": 0.002
+ },
+ "edges": 68536196,
+ "val_auc_gnn": 0.9999658527889117,
+ "val_ap_gnn": 0.9996657146162381,
+ "val_ap_stage1": 0.9993317282845148,
+ "runtime_s": 695.6751964092255,
+ "gpu": "12.47 GiB peak"
+}

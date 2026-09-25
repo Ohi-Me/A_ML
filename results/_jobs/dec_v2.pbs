@@ -1,0 +1,40 @@
+#!/bin/bash
+#PBS -N er_dec_v2
+#PBS -q workq
+#PBS -l select=1:ncpus=8:ngpus=1:mem=32gb
+#PBS -l walltime=01:00:00
+#PBS -j oe
+#PBS -o /tmp/ai_25901334/AmazonML/results/_jobs/dec_v2.out
+
+exec >> /tmp/ai_25901334/AmazonML/results/_jobs/dec_v2.log 2>&1
+cd /tmp/ai_25901334/AmazonML
+export PYTHONNOUSERSITE=1
+export NCPUS=8
+export OMP_NUM_THREADS=8
+export POLARS_MAX_THREADS=8
+export RAYON_NUM_THREADS=8
+export PYTHONPATH=/tmp/ai_25901334/AmazonML/pkgs:/tmp/ai_25901334/AmazonML/code
+export HF_HOME=/tmp/ai_25901334/AmazonML/hf_cache
+export TOKENIZERS_PARALLELISM=false
+source /apps/compilers/anaconda3/etc/profile.d/conda.sh
+conda activate refused_h100
+export ER_NORM=v2
+export ER_CACHE=data/cache_v2
+echo "job $PBS_JOBID on $(hostname) at $(date -Iseconds); PBS CUDA_VISIBLE_DEVICES=${CUDA_VISIBLE_DEVICES:-unset}"
+export PBS_CUDA_ORIG="${CUDA_VISIBLE_DEVICES:-unset}"
+MIG=""
+sleep $((RANDOM % 20)); for try in $(seq 1 120); do MIG=$(python run_h100.py pick-mig 2>/dev/null) && break; MIG=""; echo "no free MIG slice yet (try $try), waiting 60 s"; sleep 60; done
+[ -z "$MIG" ] && { echo "no free MIG slice after 2 hours"; exit 3; }
+export CUDA_VISIBLE_DEVICES="$MIG"
+echo "CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES"
+trap "rm -f /tmp/ai_25901334/AmazonML/results/_jobs/mig_locks/$MIG" EXIT
+# all our jobs were SIGKILLed at 10:45:01 and 12:44:02 (every 2 h at ~:44, cause not visible to us):
+# if the expected run would cross the next such window, wait until it has passed
+EXPECT=12
+M=$(( 10#$(date +%H) * 60 + 10#$(date +%M) )); TO=$(( (44 - M % 120 + 120) % 120 ))
+if [ $TO -lt $((EXPECT + 2)) ]; then W=$(( (TO + 3) * 60 )); echo "waiting ${W}s to skip the :44 window"; sleep $W; fi
+T0=$(date +%s)
+python -u code/xgboost/decode_eval.py --tag xgb_c2_blend_s2_v2 --simdrop 19
+RC=$?
+echo "EXIT rc=$RC after $(( $(date +%s) - T0 )) s at $(date -Iseconds)"
+exit $RC

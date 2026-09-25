@@ -1,0 +1,3 @@
+job 32794.master on master at 2026-09-25T18:15:38+05:30; PBS CUDA_VISIBLE_DEVICES=unset
+CUDA_VISIBLE_DEVICES=MIG-c747c071-8b61-5993-a5e0-33f4b566bd6e
+waiting 1920s to skip the :44 window

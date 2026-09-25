@@ -1,0 +1,26 @@
+job 32775.master on master at 2026-09-25T17:37:04+05:30; PBS CUDA_VISIBLE_DEVICES=unset
+no free MIG slice yet (try 1), waiting 60 s
+no free MIG slice yet (try 2), waiting 60 s
+CUDA_VISIBLE_DEVICES=MIG-110b5c2d-162d-5ada-814c-2aef6f9812f1
+GPU: NVIDIA H100 PCIe MIG 3g.40gb, 39.5 GiB, SMs 46, torch 2.5.1+cu121, cuda 12.1
+[17:39:23] load edges to the GPU ...
+edges 68536196 S1 2206821 records 10320219 7.04 GiB peak
+[17:41:38] load edges to the GPU done in 134.9s
+[17:41:45] GNN A: train on 714547 S1 ...
+    epoch 0 loss 0.01782
+    epoch 1 loss 0.00363
+    epoch 2 loss 0.00332
+    epoch 3 loss 0.00319
+[17:44:59] GNN A: train on 714547 S1 done in 194.3s
+[17:44:59] GNN A: score ...
+[17:45:31] GNN A: score done in 31.4s
+[17:45:31] GNN B: train on 715452 S1 ...
+    epoch 0 loss 0.01651
+    epoch 1 loss 0.00372
+    epoch 2 loss 0.00347
+    epoch 3 loss 0.00324
+[17:48:46] GNN B: train on 715452 S1 done in 194.7s
+[17:48:46] GNN B: score ...
+[17:49:06] GNN B: score done in 20.8s
+{"args": {"feats": "c2_train_sim19", "s1": "oof_xgb_c2_blend_v2.parquet", "tag": "gnn_mlx_v2", "split": "train", "epochs": 4, "batch_s1": 1500, "lr": 0.002, "extra": "xenc/ml_hardv2_train_scores.parquet:mlxenc"}, "edges": 68536196, "val_auc_gnn": 0.9999774125183349, "val_ap_gnn": 0.9997776644111536, "val_ap_stage1": 0.9993317282845148, "runtime_s": 620.9437141418457, "gpu": "12.74 GiB peak"}
+EXIT rc=0 after 623 s at 2026-09-25T17:49:45+05:30

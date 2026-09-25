@@ -1,0 +1,9 @@
+job 32779.master on master at 2026-09-25T18:02:19+05:30; PBS CUDA_VISIBLE_DEVICES=unset
+CUDA_VISIBLE_DEVICES=MIG-004fd09c-9a79-5488-bc35-54fb8de861f1
+GPU: NVIDIA H100 NVL MIG 1g.24gb, 21.6 GiB, SMs 26, torch 2.5.1+cu121, cuda 12.1
+[18:02:33] select uncertain pairs ...
+pairs 83108284 uncertain 1285550
+[18:02:34] select uncertain pairs done in 0.8s
+[18:02:34] texts ...
+[18:02:40] texts done in 6.7s
+EXIT rc=0 after 11 s at 2026-09-25T18:02:42+05:30

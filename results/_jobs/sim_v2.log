@@ -1,0 +1,11 @@
+job 32732.master on master at 2026-09-25T15:55:58+05:30; PBS CUDA_VISIBLE_DEVICES=unset
+CUDA_VISIBLE_DEVICES=MIG-c747c071-8b61-5993-a5e0-33f4b566bd6e
+GPU: NVIDIA H100 PCIe MIG 3g.40gb, 39.5 GiB, SMs 46, torch 2.5.1+cu121, cuda 12.1
+[15:56:09] slim frame + filter ...
+[15:56:10] slim frame + filter done in 1.1s
+[15:56:10] recompute ranks and context ...
+[15:56:45] recompute ranks and context done in 35.5s
+[15:56:45] write parts ...
+[15:57:11] write parts done in 25.1s
+{"pairs_before": 84853404, "pairs_after": 68536196, "dropped_s1": 418853, "drop": 0.19, "records_with_true_s1_after": 6114682, "runtime_s": 62.686710596084595}
+EXIT rc=0 after 65 s at 2026-09-25T15:57:12+05:30

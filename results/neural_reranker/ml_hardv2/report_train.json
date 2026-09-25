@@ -1,0 +1,17 @@
+{
+ "args": {
+  "name": "hardv2",
+  "split": "train",
+  "epochs": 2,
+  "max_train": 400000,
+  "score_only": false
+ },
+ "pairs": 981075,
+ "model": "FacebookAI/xlm-roberta-base",
+ "val_auc_mlxenc": 0.9449560866301204,
+ "val_auc_stage1": 0.9158972083945317,
+ "val_ap_mlxenc": 0.9223106489500608,
+ "val_ap_stage1": 0.8823834736214906,
+ "runtime_s": 1999.7232925891876,
+ "gpu": "7.52 GiB peak"
+}

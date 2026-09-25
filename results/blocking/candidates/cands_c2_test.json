@@ -1,0 +1,11 @@
+{
+ "name": "c2",
+ "lists": "emb/e2f:emb:5,blocking/b1:comb:3,blocking/b1:name:2,blocking/b1:addr:2",
+ "pairs": 83108284,
+ "split": "test",
+ "n_s1": 1732544,
+ "s1_with_candidates": 1732543,
+ "records_with_candidates": 9969589,
+ "cands_per_record_mean": 8.336179555646677,
+ "runtime_s": 13.834053754806519
+}

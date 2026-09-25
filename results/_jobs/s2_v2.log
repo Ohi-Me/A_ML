@@ -1,0 +1,60 @@
+job 32736.master on master at 2026-09-25T16:13:30+05:30; PBS CUDA_VISIBLE_DEVICES=unset
+CUDA_VISIBLE_DEVICES=MIG-c747c071-8b61-5993-a5e0-33f4b566bd6e
+waiting 2040s to skip the :44 window
+GPU: NVIDIA H100 PCIe MIG 3g.40gb, 39.5 GiB, SMs 46, torch 2.5.1+cu121, cuda 12.1
+[16:47:39] context + sibling features ...
+    siblings a<60000: 7461885 record pairs
+    siblings a<120000: 5960119 record pairs
+    siblings a<180000: 6704827 record pairs
+    siblings a<240000: 6449129 record pairs
+    siblings a<300000: 6049694 record pairs
+    siblings a<360000: 6001807 record pairs
+    siblings a<420000: 5995120 record pairs
+    siblings a<480000: 6229273 record pairs
+    siblings a<540000: 6379390 record pairs
+    siblings a<600000: 6701954 record pairs
+    siblings a<660000: 6903003 record pairs
+    siblings a<720000: 6962066 record pairs
+    siblings a<780000: 6850461 record pairs
+    siblings a<840000: 6870622 record pairs
+    siblings a<900000: 6594982 record pairs
+    siblings a<960000: 6482162 record pairs
+    siblings a<1020000: 6291939 record pairs
+    siblings a<1080000: 6140617 record pairs
+    siblings a<1140000: 6056886 record pairs
+    siblings a<1200000: 6000135 record pairs
+    siblings a<1260000: 5862064 record pairs
+    siblings a<1320000: 5874458 record pairs
+    siblings a<1380000: 5857763 record pairs
+    siblings a<1440000: 5892546 record pairs
+    siblings a<1500000: 5847047 record pairs
+    siblings a<1560000: 5830175 record pairs
+    siblings a<1620000: 5828761 record pairs
+    siblings a<1680000: 5855781 record pairs
+    siblings a<1740000: 5937634 record pairs
+    siblings a<1800000: 5862260 record pairs
+    siblings a<1860000: 5953905 record pairs
+    siblings a<1920000: 6010442 record pairs
+    siblings a<1980000: 6034220 record pairs
+    siblings a<2040000: 6053686 record pairs
+    siblings a<2100000: 6173497 record pairs
+    siblings a<2160000: 6262869 record pairs
+    siblings a<2220000: 4812012 record pairs
+[16:56:12] context + sibling features done in 513.1s
+[16:56:12] write stage-2 side-car parts (new columns only) ...
+[16:56:19] write stage-2 side-car parts (new columns only) done in 6.8s
+92 features
+[16:56:19] model A ...
+[0]	fold3-logloss:0.25007	fold3-aucpr:0.99889
+[250]	fold3-logloss:0.00476	fold3-aucpr:0.99951
+[500]	fold3-logloss:0.00471	fold3-aucpr:0.99952
+[597]	fold3-logloss:0.00471	fold3-aucpr:0.99952
+[16:59:42] model A done in 203.3s
+[16:59:42] model B ...
+[17:01:54] model B done in 131.8s
+[17:01:54] oof scores ...
+[17:03:07] oof scores done in 73.0s
+[17:03:07] decision search ...
+[17:03:51] decision search done in 44.1s
+VALIDATION fold 0: {"n_s1": 357966, "macro_f05": 0.9869057479415028, "tp": 1201547, "fp": 3915, "fn": 37615, "n_pred_matches": 1205462, "n_pred_empty": 20807, "n_true_singletons": 19918, "singleton_acc": 0.9900592428958731, "pair_precision": 0.9967522825273629, "pair_recall": 0.9696448083462856, "thr": 0.7, "margin": 0.5, "candidate_recall": 0.988268684804731}
+EXIT rc=0 after 976 s at 2026-09-25T17:03:53+05:30

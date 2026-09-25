@@ -1,0 +1,20 @@
+{
+ "France": {
+  "both": 838431,
+  "only_xgb_c2_sim19": 13661,
+  "only_xgb_c2_sim19_noemb": 14282,
+  "disagree_rate": 0.03225281460431638
+ },
+ "India": {
+  "both": 2694264,
+  "only_xgb_c2_sim19": 19397,
+  "only_xgb_c2_sim19_noemb": 12995,
+  "disagree_rate": 0.011879753074828655
+ },
+ "US": {
+  "both": 2231029,
+  "only_xgb_c2_sim19": 7713,
+  "only_xgb_c2_sim19_noemb": 5226,
+  "disagree_rate": 0.0057661250071302265
+ }
+}

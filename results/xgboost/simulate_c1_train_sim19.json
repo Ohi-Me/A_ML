@@ -1,0 +1,8 @@
+{
+ "pairs_before": 84783006,
+ "pairs_after": 68469431,
+ "dropped_s1": 418853,
+ "drop": 0.19,
+ "records_with_true_s1_after": 6139323,
+ "runtime_s": 49.882670164108276
+}

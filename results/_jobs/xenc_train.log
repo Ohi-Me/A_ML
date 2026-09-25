@@ -1,0 +1,23 @@
+job 32703.master on master at 2026-09-25T14:56:11+05:30; PBS CUDA_VISIBLE_DEVICES=unset
+CUDA_VISIBLE_DEVICES=MIG-c747c071-8b61-5993-a5e0-33f4b566bd6e
+GPU: NVIDIA H100 PCIe MIG 3g.40gb, 39.5 GiB, SMs 46, torch 2.5.1+cu121, cuda 12.1
+[14:56:29] encode 911280 pairs ...
+[14:56:33] encode 911280 pairs done in 4.1s
+[14:56:33] model A: train on 366276 pairs ...
+/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/torch/nn/modules/transformer.py:379: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  warnings.warn(
+    epoch 0 loss 0.6444 (87s)
+    epoch 1 loss 0.6275 (87s)
+[14:59:28] model A: train on 366276 pairs done in 174.9s
+[14:59:28] model A: score 545004 pairs ...
+[15:00:01] model A: score 545004 pairs done in 33.4s
+[15:00:01] model B: train on 363608 pairs ...
+/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/torch/nn/modules/transformer.py:379: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  warnings.warn(
+    epoch 0 loss 0.6481 (86s)
+    epoch 1 loss 0.6315 (86s)
+[15:02:54] model B: train on 363608 pairs done in 172.6s
+[15:02:54] model B: score 366276 pairs ...
+[15:03:17] model B: score 366276 pairs done in 23.1s
+{"args": {"name": "hard", "split": "train", "epochs": 2, "max_train": 1500000, "score_only": false}, "pairs": 911280, "val_auc_xenc": 0.6631599865464295, "val_auc_stage1": 0.9069305808260204, "val_ap_xenc": 0.55791777354464, "val_ap_stage1": 0.8760556614409641, "runtime_s": 408.98814058303833, "gpu": "6.17 GiB peak"}
+EXIT rc=0 after 412 s at 2026-09-25T15:03:19+05:30

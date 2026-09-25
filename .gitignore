@@ -1,0 +1,10 @@
+# files over GitHub's 100 MB limit (kept locally only)
+Data/student_resource/dataset/train/*.tsv
+Data/student_resource/dataset/test/*.tsv
+submissions/team_submission.zip
+submissions/*/candidate_pairs.tsv
+package/output/candidate_pairs.tsv
+# junk
+__pycache__/
+*.pyc
+Data/__MACOSX/

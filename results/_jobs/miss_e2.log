@@ -1,0 +1,6 @@
+job 32594.master on master at 2026-09-25T11:05:22+05:30
+CUDA_VISIBLE_DEVICES=MIG-2f219700-5dc6-59eb-81ef-2bb9414d3ec0
+GPU: NVIDIA H100 NVL MIG 3g.47gb, 46.4 GiB, SMs 60, torch 2.5.1+cu121, cuda 12.1
+val pairs 1528273 missed @ 5 24222
+{'empty_addr': 16520, 'nonlatin_name': 850, 'US': 12797, 'domain': 673, 'India': 11425}
+EXIT rc=0 after 11 s at 2026-09-25T11:05:36+05:30

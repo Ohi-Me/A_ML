@@ -1,0 +1,13 @@
+{
+ "args": {
+  "name": "hardv2",
+  "split": "test",
+  "epochs": 1,
+  "max_train": 400000,
+  "score_only": true
+ },
+ "pairs": 1285550,
+ "model": "FacebookAI/xlm-roberta-base",
+ "runtime_s": 565.6405377388,
+ "gpu": "2.33 GiB peak"
+}

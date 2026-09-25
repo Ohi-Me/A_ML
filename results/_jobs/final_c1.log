@@ -1,0 +1,46 @@
+job 32617.master on master at 2026-09-25T12:09:09+05:30
+CUDA_VISIBLE_DEVICES=MIG-569925cc-5048-5da0-9de5-70d720535aba
+GPU: NVIDIA H100 NVL MIG 3g.47gb, 46.4 GiB, SMs 60, torch 2.5.1+cu121, cuda 12.1
+[12:09:15] fit on all training folds ...
+[12:19:00] fit on all training folds done in 585.0s
+[12:19:00] score test candidates ...
+[12:20:03] score test candidates done in 63.1s
+[12:20:03] write submission files ...
+[12:21:17] write submission files done in 74.1s
+{
+ "test_s1": 1732544,
+ "candidate_pairs": 83085979,
+ "pred_matches": 5817909,
+ "s1_with_matches": 1633764,
+ "s1_empty": 98780,
+ "by_country": {
+  "France": {
+   "s1": 259452,
+   "with_match": 244782,
+   "matches": 859770
+  },
+  "India": {
+   "s1": 809986,
+   "with_match": 763575,
+   "matches": 2716945
+  },
+  "US": {
+   "s1": 663106,
+   "with_match": 625407,
+   "matches": 2241194
+  }
+ },
+ "args": {
+  "train_feats": "c1_train",
+  "test_feats": "c1_test",
+  "tag": "final_c1",
+  "features_from": "xgb_c1",
+  "rounds": 1980,
+  "thr": 0.7,
+  "margin": 0.2,
+  "rename": "r_e2f_emb:r_e2_emb"
+ },
+ "runtime_s": 722.2568564414978,
+ "gpu": "0.00 GiB peak"
+}
+EXIT rc=0 after 729 s at 2026-09-25T12:21:21+05:30

@@ -1,0 +1,17 @@
+# Python 3.10 (tested 3.10.21), NVIDIA GPU with CUDA 12.x driver (run on H100 NVL MIG 3g.47gb slices)
+# All libraries are open source (BSD / MIT / Apache-2.0 / ISC). One pretrained model is used: FacebookAI/xlm-roberta-base
+# (MIT licence, 278M parameters), downloaded from the Hugging Face hub and fine-tuned on the training pairs. All other
+# models (n-gram bi-encoders, XGBoost, GNN) are trained from scratch on the challenge training data.
+torch==2.5.1          # CUDA 12.1 build: pip install torch==2.5.1 --index-url https://download.pytorch.org/whl/cu121
+xgboost==3.2.0        # CUDA training / inference (device="cuda")
+numpy==2.2.6
+scipy==1.15.3
+scikit-learn==1.7.2   # HashingVectorizer, IsotonicRegression
+polars==1.44.2
+polars-runtime-32==1.44.2
+pyarrow==25.0.1
+rapidfuzz==3.14.5
+anyascii==0.3.3
+transformers==5.3.0
+tokenizers
+sentencepiece

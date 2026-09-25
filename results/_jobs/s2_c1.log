@@ -1,0 +1,63 @@
+job 32614.master on master at 2026-09-25T12:07:05+05:30
+CUDA_VISIBLE_DEVICES=MIG-2f219700-5dc6-59eb-81ef-2bb9414d3ec0
+GPU: NVIDIA H100 NVL MIG 3g.47gb, 46.4 GiB, SMs 60, torch 2.5.1+cu121, cuda 12.1
+[12:07:12] context + sibling features ...
+    siblings a<60000: 9540818 record pairs
+    siblings a<120000: 7323151 record pairs
+    siblings a<180000: 8357729 record pairs
+    siblings a<240000: 7927995 record pairs
+    siblings a<300000: 7509721 record pairs
+    siblings a<360000: 7410599 record pairs
+    siblings a<420000: 7477724 record pairs
+    siblings a<480000: 7664105 record pairs
+    siblings a<540000: 7888883 record pairs
+    siblings a<600000: 8298013 record pairs
+    siblings a<660000: 8544146 record pairs
+    siblings a<720000: 8581208 record pairs
+    siblings a<780000: 8518619 record pairs
+    siblings a<840000: 8456239 record pairs
+    siblings a<900000: 8148716 record pairs
+    siblings a<960000: 8025121 record pairs
+    siblings a<1020000: 7709745 record pairs
+    siblings a<1080000: 7615675 record pairs
+    siblings a<1140000: 7519409 record pairs
+    siblings a<1200000: 7412522 record pairs
+    siblings a<1260000: 7294944 record pairs
+    siblings a<1320000: 7265124 record pairs
+    siblings a<1380000: 7190731 record pairs
+    siblings a<1440000: 7332348 record pairs
+    siblings a<1500000: 7270531 record pairs
+    siblings a<1560000: 7227596 record pairs
+    siblings a<1620000: 7253309 record pairs
+    siblings a<1680000: 7199335 record pairs
+    siblings a<1740000: 7362398 record pairs
+    siblings a<1800000: 7250545 record pairs
+    siblings a<1860000: 7343347 record pairs
+    siblings a<1920000: 7421209 record pairs
+    siblings a<1980000: 7458473 record pairs
+    siblings a<2040000: 7510302 record pairs
+    siblings a<2100000: 7653907 record pairs
+    siblings a<2160000: 7706509 record pairs
+    siblings a<2220000: 5961862 record pairs
+[12:12:08] context + sibling features done in 295.2s
+[12:12:08] write stage-2 parts ...
+/tmp/ai_25901334/AmazonML/code/xgboost/stage2.py:136: DeprecationWarning: the default behavior of `how='horizontal'` for `concat` is deprecated and will require equal heights in the next breaking release. Use `how='horizontal_extend'` to keep the current behavior.
+(Deprecated in version 1.42.1)
+  pl.concat([d, add], how="horizontal").write_parquet(os.path.join(out_dir, f"part_{i:03d}.parquet"))
+[12:12:32] write stage-2 parts done in 24.8s
+87 features
+[12:12:32] model A ...
+[0]	fold3-logloss:0.25195	fold3-aucpr:0.99876
+[250]	fold3-logloss:0.00475	fold3-aucpr:0.99951
+[500]	fold3-logloss:0.00465	fold3-aucpr:0.99953
+[750]	fold3-logloss:0.00464	fold3-aucpr:0.99953
+[875]	fold3-logloss:0.00464	fold3-aucpr:0.99953
+[12:15:28] model A done in 175.6s
+[12:15:28] model B ...
+[12:17:38] model B done in 130.1s
+[12:17:38] oof scores ...
+[12:18:51] oof scores done in 72.5s
+[12:18:51] decision search ...
+[12:19:23] decision search done in 32.7s
+VALIDATION fold 0: {"n_s1": 441611, "macro_f05": 0.9850634674799044, "tp": 1476390, "fp": 4251, "fn": 51883, "n_pred_matches": 1480641, "n_pred_empty": 26320, "n_true_singletons": 24706, "singleton_acc": 0.9906095685258641, "pair_precision": 0.9971289461793912, "pair_recall": 0.9660512225237244, "thr": 0.7, "margin": 0.2, "candidate_recall": 0.9880636509314763}
+EXIT rc=0 after 735 s at 2026-09-25T12:19:25+05:30

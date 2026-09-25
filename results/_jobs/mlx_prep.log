@@ -1,0 +1,10 @@
+job 32747.master on master at 2026-09-25T16:26:57+05:30; PBS CUDA_VISIBLE_DEVICES=unset
+CUDA_VISIBLE_DEVICES=MIG-110b5c2d-162d-5ada-814c-2aef6f9812f1
+GPU: NVIDIA H100 PCIe MIG 3g.40gb, 39.5 GiB, SMs 46, torch 2.5.1+cu121, cuda 12.1
+[16:27:05] select uncertain pairs ...
+pairs 68536196 uncertain 981075
+[16:27:05] select uncertain pairs done in 0.3s
+[16:27:05] texts ...
+[16:27:10] texts done in 5.2s
+positives 368113 by fold [{'fold': 0, 'len': 196820}, {'fold': 1, 'len': 195582}, {'fold': 2, 'len': 196345}, {'fold': 3, 'len': 195778}, {'fold': 4, 'len': 196550}]
+EXIT rc=0 after 9 s at 2026-09-25T16:27:11+05:30

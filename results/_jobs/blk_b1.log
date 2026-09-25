@@ -1,0 +1,160 @@
+job 32586.master on master at 2026-09-25T10:46:57+05:30
+CUDA_VISIBLE_DEVICES=MIG-c747c071-8b61-5993-a5e0-33f4b566bd6e
+GPU: NVIDIA H100 PCIe MIG 3g.40gb, 39.5 GiB, SMs 46, torch 2.5.1+cu121, cuda 12.1
+[10:47:02] load normalized ...
+[10:47:02] load normalized done in 0.3s
+[10:47:02] hash features ...
+nc nnz/doc 17.1
+nw nnz/doc 2.6
+aw nnz/doc 5.6
+[10:47:34] hash features done in 31.4s
+[10:47:34] save tfidf matrices ...
+[10:47:40] save tfidf matrices done in 6.5s
+countries in S1: ['India', 'US']
+[10:47:47] India: 4133346 records -> 883188 S1 ...
+/tmp/ai_25901334/AmazonML/code/blocking/sparse_tfidf.py:59: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at ../aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
+  return torch.sparse_csr_tensor(torch.from_numpy(m.indptr.astype(np.int64)), torch.from_numpy(m.indices.astype(np.int64)),
+    0/4133346 queries, 0s, eta 11s
+    409600/4133346 queries, 103s, eta 941s
+    819200/4133346 queries, 207s, eta 837s
+    1228800/4133346 queries, 310s, eta 734s
+    1638400/4133346 queries, 414s, eta 630s
+    2048000/4133346 queries, 517s, eta 527s
+    2457600/4133346 queries, 621s, eta 423s
+    2867200/4133346 queries, 724s, eta 320s
+    3276800/4133346 queries, 828s, eta 216s
+    3686400/4133346 queries, 931s, eta 113s
+    4096000/4133346 queries, 1035s, eta 9s
+[11:05:22] India: 4133346 records -> 883188 S1 done in 1055.0s
+[11:05:22] US: 6186873 records -> 1323633 S1 ...
+    0/6186873 queries, 0s, eta 19s
+    409600/6186873 queries, 127s, eta 1792s
+    819200/6186873 queries, 254s, eta 1665s
+    1228800/6186873 queries, 381s, eta 1538s
+    1638400/6186873 queries, 508s, eta 1411s
+    2048000/6186873 queries, 635s, eta 1284s
+    2457600/6186873 queries, 762s, eta 1157s
+    2867200/6186873 queries, 889s, eta 1030s
+    3276800/6186873 queries, 1017s, eta 903s
+    3686400/6186873 queries, 1144s, eta 776s
+    4096000/6186873 queries, 1271s, eta 649s
+    4505600/6186873 queries, 1398s, eta 522s
+    4915200/6186873 queries, 1525s, eta 394s
+    5324800/6186873 queries, 1652s, eta 267s
+    5734400/6186873 queries, 1779s, eta 140s
+    6144000/6186873 queries, 1906s, eta 13s
+[11:37:33] US: 6186873 records -> 1323633 S1 done in 1930.4s
+gpu 34.69 GiB peak
+[11:37:33] recall analysis ...
+val {
+"rid2s1_name@1": 0.5017788052265532,
+"rid2s1_name@2": 0.5915474525820976,
+"rid2s1_name@3": 0.6366087734324953,
+"rid2s1_name@5": 0.6815824136132745,
+"rid2s1_name@10": 0.7283626681882098,
+"rid2s1_name@20": 0.7788431778877203,
+"rid2s1_addr@1": 0.7904065569436874,
+"rid2s1_addr@2": 0.8399461352781865,
+"rid2s1_addr@3": 0.860564833639016,
+"rid2s1_addr@5": 0.8816834426833425,
+"rid2s1_addr@10": 0.8987144312567192,
+"rid2s1_addr@20": 0.9083357489139702,
+"rid2s1_comb@1": 0.971504436707316,
+"rid2s1_comb@2": 0.9792085576333548,
+"rid2s1_comb@3": 0.9824645204096388,
+"rid2s1_comb@5": 0.9855987771818255,
+"rid2s1_comb@10": 0.9884182996100828,
+"rid2s1_comb@20": 0.9908236290243955,
+"rid2s1_union@1": 0.9728320790853466,
+"rid2s1_union@2": 0.9800173136605829,
+"rid2s1_union@3": 0.9831417554324391,
+"rid2s1_union@5": 0.9861379478666442,
+"rid2s1_union@10": 0.9888318382906719,
+"rid2s1_union@20": 0.9911645367025395,
+"n_pairs": 1528273
+}
+all {
+"rid2s1_name@1": 0.5020706656463785,
+"rid2s1_name@2": 0.5917898660249936,
+"rid2s1_name@3": 0.6364974703356019,
+"rid2s1_name@5": 0.6811842586731585,
+"rid2s1_name@10": 0.7281280745290386,
+"rid2s1_name@20": 0.7786521068317631,
+"rid2s1_addr@1": 0.7905592361716153,
+"rid2s1_addr@2": 0.8397585085289849,
+"rid2s1_addr@3": 0.8604429089209537,
+"rid2s1_addr@5": 0.8815149577167365,
+"rid2s1_addr@10": 0.8984662293566752,
+"rid2s1_addr@20": 0.9081867650995992,
+"rid2s1_comb@1": 0.9714719053095787,
+"rid2s1_comb@2": 0.9791260302433832,
+"rid2s1_comb@3": 0.9823995056533695,
+"rid2s1_comb@5": 0.9855115590836521,
+"rid2s1_comb@10": 0.9883962078271986,
+"rid2s1_comb@20": 0.9908028746989702,
+"rid2s1_union@1": 0.9727869773177898,
+"rid2s1_union@2": 0.9799478029656871,
+"rid2s1_union@3": 0.9830739955474764,
+"rid2s1_union@5": 0.9860467521518022,
+"rid2s1_union@10": 0.9887923659055309,
+"rid2s1_union@20": 0.9911385486291896,
+"n_pairs": 7638365
+}
+[11:37:40] recall analysis done in 6.9s
+Exception ignored in: <Finalize object, dead>
+Traceback (most recent call last):
+  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/multiprocessing/synchronize.py", line 87, in _cleanup
+    sem_unlink(name)
+FileNotFoundError: [Errno 2] No such file or directory
+Exception ignored in: <Finalize object, dead>
+Traceback (most recent call last):
+  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/multiprocessing/synchronize.py", line 87, in _cleanup
+    sem_unlink(name)
+FileNotFoundError: [Errno 2] No such file or directory
+Exception ignored in: <Finalize object, dead>
+Traceback (most recent call last):
+  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/multiprocessing/synchronize.py", line 87, in _cleanup
+    sem_unlink(name)
+FileNotFoundError: [Errno 2] No such file or directory
+Exception ignored in: <Finalize object, dead>
+Traceback (most recent call last):
+  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/multiprocessing/synchronize.py", line 87, in _cleanup
+    sem_unlink(name)
+FileNotFoundError: [Errno 2] No such file or directory
+Exception ignored in: <Finalize object, dead>
+Traceback (most recent call last):
+  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/multiprocessing/synchronize.py", line 87, in _cleanup
+    sem_unlink(name)
+FileNotFoundError: [Errno 2] No such file or directory
+Exception ignored in: <Finalize object, dead>
+Traceback (most recent call last):
+  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/multiprocessing/synchronize.py", line 87, in _cleanup
+    sem_unlink(name)
+FileNotFoundError: [Errno 2] No such file or directory
+/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 6 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/multiprocessing/resource_tracker.py:237: UserWarning: resource_tracker: '/mp-lx74sffm': [Errno 2] No such file or directory
+  warnings.warn('resource_tracker: %r: %s' % (name, e))
+/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/multiprocessing/resource_tracker.py:237: UserWarning: resource_tracker: '/mp-slej_fgd': [Errno 2] No such file or directory
+  warnings.warn('resource_tracker: %r: %s' % (name, e))
+/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/multiprocessing/resource_tracker.py:237: UserWarning: resource_tracker: '/mp-1zrrxibi': [Errno 2] No such file or directory
+  warnings.warn('resource_tracker: %r: %s' % (name, e))
+/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/multiprocessing/resource_tracker.py:237: UserWarning: resource_tracker: '/mp-85weqot6': [Errno 2] No such file or directory
+  warnings.warn('resource_tracker: %r: %s' % (name, e))
+/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/multiprocessing/resource_tracker.py:237: UserWarning: resource_tracker: '/mp-ca_rog2l': [Errno 2] No such file or directory
+  warnings.warn('resource_tracker: %r: %s' % (name, e))
+/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/multiprocessing/resource_tracker.py:237: UserWarning: resource_tracker: '/mp-c3gkw5e7': [Errno 2] No such file or directory
+  warnings.warn('resource_tracker: %r: %s' % (name, e))
+EXIT rc=0 after 3041 s at 2026-09-25T11:37:41+05:30

@@ -1,0 +1,21 @@
+job 32744.master on master at 2026-09-25T16:14:44+05:30; PBS CUDA_VISIBLE_DEVICES=unset
+CUDA_VISIBLE_DEVICES=MIG-110b5c2d-162d-5ada-814c-2aef6f9812f1
+GPU: NVIDIA H100 PCIe MIG 3g.40gb, 39.5 GiB, SMs 46, torch 2.5.1+cu121, cuda 12.1
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 6566.49it/s]
+[1mXLMRobertaModel LOAD REPORT[0m from: FacebookAI/xlm-roberta-base
+Key                       | Status     |  | 
+--------------------------+------------+--+-
+lm_head.dense.weight      | UNEXPECTED |  | 
+lm_head.bias              | UNEXPECTED |  | 
+lm_head.layer_norm.weight | UNEXPECTED |  | 
+lm_head.dense.bias        | UNEXPECTED |  | 
+lm_head.layer_norm.bias   | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+loaded FacebookAI/xlm-roberta-base 278.043648 M params in 32 s
+['<s>', '▁Gar', 'o', 'a', '▁', '|', '▁3', '13', '▁Berry', '▁Avenue', ',', '▁Ash', 'land', ',', '▁KY', '</s>', '</s>', '▁', 'GAR', 'OA', '▁COR', 'P', '▁', '|', '▁3', '13', '▁BER', 'RY', '▁', 'AVE', ',', '▁A', 'SH', 'LAND', ',', '▁KY', '</s>']
+inference pairs/s 6741
+['▁ऑ', 'ल', '▁सिस्टम', '्स', '▁प्र', 'ाइ', 'वे', 'ट', '▁लिमिटेड', '▁', '|', '▁Société', '▁Et', 's', '▁Ra', 'id', '▁SAS', ',', '▁28', '7', '▁Avenue', '▁Lin', 'né', ',', '▁Rou', 'ba', 'ix']
+EXIT rc=0 after 37 s at 2026-09-25T16:15:35+05:30
