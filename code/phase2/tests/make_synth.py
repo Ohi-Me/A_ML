@@ -86,20 +86,53 @@ def write_parts(F, d, n_parts=3):
         F[i * step:(i + 1) * step].write_parquet(os.path.join(d, f"part_{i:03d}.parquet"))
 
 
-def save_sources(split, s1_id, c1, rid, rc):
+def save_sources(split, s1_id, c1, rid, rc, rec_s1):
+    """raw sources + normalized tables; a matched record copies (with noise) its S1's name and address."""
     os.makedirs(RAW_CACHE, exist_ok=True)
     os.makedirs(CACHE, exist_ok=True)
-    words = np.array(["acme", "global", "traders", "pvt", "ltd", "inc", "sharma", "boulangerie", "sas", "llc"])
-    for k, ids_, cs in ((1, s1_id, c1), (2, [r for r in rid if r.startswith("S2")], None), (3, [r for r in rid if r.startswith("S3")], None)):
-        if cs is None:
+    words = np.array(["acme", "global", "traders", "pvt", "ltd", "inc", "sharma", "boulangerie", "sas", "llc", "club",
+                      "nantes", "amicale", "sportive", "kiriol", "gosquet", "zenith", "orion"])
+    streets = np.array(["main road", "rue du kiriol", "avenue thiers", "mg road", "oak street", "bd de la liberte"])
+    n1 = len(s1_id)
+    s1n = [" ".join(rng.choice(words, 3)) for _ in range(n1)]
+    s1a = [f"{rng.integers(1, 300)} {rng.choice(streets)}" for _ in range(n1)]
+    rn, ra = [], []
+    for a in rec_s1:
+        if a >= 0 and rng.random() < 0.9:
+            t = s1n[a].split(" ")
+            rn.append(" ".join(t if rng.random() < 0.7 else t[:2]))
+            ra.append(s1a[a] if rng.random() < 0.8 else ("n\u00b0 " + s1a[a] if rng.random() < 0.5 else ""))
+        else:
+            rn.append(" ".join(rng.choice(words, 3)))
+            ra.append(f"{rng.integers(1, 300)} {rng.choice(streets)}")
+    rn, ra = np.array(rn, dtype=object), np.array(ra, dtype=object)
+    for k, ids_, cs, nm, ad in ((1, s1_id, c1, np.array(s1n, dtype=object), np.array(s1a, dtype=object)),
+                                (2, None, None, None, None), (3, None, None, None, None)):
+        if ids_ is None:
             m = np.array([r.startswith(f"S{k}") for r in rid])
-            cs = rc[m]
-        nm = [" ".join(rng.choice(words, 3)) for _ in ids_]
-        ad = [f"{rng.integers(1, 999)} main road" for _ in ids_]
-        pl.DataFrame({"entity_id": ids_, "business_name": nm, "business_address": ad, "country": cs}).write_parquet(
+            ids_, cs, nm, ad = [r for r, x in zip(rid, m) if x], rc[m], rn[m], ra[m]
+        pl.DataFrame({"entity_id": ids_, "business_name": list(nm), "business_address": list(ad), "country": cs}).write_parquet(
             os.path.join(RAW_CACHE, f"{split}_source{k}.parquet"))
-        pl.DataFrame({"id": ids_, "country": cs, "state": ["x"] * len(ids_)}).write_parquet(
-            os.path.join(CACHE, f"norm_v2_{split}_s{k}.parquet"))
+        am = [a.replace("n\u00b0 ", "ndeg ") for a in ad]
+        fn = [a.split(" ")[0] if a and a.split(" ")[0].isdigit() else (a.split(" ")[1] if a.startswith("n") and len(a.split(" ")) > 1 else "") for a in am]
+        pl.DataFrame({"id": ids_, "country": cs, "state": ["x"] * len(ids_), "core": list(nm), "key": list(nm), "am": am,
+                      "first_num": fn, "nums": fn}).write_parquet(os.path.join(CACHE, f"norm_v2_{split}_s{k}.parquet"))
+
+
+def write_lists(split, C, y, nr, K=5):
+    """blocking lists as sparse_tfidf.py writes them: rid_<list>_idx (nr x K, -1 padded) and rid_<list>_sc."""
+    d = os.path.join(CACHE, "blocking", f"b1_{split}")
+    os.makedirs(d, exist_ok=True)
+    for li in ("name", "addr", "comb"):
+        sc = np.clip(0.4 + 0.5 * y + rng.normal(0, 0.15, len(y)), 0, 1).astype(np.float32)
+        D = C.with_columns(pl.Series("sc", sc)).sort(["b", "sc"], descending=[False, True]) \
+             .with_columns(pl.int_range(pl.len()).over("b").alias("r")).filter(pl.col("r") < K)
+        idx = np.full((nr, K), -1, np.int32)
+        scm = np.zeros((nr, K), np.float16)
+        idx[D["b"].to_numpy(), D["r"].to_numpy()] = D["a"].to_numpy()
+        scm[D["b"].to_numpy(), D["r"].to_numpy()] = D["sc"].to_numpy()
+        np.save(os.path.join(d, f"rid_{li}_idx.npy"), idx)
+        np.save(os.path.join(d, f"rid_{li}_sc.npy"), scm)
 
 
 def fit(F, feats, folds, rounds=30):
@@ -122,7 +155,8 @@ def main():
         os.makedirs(os.path.join(CACHE, d), exist_ok=True)
     # ---------------- train split
     s1, c1, rid, rc, rec_s1, C, y = make_split("tr", 1500, np.array(["US", "India"]))
-    save_sources("train", s1, c1, rid, rc)
+    save_sources("train", s1, c1, rid, rc, rec_s1)
+    write_lists("train", C, y, len(rid))
     gt = pl.DataFrame({"s1": [s1[a] for a in rec_s1 if a >= 0], "rid": [r for r, a in zip(rid, rec_s1) if a >= 0]})
     gt.write_parquet(os.path.join(RAW_CACHE, "train_gt_pairs.parquet"))
     gt.group_by("s1").agg(pl.col("rid").alias("matches")).write_parquet(os.path.join(RAW_CACHE, "train_gt.parquet"))
@@ -168,6 +202,10 @@ def main():
     E = torch.nn.functional.normalize(torch.randn(n1 + nr, 16), dim=1).half()
     NAMEm = sp.random(n1 + nr, HN, density=0.02, format="csr", random_state=1, dtype=np.float32)
     ADDRm = sp.random(n1 + nr, HA, density=0.02, format="csr", random_state=2, dtype=np.float32)
+    os.makedirs(os.path.join(CACHE, "emb", "e2f_train"), exist_ok=True)
+    np.save(os.path.join(CACHE, "emb", "e2f_train", "emb.npy"), E.numpy())
+    sp.save_npz(os.path.join(CACHE, "blocking", "b1_train", "tfidf_name.npz"), NAMEm)
+    sp.save_npz(os.path.join(CACHE, "blocking", "b1_train", "tfidf_addr.npz"), ADDRm)
     D = context_features(OB.select(["a", "b", "p"]).with_row_index("r"))
     D = sibling_features(D, E, NAMEm, ADDRm, n1, dev).sort("r")
     new = [c for c in D.columns if c not in ("r", "a", "b", "fold", "y")]
@@ -186,7 +224,8 @@ def main():
 
     # ---------------- test split
     s1t, c1t, ridt, rct, rec_t, Ct, yt = make_split("te", 1200, np.array(["US", "India", "France"]))
-    save_sources("test", s1t, c1t, ridt, rct)
+    save_sources("test", s1t, c1t, ridt, rct, rec_t)
+    write_lists("test", Ct, yt, len(ridt))
     n1t, nrt = len(s1t), len(ridt)
     NAMEt = sp.random(n1t + nrt, HN, density=0.02, format="csr", random_state=3, dtype=np.float32)
     ADDRt = sp.random(n1t + nrt, HA, density=0.02, format="csr", random_state=4, dtype=np.float32)

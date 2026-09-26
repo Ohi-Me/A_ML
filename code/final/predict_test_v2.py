@@ -145,7 +145,8 @@ def main():
     T.write_parquet(os.path.join(CACHE, "feats", f"test_scores_{args.out}.parquet"))
     with Timer("calibrate + decode"):
         oof = pl.read_parquet(os.path.join(CACHE, "feats", f"oof_{last}.parquet"))
-        tr = oof.filter(pl.col("fold").is_in([1, 2])).sample(n=min(8_000_000, oof.height), seed=0)
+        tr = oof.filter(pl.col("fold").is_in([1, 2]))
+        tr = tr.sample(n=min(8_000_000, tr.height), seed=0)
         iso = IsotonicRegression(out_of_bounds="clip", y_min=0.0, y_max=1.0).fit(tr["p"].to_numpy(), tr["y"].to_numpy())
         del oof, tr
         if use_thr:

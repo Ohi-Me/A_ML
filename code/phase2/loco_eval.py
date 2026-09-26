@@ -15,7 +15,11 @@ Steps (each resumable; outputs in data/cache_v2/p2/loco_<src>2<dst>[_noemb]/):
   python code/phase2/loco_eval.py stage1   [--src India --dst US] [--noemb]
   python code/phase2/loco_eval.py xenc     (XLM-R base fine-tuned on source band pairs; --xenc_max_train 400000)
   python code/phase2/loco_eval.py gnn      (GNN with and without the XLM-R edge input)
-  python code/phase2/loco_eval.py evaluate -> results/phase2/loco_<src>2<dst>[_noemb].json
+  python code/phase2/loco_eval.py pl       (V5: pseudo-label self-training on the unseen country, see code/v5/pl_lib.py)
+  python code/phase2/loco_eval.py evaluate -> results/phase2/loco_<src>2<dst>[_noemb][_<name>].json
+V5 options: --feats_table c2v5_train_sim19 --full_tag xgb_v5_full --noemb_tag xgb_v5_noemb --name v5 --skip_neural
+(stage1 -> pl -> evaluate only). evaluate also searches the expected-F0.5 gamma on the unseen country
+('best_gamma_unseen'), which final_v5.py uses for France.
 """
 import argparse
 import glob
@@ -40,8 +44,12 @@ FEATS_TABLE = "c2_train_sim19"
 FULL, NOEMB = "xgb_c2_sim19_v2", "xgb_c2_sim19_noemb_v2"
 
 
+def tag(args):
+    return f"loco_{args.src}2{args.dst}{'_noemb' if args.noemb else ''}{'_' + args.name if args.name else ''}"
+
+
 def odir(args):
-    d = os.path.join(CACHE, "p2", f"loco_{args.src}2{args.dst}{'_noemb' if args.noemb else ''}")
+    d = os.path.join(CACHE, "p2", tag(args))
     os.makedirs(d, exist_ok=True)
     return d
 
@@ -96,12 +104,12 @@ def cmd_stage1(args):
             if args.noemb:
                 p = cols[NOEMB]
             else:
-                w = np.where(cty[d["a"].to_numpy()] == args.src, 0.75, 0.5).astype(np.float32)
+                w = np.where(cty[d["a"].to_numpy()] == args.src, 0.75, args.w_unseen).astype(np.float32)
                 p = w * cols[FULL] + (1 - w) * cols[NOEMB]
             outs.append(d.select(["a", "b", "fold", "y"]).with_columns(pl.Series("p", p.astype(np.float32)),
                                                                       *[pl.Series(f"p_{t}", v) for t, v in cols.items()]))
     pl.concat(outs).write_parquet(out)
-    dump(rep, f"loco_{args.src}2{args.dst}{'_noemb' if args.noemb else ''}", "stage1_step.json")
+    dump(rep, tag(args), "stage1_step.json")
 
 
 def cmd_xenc(args):
@@ -160,6 +168,63 @@ def cmd_gnn(args):
             del G
 
 
+def cmd_pl(args):
+    """V5 self-training check: pseudo-label the unseen country with the source-trained stage 1, refit stage 1 on
+    source folds 1-4 with and without the pseudo-labelled rows, score the unseen country with both."""
+    import xgboost as xgb
+    from v5.pl_lib import AGREE_COLS, MixIter, select_pseudo
+    d = odir(args)
+    if os.path.exists(os.path.join(d, "stage1_pl.parquet")):
+        print("exists", d, "stage1_pl")
+        return
+    files = sorted(glob.glob(os.path.join(CACHE, "feats", FEATS_TABLE, "part_*.parquet")))
+    cty = ids("train")[0]["country"].to_numpy()
+    S = pl.read_parquet(os.path.join(d, "stage1.parquet"), columns=["a", "b", "fold", "y", "p"])
+    srcr = S.filter(pl.Series(cty[S["a"].to_numpy()] == args.src) & pl.col("fold").is_in([1, 2]))
+    srcr = srcr.sample(n=min(8_000_000, srcr.height), seed=0)
+    iso = fit_iso(srcr["p"].to_numpy(), srcr["y"].to_numpy())
+    dst = S.filter(pl.Series(cty[S["a"].to_numpy()] == args.dst)).select(["a", "b", "p"])
+    dst = dst.with_columns(pl.Series("p", iso.predict(dst["p"].to_numpy()).astype(np.float32)))
+    F = pl.concat([pl.read_parquet(f, columns=["a", "b"] + AGREE_COLS) for f in files]).join(dst.select(["a", "b"]), on=["a", "b"], how="semi")
+    rows, rep = select_pseudo(dst, F, args.pos_thr, args.margin, args.neg_thr, args.addr_jac, args.max_pl_pairs)
+    true = S.select(["a", "b", "y"]).rename({"y": "y_true"})
+    chk = rows.join(true, on=["a", "b"], how="left")
+    pos = chk.filter(pl.col("y") == 1)
+    rep["pseudo_label_accuracy"] = float((chk["y"] == chk["y_true"]).mean()) if chk.height else None
+    rep["pseudo_positive_precision"] = float(pos["y_true"].mean()) if pos.height else None
+    print("pseudo-labels", json.dumps(rep), flush=True)
+    rounds = json.load(open(os.path.join(RESULTS, "phase2", tag(args), "stage1_step.json")))
+    am = src_mask(args)
+    tags = [NOEMB] if args.noemb else [FULL, NOEMB]
+    preds = {"all": {}, "pl": {}}
+    for t in tags:
+        rp = json.load(open(os.path.join(RESULTS, "xgboost", t, "report.json")))
+        feats, params = rp["features"], dict(rp["params"])
+        n = int(rounds[t]["rounds"] * 1.25)
+        for kind in ("all", "pl"):
+            with Timer(f"{t} {kind}: source folds 1-4{' + pseudo-labels' if kind == 'pl' else ''}, {n} rounds"):
+                it = MixIter(files, feats, [1, 2, 3, 4], a_mask=am, extra_files=files if kind == "pl" else (),
+                             pl_rows=rows if kind == "pl" else None)
+                m = xgb.train(params, xgb.QuantileDMatrix(it, max_bin=int(params.get("max_bin", 256))), n)
+            outs = []
+            for f in files:
+                q = pl.read_parquet(f, columns=["a", "b"] + feats)
+                q = q.filter(pl.Series(cty[q["a"].to_numpy()] == args.dst))
+                outs.append(q.select(["a", "b"]).with_columns(pl.Series(
+                    "p", m.predict(xgb.DMatrix(q.select([pl.col(c).cast(pl.Float32) for c in feats]).to_numpy())))))
+            preds[kind][t] = pl.concat(outs)
+    for kind in ("all", "pl"):
+        if args.noemb:
+            P = preds[kind][NOEMB]
+        else:
+            P = preds[kind][FULL].join(preds[kind][NOEMB].rename({"p": "p2"}), on=["a", "b"]).with_columns(
+                (args.w_unseen * pl.col("p") + (1 - args.w_unseen) * pl.col("p2")).alias("p")).drop("p2")
+        out = S.join(P.rename({"p": "p_new"}), on=["a", "b"], how="left").with_columns(
+            pl.coalesce(["p_new", "p"]).cast(pl.Float32).alias("p")).drop("p_new")
+        out.write_parquet(os.path.join(d, f"stage1_{kind}.parquet"))
+    dump(rep, tag(args), "pl_step.json")
+
+
 def ece(p, y, bins=15):
     e, n = 0.0, len(p)
     if n == 0:
@@ -199,6 +264,9 @@ def cmd_evaluate(args):
         p = X["p"].to_numpy().astype(np.float64)
         p[h] = lr.predict_proba(Z[h])[:, 1]
         systems["stage1+xlmr_stack"] = X.select(["a", "b", "fold", "y"]).with_columns(pl.Series("p", p.astype(np.float32)))
+    for name in ("stage1_all", "stage1_pl"):
+        if os.path.exists(os.path.join(d, f"{name}.parquet")):
+            systems[name] = pl.read_parquet(os.path.join(d, f"{name}.parquet"), columns=["a", "b", "fold", "y", "p"])
     for name in ("gnn", "gnn_xenc"):
         if os.path.exists(os.path.join(d, f"{name}.parquet")):
             systems[{"gnn": "gnn_no_xlmr", "gnn_xenc": "gnn+xlmr"}[name]] = pl.read_parquet(os.path.join(d, f"{name}.parquet"))
@@ -224,6 +292,14 @@ def cmd_evaluate(args):
                     r[mn] = {k: mm[k] for k in ("macro_f05", "pair_precision", "pair_recall", "fp", "fn", "n_pred_matches",
                                                 "pred_over_true", "n_pred_empty", "singleton_acc")}
                 res[dec_name] = r
+            # decoder strictness for an unseen country: expected-F0.5 gamma that is best on the target country
+            gg = {}
+            for g in args.gammas:
+                keep, _ = decode(D.select(["a", "b", "p"]), rule="ef", iso=iso, gamma=g, dev=dev, M=2048)
+                gg[str(g)] = {mn: sc.metrics(keep, m)[0]["macro_f05"] for mn, m in masks.items()}
+            res["gamma_grid"] = gg
+            um = f"{args.dst}_all_unseen"
+            res["best_gamma_unseen"] = float(max(args.gammas, key=lambda g: gg[str(g)][um]))
             # ranking quality and calibration on each population
             for mn, m in masks.items():
                 mD = D.filter(pl.Series(m[D["a"].to_numpy()]))
@@ -240,16 +316,18 @@ def cmd_evaluate(args):
     # component deltas: in-domain vs unseen
     s = rep["systems"]
     deltas = {}
-    for a_, b_ in (("stage1+xlmr_stack", "stage1"), ("gnn_no_xlmr", "stage1"), ("gnn+xlmr", "gnn_no_xlmr"), ("gnn+xlmr", "stage1")):
+    for a_, b_ in (("stage1+xlmr_stack", "stage1"), ("gnn_no_xlmr", "stage1"), ("gnn+xlmr", "gnn_no_xlmr"), ("gnn+xlmr", "stage1"),
+                   ("stage1_pl", "stage1_all")):
         if a_ in s and b_ in s:
             deltas[f"{a_} - {b_}"] = {mn: s[a_]["iso+ef"][mn]["macro_f05"] - s[b_]["iso+ef"][mn]["macro_f05"] for mn in masks}
     rep["component_deltas_iso_ef"] = deltas
-    dump(rep, f"loco_{args.src}2{args.dst}{'_noemb' if args.noemb else ''}.json")
+    dump(rep, f"{tag(args)}.json")
 
 
 def main():
+    global FEATS_TABLE, FULL, NOEMB
     ap = argparse.ArgumentParser()
-    ap.add_argument("step", choices=["stage1", "xenc", "gnn", "evaluate", "all"])
+    ap.add_argument("step", choices=["stage1", "xenc", "gnn", "pl", "evaluate", "all"])
     ap.add_argument("--src", default="India")
     ap.add_argument("--dst", default="US")
     ap.add_argument("--noemb", action="store_true")
@@ -258,11 +336,28 @@ def main():
     ap.add_argument("--xenc_epochs", type=int, default=2)
     ap.add_argument("--epochs", type=int, default=4)
     ap.add_argument("--batch_s1", type=int, default=1500)
+    ap.add_argument("--feats_table", default=FEATS_TABLE)
+    ap.add_argument("--full_tag", default=FULL)
+    ap.add_argument("--noemb_tag", default=NOEMB)
+    ap.add_argument("--name", default="", help="suffix of the output names (e.g. v5)")
+    ap.add_argument("--w_unseen", type=float, default=0.5)
+    ap.add_argument("--skip_neural", action="store_true", help="'all' runs stage1 -> pl -> evaluate (no XLM-R / GNN)")
+    ap.add_argument("--with_pl", action="store_true", help="'all' also runs the pseudo-label step")
+    ap.add_argument("--gammas", type=float, nargs="+", default=[1.0, 1.25, 1.5, 2.0, 3.0])
+    ap.add_argument("--pos_thr", type=float, default=0.97)
+    ap.add_argument("--margin", type=float, default=0.5)
+    ap.add_argument("--neg_thr", type=float, default=0.02)
+    ap.add_argument("--addr_jac", type=float, default=0.3)
+    ap.add_argument("--max_pl_pairs", type=int, default=4_000_000)
     args = ap.parse_args()
+    FEATS_TABLE, FULL, NOEMB = args.feats_table, args.full_tag, args.noemb_tag
     t0 = time.time()
-    steps = ["stage1", "xenc", "gnn", "evaluate"] if args.step == "all" else [args.step]
+    if args.step == "all":
+        steps = ["stage1"] + ([] if args.skip_neural else ["xenc", "gnn"]) + (["pl"] if args.with_pl or args.skip_neural else []) + ["evaluate"]
+    else:
+        steps = [args.step]
     for s in steps:
-        {"stage1": cmd_stage1, "xenc": cmd_xenc, "gnn": cmd_gnn, "evaluate": cmd_evaluate}[s](args)
+        {"stage1": cmd_stage1, "xenc": cmd_xenc, "gnn": cmd_gnn, "pl": cmd_pl, "evaluate": cmd_evaluate}[s](args)
     print("done in", time.time() - t0, flush=True)
 
 

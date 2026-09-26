@@ -36,9 +36,14 @@ bash run_all.sh --data <DATASET_FOLDER> --dry               # must print the GPU
 ```
 
 ## Run
+If V2 was already built on this machine (data/cache_v2 exists from the earlier run), run only V5:
+```bash
+nohup bash run_all.sh --data <DATASET_FOLDER> --stage v5all > run_v5.out 2>&1 &
+tail -f run_v5.out
+```
+Otherwise run everything (V2 is built first, then V5):
 ```bash
 nohup bash run_all.sh --data <DATASET_FOLDER> > run_all.out 2>&1 &
-tail -f run_all.out
 ```
 The blocks run in this order: v2 → v3 → audit → phase2 → loco → select → v4. The total is roughly 8–12 hours. Each
 step's log is in `results/_runs/<step>.log`. Check progress periodically and don't restart steps that are running.
@@ -58,6 +63,12 @@ step's log is in `results/_runs/<step>.log`. Check progress periodically and don
 - Do not commit large files: no `data/`, `*.parquet`, `*.npy`, `*.pt`, `hf_cache/`, or any `*.tsv` over 50 MB.
 
 ## When it finishes, report back
+For the V5 run (read V5.md first), report: results/v5/v5_choice.json (full), results/v5/recall_xgb_v5_s2.json
+(the f0|ALL, f0|US, f0|India entries), results/phase2/loco_India2US_v2.json and loco_India2US_v5.json
+("component_deltas_iso_ef", and "best_gamma_unseen" + "iso+ef" of every system), results/phase2/loco_India2US_v5/pl_step.json,
+results/v5/pl_select.json, results/v5/pl_score.json, and results/final/final_v5*/test_stats.json. Zip results/v5 and
+results/phase2 and results/final/final_v5*/test_stats.json and send them.
+For the earlier phase-2 run:
 1. Whether every step succeeded (`ls data/cache_v2/_done/`) and the total run time.
 2. `results/phase2/ablation.csv`: the full table, especially val_f0, val_f4, test_matches, delta_vs_V2,
    extra_removed and inflation_US / inflation_India for every system.

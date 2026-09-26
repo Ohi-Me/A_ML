@@ -43,7 +43,8 @@ def record_country(split):
 
 def iso_from(oof_name):
     oof = pl.read_parquet(os.path.join(CACHE, "feats", oof_name))
-    tr = oof.filter(pl.col("fold").is_in([1, 2])).sample(n=min(8_000_000, oof.height), seed=0)
+    tr = oof.filter(pl.col("fold").is_in([1, 2]))
+    tr = tr.sample(n=min(8_000_000, tr.height), seed=0)
     return IsotonicRegression(out_of_bounds="clip", y_min=0.0, y_max=1.0).fit(tr["p"].to_numpy(), tr["y"].to_numpy())
 
 

@@ -19,9 +19,10 @@ def assign(D, floor=0.01):
     return best.filter(pl.col("p") >= floor)
 
 
-def expected_f_decode(A, K=12, M=2048, extra=0.0, gamma=1.0, seed=0, dev="cuda", chunk=200_000):
+def expected_f_decode(A, K=12, M=2048, extra=0.0, gamma=1.0, seed=0, dev=None, chunk=200_000):
     """A: a, b, p (one row per kept record). Returns chosen (a, b) and per S1 the chosen k and its expected F0.5
     (S1 without any kept record are not listed: their expected F0.5 is 1 under the model)."""
+    dev = dev or ("cuda" if torch.cuda.is_available() else "cpu")      # cpu only in smoke tests
     A = A.with_columns((pl.col("p") ** gamma).alias("q")).sort(["a", "q"], descending=[False, True])
     A = A.with_columns(pl.int_range(pl.len()).over("a").alias("pos")).filter(pl.col("pos") < K)
     g = A.group_by("a", maintain_order=True).agg(pl.col("q"), pl.col("b"))

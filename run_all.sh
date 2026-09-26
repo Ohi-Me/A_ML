@@ -7,7 +7,8 @@
 #
 #    --data DIR   folder that contains train/ and test/ with the challenge TSVs (train_source1.tsv ... test_source3.tsv,
 #                 train_ground_truth.tsv). Linked to data/dataset (the code reads data/dataset). Needed only once.
-#    --stage      which block to run (default all = v2 -> v3 -> audit -> phase2 -> loco -> select -> v4)
+#    --stage      which block to run (default all = v2 -> v3 -> audit -> phase2 -> loco -> select -> v4 -> v5 -> loco5
+#                 -> v5pl -> v5final). V5 only, on an existing V2 cache: --stage v5all
 #    --only STEP  run a single step by name (see --list), even if it was done before
 #    --list       print every step with its block and exit
 #    --dry        print what would run
@@ -58,7 +59,7 @@ step() {   # step BLOCK NAME CHECK_PATH "command"
   if [[ $LIST == 1 ]]; then printf "%-8s %-22s %s\n" "$block" "$name" "$cmd"; return 0; fi
   if [[ -n "$ONLY" ]]; then [[ "$ONLY" == "$name" ]] || return 0
   else
-    [[ "$STAGE" == "all" || "$STAGE" == "$block" ]] || return 0
+    [[ "$STAGE" == "all" || "$STAGE" == "$block" || ( "$STAGE" == "v5all" && "$block" =~ ^(v5|loco5|v5pl|v5final)$ ) ]] || return 0
     if [[ -e "$C/_done/$name" || ( -n "$check" && -e "$check" ) ]]; then echo "[skip] $name"; return 0; fi
   fi
   echo "[run ] $(date '+%H:%M:%S') $name"
@@ -179,6 +180,28 @@ sys.exit(subprocess.call(cmd, shell=True))
 EOF'
 step v4 final_v4        "" "$V4CMD"
 step v4 val_v4          "" "[ -f results/final/final_v4/output/matching_results.tsv ] || exit 0; bash code/final/validate.sh results/final/final_v4/output && mkdir -p submissions/final_v4 && { [ -e submissions/final_v4/matching_results.tsv ] || cp results/final/final_v4/output/matching_results.tsv submissions/final_v4/; }"
+
+# ================================================ V5: V2 recipe + transferable features, LOCO-checked unseen-country
+#                                                  handling, optional France pseudo-labels (see V5.md)
+V5DROP="$DROP_EMB,sib_emb_max,sib_emb_mean"
+step v5 v5_feats_train  "" "$P code/v5/extra_feats.py --src c2_train_sim19"
+step v5 v5_feats_test   "" "$P code/v5/extra_feats.py --src c2_test"
+step v5 v5_xgb_full     "$C/feats/oof_xgb_v5_full.parquet" "$P code/xgboost/train_xgb.py --feats c2v5_train_sim19 --tag xgb_v5_full --simdrop 19"
+step v5 v5_xgb_noemb    "$C/feats/oof_xgb_v5_noemb.parquet" "$P code/xgboost/train_xgb.py --feats c2v5_train_sim19 --tag xgb_v5_noemb --simdrop 19 --drop $DROP_EMB"
+step v5 v5_blend        "$C/feats/oof_xgb_v5_blend.parquet" "$P code/xgboost/blend_oof.py --full xgb_v5_full --noemb xgb_v5_noemb --w 0.75 --out xgb_v5_blend"
+step v5 v5_stage2       "$C/feats/oof_xgb_v5_s2.parquet" "$P code/xgboost/stage2.py --feats c2v5_train_sim19 --s1tag xgb_v5_blend --tag xgb_v5_s2 --etag e2f --simdrop 19 --drop_feats $V5DROP"
+step v5 v5_dec          "" "$P code/xgboost/decode_eval.py --tag xgb_v5_s2 --simdrop 19"
+step v5 v5_recall       "" "$P code/v5/recall_report.py --s1 xgb_v5_blend --s2 xgb_v5_s2"
+step v5 v5_test         "$C/feats/test_scores_final_v5.parquet" "$P code/final/predict_test_v2.py --s1_feats c2v5_train_sim19 --s1_tag xgb_v5_full --blend_from xgb_v5_blend --s2_tag xgb_v5_s2 --test_feats c2v5_test --rename r_e2f_emb:r_e3_emb --etag_test e2f --out final_v5"
+step loco5 loco_v2feat  "" "$P code/phase2/loco_eval.py all --skip_neural --name v2"
+step loco5 loco_v5feat  "" "$P code/phase2/loco_eval.py all --skip_neural --name v5 --feats_table c2v5_train_sim19 --full_tag xgb_v5_full --noemb_tag xgb_v5_noemb"
+step v5pl pl_select     "" "$P code/v5/pseudo_label.py select"
+step v5pl pl_fit        "" "$P code/v5/pseudo_label.py fit"
+step v5pl pl_score      "$C/feats/test_scores_final_v5pl.parquet" "$P code/v5/pseudo_label.py score"
+step v5final final_v5   "" "$P code/v5/final_v5.py --scores feats/test_scores_final_v5.parquet --loco_system stage1_all --out final_v5"
+step v5final final_v5pl "" "$P code/v5/final_v5.py --scores feats/test_scores_final_v5pl.parquet --loco_system stage1_pl --out final_v5pl"
+step v5final val_v5     "" "bash code/final/validate.sh results/final/final_v5/output && bash code/final/validate.sh results/final/final_v5pl/output"
+step v5final choose_v5  "" "$P code/v5/choose_v5.py"
 
 if [[ $LIST == 0 && $DRY == 0 ]]; then
   echo "done ($STAGE${ONLY:+, only $ONLY}). Reports: results/phase2/  Submission (if V4 chosen): results/final/final_v4/output/"

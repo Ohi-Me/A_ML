@@ -11,6 +11,9 @@ _KEEP = None
 def gpu_init(require=True):
     global _KEEP
     ok = torch.cuda.is_available()
+    if not ok and os.environ.get("ER_ALLOW_CPU") == "1":     # synthetic smoke tests only (code/phase2/tests)
+        print("CPU mode (ER_ALLOW_CPU=1): smoke test only", flush=True)
+        return torch.device("cpu")
     if not ok:
         msg = f"CUDA not available (CUDA_VISIBLE_DEVICES={os.environ.get('CUDA_VISIBLE_DEVICES')})"
         if require:

@@ -100,6 +100,12 @@ Times were measured on an H100 NVL MIG 3g slice; a full H100 is about 1.5–2× 
 | `loco` | India → US leave-one-country-out, with and without embedding features | ~3 h | `results/phase2/loco_India2US*.json` |
 | `select` | pre-registered V4 selection rule (see `code/phase2/select_v4.py`) | 1 min | `results/phase2/v4_choice.json` |
 | `v4` | writes the chosen V4 submission and runs the official validator | ~15 min | `results/final/final_v4/output/matching_results.tsv` (+ copy in `submissions/final_v4/`) |
+| `v5` | V5 features (`code/v5/extra_feats.py`), V2 recipe retrained on them, error accounting, test scores | ~3 h | `results/v5/recall_xgb_v5_s2.json`, `feats/test_scores_final_v5.parquet` |
+| `loco5` | India → US with V2 features and with V5 features, pseudo-label check, unseen-country γ | ~3 h | `results/phase2/loco_India2US_v2.json`, `_v5.json` |
+| `v5pl` | France pseudo-labels, stage-1 refit, France re-scored | ~1.5 h | `results/v5/pl_*.json` |
+| `v5final` | both V5 submissions (per-country decoding), validator, pre-registered choice | ~20 min | `results/final/final_v5*/output/`, `results/v5/v5_choice.json` |
+
+**V5 only** (V2 already built on this machine): `bash run_all.sh --stage v5all`. See `V5.md`.
 
 Existing submissions in `submissions/final_v2`, `final_v3`, etc. are **never overwritten**. The V4 file is only
 copied into `submissions/final_v4/` if that folder doesn't have one yet.

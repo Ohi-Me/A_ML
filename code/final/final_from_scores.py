@@ -51,7 +51,8 @@ def main():
             rule = {"rule": "threshold+margin", "thr": r["thr"], "margin": r["margin"], "f05_tune": r["f05_tune"]}
         else:
             oof = pl.read_parquet(os.path.join(CACHE, "feats", args.oof))
-            tr = oof.filter(pl.col("fold").is_in([1, 2])).sample(n=min(8_000_000, oof.height), seed=0)
+            tr = oof.filter(pl.col("fold").is_in([1, 2]))
+            tr = tr.sample(n=min(8_000_000, tr.height), seed=0)
             iso = IsotonicRegression(out_of_bounds="clip", y_min=0.0, y_max=1.0).fit(tr["p"].to_numpy(), tr["y"].to_numpy())
             T = T.with_columns(pl.Series("p", iso.predict(T["p"].to_numpy()).astype(np.float32)))
             b = dj["expected_f"]["best"]
