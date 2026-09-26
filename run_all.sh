@@ -61,7 +61,7 @@ step() {   # step BLOCK NAME CHECK_PATH "command"
   if [[ $LIST == 1 ]]; then printf "%-8s %-22s %s\n" "$block" "$name" "$cmd"; return 0; fi
   if [[ -n "$ONLY" ]]; then [[ "$ONLY" == "$name" ]] || return 0
   else
-    [[ ( "$STAGE" == "all" && ! "$block" =~ ^(v5|loco5|v5pl|v5final|v6a)$ ) || "$STAGE" == "$block" ||
+    [[ ( "$STAGE" == "all" && ! "$block" =~ ^(v5|loco5|v5pl|v5final|v6a|v7diag)$ ) || "$STAGE" == "$block" ||
        ( "$STAGE" == "v5all" && "$block" =~ ^(v5|loco5|v5pl|v5final)$ ) ||
        ( "$STAGE" == "v6all" && "$block" =~ ^(v6diag|v6feat|v6s1|v6x|v6col|v6loco|v6test|v6final|v6pl|v6pick)$ ) ]] || return 0
     if [[ -e "$C/_done/$name" || ( -n "$check" && -e "$check" ) ]]; then echo "[skip] $name"; return 0; fi
@@ -255,6 +255,11 @@ step v6pl v6_pl_score   "" "$PLON; $P code/v6/pl_v6.py score"
 step v6pl v6_pl_final   "" "$PLON; $P code/v6/final_v6.py --scores feats/test_scores_final_v6pl.parquet --tag xgb_v6_c2 $FARGS --out final_v6pl"
 step v6pick v6_val      "" "for d in final_v6 final_v6pl final_v6a final_v3nognn; do f=results/final/\$d/output; [ -f \$f/matching_results.tsv ] || continue; bash code/final/validate.sh \$f || exit 1; done"
 step v6pick v6_choose   "" "$P code/v6/choose_v6.py pick"
+
+# ================================================ V7 diagnostics (cheap, labels of train only): what blocking misses and
+#                                                  what each new pass would recover; where V6 loses F0.5; France sample
+step v7diag v7_miss_probe "" "$P code/v7/miss_probe.py --universe dms"
+step v7diag v7_error_dump "" "$P code/v7/error_dump.py"
 
 if [[ $LIST == 0 && $DRY == 0 ]]; then
   echo "done ($STAGE${ONLY:+, only $ONLY}). V6 choice: results/v6/v6_choice.json (first_choice_file); phase 2: results/phase2/"
