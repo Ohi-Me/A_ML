@@ -9,11 +9,33 @@ cache from that run is in `data/cache_v2/` (plus `data/cache/`), and the reports
 code has been updated to V5. Your job: run V5 on the full data, **reusing every existing artifact that V5 can
 use**, train only what is new, report the results, and never break or overwrite the existing ones.
 
-## 0. Update the code without touching data or results
-- If this is a git checkout: `git fetch origin && git checkout claude/dazzling-gauss-3jgxpd && git pull`.
-- If you were given `A_ML_code_v5.zip`: unzip it **over** the repository folder. It only contains `code/`,
-  `run_all.sh`, `requirements.txt` and docs. Do not delete `data/`, `results/` or `submissions/`.
-- Read `V5.md` (what V5 is and why) and `H100_MANUAL.md` (how the runner works), then run `bash run_all.sh --list`.
+## 0. The code has been updated by hand: verify it before running anything
+This repository was downloaded earlier (it is NOT a git checkout) and the user has now pasted the updated files
+from `A_ML_code_v5.zip` into it: the `code/` folder and, at the repository root, `run_all.sh`, `requirements.txt`,
+`V5.md`, `H100_MANUAL.md`, `PHASE2.md`, `AGENT_RUN_PROMPT.md`. The existing `data/`, `results/` and `submissions/`
+folders are from the earlier H100 run and must stay exactly as they are (do not delete, move or regenerate them).
+
+Verify that the new code is really in place (run from the repository root):
+```bash
+ok=1
+for f in code/v5/extra_feats.py code/v5/pl_lib.py code/v5/pseudo_label.py code/v5/final_v5.py code/v5/recall_report.py \
+         code/v5/choose_v5.py code/v5/tests/smoke_v5.sh code/phase2/p2lib.py code/phase2/gnn_lib.py code/phase2/loco_eval.py V5.md; do
+  [ -f "$f" ] || { echo "MISSING $f"; ok=0; }; done
+grep -q "v5all" run_all.sh                        || { echo "run_all.sh is the OLD version (no v5 blocks)"; ok=0; }
+grep -q "feats_table" code/phase2/loco_eval.py    || { echo "code/phase2/loco_eval.py is the OLD version"; ok=0; }
+grep -q "ER_ALLOW_CPU" code/common/gpu.py         || { echo "code/common/gpu.py is the OLD version"; ok=0; }
+grep -q "tr.sample(n=min(8_000_000, tr.height)" code/xgboost/decode_eval.py || { echo "code/xgboost/decode_eval.py is the OLD version"; ok=0; }
+[ $ok = 1 ] && echo "code is up to date"
+find code -name __pycache__ -type d -prune -exec rm -rf {} +      # drop stale bytecode from the old code
+chmod +x run_all.sh
+```
+If anything is reported missing or OLD, STOP and tell the user which files to copy from `A_ML_code_v5.zip`.
+Do not try to recreate or edit them yourself.
+
+Optional quick self-test of the new code (CPU only, a few minutes, uses a temporary folder, does not touch the real
+cache): `bash code/v5/tests/smoke_v5.sh /tmp/er_smoke_v5` must end with `V5 SMOKE TEST PASSED`.
+
+Then read `V5.md` (what V5 is and why) and `H100_MANUAL.md` (how the runner works) and run `bash run_all.sh --list`.
 
 ## 1. What is REUSED (must already exist) and what is NEW
 Reused from the previous run: normalised tables, TF-IDF blocking lists, candidate pairs, bi-encoder embeddings,
