@@ -3,12 +3,14 @@
 #  Business Entity Resolution - one self-contained runner for a single GPU machine (H100 or any CUDA GPU >= 40 GB).
 #  No SSH, no scheduler, no hard-coded paths: run it from the repository folder (or anywhere, it cds to itself).
 #
-#  bash run_all.sh --data /path/to/dataset [--stage all|v2|v3|audit|phase2|loco|select|v4] [--only STEP] [--dry]
+#  bash run_all.sh --data /path/to/dataset [--stage all|v6all|<block>] [--only STEP] [--dry]
 #
 #    --data DIR   folder that contains train/ and test/ with the challenge TSVs (train_source1.tsv ... test_source3.tsv,
 #                 train_ground_truth.tsv). Linked to data/dataset (the code reads data/dataset). Needed only once.
-#    --stage      which block to run (default all = v2 -> v3 -> audit -> phase2 -> loco -> select -> v4 -> v5 -> loco5
-#                 -> v5pl -> v5final). V5 only, on an existing V2 cache: --stage v5all
+#    --stage      which block to run. all (default) = v2 -> v3 -> audit -> phase2 -> loco -> select -> v4 -> V6 blocks.
+#                 V6 on an existing V2/V3/phase-2 cache: --stage v6all (v6diag -> v6feat -> v6s1 -> v6x -> v6col ->
+#                 v6loco -> v6test -> v6final -> v6pl -> v6pick, see V6.md). Optional blocks, never part of all/v6all:
+#                 V5 (--stage v5all) and v6a (--stage v6a, the V2 recipe at test density: a fallback / ablation)
 #    --only STEP  run a single step by name (see --list), even if it was done before
 #    --list       print every step with its block and exit
 #    --dry        print what would run
@@ -59,7 +61,9 @@ step() {   # step BLOCK NAME CHECK_PATH "command"
   if [[ $LIST == 1 ]]; then printf "%-8s %-22s %s\n" "$block" "$name" "$cmd"; return 0; fi
   if [[ -n "$ONLY" ]]; then [[ "$ONLY" == "$name" ]] || return 0
   else
-    [[ "$STAGE" == "all" || "$STAGE" == "$block" || ( "$STAGE" == "v5all" && "$block" =~ ^(v5|loco5|v5pl|v5final)$ ) ]] || return 0
+    [[ ( "$STAGE" == "all" && ! "$block" =~ ^(v5|loco5|v5pl|v5final|v6a)$ ) || "$STAGE" == "$block" ||
+       ( "$STAGE" == "v5all" && "$block" =~ ^(v5|loco5|v5pl|v5final)$ ) ||
+       ( "$STAGE" == "v6all" && "$block" =~ ^(v6diag|v6feat|v6s1|v6x|v6col|v6loco|v6test|v6final|v6pl|v6pick)$ ) ]] || return 0
     if [[ -e "$C/_done/$name" || ( -n "$check" && -e "$check" ) ]]; then echo "[skip] $name"; return 0; fi
   fi
   echo "[run ] $(date '+%H:%M:%S') $name"
@@ -217,6 +221,41 @@ step v6a v6a_dec    "" "$P code/xgboost/decode_eval.py --tag xgb_v6a_s2 --simdro
 step v6a v6a_test   "$C/feats/test_scores_final_v6a.parquet" "$P code/final/predict_test_v2.py --s1_feats c2_train_dmsA --s1_tag xgb_v6a_full --blend_from xgb_v6a_blend --s2_tag xgb_v6a_s2 --test_feats c2_test --rename r_e2f_emb:r_e3_emb --etag_test e2f --out final_v6a"
 step v6a v6a_val    "" "bash code/final/validate.sh results/final/final_v6a/output"
 
+# ================================================ V6 (V6.md): the chain trained and calibrated at test density
+#   universe (v6diag) -> transferable features (v6feat) -> stage 1 (v6s1) -> second cross-encoder (v6x, optional:
+#   XENC2_MODEL=none switches it off, a failure falls back to XLM-R base) -> collective sibling rounds 1-2 (v6col) ->
+#   India->US LOCO for the unseen country (v6loco) -> test (v6test) -> pre-registered plan + file (v6final) ->
+#   France pseudo-labels if the plan allows (v6pl) -> validate + pick (v6pick)
+V6DROP="$DROP_EMB,sib_emb_max,sib_emb_mean"
+XENC2="${XENC2_MODEL:-BAAI/bge-reranker-v2-m3}"
+NOX2="[ -f $C/xenc/ml_v6band_model_A.pt ] || { echo 'no second cross-encoder: skipped'; exit 0; }"
+PLON="$P code/v6/choose_v6.py pl_on || { echo 'plan: no pseudo-labels, skipped'; exit 0; }"
+FARGS="\$($P code/v6/choose_v6.py final_args)"
+step v6feat v6_feats_train "" "$P code/v5/extra_feats.py --src c2_train_dmsA --absent_code 62 --out c2v6_train_dmsA"
+step v6feat v6_feats_test  "" "$P code/v5/extra_feats.py --src c2_test --out c2v6_test"
+step v6s1 v6_full       "$C/feats/oof_xgb_v6_full.parquet"  "$P code/xgboost/train_xgb.py --feats c2v6_train_dmsA --tag xgb_v6_full --simdrop 62"
+step v6s1 v6_noemb      "$C/feats/oof_xgb_v6_noemb.parquet" "$P code/xgboost/train_xgb.py --feats c2v6_train_dmsA --tag xgb_v6_noemb --simdrop 62 --drop $DROP_EMB"
+step v6s1 v6_blend      "$C/feats/oof_xgb_v6_blend.parquet" "$P code/xgboost/blend_oof.py --full xgb_v6_full --noemb xgb_v6_noemb --w 0.75 --out xgb_v6_blend --simdrop 62"
+step v6x v6x_prep       "" "[ '$XENC2' = none ] && exit 0; $P code/neural_reranker/prep_pairs.py --split train --scores oof_xgb_v6_blend.parquet --name v6band --raw --maxlen 110 --lo 0.01 --hi 0.99"
+step v6x v6x_train      "" "[ '$XENC2' = none ] && { echo 'second cross-encoder switched off'; exit 0; }; $P code/neural_reranker/ml_cross_encoder.py --name v6band --split train --epochs 2 --model $XENC2 --col bgexenc || { echo 'WARNING: second cross-encoder failed - V6 continues with XLM-R base only'; rm -f $C/xenc/ml_v6band_train_scores.parquet $C/xenc/ml_v6band_model_A.pt $C/xenc/ml_v6band_model_B.pt; }"
+step v6col v6_c1        "$C/feats/oof_xgb_v6_c1.parquet" "$P code/v6/train_collective.py --feats c2v6_train_dmsA --s1tag xgb_v6_blend --tag xgb_v6_c1 --simdrop 62 --drop_feats $V6DROP"
+step v6col v6_c1_dec    "" "$P code/xgboost/decode_eval.py --tag xgb_v6_c1 --simdrop 62"
+step v6col v6_c2        "$C/feats/oof_xgb_v6_c2.parquet" "$P code/v6/train_collective.py --feats c2v6_train_dmsA --s1tag xgb_v6_blend --prev xgb_v6_c1 --tag xgb_v6_c2 --simdrop 62 --drop_feats $V6DROP"
+step v6col v6_c2_dec    "" "$P code/xgboost/decode_eval.py --tag xgb_v6_c2 --simdrop 62"
+step v6loco v6_loco     "" "$P code/phase2/loco_eval.py all --skip_neural --name v6 --feats_table c2v6_train_dmsA --full_tag xgb_v6_full --noemb_tag xgb_v6_noemb --simdrop 62"
+step v6test v6_test_s1  "$C/feats/test_stage1_final_v6.parquet" "$P code/v6/predict_v6.py --step stage1 --out final_v6"
+step v6test v6x_prep_te "" "$NOX2; $P code/neural_reranker/prep_pairs.py --split test --scores test_stage1_final_v6.parquet --name v6band --raw --maxlen 110 --lo 0.01 --hi 0.99"
+step v6test v6x_score_te "" "$NOX2; $P code/neural_reranker/ml_cross_encoder.py --name v6band --split test --score_only --model $XENC2 --col bgexenc"
+step v6test v6_test_rounds "$C/feats/test_scores_final_v6.parquet" "$P code/v6/predict_v6.py --step rounds --out final_v6"
+step v6final v6_plan    "" "$P code/v6/choose_v6.py plan"
+step v6final v6_final   "" "$P code/v6/final_v6.py --scores feats/test_scores_final_v6.parquet --tag xgb_v6_c2 $FARGS --out final_v6"
+step v6pl v6_pl_select  "" "$PLON; $P code/v6/pl_v6.py select"
+step v6pl v6_pl_fit     "" "$PLON; $P code/v6/pl_v6.py fit"
+step v6pl v6_pl_score   "" "$PLON; $P code/v6/pl_v6.py score"
+step v6pl v6_pl_final   "" "$PLON; $P code/v6/final_v6.py --scores feats/test_scores_final_v6pl.parquet --tag xgb_v6_c2 $FARGS --out final_v6pl"
+step v6pick v6_val      "" "for d in final_v6 final_v6pl final_v6a final_v3nognn; do f=results/final/\$d/output; [ -f \$f/matching_results.tsv ] || continue; bash code/final/validate.sh \$f || exit 1; done"
+step v6pick v6_choose   "" "$P code/v6/choose_v6.py pick"
+
 if [[ $LIST == 0 && $DRY == 0 ]]; then
-  echo "done ($STAGE${ONLY:+, only $ONLY}). Reports: results/phase2/  Submission (if V4 chosen): results/final/final_v4/output/"
+  echo "done ($STAGE${ONLY:+, only $ONLY}). V6 choice: results/v6/v6_choice.json (first_choice_file); phase 2: results/phase2/"
 fi

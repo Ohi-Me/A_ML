@@ -18,6 +18,7 @@ Steps (each resumable; outputs in data/cache_v2/p2/loco_<src>2<dst>[_noemb]/):
   python code/phase2/loco_eval.py pl       (V5: pseudo-label self-training on the unseen country, see code/v5/pl_lib.py)
   python code/phase2/loco_eval.py evaluate -> results/phase2/loco_<src>2<dst>[_noemb][_<name>].json
 V5 options: --feats_table c2v5_train_sim19 --full_tag xgb_v5_full --noemb_tag xgb_v5_noemb --name v5 --skip_neural
+V6 options: --feats_table c2v6_train_dmsA --full_tag xgb_v6_full --noemb_tag xgb_v6_noemb --name v6 --skip_neural --simdrop 62
 (stage1 -> pl -> evaluate only). evaluate also searches the expected-F0.5 gamma on the unseen country
 ('best_gamma_unseen'), which final_v5.py uses for France.
 """
@@ -244,7 +245,7 @@ def cmd_evaluate(args):
     from common.decode import assign
     dev = device()
     d = odir(args)
-    sc = Scorer("train", np.load(os.path.join(CACHE, "drop_19.npy")))
+    sc = Scorer("train", np.load(os.path.join(CACHE, f"drop_{args.simdrop}.npy")))
     cty = sc.country
     masks = {f"{args.src}_f0_in_domain": (sc.fold == 0) & (cty == args.src),
              f"{args.dst}_f0_unseen": (sc.fold == 0) & (cty == args.dst),
@@ -349,6 +350,7 @@ def main():
     ap.add_argument("--neg_thr", type=float, default=0.02)
     ap.add_argument("--addr_jac", type=float, default=0.3)
     ap.add_argument("--max_pl_pairs", type=int, default=4_000_000)
+    ap.add_argument("--simdrop", type=int, default=19, help="drop_<N>.npy of the feature table's universe (V6: 62)")
     args = ap.parse_args()
     FEATS_TABLE, FULL, NOEMB = args.feats_table, args.full_tag, args.noemb_tag
     t0 = time.time()

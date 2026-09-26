@@ -7,6 +7,10 @@ Fit   : two halves (A on folds {1,2} scores {0,3,4}; B on {3,4} scores {1,2}); t
 
   python code/neural_reranker/ml_cross_encoder.py --name hardv2 --split train
   python code/neural_reranker/ml_cross_encoder.py --name hardv2 --split test --score_only
+V6 adds --model (any MIT / Apache-2.0 encoder on the Hugging Face hub, e.g. BAAI/bge-reranker-v2-m3, 568M, Apache-2.0,
+a multilingual cross-encoder pretrained for relevance ranking: its own classification head is kept and fine-tuned) and
+--col (name of the score column). Defaults reproduce V3 exactly.
+  python code/neural_reranker/ml_cross_encoder.py --name v6band --split train --model BAAI/bge-reranker-v2-m3 --col bgexenc
 """
 import argparse
 import json
@@ -27,16 +31,24 @@ from common.io import CACHE, RESULTS  # noqa: E402
 
 MODEL = "FacebookAI/xlm-roberta-base"
 MAXLEN = 128
+LR, BS = 0.0, 0                        # set by --lr / --bs (0 = the V3 defaults 2e-5 / 64)
 
 
 class PairModel(nn.Module):
     def __init__(self):
         super().__init__()
-        from transformers import AutoModel
-        self.enc = AutoModel.from_pretrained(MODEL)
-        self.head = nn.Linear(self.enc.config.hidden_size, 1)
+        from transformers import AutoConfig, AutoModel, AutoModelForSequenceClassification
+        arch = AutoConfig.from_pretrained(MODEL).architectures or []
+        self.seqcls = any(a.endswith("ForSequenceClassification") for a in arch)
+        if self.seqcls:                     # a pretrained cross-encoder (reranker): keep its relevance head
+            self.enc = AutoModelForSequenceClassification.from_pretrained(MODEL, num_labels=1)
+        else:
+            self.enc = AutoModel.from_pretrained(MODEL)
+            self.head = nn.Linear(self.enc.config.hidden_size, 1)
 
     def forward(self, ids, mask):
+        if self.seqcls:
+            return self.enc(input_ids=ids, attention_mask=mask).logits[:, 0]
         h = self.enc(input_ids=ids, attention_mask=mask).last_hidden_state[:, 0]
         return self.head(h).squeeze(-1)
 
@@ -52,6 +64,7 @@ def tokenize(t1, t2, bs=100_000):
 
 
 def train(ids, pad, y, dev, epochs, bs=64, lr=2e-5, seed=0):
+    bs, lr = BS or bs, LR or lr
     torch.manual_seed(seed)
     model = PairModel().to(dev)
     opt = torch.optim.AdamW(model.parameters(), lr=lr, weight_decay=0.01)
@@ -106,13 +119,19 @@ def score(model, ids, pad, dev, bs=512):
 
 
 def main():
+    global MODEL, LR, BS
     ap = argparse.ArgumentParser()
     ap.add_argument("--name", default="hardv2")
     ap.add_argument("--split", default="train")
     ap.add_argument("--epochs", type=int, default=1)
     ap.add_argument("--max_train", type=int, default=400_000)
     ap.add_argument("--score_only", action="store_true")
+    ap.add_argument("--model", default=MODEL, help="Hugging Face model id (MIT / Apache-2.0 licence, <= 8B parameters)")
+    ap.add_argument("--col", default="mlxenc", help="name of the score column in the output")
+    ap.add_argument("--lr", type=float, default=0.0, help="0 = 2e-5")
+    ap.add_argument("--bs", type=int, default=0, help="0 = 64")
     args = ap.parse_args()
+    MODEL, LR, BS = args.model, args.lr, args.bs
     dev = gpu_init()
     t0 = time.time()
     xdir = os.path.join(CACHE, "xenc")
@@ -140,16 +159,17 @@ def main():
         from sklearn.metrics import average_precision_score, roc_auc_score
         v = fold == 0
         p1 = H["p"].to_numpy()
-        rep.update({"val_auc_mlxenc": float(roc_auc_score(y[v], xenc[v])), "val_auc_stage1": float(roc_auc_score(y[v], p1[v])),
-                    "val_ap_mlxenc": float(average_precision_score(y[v], xenc[v])),
-                    "val_ap_stage1": float(average_precision_score(y[v], p1[v]))})
+        if 0 < y[v].sum() < v.sum():
+            rep.update({"val_auc_mlxenc": float(roc_auc_score(y[v], xenc[v])), "val_auc_stage1": float(roc_auc_score(y[v], p1[v])),
+                        "val_ap_mlxenc": float(average_precision_score(y[v], xenc[v])),
+                        "val_ap_stage1": float(average_precision_score(y[v], p1[v]))})
     else:
         for name in ("A", "B"):
             m = PairModel().to(dev)
             m.load_state_dict(torch.load(os.path.join(xdir, f"ml_{args.name}_model_{name}.pt"), map_location=dev))
             xenc += score(m, ids, pad, dev) / 2
             del m
-    H.select(["a", "b"]).with_columns(pl.Series("mlxenc", xenc)).write_parquet(
+    H.select(["a", "b"]).with_columns(pl.Series(args.col, xenc)).write_parquet(
         os.path.join(xdir, f"ml_{args.name}_{args.split}_scores.parquet"))
     rep["runtime_s"] = time.time() - t0
     rep["gpu"] = gpu_mem()

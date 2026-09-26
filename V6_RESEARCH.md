@@ -1,5 +1,7 @@
 # V6 research: where the remaining F0.5 is, how 0.997 is possible, and what to build
 
+> **Implemented as V6** — see `V6.md` for the final design, the run command (`bash run_all.sh --stage v6all`) and the decision rules. This file is the data study and literature behind it.
+
 Everything here was measured on files in this repository: 3,000 real true pairs, 40 real multi-record entities,
 the validation error dumps, the EDA, the France test samples, and the phase-2 ablation from the H100 run. Items
 marked **(to measure)** need the H100 and come with a ready script. Nothing is extrapolated from synthetic data.

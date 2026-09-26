@@ -19,6 +19,10 @@ New columns (prefix v5_), appended to a copy of the feature parts (so every exis
 
   python code/v5/extra_feats.py --src c2_train_sim19          -> feats/c2v5_train_sim19/
   python code/v5/extra_feats.py --src c2_test [--cosvar hash1] -> feats/c2v5_test/
+V6 (any simulated universe): the S1 absent from the universe (drop_<code>.npy) leave the retrieval lists AND the name
+document-frequency table, so every count is what it would be if the universe were the real S1 file (as on test):
+  python code/v5/extra_feats.py --src c2_train_dmsA --absent_code 62 --out c2v6_train_dmsA
+  python code/v5/extra_feats.py --src c2_test --out c2v6_test
 """
 import argparse
 import glob
@@ -59,8 +63,10 @@ def token_lists(df):
         pl.col("country"))
 
 
-def df_table(s1tok):
-    """(country, tok) -> log1p(number of S1 whose name contains tok)."""
+def df_table(s1tok, present=None):
+    """(country, tok) -> number of S1 whose name contains tok (only S1 present in the universe, if given)."""
+    if present is not None:
+        s1tok = s1tok.filter(pl.Series(present))
     return s1tok.select(["country", "nt"]).explode("nt").drop_nulls("nt").group_by(["country", "nt"]).len() \
         .rename({"nt": "tok", "len": "df"}).with_columns(pl.col("df").cast(pl.Float32))
 
@@ -100,18 +106,25 @@ def main():
     ap.add_argument("--src", required=True, help="feature parts under feats/: c2_train_sim19 or c2_test")
     ap.add_argument("--btag", default="b1")
     ap.add_argument("--cosvar", default="none", help="test only: replace cos_e3 features by p2/cosvar/c2_test_<var>")
+    ap.add_argument("--absent_code", type=int, default=-1,
+                    help="drop_<code>.npy = S1 absent from the universe (default: <N> of 'sim<N>' in --src, else none)")
+    ap.add_argument("--out", default="", help="output table under feats/ (default: --src with c2_ -> c2v5_)")
     args = ap.parse_args()
     t0 = time.time()
     split = "test" if "test" in args.src else "train"
-    out_dir = os.path.join(CACHE, "feats", args.src.replace("c2_", "c2v5_", 1))
+    out_name = args.out or args.src.replace("c2_", "c2v5_", 1)
+    out_dir = os.path.join(CACHE, "feats", out_name)
     os.makedirs(out_dir, exist_ok=True)
     files = sorted(glob.glob(os.path.join(CACHE, "feats", args.src, "part_*.parquet")))
+    assert files, f"no feature parts under feats/{args.src}"
     dropped = None
-    if "sim" in args.src:
-        dropped = np.load(os.path.join(CACHE, f"drop_{args.src.split('sim')[-1]}.npy"))
+    code = args.absent_code if args.absent_code >= 0 else (int(args.src.split("sim")[-1]) if "sim" in args.src else -1)
+    if code >= 0 and split == "train":
+        dropped = np.load(os.path.join(CACHE, f"drop_{code}.npy"))
     s1, rr = load_norm(split)
     T1, TR = token_lists(s1), token_lists(rr)
-    DF = df_table(T1)
+    # V5 counted every S1 of the file; S1 absent from a simulated universe are not in its index, so they are left out
+    DF = df_table(T1, None if dropped is None else ~dropped)
     # per-row name specificity
     def row_df(T, pre):
         e = T.with_row_index("i").select(["i", "country", "nt"]).explode("nt").join(
@@ -157,8 +170,9 @@ def main():
         print(f"  part {i}: {d.height} pairs, {time.time() - t0:.0f}s", flush=True)
     cols = [c for c in d.columns if c.startswith("v5_")]
     os.makedirs(os.path.join(RESULTS, "v5"), exist_ok=True)
-    json.dump({"src": args.src, "out": out_dir, "new_columns": cols, "cosvar": args.cosvar, "runtime_s": time.time() - t0},
-              open(os.path.join(RESULTS, "v5", f"extra_feats_{split}.json"), "w"), indent=1)
+    json.dump({"src": args.src, "out": out_dir, "new_columns": cols, "cosvar": args.cosvar, "absent_code": code,
+               "runtime_s": time.time() - t0},
+              open(os.path.join(RESULTS, "v5", f"extra_feats_{out_name}.json"), "w"), indent=1)
     print("new columns:", cols, flush=True)
 
 
