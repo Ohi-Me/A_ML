@@ -203,6 +203,20 @@ step v5final final_v5pl "" "$P code/v5/final_v5.py --scores feats/test_scores_fi
 step v5final val_v5     "" "bash code/final/validate.sh results/final/final_v5/output && bash code/final/validate.sh results/final/final_v5pl/output"
 step v5final choose_v5  "" "$P code/v5/choose_v5.py"
 
+# ================================================ V6 diagnostics (see V6_RESEARCH.md): cheap, decisive
+step v6diag v6_probe     "" "$P code/v6/data_probe.py"
+step v6diag v6_v3nognn   "" "$P code/v6/submit_from_decisions.py --decisions p2/decisions/V3_noGNN_test.parquet --out final_v3nognn && bash code/final/validate.sh results/final/final_v3nognn/output"
+step v6diag v6_dms       "" "$P code/v6/simulate_universe.py --src c2_train --plan US:0.62:0.19,India:1.0:0.19 --tag dmsA --code 62"
+step v6diag v6_dms_chain "" "$P code/v6/score_chain.py --feats c2_train_dmsA --code 62 --name dmsA"
+# ================================================ V6a: the V2 recipe trained and calibrated in the test-density universe
+step v6a v6a_full   "$C/feats/oof_xgb_v6a_full.parquet" "$P code/xgboost/train_xgb.py --feats c2_train_dmsA --tag xgb_v6a_full --simdrop 62"
+step v6a v6a_noemb  "$C/feats/oof_xgb_v6a_noemb.parquet" "$P code/xgboost/train_xgb.py --feats c2_train_dmsA --tag xgb_v6a_noemb --simdrop 62 --drop $DROP_EMB"
+step v6a v6a_blend  "$C/feats/oof_xgb_v6a_blend.parquet" "$P code/xgboost/blend_oof.py --full xgb_v6a_full --noemb xgb_v6a_noemb --w 0.75 --out xgb_v6a_blend --simdrop 62"
+step v6a v6a_stage2 "$C/feats/oof_xgb_v6a_s2.parquet" "$P code/xgboost/stage2.py --feats c2_train_dmsA --s1tag xgb_v6a_blend --tag xgb_v6a_s2 --etag e2f --simdrop 62 --drop_feats $DROP_EMB,sib_emb_max,sib_emb_mean"
+step v6a v6a_dec    "" "$P code/xgboost/decode_eval.py --tag xgb_v6a_s2 --simdrop 62"
+step v6a v6a_test   "$C/feats/test_scores_final_v6a.parquet" "$P code/final/predict_test_v2.py --s1_feats c2_train_dmsA --s1_tag xgb_v6a_full --blend_from xgb_v6a_blend --s2_tag xgb_v6a_s2 --test_feats c2_test --rename r_e2f_emb:r_e3_emb --etag_test e2f --out final_v6a"
+step v6a v6a_val    "" "bash code/final/validate.sh results/final/final_v6a/output"
+
 if [[ $LIST == 0 && $DRY == 0 ]]; then
   echo "done ($STAGE${ONLY:+, only $ONLY}). Reports: results/phase2/  Submission (if V4 chosen): results/final/final_v4/output/"
 fi

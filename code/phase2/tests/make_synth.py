@@ -165,6 +165,7 @@ def main():
     np.save(os.path.join(CACHE, "drop_19.npy"), drop)
     F = features(C, y).with_columns(pl.Series("fold", fold1[C["a"].to_numpy()]), pl.Series("y", y),
                                     pl.Series("b_has_match", (rec_s1[C["b"].to_numpy()] >= 0).astype(np.int8)))
+    write_parts(F, os.path.join(CACHE, "feats", "c2_train"))          # full universe (before the SIM19 drop)
     F = F.filter(pl.Series(~drop[F["a"].to_numpy()]))
     write_parts(F, os.path.join(CACHE, "feats", "c2_train_sim19"))
     # stage 1 full / no-embedding, blend
@@ -215,6 +216,7 @@ def main():
     os.makedirs(rd, exist_ok=True)
     s2A, s2B = fit(S2, f2, [1, 2]), fit(S2, f2, [3, 4])
     s2A.save_model(os.path.join(rd, "model_A.json"))
+    s2B.save_model(os.path.join(rd, "model_B.json"))
     json.dump({"features": f2, "params": PARAMS, "rounds": 30}, open(os.path.join(rd, "report.json"), "w"))
     oof(S2, s2A, s2B, f2).write_parquet(os.path.join(CACHE, "feats", "oof_xgb_c2_blend_s2_v2.parquet"))
     dec = {"expected_f": {"best": {"gamma": 1.0, "extra": 0.0, "f05_tune": 0.9}}, "threshold_rule": {"thr": 0.7, "margin": 0.5, "f05_tune": 0.8}}

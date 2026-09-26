@@ -9,7 +9,10 @@ Rule
      are not worse on the unseen country in LOCO (US_all_unseen, iso+ef) by more than 0.0005.
   2. Pseudo-labels (final_v5pl) only if, in LOCO v5, stage1_pl beats stage1_all on US_all_unseen by > 0.001 and the
      pseudo-positive precision there is >= 0.99.
-  3. Submit in this order: final_v5pl (1 and 2 pass), final_v5 (1 passes), otherwise V2 stays.
+  3. Consistency gate (added after the phase-2 ablation showed the leaderboard follows US over-acceptance): for US and
+     India, the test/validation ratio of predicted matches per S1 may exceed V2's ratio by at most 0.003
+     (V2 +0.95 % US -> LB 0.98332, V3 +2.9 % -> 0.98281, V4A +3.5 % -> 0.981).
+  4. Submit in this order: final_v5pl (1, 2, 3 pass), final_v5 (1, 3 pass), otherwise V2 stays.
 
   python code/v5/choose_v5.py
 """
@@ -34,7 +37,29 @@ def val_scores(tag, sc, dev):
     keep, _ = decode(D.select(["a", "b", "p"]), rule="ef", iso=iso_from_oof(D), gamma=b["gamma"], extra=b["extra"], dev=dev, M=4096)
     r = val_report(sc, keep, ids("train")[0]["country"].to_numpy())
     return {"f0": r["f0"]["macro_f05"], "f4": r["f4"]["macro_f05"],
-            "by_country_f0": {c: v["macro_f05"] for c, v in r["f0"]["by_country"].items()}}
+            "by_country_f0": {c: v["macro_f05"] for c, v in r["f0"]["by_country"].items()},
+            "pred_per_s1_f0": {c: v["pred_per_s1"] for c, v in r["f0"]["by_country"].items()}}
+
+
+def test_rate(out_name):
+    p = os.path.join(RESULTS, "final", out_name, "test_stats.json")
+    if not os.path.exists(p):
+        return None
+    d = json.load(open(p))["by_country"]
+    return {c: v.get("matches_per_s1", v["matches"] / v["s1"]) for c, v in d.items()}
+
+
+def consistent(test_rate_sys, val_sys, test_rate_v2, val_v2, tol=0.003):
+    """US / India: (test / val predicted matches per S1) of the system may exceed V2's by at most tol."""
+    if not test_rate_sys or not test_rate_v2:
+        return None, {}
+    det, ok = {}, True
+    for c in ("US", "India"):
+        rs = test_rate_sys[c] / val_sys["pred_per_s1_f0"][c]
+        r2 = test_rate_v2[c] / val_v2["pred_per_s1_f0"][c]
+        det[c] = {"ratio": rs, "ratio_v2": r2}
+        ok &= rs <= r2 + tol
+    return ok, det
 
 
 def loco(name):
@@ -65,6 +90,12 @@ def main():
         stp = os.path.join(RESULTS, "phase2", "loco_India2US_v5", "pl_step.json")
         pl_prec = json.load(open(stp)).get("pseudo_positive_precision") if os.path.exists(stp) else None
     pl_ok = feat_ok and pl_gain is not None and pl_gain > MIN_PL and (pl_prec or 0) >= 0.99
+    t2 = test_rate("final_v2")
+    c5, d5 = consistent(test_rate("final_v5"), v5, t2, v2)
+    c5pl, d5pl = consistent(test_rate("final_v5pl"), v5, t2, v2)
+    out["consistency"] = {"final_v5": d5, "final_v5pl": d5pl}
+    feat_ok = feat_ok and c5 is not False
+    pl_ok = pl_ok and feat_ok and c5pl is not False
     out.update({"features_ok": feat_ok, "pl_gain_unseen": pl_gain, "pl_positive_precision": pl_prec, "pl_ok": pl_ok})
     order = (["final_v5pl"] if pl_ok else []) + (["final_v5"] if feat_ok else []) + ["final_v2 (keep)"]
     out["submit_order"] = order
