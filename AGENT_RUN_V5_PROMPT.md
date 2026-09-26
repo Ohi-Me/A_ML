@@ -41,9 +41,9 @@ for f in $C/norm_v2_train_s1.parquet $C/norm_v2_train_s2.parquet $C/norm_v2_trai
 - If anything else is missing, run `bash run_all.sh --data <DATASET_FOLDER> --stage v2`. It **skips** every V2 step
   whose output already exists and rebuilds only the missing pieces. Then re-check.
 - Check that the feature tables are complete (a killed earlier run can leave them half-written): the number of
-  `part_*.parquet` files in `feats/c2_train_sim19/` and `feats/c2_test/` must match what the earlier logs report
-  (`results/_runs/sim19.log`, `feats_test.log`, or about 35-43 parts each). If a table is incomplete, rebuild only
-  that step with `bash run_all.sh --only sim19` (or `--only feats_test`).
+  `part_*.parquet` files must be **43** in `feats/c2_train_sim19/` (and in `feats/c2_train/`) and **42** in
+  `feats/c2_test/` (`ls data/cache_v2/feats/c2_test | wc -l`). If a table is incomplete, rebuild only that step:
+  `bash run_all.sh --only feats_train`, then `--only sim19` (train), or `--only feats_test` (test).
 
 ## 2. Run V5 (full data, new steps only)
 ```bash
