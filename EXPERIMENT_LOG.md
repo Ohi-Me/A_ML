@@ -102,3 +102,11 @@ Submissions: final_c1 (0.983 plain val), final_c2v1 (0.9848 sim), final_v2 (0.98
 | V6-RULES | pre-registered plan (caps / EM / France gamma / pseudo-labels) and pick (DMS min(f0, f4) vs V2 chain and V3-without-GNN chain applied to DMS as on test, + US/India consistency gate) in `code/v6/choose_v6.py` | fixed before any V6 number |
 | V6-CEILING | `score_chain.py` now reports the perfect-scorer ceiling on the candidates (SIM19 and DMS) and the V3-without-GNN chain on DMS | pending (H100) |
 | V6-RUN | `bash run_all.sh --stage v6all` (≈ 11-14 h on the H100, reuses the V2/V3/phase-2 cache) | **pending (H100)** |
+
+## V6 result and V7 (26-27 Sep)
+| id | what | result / status |
+|---|---|---|
+| V6-RUN (H100) | `results/v6/v6_choice.json` | DMS min(f0, f4): V6 0.99127 (round 1 0.99128), V3-without-GNN chain 0.98981, V2 chain 0.98680; **candidate ceiling 0.99635** (pair recall 0.988); caps on, EM off, pseudo-labels off; US/India test/DMS ratio 1.0019 / 0.996 (consistent). **LB 0.988109** (best so far; V2 0.98332) |
+| DIAGNOSIS | ceiling vs target | validation >= 0.998 is impossible on C2 candidates; loss = blocking 0.0037 + scorer 0.0051 (FN 22.3 k vs FP 1.4 k); LB - DMS gap consistent with France ≈ 0.97 (inference) |
+| V7-DIAG | `code/v7/miss_probe.py`, `error_dump.py` (`--stage v7diag`) | blocking misses by type + simulated recall of new passes; V6 loss decomposition; FN / FP / France samples. Pending (H100) |
+| V7 | `V7.md`: native test-density candidates (lists re-cut on the universe's S1), deeper lists, exact key / address / number+street blocks, sibling expansion, pass flags as features, cross-encoders re-scored OOF with existing checkpoints, optional Qwen3 decoder reranker, same V6 chain, fixed choice rule vs V6 | smoke test of all 33 V7 runner steps PASS (real candidate builder, pair features, bi-encoder cosines, universe, XGBoost, rounds, test, choice); causal reranker path tested on a tiny random Qwen3. **H100 run pending** |

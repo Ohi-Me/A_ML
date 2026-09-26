@@ -32,6 +32,7 @@ import polars as pl
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 from common.io import CACHE, NORM, RESULTS, load_gt, load_source  # noqa: E402
 from v6.simulate_universe import h  # noqa: E402
+from v7.keys import numstreet_key  # noqa: E402
 
 LISTS = [("emb/e3", "emb", 5), ("blocking/b1", "comb", 3), ("blocking/b1", "name", 2), ("blocking/b1", "addr", 2)]
 PLANS = {"dms": {"US": (0.62, 0.19), "India": (1.0, 0.19)}, "sim19": {"US": (1.0, 0.19), "India": (1.0, 0.19)},
@@ -146,12 +147,8 @@ def main():
         return out, same
     k1, kr = s1["key"].fill_null("").to_numpy(), rr["key"].fill_null("").to_numpy()
     m1, mr = s1["am"].fill_null("").to_numpy(), rr["am"].fill_null("").to_numpy()
-    def street(x):
-        return pl.Series(x).str.replace_all(r"\S*\d\S*", "").str.split(" ").list.eval(
-            pl.element().filter(pl.element() != "")).list.sort().list.join(" ").to_numpy()
     n1, nr = s1["first_num"].fill_null("").to_numpy(), rr["first_num"].fill_null("").to_numpy()
-    ns1 = np.where((n1 != "") & (street(m1) != ""), n1 + "|" + street(m1), "")
-    nsr = np.where((nr != "") & (street(mr) != ""), nr + "|" + street(mr), "")
+    ns1, nsr = numstreet_key(s1["am"], s1["first_num"]), numstreet_key(rr["am"], rr["first_num"])
     rep["passes"] = {}
     rep["passes"]["key"], key_eq = block_pass(k1, kr, (1, 3, 5, 10, 30))
     rep["passes"]["addr"], addr_eq = block_pass(m1, mr, (1, 3, 5, 10))

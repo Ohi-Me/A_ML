@@ -10,7 +10,9 @@
 #    --stage      which block to run. all (default) = v2 -> v3 -> audit -> phase2 -> loco -> select -> v4 -> V6 blocks.
 #                 V6 on an existing V2/V3/phase-2 cache: --stage v6all (v6diag -> v6feat -> v6s1 -> v6x -> v6col ->
 #                 v6loco -> v6test -> v6final -> v6pl -> v6pick, see V6.md). Optional blocks, never part of all/v6all:
-#                 V5 (--stage v5all) and v6a (--stage v6a, the V2 recipe at test density: a fallback / ablation)
+#                 V5 (--stage v5all) and v6a (--stage v6a, the V2 recipe at test density: a fallback / ablation).
+#                 V7 on a V6 cache: --stage v7all (v7diag -> v7cands -> v7feat -> v7s1 -> v7xenc -> v7col -> v7test ->
+#                 v7final -> v7pick, see V7.md)
 #    --only STEP  run a single step by name (see --list), even if it was done before
 #    --list       print every step with its block and exit
 #    --dry        print what would run
@@ -61,9 +63,10 @@ step() {   # step BLOCK NAME CHECK_PATH "command"
   if [[ $LIST == 1 ]]; then printf "%-8s %-22s %s\n" "$block" "$name" "$cmd"; return 0; fi
   if [[ -n "$ONLY" ]]; then [[ "$ONLY" == "$name" ]] || return 0
   else
-    [[ ( "$STAGE" == "all" && ! "$block" =~ ^(v5|loco5|v5pl|v5final|v6a|v7diag)$ ) || "$STAGE" == "$block" ||
+    [[ ( "$STAGE" == "all" && ! "$block" =~ ^(v5|loco5|v5pl|v5final|v6a)$ ) || "$STAGE" == "$block" ||
        ( "$STAGE" == "v5all" && "$block" =~ ^(v5|loco5|v5pl|v5final)$ ) ||
-       ( "$STAGE" == "v6all" && "$block" =~ ^(v6diag|v6feat|v6s1|v6x|v6col|v6loco|v6test|v6final|v6pl|v6pick)$ ) ]] || return 0
+       ( "$STAGE" == "v6all" && "$block" =~ ^(v6diag|v6feat|v6s1|v6x|v6col|v6loco|v6test|v6final|v6pl|v6pick)$ ) ||
+       ( "$STAGE" == "v7all" && "$block" =~ ^(v7diag|v7cands|v7feat|v7s1|v7xenc|v7col|v7test|v7final|v7pick)$ ) ]] || return 0
     if [[ -e "$C/_done/$name" || ( -n "$check" && -e "$check" ) ]]; then echo "[skip] $name"; return 0; fi
   fi
   echo "[run ] $(date '+%H:%M:%S') $name"
@@ -261,6 +264,48 @@ step v6pick v6_choose   "" "$P code/v6/choose_v6.py pick"
 step v7diag v7_miss_probe "" "$P code/v7/miss_probe.py --universe dms"
 step v7diag v7_error_dump "" "$P code/v7/error_dump.py"
 
+# ================================================ V7 (V7.md): raise the candidate ceiling (V6 DMS: 0.99635), rebuild the V6
+#   chain on the new candidates. Candidates native to the test-density universe (lists re-cut on its own S1), deeper
+#   lists, exact name / address / number+street blocks, sibling expansion -> features -> universe -> V6 chain.
+#   Cross-encoders re-score V7's band with the existing checkpoints (XLM-R base from V3, bge from V6; out-of-fold on
+#   train). XENC3_MODEL=Qwen/Qwen3-Reranker-0.6B (or -4B with XENC3_ARGS="--train_top 4 --bs 32") adds a decoder-only
+#   reranker (Apache-2.0, < 8B), off by default.
+XENC3="${XENC3_MODEL:-none}"
+XENC3_ARGS="${XENC3_ARGS:-}"
+V7ARGS="--feats c3v7_train_dmsA --test_feats c3v7_test --s1 xgb_v7_blend --c1 xgb_v7_c1 --c2 xgb_v7_c2 --out final_v7"
+SKIPNO() { echo "[ -f $1 ] || { echo 'not available: skipped'; exit 0; }"; }
+step v7cands v7_cands_plan  "" "$P code/v7/cands_plan.py"
+step v7cands v7_cands_train "$C/cands/c3dms_train.parquet" "$P code/v7/build_cands.py --split train --universe dms --name c3dms"
+step v7cands v7_cands_test  "$C/cands/c3_test.parquet" "$P code/v7/build_cands.py --split test --name c3 --passes_from c3dms"
+step v7feat v7_paircos_train "$C/emb/e3_train/paircos_c3dms.parquet" "$P code/embeddings/oof_biencoder.py --split train --tag e3 --reuse --cands c3dms"
+step v7feat v7_paircos_test  "$C/emb/e3_test/paircos_c3.parquet" "$P code/embeddings/oof_biencoder.py --split test --tag e3 --cands c3"
+step v7feat v7_feats_train  "" "$P code/tfidf_fuzzy/pair_features.py --cands c3dms --split train --btag b1 --etags '' --fset v2 --pairc emb/e3_train/paircos_c3dms.parquet"
+step v7feat v7_feats_test   "" "$P code/tfidf_fuzzy/pair_features.py --cands c3 --split test --btag b1 --etags '' --fset v2 --pairc emb/e3_test/paircos_c3.parquet"
+step v7feat v7_universe     "" "$P code/v6/simulate_universe.py --src c3dms_train --plan US:0.62:0.19,India:1.0:0.19 --tag dmsA --code 62"
+step v7feat v7_xfeats_train "" "$P code/v5/extra_feats.py --src c3dms_train_dmsA --absent_code 62 --out c3v7_train_dmsA"
+step v7feat v7_xfeats_test  "" "$P code/v5/extra_feats.py --src c3_test --out c3v7_test"
+step v7s1 v7_full   "$C/feats/oof_xgb_v7_full.parquet"  "$P code/xgboost/train_xgb.py --feats c3v7_train_dmsA --tag xgb_v7_full --simdrop 62"
+step v7s1 v7_noemb  "$C/feats/oof_xgb_v7_noemb.parquet" "$P code/xgboost/train_xgb.py --feats c3v7_train_dmsA --tag xgb_v7_noemb --simdrop 62 --drop $DROP_EMB"
+step v7s1 v7_blend  "$C/feats/oof_xgb_v7_blend.parquet" "$P code/xgboost/blend_oof.py --full xgb_v7_full --noemb xgb_v7_noemb --w 0.75 --out xgb_v7_blend --simdrop 62"
+step v7xenc v7x_prep "" "$P code/neural_reranker/prep_pairs.py --split train --scores oof_xgb_v7_blend.parquet --name v7band --raw --maxlen 110 --lo 0.01 --hi 0.99"
+step v7xenc v7x_xlmr "" "$(SKIPNO $C/xenc/ml_hardv2_model_A.pt); $P code/neural_reranker/ml_cross_encoder.py --name v7band --split train --models_from ml_hardv2 --out_name ml_v7xlmr --col mlxenc"
+step v7xenc v7x_bge  "" "$(SKIPNO $C/xenc/ml_v6band_model_A.pt); $P code/neural_reranker/ml_cross_encoder.py --name v7band --split train --models_from ml_v6band --out_name ml_v7bge --col bgexenc"
+step v7xenc v7x_qwen "" "[ '$XENC3' = none ] && { echo 'third cross-encoder off (XENC3_MODEL)'; exit 0; }; $P code/neural_reranker/ml_cross_encoder.py --name v7band --split train --epochs 1 --model $XENC3 --col qwxenc --out_name ml_v7qwen $XENC3_ARGS || { echo 'WARNING: third cross-encoder failed - V7 continues without it'; rm -f $C/xenc/ml_v7qwen_train_scores.parquet $C/xenc/ml_v7qwen_model_A.pt $C/xenc/ml_v7qwen_model_B.pt; }"
+step v7col v7_c1     "$C/feats/oof_xgb_v7_c1.parquet" "$P code/v6/train_collective.py --feats c3v7_train_dmsA --s1tag xgb_v7_blend --tag xgb_v7_c1 --simdrop 62 --extra auto --extra_set v7 --drop_feats $V6DROP"
+step v7col v7_c1_dec "" "$P code/xgboost/decode_eval.py --tag xgb_v7_c1 --simdrop 62"
+step v7col v7_c2     "$C/feats/oof_xgb_v7_c2.parquet" "$P code/v6/train_collective.py --feats c3v7_train_dmsA --s1tag xgb_v7_blend --prev xgb_v7_c1 --tag xgb_v7_c2 --simdrop 62 --extra auto --extra_set v7 --drop_feats $V6DROP"
+step v7col v7_c2_dec "" "$P code/xgboost/decode_eval.py --tag xgb_v7_c2 --simdrop 62"
+step v7test v7_test_s1 "$C/feats/test_stage1_final_v7.parquet" "$P code/v6/predict_v6.py --step stage1 $V7ARGS"
+step v7test v7x_prep_te "" "$P code/neural_reranker/prep_pairs.py --split test --scores test_stage1_final_v7.parquet --name v7band --raw --maxlen 110 --lo 0.01 --hi 0.99"
+step v7test v7x_xlmr_te "" "$(SKIPNO $C/xenc/ml_v7xlmr_train_scores.parquet); $P code/neural_reranker/ml_cross_encoder.py --name v7band --split test --models_from ml_hardv2 --out_name ml_v7xlmr --col mlxenc"
+step v7test v7x_bge_te  "" "$(SKIPNO $C/xenc/ml_v7bge_train_scores.parquet); $P code/neural_reranker/ml_cross_encoder.py --name v7band --split test --models_from ml_v6band --out_name ml_v7bge --col bgexenc"
+step v7test v7x_qwen_te "" "$(SKIPNO $C/xenc/ml_v7qwen_model_A.pt); $P code/neural_reranker/ml_cross_encoder.py --name v7band --split test --models_from ml_v7qwen --out_name ml_v7qwen --col qwxenc"
+step v7test v7_test_rounds "$C/feats/test_scores_final_v7.parquet" "$P code/v6/predict_v6.py --step rounds $V7ARGS"
+step v7final v7_plan  "" "$P code/v7/choose_v7.py plan"
+step v7final v7_final "" "$P code/v6/final_v6.py --scores feats/test_scores_final_v7.parquet \$($P code/v7/choose_v7.py final_args) --out final_v7"
+step v7pick v7_val    "" "bash code/final/validate.sh results/final/final_v7/output"
+step v7pick v7_choose "" "$P code/v7/choose_v7.py pick"
+
 if [[ $LIST == 0 && $DRY == 0 ]]; then
-  echo "done ($STAGE${ONLY:+, only $ONLY}). V6 choice: results/v6/v6_choice.json (first_choice_file); phase 2: results/phase2/"
+  echo "done ($STAGE${ONLY:+, only $ONLY}). Choice: results/v7/v7_choice.json (V7) / results/v6/v6_choice.json (V6), first_choice_file"
 fi

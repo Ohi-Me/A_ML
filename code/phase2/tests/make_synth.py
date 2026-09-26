@@ -116,14 +116,16 @@ def save_sources(split, s1_id, c1, rid, rc, rec_s1):
         am = [a.replace("n\u00b0 ", "ndeg ") for a in ad]
         fn = [a.split(" ")[0] if a and a.split(" ")[0].isdigit() else (a.split(" ")[1] if a.startswith("n") and len(a.split(" ")) > 1 else "") for a in am]
         pl.DataFrame({"id": ids_, "country": cs, "state": ["x"] * len(ids_), "core": list(nm), "key": list(nm), "am": am,
-                      "first_num": fn, "nums": fn}).write_parquet(os.path.join(CACHE, f"norm_v2_{split}_s{k}.parquet"))
+                      "first_num": fn, "nums": fn, "n": list(nm), "a": am, "legal": [""] * len(ids_),
+                      "is_domain": [False] * len(ids_), "nonlatin": [False] * len(ids_), "comps": [1] * len(ids_)}) \
+            .write_parquet(os.path.join(CACHE, f"norm_v2_{split}_s{k}.parquet"))
 
 
-def write_lists(split, C, y, nr, K=5):
+def write_lists(split, C, y, nr, K=5, d=None, lists=("name", "addr", "comb")):
     """blocking lists as sparse_tfidf.py writes them: rid_<list>_idx (nr x K, -1 padded) and rid_<list>_sc."""
-    d = os.path.join(CACHE, "blocking", f"b1_{split}")
+    d = d or os.path.join(CACHE, "blocking", f"b1_{split}")
     os.makedirs(d, exist_ok=True)
-    for li in ("name", "addr", "comb"):
+    for li in lists:
         sc = np.clip(0.4 + 0.5 * y + rng.normal(0, 0.15, len(y)), 0, 1).astype(np.float32)
         D = C.with_columns(pl.Series("sc", sc)).sort(["b", "sc"], descending=[False, True]) \
              .with_columns(pl.int_range(pl.len()).over("b").alias("r")).filter(pl.col("r") < K)
@@ -157,6 +159,9 @@ def main():
     s1, c1, rid, rc, rec_s1, C, y = make_split("tr", 1500, np.array(["US", "India"]))
     save_sources("train", s1, c1, rid, rc, rec_s1)
     write_lists("train", C, y, len(rid))
+    write_lists("train", C, y, len(rid), d=os.path.join(CACHE, "emb", "e3_train"), lists=("emb",))
+    os.makedirs(os.path.join(CACHE, "cands"), exist_ok=True)
+    C.write_parquet(os.path.join(CACHE, "cands", "c2_train.parquet"))
     gt = pl.DataFrame({"s1": [s1[a] for a in rec_s1 if a >= 0], "rid": [r for r, a in zip(rid, rec_s1) if a >= 0]})
     gt.write_parquet(os.path.join(RAW_CACHE, "train_gt_pairs.parquet"))
     gt.group_by("s1").agg(pl.col("rid").alias("matches")).write_parquet(os.path.join(RAW_CACHE, "train_gt.parquet"))
@@ -228,6 +233,7 @@ def main():
     s1t, c1t, ridt, rct, rec_t, Ct, yt = make_split("te", 1200, np.array(["US", "India", "France"]))
     save_sources("test", s1t, c1t, ridt, rct, rec_t)
     write_lists("test", Ct, yt, len(ridt))
+    write_lists("test", Ct, yt, len(ridt), d=os.path.join(CACHE, "emb", "e2f_test"), lists=("emb",))
     n1t, nrt = len(s1t), len(ridt)
     NAMEt = sp.random(n1t + nrt, HN, density=0.02, format="csr", random_state=3, dtype=np.float32)
     ADDRt = sp.random(n1t + nrt, HA, density=0.02, format="csr", random_state=4, dtype=np.float32)

@@ -70,6 +70,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--scores", default="feats/test_scores_final_v6.parquet")
     ap.add_argument("--tag", default="xgb_v6_c2", help="last model: oof_<tag>.parquet and its decode_eval.json")
+    ap.add_argument("--col", default="p", help="score column of --scores (p = round 2, p_round1 = round 1)")
     ap.add_argument("--sub", default="xgboost")
     ap.add_argument("--em", action="store_true")
     ap.add_argument("--caps", action="store_true")
@@ -79,7 +80,7 @@ def main():
     args = ap.parse_args()
     dev = device()
     t0 = time.time()
-    T = pl.read_parquet(os.path.join(CACHE, args.scores), columns=["a", "b", "p"])
+    T = pl.read_parquet(os.path.join(CACHE, args.scores), columns=["a", "b", args.col]).rename({args.col: "p"}, strict=False)
     oof = pl.read_parquet(os.path.join(CACHE, "feats", f"oof_{args.tag}.parquet"))
     iso = iso_from_oof(oof)
     b = json.load(open(os.path.join(RESULTS, args.sub, args.tag, "decode_eval.json")))["expected_f"]["best"]
@@ -99,7 +100,7 @@ def main():
     del oof
     keep, A, info = decode_v6(T, iso, b["gamma"], b["extra"], dev, cty, src=record_source("test") if args.caps else None,
                               em_pi=em_pi, gamma_by_country=gmap)
-    write_submission(args.out, keep, T, {"scores": args.scores, "tag": args.tag, "em": args.em, "caps": args.caps,
+    write_submission(args.out, keep, T, {"scores": args.scores, "col": args.col, "tag": args.tag, "em": args.em, "caps": args.caps,
                                          "decoder": {"gamma": b["gamma"], "extra": b["extra"], "gamma_unseen_source": g_src},
                                          "decode_info": info, "runtime_s": time.time() - t0})
 
