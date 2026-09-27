@@ -9,6 +9,8 @@
 3. Sibling expansion (the generator is hierarchical: records of one entity share the source version's address):
      x_sib_addr  the top-1 list candidates of every other record with the identical non-empty normalised address
      x_sib_key   ... with the identical name key and state
+     x_sib_name  ... with the identical normalised full name (V8: the source version's spelling; reaches empty-address
+                 records, whose state is empty so sib_key never groups them with their addressed siblings)
 Pass flags and list ranks (99 = not in that list) become features in pair_features.py (it keeps every column).
 The train build (--universe dms) enforces the pair budget by dropping the least efficient passes and records the
 passes it kept; the test build (--passes_from) uses exactly those passes.
@@ -29,11 +31,12 @@ import polars as pl
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 from common.gpu import Timer  # noqa: E402
 from common.io import CACHE, NORM, RESULTS, load_gt  # noqa: E402
-from v7.keys import numstreet_key  # noqa: E402
+from v7.keys import name_sib_key, numstreet_key  # noqa: E402
 
 LISTS = {"train": [("emb/e3", "emb", 5), ("blocking/b1", "comb", 3), ("blocking/b1", "name", 2), ("blocking/b1", "addr", 2)],
          "test": [("emb/e2f", "emb", 5), ("blocking/b1", "comb", 3), ("blocking/b1", "name", 2), ("blocking/b1", "addr", 2)]}
-FLAGS = {"key": "x_key", "addr": "x_addr", "numstreet": "x_numst", "sib_addr": "x_sib_addr", "sib_key": "x_sib_key"}
+FLAGS = {"key": "x_key", "addr": "x_addr", "numstreet": "x_numst", "sib_addr": "x_sib_addr", "sib_key": "x_sib_key",
+         "sib_name": "x_sib_name"}
 
 
 def recut(L, present, k, rows, col):
@@ -81,8 +84,13 @@ def main():
     if args.passes_from:
         kept_from = json.load(open(os.path.join(RESULTS, "v7", f"cands_{args.passes_from}_train.json")))
         passes, mult = kept_from["passes_kept"], int(kept_from["depth_mult"])
-    cols = ["id", "country", "key", "am", "first_num", "state"]
-    rd = lambda k: pl.read_parquet(os.path.join(CACHE, f"norm_{NORM}_{args.split}_s{k}.parquet"), columns=cols)  # noqa: E731
+    cols = ["id", "country", "key", "n", "am", "first_num", "state"]
+
+    def rd(k):
+        path = os.path.join(CACHE, f"norm_{NORM}_{args.split}_s{k}.parquet")
+        have = pl.read_parquet_schema(path)
+        d = pl.read_parquet(path, columns=[c for c in cols if c in have])
+        return d if "n" in d.columns else d.with_columns(pl.col("key").alias("n"))
     s1 = rd(1)
     rr = pl.concat([rd(2), rd(3)])
     n1, nr = s1.height, rr.height
@@ -125,7 +133,8 @@ def main():
             pl.when(pl.col("am").fill_null("") != "").then(pl.concat_str(["country", "am"], separator="|")).otherwise(pl.lit("")).alias("ga"),
             pl.when(pl.col("key").fill_null("") != "").then(pl.concat_str([pl.col("country"), pl.col("key"), pl.col("state").fill_null("")],
                                                                           separator="|")).otherwise(pl.lit("")).alias("gk"))
-        for name, col in (("sib_addr", "ga"), ("sib_key", "gk")):
+        g = g.with_columns(pl.Series("gn", name_sib_key(rr["country"], rr["n"])))
+        for name, col in (("sib_addr", "ga"), ("sib_key", "gk"), ("sib_name", "gn")):
             if passes.get(name, 0):
                 pf[name] = sib_pass(g[col].to_numpy(), kept, top1, int(passes[name]), FLAGS[name])
         for name, f in pf.items():

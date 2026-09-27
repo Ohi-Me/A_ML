@@ -13,6 +13,8 @@
 #                 V5 (--stage v5all) and v6a (--stage v6a, the V2 recipe at test density: a fallback / ablation).
 #                 V7 on a V6 cache: --stage v7all (v7diag -> v7cands -> v7feat -> v7s1 -> v7xenc -> v7col -> v7test ->
 #                 v7final -> v7pick, see V7.md)
+#                 V8 on a V6 cache: --stage v8all (v8diag -> v8cands -> v8prune -> v8feat -> v8s1 -> v8xenc -> v8col ->
+#                 v8test -> v8final -> v8pick, see V8.md): wide candidates + a light pruner, name-sibling evidence
 #    --only STEP  run a single step by name (see --list), even if it was done before
 #    --list       print every step with its block and exit
 #    --dry        print what would run
@@ -63,10 +65,11 @@ step() {   # step BLOCK NAME CHECK_PATH "command"
   if [[ $LIST == 1 ]]; then printf "%-8s %-22s %s\n" "$block" "$name" "$cmd"; return 0; fi
   if [[ -n "$ONLY" ]]; then [[ "$ONLY" == "$name" ]] || return 0
   else
-    [[ ( "$STAGE" == "all" && ! "$block" =~ ^(v5|loco5|v5pl|v5final|v6a)$ ) || "$STAGE" == "$block" ||
+    [[ ( "$STAGE" == "all" && ! "$block" =~ ^(v5|loco5|v5pl|v5final|v6a|v8[a-z]*)$ ) || "$STAGE" == "$block" ||
        ( "$STAGE" == "v5all" && "$block" =~ ^(v5|loco5|v5pl|v5final)$ ) ||
        ( "$STAGE" == "v6all" && "$block" =~ ^(v6diag|v6feat|v6s1|v6x|v6col|v6loco|v6test|v6final|v6pl|v6pick)$ ) ||
-       ( "$STAGE" == "v7all" && "$block" =~ ^(v7diag|v7cands|v7feat|v7s1|v7xenc|v7col|v7test|v7final|v7pick)$ ) ]] || return 0
+       ( "$STAGE" == "v7all" && "$block" =~ ^(v7diag|v7cands|v7feat|v7s1|v7xenc|v7col|v7test|v7final|v7pick)$ ) ||
+       ( "$STAGE" == "v8all" && "$block" =~ ^(v8diag|v8cands|v8prune|v8feat|v8s1|v8xenc|v8col|v8test|v8final|v8pick)$ ) ]] || return 0
     if [[ -e "$C/_done/$name" || ( -n "$check" && -e "$check" ) ]]; then echo "[skip] $name"; return 0; fi
   fi
   echo "[run ] $(date '+%H:%M:%S') $name"
@@ -306,6 +309,52 @@ step v7final v7_final "" "$P code/v6/final_v6.py --scores feats/test_scores_fina
 step v7pick v7_val    "" "bash code/final/validate.sh results/final/final_v7/output"
 step v7pick v7_choose "" "$P code/v7/choose_v7.py pick"
 
+# ================================================ V8 (V8.md): wide candidates for recall, a light pruner for size,
+#   name-sibling evidence for the empty-address records. Diagnostics first (cheap): the name-sibling structure and a
+#   report-only id check (v8_sib_probe), the V7 miss probe with the new sib_name pass. Then the union is built wide
+#   (deeper lists, block passes, sibling passes incl. sib_name), a pruner (code/v8/prune.py) cuts it to a few pairs
+#   per record while losing <= 0.05 % of the true pairs it found, and the V7 chain runs on the pruned table.
+V8PLAN="results/v8/cands_plan.json"
+V8ARGS="--feats c4v8_train_dmsA --test_feats c4v8_test --s1 xgb_v8_blend --c1 xgb_v8_c1 --c2 xgb_v8_c2 --out final_v8"
+step v8diag v8_sib_probe   "" "$P code/v8/sib_probe.py"
+step v8diag v8_miss_probe  "" "$P code/v7/miss_probe.py --universe dms"
+step v8cands v8_cands_plan  "" "$P code/v7/cands_plan.py --wide --budget ${V8_BUDGET:-24} --out $V8PLAN"
+step v8cands v8_cands_train "$C/cands/c3wdms_train.parquet" "$P code/v7/build_cands.py --split train --universe dms --name c3wdms --plan $V8PLAN"
+step v8cands v8_cands_test  "$C/cands/c3w_test.parquet" "$P code/v7/build_cands.py --split test --name c3w --passes_from c3wdms --plan $V8PLAN"
+step v8cands v8_paircos_train "$C/emb/e3_train/paircos_c3wdms.parquet" "$P code/embeddings/oof_biencoder.py --split train --tag e3 --reuse --cands c3wdms"
+step v8cands v8_paircos_test  "$C/emb/e3_test/paircos_c3w.parquet" "$P code/embeddings/oof_biencoder.py --split test --tag e3 --cands c3w"
+step v8prune v8_prune_feats_train "" "$P code/v8/prune.py feats --cands c3wdms --split train --universe dms"
+step v8prune v8_prune_feats_test  "" "$P code/v8/prune.py feats --cands c3w --split test"
+step v8prune v8_prune_fit   "" "$P code/v8/prune.py fit --cands c3wdms --max_loss ${V8_MAX_LOSS:-0.0005}"
+step v8prune v8_prune_train "$C/cands/c4dms_train.parquet" "$P code/v8/prune.py apply --cands c3wdms --split train --out c4dms"
+step v8prune v8_prune_test  "$C/cands/c4_test.parquet" "$P code/v8/prune.py apply --cands c3w --split test --out c4 --fit_from c3wdms"
+step v8feat v8_feats_train  "" "$P code/tfidf_fuzzy/pair_features.py --cands c4dms --split train --btag b1 --etags '' --fset v2 --pairc emb/e3_train/paircos_c3wdms.parquet"
+step v8feat v8_feats_test   "" "$P code/tfidf_fuzzy/pair_features.py --cands c4 --split test --btag b1 --etags '' --fset v2 --pairc emb/e3_test/paircos_c3w.parquet"
+step v8feat v8_universe     "" "$P code/v6/simulate_universe.py --src c4dms_train --plan US:0.62:0.19,India:1.0:0.19 --tag dmsA --code 62"
+step v8feat v8_xfeats_train "" "$P code/v5/extra_feats.py --src c4dms_train_dmsA --absent_code 62 --out c4v8_train_dmsA"
+step v8feat v8_xfeats_test  "" "$P code/v5/extra_feats.py --src c4_test --out c4v8_test"
+step v8s1 v8_full   "$C/feats/oof_xgb_v8_full.parquet"  "$P code/xgboost/train_xgb.py --feats c4v8_train_dmsA --tag xgb_v8_full --simdrop 62"
+step v8s1 v8_noemb  "$C/feats/oof_xgb_v8_noemb.parquet" "$P code/xgboost/train_xgb.py --feats c4v8_train_dmsA --tag xgb_v8_noemb --simdrop 62 --drop $DROP_EMB"
+step v8s1 v8_blend  "$C/feats/oof_xgb_v8_blend.parquet" "$P code/xgboost/blend_oof.py --full xgb_v8_full --noemb xgb_v8_noemb --w 0.75 --out xgb_v8_blend --simdrop 62"
+step v8xenc v8x_prep "" "$P code/neural_reranker/prep_pairs.py --split train --scores oof_xgb_v8_blend.parquet --name v8band --raw --maxlen 110 --lo 0.01 --hi 0.99"
+step v8xenc v8x_xlmr "" "$(SKIPNO $C/xenc/ml_hardv2_model_A.pt); $P code/neural_reranker/ml_cross_encoder.py --name v8band --split train --models_from ml_hardv2 --out_name ml_v8xlmr --col mlxenc"
+step v8xenc v8x_bge  "" "$(SKIPNO $C/xenc/ml_v6band_model_A.pt); $P code/neural_reranker/ml_cross_encoder.py --name v8band --split train --models_from ml_v6band --out_name ml_v8bge --col bgexenc"
+step v8xenc v8x_qwen "" "[ '$XENC3' = none ] && { echo 'third cross-encoder off (XENC3_MODEL)'; exit 0; }; $P code/neural_reranker/ml_cross_encoder.py --name v8band --split train --epochs 1 --model $XENC3 --col qwxenc --out_name ml_v8qwen $XENC3_ARGS || { echo 'WARNING: third cross-encoder failed - V8 continues without it'; rm -f $C/xenc/ml_v8qwen_train_scores.parquet $C/xenc/ml_v8qwen_model_A.pt $C/xenc/ml_v8qwen_model_B.pt; }"
+step v8col v8_c1     "$C/feats/oof_xgb_v8_c1.parquet" "$P code/v6/train_collective.py --feats c4v8_train_dmsA --s1tag xgb_v8_blend --tag xgb_v8_c1 --simdrop 62 --extra auto --extra_set v8 --drop_feats $V6DROP"
+step v8col v8_c1_dec "" "$P code/xgboost/decode_eval.py --tag xgb_v8_c1 --simdrop 62"
+step v8col v8_c2     "$C/feats/oof_xgb_v8_c2.parquet" "$P code/v6/train_collective.py --feats c4v8_train_dmsA --s1tag xgb_v8_blend --prev xgb_v8_c1 --tag xgb_v8_c2 --simdrop 62 --extra auto --extra_set v8 --drop_feats $V6DROP"
+step v8col v8_c2_dec "" "$P code/xgboost/decode_eval.py --tag xgb_v8_c2 --simdrop 62"
+step v8test v8_test_s1 "$C/feats/test_stage1_final_v8.parquet" "$P code/v6/predict_v6.py --step stage1 $V8ARGS"
+step v8test v8x_prep_te "" "$P code/neural_reranker/prep_pairs.py --split test --scores test_stage1_final_v8.parquet --name v8band --raw --maxlen 110 --lo 0.01 --hi 0.99"
+step v8test v8x_xlmr_te "" "$(SKIPNO $C/xenc/ml_v8xlmr_train_scores.parquet); $P code/neural_reranker/ml_cross_encoder.py --name v8band --split test --models_from ml_hardv2 --out_name ml_v8xlmr --col mlxenc"
+step v8test v8x_bge_te  "" "$(SKIPNO $C/xenc/ml_v8bge_train_scores.parquet); $P code/neural_reranker/ml_cross_encoder.py --name v8band --split test --models_from ml_v6band --out_name ml_v8bge --col bgexenc"
+step v8test v8x_qwen_te "" "$(SKIPNO $C/xenc/ml_v8qwen_model_A.pt); $P code/neural_reranker/ml_cross_encoder.py --name v8band --split test --models_from ml_v8qwen --out_name ml_v8qwen --col qwxenc"
+step v8test v8_test_rounds "$C/feats/test_scores_final_v8.parquet" "$P code/v6/predict_v6.py --step rounds $V8ARGS"
+step v8final v8_plan  "" "$P code/v8/choose_v8.py plan"
+step v8final v8_final "" "$P code/v6/final_v6.py --scores feats/test_scores_final_v8.parquet \$($P code/v8/choose_v8.py final_args) --out final_v8"
+step v8pick v8_val    "" "bash code/final/validate.sh results/final/final_v8/output"
+step v8pick v8_choose "" "$P code/v8/choose_v8.py pick"
+
 if [[ $LIST == 0 && $DRY == 0 ]]; then
-  echo "done ($STAGE${ONLY:+, only $ONLY}). Choice: results/v7/v7_choice.json (V7) / results/v6/v6_choice.json (V6), first_choice_file"
+  echo "done ($STAGE${ONLY:+, only $ONLY}). Choice: results/v8/v8_choice.json (V8) / results/v7/v7_choice.json (V7) / results/v6/v6_choice.json (V6), first_choice_file"
 fi

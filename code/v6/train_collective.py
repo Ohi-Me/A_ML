@@ -34,7 +34,9 @@ from v6.collective import COLS, collective_features, record_attrs  # noqa: E402
 NON_FEATURES = {"a", "b", "fold", "y", "b_has_match"}
 AUTO_EXTRAS = {"v6": [("xenc/ml_hardv2_train_scores.parquet", "mlxenc"), ("xenc/ml_v6band_train_scores.parquet", "bgexenc")],
                "v7": [("xenc/ml_v7xlmr_train_scores.parquet", "mlxenc"), ("xenc/ml_v7bge_train_scores.parquet", "bgexenc"),
-                      ("xenc/ml_v7qwen_train_scores.parquet", "qwxenc")]}
+                      ("xenc/ml_v7qwen_train_scores.parquet", "qwxenc")],
+               "v8": [("xenc/ml_v8xlmr_train_scores.parquet", "mlxenc"), ("xenc/ml_v8bge_train_scores.parquet", "bgexenc"),
+                      ("xenc/ml_v8qwen_train_scores.parquet", "qwxenc")]}
 
 
 def build_side(D, prev, extras, split, etag, btag, dev, attrs):
@@ -76,7 +78,7 @@ def main():
     ap.add_argument("--simdrop", type=int, default=62)
     ap.add_argument("--extra", default="auto", help="path:column list of extra pair scores; 'auto' = XLM-R base (V3) + the "
                                                     "second cross-encoder of V6 (xenc/ml_v6band_train_scores.parquet) if it exists")
-    ap.add_argument("--extra_set", default="v6", choices=["v6", "v7"], help="which score tables 'auto' looks for")
+    ap.add_argument("--extra_set", default="v6", choices=["v6", "v7", "v8"], help="which score tables 'auto' looks for")
     ap.add_argument("--drop_feats", default="cos_e3,b_gap_cos_e3,b_rank_cos_e3,a_gap_cos_e3,a_rank_cos_e3,b_gap2_cos_e3,"
                                             "r_e3_emb,sib_emb_max,sib_emb_mean")
     ap.add_argument("--rounds", type=int, default=3000)
