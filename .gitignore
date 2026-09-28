@@ -12,3 +12,4 @@ Data/__MACOSX/
 data/
 hf_cache/
 run_all.out
+build/
