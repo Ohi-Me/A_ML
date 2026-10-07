@@ -1,0 +1,57 @@
+Steps on the college Wi-Fi (Windows PowerShell; ssh / scp are built in).
+Put A_ML_code_v8.zip and v8_job.pbs in the folder you run these commands from.
+When ssh or scp asks for the password, type it yourself. Never save it in a file.
+
+----------------------------------------------------------------------------
+PART 1 - find V7 and copy its results out
+----------------------------------------------------------------------------
+ssh ai_25901334@10.10.11.201
+
+  export PATH=/opt/pbs/bin:$PATH
+  qstat -u ai_25901334
+  find /tmp/ai_25901334 -maxdepth 6 -path '*final_v7/output/matching_results.tsv' 2>/dev/null
+  find /tmp/ai_25901334 -maxdepth 3 -name 'run_v7.out' 2>/dev/null
+  tail -n 30 /tmp/ai_25901334/AmazonML/run_v7.out        (use the path the find printed)
+  cat /tmp/ai_25901334/AmazonML/results/v7/v7_choice.json
+  df -h /
+  exit
+
+Then, back on your laptop (use the path the first find printed):
+  scp ai_25901334@10.10.11.201:/tmp/ai_25901334/AmazonML/results/final/final_v7/output/matching_results.tsv .\v7_matching_results.tsv
+  scp -r ai_25901334@10.10.11.201:/tmp/ai_25901334/AmazonML/results/v7 .\v7_results
+
+Send v7_matching_results.tsv, the v7_results folder and everything the commands above printed to Rohit.
+
+----------------------------------------------------------------------------
+PART 2 - start V8 (ONLY if V7 is finished: no V7 job in qstat, and run_v7.out ends with "done" or a FAIL line)
+          and ONLY if df -h / shows at least 60G available
+----------------------------------------------------------------------------
+On your laptop:
+  scp A_ML_code_v8.zip v8_job.pbs ai_25901334@10.10.11.201:/tmp/ai_25901334/AmazonML/
+
+ssh ai_25901334@10.10.11.201
+
+  export PATH=/opt/pbs/bin:$PATH
+  cd /tmp/ai_25901334/AmazonML
+  unzip -o A_ML_code_v8.zip            (updates code only; data/, results/ and submissions/ are not touched)
+  grep -c v8all run_all.sh             (must print a number > 0)
+  mkdir -p results/_jobs
+  qsub v8_job.pbs                      (prints a job id like 12345.master)
+  qstat -u ai_25901334                 (Q = waiting, R = running)
+  tail -n 20 results/_jobs/v8all.log   (progress; run again any time)
+  exit
+
+The job can be killed by the cluster (walltime, or the kills at ~:44 of even hours). The run resumes where it stopped:
+just log in again and run   qsub v8_job.pbs   once more. Finished steps are skipped.
+
+----------------------------------------------------------------------------
+PART 3 - what to send back
+----------------------------------------------------------------------------
+After about 1 hour (when results/_runs/v8_miss_probe.log exists):
+  scp -r ai_25901334@10.10.11.201:/tmp/ai_25901334/AmazonML/results/v8 .\v8_results
+  scp ai_25901334@10.10.11.201:/tmp/ai_25901334/AmazonML/results/v7/miss_probe.json .\
+At the end (results/v8/v8_choice.json exists):
+  scp -r ai_25901334@10.10.11.201:/tmp/ai_25901334/AmazonML/results/v8 .\v8_results
+  scp ai_25901334@10.10.11.201:/tmp/ai_25901334/AmazonML/results/final/final_v8/output/matching_results.tsv .\v8_matching_results.tsv
+  scp ai_25901334@10.10.11.201:/tmp/ai_25901334/AmazonML/results/_jobs/v8all.log .\
+Do not submit anything to the leaderboard.

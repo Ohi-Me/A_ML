@@ -1,0 +1,7 @@
+This zip is the repository at commit b582f93 (branch claude/dazzling-gauss-3jgxpd on GitHub Ohi-Me/A_ML).
+Left out to fit the 30 MB chat limit (all still on GitHub; none are needed to run the pipeline):
+  submissions/*/matching_results.tsv   (97 MB each - the files you submitted; keep your local copies)
+  package/                             (old submission package copy)
+  results/**/*.tsv                     (validation false-positive / false-negative dumps)
+  results/xgboost/*/model_*.json       (V1-era XGBoost models; V2-V4 retrain their own)
+Start: read H100_MANUAL.md, then  bash run_all.sh --data /path/to/dataset

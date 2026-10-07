@@ -1,0 +1,36 @@
+#!/bin/bash
+#PBS -N er_v8all
+#PBS -q workq
+#PBS -l select=1:ncpus=8:ngpus=1:mem=32gb
+#PBS -l walltime=12:00:00
+#PBS -j oe
+#PBS -o /tmp/ai_25901334/AmazonML/results/_jobs/v8all.out
+
+exec >> /tmp/ai_25901334/AmazonML/results/_jobs/v8all.log 2>&1
+cd /tmp/ai_25901334/AmazonML
+export PYTHONNOUSERSITE=1
+export NCPUS=8
+export OMP_NUM_THREADS=8
+export POLARS_MAX_THREADS=8
+export RAYON_NUM_THREADS=8
+export PYTHONPATH=/tmp/ai_25901334/AmazonML/pkgs:/tmp/ai_25901334/AmazonML/code
+export HF_HOME=/tmp/ai_25901334/AmazonML/hf_cache
+export TOKENIZERS_PARALLELISM=false
+source /apps/compilers/anaconda3/etc/profile.d/conda.sh
+conda activate refused_h100
+export ER_NORM=v2
+export ER_CACHE=data/cache_v2
+export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+echo "job $PBS_JOBID on $(hostname) at $(date -Iseconds); PBS CUDA_VISIBLE_DEVICES=${CUDA_VISIBLE_DEVICES:-unset}"
+export PBS_CUDA_ORIG="${CUDA_VISIBLE_DEVICES:-unset}"
+
+# Select completely free 47GB H100 MIG slice (GPU 1 Device 0)
+MIG="MIG-2f219700-5dc6-59eb-81ef-2bb9414d3ec0"
+export CUDA_VISIBLE_DEVICES="$MIG"
+echo "CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES"
+
+T0=$(date +%s)
+bash run_all.sh --stage all
+RC=$?
+echo "EXIT rc=$RC after $(( $(date +%s) - T0 )) s at $(date -Iseconds)"
+exit $RC

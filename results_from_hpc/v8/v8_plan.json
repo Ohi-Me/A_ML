@@ -1,0 +1,178 @@
+{
+ "rule": "V8 decisions, fixed before any V8 number exists (do not tune them on the results).\n\nSame measurement as V6 / V7: DMS universe, clean held-out folds 0 and 4 (min of the two). The Scorer counts every true\npair, also those candidate generation missed, so V8's candidate recall and its pruning loss both show up.\n\n  plan (before the V8 file is written)\n    round  round 2 (xgb_v8_c2) unless round 1 (xgb_v8_c1) is higher on DMS\n    caps   per-source caps if they do not lower that round's DMS score by more than 0.0001\n    em, France gamma: from the V6 plan (results/v6/v6_plan.json)\n  pick\n    reference = the best of V6 and V7 on DMS (whichever exists). V8 is submitted first if DMS(V8) >= reference + 0.0005\n    and, for US and India, its test / DMS-fold-0 ratio of predicted matches per S1 exceeds the V2 chain's by at most\n    0.003 (the V6 rule). Order: final_v8 > final_v7 / final_v6 (as their own choice files say) > final_v2 (keep).\n  Also reported: V8's candidate ceiling on DMS (perfect scorer on the pruned candidates), pairs per record on train and\n  test, and the pruning loss on fold 0.\n\n  python code/v8/choose_v8.py plan | final_args | pick\n",
+ "dms": {
+  "xgb_v8_c1": {
+   "no_caps": {
+    "f0": 0.988145414765962,
+    "f4": 0.9878732018702789,
+    "f3_es": 0.9878419423477671,
+    "gamma": 1.0,
+    "extra": 0.05,
+    "capped_records": 0,
+    "by_country_f0": {
+     "India": {
+      "f05": 0.9868162694526519,
+      "precision": 0.9970178000062129,
+      "recall": 0.9684787987785006,
+      "fp": 1440,
+      "fn": 15669,
+      "pred_per_s1": 3.370950063877467
+     },
+     "US": {
+      "f05": 0.989579252894912,
+      "precision": 0.9977124569551351,
+      "recall": 0.973693839680092,
+      "fp": 1025,
+      "fn": 12078,
+      "pred_per_s1": 3.3744954211350766
+     }
+    }
+   },
+   "caps": {
+    "f0": 0.9881464141684443,
+    "f4": 0.9878737914167272,
+    "f3_es": 0.987842367574514,
+    "gamma": 1.0,
+    "extra": 0.05,
+    "capped_records": 747,
+    "by_country_f0": {
+     "India": {
+      "f05": 0.9868172323690562,
+      "precision": 0.9970198648066536,
+      "recall": 0.9684787987785006,
+      "fp": 1439,
+      "fn": 15669,
+      "pred_per_s1": 3.370943082733537
+     },
+     "US": {
+      "f05": 0.9895802916573718,
+      "precision": 0.9977146836041939,
+      "recall": 0.973693839680092,
+      "fp": 1024,
+      "fn": 12078,
+      "pred_per_s1": 3.374487890107242
+     }
+    }
+   }
+  },
+  "xgb_v8_c2": {
+   "no_caps": {
+    "f0": 0.9880229566524767,
+    "f4": 0.9877772997112216,
+    "f3_es": 0.987716514386577,
+    "gamma": 1.0,
+    "extra": 0.05,
+    "capped_records": 0,
+    "by_country_f0": {
+     "India": {
+      "f05": 0.9866085325191417,
+      "precision": 0.9972566949706074,
+      "recall": 0.9675071515648952,
+      "fp": 1323,
+      "fn": 16152,
+      "pred_per_s1": 3.36676137751932
+     },
+     "US": {
+      "f05": 0.9895487907599843,
+      "precision": 0.997818368577362,
+      "recall": 0.9732560570816235,
+      "fp": 977,
+      "fn": 12279,
+      "pred_per_s1": 3.3726201952042416
+     }
+    }
+   },
+   "caps": {
+    "f0": 0.9880239560549589,
+    "f4": 0.987777559371319,
+    "f3_es": 0.987716939613324,
+    "gamma": 1.0,
+    "extra": 0.05,
+    "capped_records": 721,
+    "by_country_f0": {
+     "India": {
+      "f05": 0.986609495435546,
+      "precision": 0.9972587628352936,
+      "recall": 0.9675071515648952,
+      "fp": 1322,
+      "fn": 16152,
+      "pred_per_s1": 3.36675439637539
+     },
+     "US": {
+      "f05": 0.9895498295224441,
+      "precision": 0.9978205967009729,
+      "recall": 0.9732560570816235,
+      "fp": 976,
+      "fn": 12279,
+      "pred_per_s1": 3.372612664176407
+     }
+    }
+   }
+  }
+ },
+ "ceiling_v8": {
+  "f0": 0.997593212111114,
+  "f4": 0.9976781727900889,
+  "pair_recall_f0": 0.9922455570126727
+ },
+ "plan": {
+  "tag": "xgb_v8_c1",
+  "col": "p_round1",
+  "caps": true,
+  "em": false,
+  "gamma_unseen": "same",
+  "pl": false
+ },
+ "candidates": {
+  "c4dms_train": {
+   "cands": "c3wdms",
+   "split": "train",
+   "out": "c4dms",
+   "tau": 0.0032383420038968325,
+   "pairs_before": 121048754,
+   "pairs_after": 16720350,
+   "records": 7973917,
+   "pairs_per_record_after": 2.096880366324355,
+   "runtime_s": 15.052264213562012,
+   "kept_share_of_true_fold0": 0.9992722500847813
+  },
+  "c4_test": {
+   "cands": "c3w",
+   "split": "test",
+   "out": "c4",
+   "tau": 0.0032383420038968325,
+   "pairs_before": 215851328,
+   "pairs_after": 20854679,
+   "records": 9969589,
+   "pairs_per_record_after": 2.0918293622736104,
+   "runtime_s": 705.0708284378052
+  }
+ },
+ "pruner": {
+  "tau": 0.0032383420038968325,
+  "pairs_per_record_before": 15.18058866175808,
+  "pairs_per_record_after": 2.096880366324355,
+  "by_fold": {
+   "0": {
+    "true_pairs_in_union": 949502,
+    "kept_share_of_true": 0.9992722500847813
+   },
+   "1": {
+    "true_pairs_in_union": 949198,
+    "kept_share_of_true": 0.9992741240499875
+   },
+   "2": {
+    "true_pairs_in_union": 948793,
+    "kept_share_of_true": 0.9992632744971769
+   },
+   "3": {
+    "true_pairs_in_union": 950018,
+    "kept_share_of_true": 0.9992936975930983
+   },
+   "4": {
+    "true_pairs_in_union": 946862,
+    "kept_share_of_true": 0.9992850066852403
+   }
+  }
+ }
+}
