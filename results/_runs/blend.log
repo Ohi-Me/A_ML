@@ -1,0 +1,4 @@
+== 2026-10-05T21:13:02+05:30 blend
+python -u code/xgboost/blend_oof.py --full xgb_c2_sim19_v2 --noemb xgb_c2_sim19_noemb_v2 --w 0.75 --out xgb_c2_blend_v2
+GPU: NVIDIA H100 NVL MIG 3g.47gb, 46.4 GiB, SMs 60, torch 2.5.1+cu121, cuda 12.1
+{"blend": {"full": "xgb_c2_sim19_v2", "noemb": "xgb_c2_sim19_noemb_v2", "w_seen": 0.75, "w_unseen": 0.5}, "val": {"n_s1": 357966, "macro_f05": 0.984443454625972, "tp": 1192028, "fp": 4453, "fn": 47134, "n_pred_matches": 1196481, "n_pred_empty": 20569, "n_true_singletons": 19918, "singleton_acc": 0.9816246611105532, "pair_precision": 0.9962782526425409, "pair_recall": 0.9619630040301429, "thr": 0.7, "margin": 0.4, "candidate_recall": 0.9844209231722729}, "best": {"thr": 0.7, "margin": 0.4, "f05_tune": 0.9845794700089152, "p": 0.996122099055133, "r": 0.962092635588726}}

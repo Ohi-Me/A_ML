@@ -1,0 +1,25 @@
+{
+ "decisions": "p2/decisions/V3_noGNN_test.parquet",
+ "pred_matches": 5817418,
+ "s1_empty": 98763,
+ "by_country": {
+  "France": {
+   "s1": 259452,
+   "matches": 847370,
+   "matches_per_s1": 3.265999105807625,
+   "empty_rate": 0.05739790018963045
+  },
+  "India": {
+   "s1": 809986,
+   "matches": 2729484,
+   "matches_per_s1": 3.3697915766445345,
+   "empty_rate": 0.057035553700928165
+  },
+  "US": {
+   "s1": 663106,
+   "matches": 2240564,
+   "matches_per_s1": 3.3788926657276512,
+   "empty_rate": 0.05681293790133101
+  }
+ }
+}

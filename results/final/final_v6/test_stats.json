@@ -1,0 +1,46 @@
+{
+ "scores": "feats/test_scores_final_v6.parquet",
+ "tag": "xgb_v6_c2",
+ "em": false,
+ "caps": true,
+ "decoder": {
+  "gamma": 1.0,
+  "extra": 0.0,
+  "gamma_unseen_source": "decode_eval"
+ },
+ "decode_info": {
+  "assigned": 6055906,
+  "capped_records": 723,
+  "gamma_by_country": {
+   "France": 1.0,
+   "India": 1.0,
+   "US": 1.0
+  }
+ },
+ "runtime_s": 140.52634239196777,
+ "pred_matches": 5836570,
+ "s1_empty": 99777,
+ "by_country": {
+  "France": {
+   "s1": 259452,
+   "with_match": 244268,
+   "matches": 850589,
+   "matches_per_s1": 3.2784060250065523,
+   "empty_rate": 0.05852334921295654
+  },
+  "India": {
+   "s1": 809986,
+   "with_match": 763344,
+   "matches": 2736620,
+   "matches_per_s1": 3.3786016054598473,
+   "empty_rate": 0.05758371132340559
+  },
+  "US": {
+   "s1": 663106,
+   "with_match": 625155,
+   "matches": 2249361,
+   "matches_per_s1": 3.3921590213329393,
+   "empty_rate": 0.057232177057664986
+  }
+ }
+}

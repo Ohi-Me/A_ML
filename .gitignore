@@ -1,4 +1,4 @@
-# Large dataset directories & zip archives
+# Challenge data and archives (kept locally only)
 Data/
 data/
 *.zip
@@ -7,26 +7,28 @@ data/
 hf_cache/
 pkgs/
 
-# Large model weights, parquets, binary files
+# Large model weights, tables and binaries
 *.parquet
 *.npy
 *.pt
 *.bin
 *.onnx
+results/**/model_A.json
+results/**/model_B.json
+results/**/model_all_folds.json
+results/**/refit_*.json
+results/**/stage1_*.json
+results/**/stage2_*.json
+results/**/pruner_*.json
 
-# Submission binaries and candidate pair TSVs over 100MB
-submissions/
+# Candidate-pair files (~0.3-1.1 GB each) and the zipped packages: kept locally, not in git
+candidate_pairs.tsv
+results/final/**/output/*.tsv
 staging_submission/
-Enigma_submission/
+Enigma_submission/output/
 merged/
-package/
-results/
-!results_from_hpc/
-results_from_hpc/*
-!results_from_hpc/v8/
-results_from_hpc/v8/matching_results_v8.tsv
 
-# Python & environment junk
+# Python and editor junk
 __pycache__/
 *.pyc
 .DS_Store
@@ -35,6 +37,8 @@ Thumbs.db
 .venv/
 env/
 
-# Logs
+# Logs: the experiment run logs are kept, other logs are ignored
 *.out
 *.log
+!results/_runs/*.log
+!results/_jobs/*.log

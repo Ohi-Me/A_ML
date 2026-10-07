@@ -1,0 +1,22 @@
+{
+ "args": {
+  "feats": "c2_train_sim19",
+  "s1": "oof_chainB_s1.parquet",
+  "tag": "gnn_mlx_v2",
+  "split": "train",
+  "epochs": 4,
+  "batch_s1": 1500,
+  "lr": 0.002,
+  "extra": "xenc/chainB_train_extra.parquet:mlxenc",
+  "halves": "B",
+  "out_tag": "chainB",
+  "score_only": true,
+  "score_folds": "0",
+  "fit_country": "",
+  "drop_feats": ""
+ },
+ "edges": 68536196,
+ "ap_scored": 0.9997697613349701,
+ "runtime_s": 55.31856942176819,
+ "gpu": "10.54 GiB peak"
+}

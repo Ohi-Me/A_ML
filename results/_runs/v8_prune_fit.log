@@ -1,0 +1,55 @@
+== 2026-10-05T22:33:06+05:30 v8_prune_fit
+python -u code/v8/prune.py fit --cands c3wdms --max_loss 0.0005
+GPU: NVIDIA H100 NVL MIG 3g.47gb, 46.4 GiB, SMs 60, torch 2.5.1+cu121, cuda 12.1
+[22:33:09] pruner A: folds 1,2 (early stop on fold 3) ...
+[0]	fold3-logloss:0.08679	fold3-aucpr:0.97625
+[100]	fold3-logloss:0.00967	fold3-aucpr:0.99124
+[200]	fold3-logloss:0.00908	fold3-aucpr:0.99222
+[300]	fold3-logloss:0.00894	fold3-aucpr:0.99244
+[400]	fold3-logloss:0.00886	fold3-aucpr:0.99257
+[500]	fold3-logloss:0.00882	fold3-aucpr:0.99264
+[600]	fold3-logloss:0.00878	fold3-aucpr:0.99269
+[700]	fold3-logloss:0.00876	fold3-aucpr:0.99272
+[799]	fold3-logloss:0.00874	fold3-aucpr:0.99275
+[22:35:34] pruner A: folds 1,2 (early stop on fold 3) done in 145.1s
+[22:35:34] pruner B: folds 3,4 ...
+[22:37:30] pruner B: folds 3,4 done in 116.2s
+[22:37:30] out-of-fold scores ...
+[22:38:24] out-of-fold scores done in 54.5s
+[22:38:24] cut ...
+[22:38:35] cut done in 10.0s
+{
+ "cands": "c3wdms",
+ "rounds": 800,
+ "tau": 0.0032383420038968325,
+ "top": 2,
+ "max_per_record": 10,
+ "max_loss": 0.0005,
+ "pairs_before": 121048754,
+ "pairs_after": 16720350,
+ "pairs_per_record_before": 15.18058866175808,
+ "pairs_per_record_after": 2.096880366324355,
+ "by_fold": {
+  "0": {
+   "true_pairs_in_union": 949502,
+   "kept_share_of_true": 0.9992722500847813
+  },
+  "1": {
+   "true_pairs_in_union": 949198,
+   "kept_share_of_true": 0.9992741240499875
+  },
+  "2": {
+   "true_pairs_in_union": 948793,
+   "kept_share_of_true": 0.9992632744971769
+  },
+  "3": {
+   "true_pairs_in_union": 950018,
+   "kept_share_of_true": 0.9992936975930983
+  },
+  "4": {
+   "true_pairs_in_union": 946862,
+   "kept_share_of_true": 0.9992850066852403
+  }
+ },
+ "runtime_s": 325.9501829147339
+}

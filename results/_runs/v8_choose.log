@@ -1,0 +1,32 @@
+== 2026-10-05T23:58:44+05:30 v8_choose
+python -u code/v8/choose_v8.py pick
+GPU: NVIDIA H100 NVL MIG 3g.47gb, 46.4 GiB, SMs 60, torch 2.5.1+cu121, cuda 12.1
+{
+ "plan": {
+  "tag": "xgb_v8_c1",
+  "col": "p_round1",
+  "caps": true,
+  "em": false,
+  "gamma_unseen": "same",
+  "pl": false
+ },
+ "dms_min_f0_f4": {
+  "V8": 0.9878737914167272
+ },
+ "ceiling": {
+  "v8_dms": 0.997593212111114,
+  "v6_dms": null
+ },
+ "v2_test_over_dms_ratio": null,
+ "v8_test_over_dms_ratio": {
+  "US": 1.0328121276126707,
+  "India": 1.0038537327193708
+ },
+ "v8_better": true,
+ "v8_consistent": true,
+ "submit_order": [
+  "final_v8",
+  "final_v2 (keep)"
+ ],
+ "first_choice_file": "results/final/final_v8/output/matching_results.tsv"
+}

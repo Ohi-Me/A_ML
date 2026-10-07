@@ -1,0 +1,5 @@
+== 2026-09-26T01:52:23+05:30 s1_mean5chk
+python -u code/phase2/cos_variants.py stage1 --var mean5 --models refit
+[01:52:29] stage-1 refit with cosine variant mean5 ...
+[02:23:00] stage-1 refit with cosine variant mean5 done in 1831.4s
+wrote /tmp/ai_25901334/AmazonML/results/phase2/cos/stage1_refit_mean5_check.json

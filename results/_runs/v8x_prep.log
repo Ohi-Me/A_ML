@@ -1,0 +1,9 @@
+== 2026-10-05T23:13:19+05:30 v8x_prep
+python -u code/neural_reranker/prep_pairs.py --split train --scores oof_xgb_v8_blend.parquet --name v8band --raw --maxlen 110 --lo 0.01 --hi 0.99
+GPU: NVIDIA H100 NVL MIG 3g.47gb, 46.4 GiB, SMs 60, torch 2.5.1+cu121, cuda 12.1
+[23:13:21] select uncertain pairs ...
+pairs 16720350 uncertain 1179705
+[23:13:21] select uncertain pairs done in 0.1s
+[23:13:21] texts ...
+[23:13:26] texts done in 5.4s
+positives 392492 by fold [{'fold': 0, 'len': 232870}, {'fold': 1, 'len': 238135}, {'fold': 2, 'len': 240061}, {'fold': 3, 'len': 233153}, {'fold': 4, 'len': 235486}]

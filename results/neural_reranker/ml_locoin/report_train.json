@@ -1,0 +1,18 @@
+{
+ "args": {
+  "name": "locoin",
+  "split": "train",
+  "epochs": 2,
+  "max_train": 400000,
+  "score_only": false,
+  "fit_country": "India"
+ },
+ "pairs": 1254849,
+ "model": "FacebookAI/xlm-roberta-base",
+ "val_auc_mlxenc": 0.8443426577120308,
+ "val_auc_stage1": 0.8943008505053499,
+ "val_ap_mlxenc": 0.769320318606965,
+ "val_ap_stage1": 0.8741954859657739,
+ "runtime_s": 1103.3880643844604,
+ "gpu": "7.37 GiB peak"
+}

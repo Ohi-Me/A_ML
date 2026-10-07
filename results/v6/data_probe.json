@@ -1,0 +1,86 @@
+{
+ "T1_row_order": {
+  "S2": {
+   "spearman_s1row_vs_recordrow": 0.0009547762079582013,
+   "sibling_gap_median": 1087819.0,
+   "sibling_adjacent_share": 5.635253696303781e-07,
+   "random_expectation_adjacent": 3.9724976045839445e-07
+  },
+  "S3": {
+   "spearman_s1row_vs_recordrow": -0.0006552340409623794,
+   "sibling_gap_median": 1105592.0,
+   "sibling_adjacent_share": 0.0,
+   "random_expectation_adjacent": 3.7838634494493817e-07
+  }
+ },
+ "T2_source_versions": {
+  "same_source": {
+   "pairs": 5174346,
+   "identical_normalised_address": 0.48514846127413974,
+   "share_same_number_that_differs_from_S1": 0.12140722711623846
+  },
+  "cross_source": {
+   "pairs": 6347529,
+   "identical_normalised_address": 0.20856493920705207,
+   "share_same_number_that_differs_from_S1": 0.019154855377580788
+  },
+  "record_vs_S1": {
+   "pairs": 7301277,
+   "identical_normalised_address": 0.3590422606894657,
+   "record_number_differs_from_S1": 0.1561157041432615
+  }
+ },
+ "T3_empty_address": {
+  "empty_address_true_records": 337088,
+  "with_unique_name_key": 115232,
+  "with_ambiguous_name_key(>=2 S1)": 146723,
+  "ambiguous_mean_candidates": 82.43361981420773,
+  "count_prior_true_has_fewer_records": 0.1501511137644118,
+  "count_prior_true_has_more_records": 0.7479497033692772,
+  "random_guess_accuracy": 0.18101374893612857
+ },
+ "T4_density": {
+  "India": {
+   "train": {
+    "s1": 883188,
+    "records": 4133346,
+    "records_per_s1": 4.680029619967662
+   },
+   "test": {
+    "s1": 809986,
+    "records": 4717565,
+    "records_per_s1": 5.8242549871232345
+   },
+   "sim19": {
+    "s1": 715335,
+    "records_per_s1": 5.778196229738514
+   },
+   "test_s1_over_train_s1": 0.9171161745857054
+  },
+  "US": {
+   "train": {
+    "s1": 1323633,
+    "records": 6186873,
+    "records_per_s1": 4.674160435709898
+   },
+   "test": {
+    "s1": 663106,
+    "records": 3817031,
+    "records_per_s1": 5.756290849426788
+   },
+   "sim19": {
+    "s1": 1072633,
+    "records_per_s1": 5.76793087663721
+   },
+   "test_s1_over_train_s1": 0.5009742126405129
+  },
+  "France": {
+   "test": {
+    "s1": 259452,
+    "records": 1434993,
+    "records_per_s1": 5.530861199759493
+   }
+  }
+ },
+ "runtime_s": 32.138592004776
+}

@@ -1,0 +1,28 @@
+== 2026-10-05T19:02:38+05:30 blk_test
+python -u code/blocking/sparse_tfidf.py --split test --tag b1 --no_s1side --k_rid 20
+GPU: NVIDIA H100 NVL MIG 3g.47gb, 46.4 GiB, SMs 60, torch 2.5.1+cu121, cuda 12.1
+[19:02:40] load normalized ...
+[19:02:40] load normalized done in 0.4s
+[19:02:40] hash features ...
+nc nnz/doc 17.0
+nw nnz/doc 2.6
+aw nnz/doc 6.0
+[19:06:17] hash features done in 217.2s
+[19:06:17] save tfidf matrices ...
+[19:06:20] save tfidf matrices done in 2.7s
+countries in S1: ['France', 'India', 'US']
+[19:06:26] France: 1434993 records -> 259452 S1 ...
+/tmp/ai_25901334/AmazonML/code/blocking/sparse_tfidf.py:59: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at ../aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
+  return torch.sparse_csr_tensor(torch.from_numpy(m.indptr.astype(np.int64)), torch.from_numpy(m.indices.astype(np.int64)),
+    0/1434993 queries, 0s, eta 11s
+[19:06:27] France: 1434993 records -> 259452 S1 done in 0.4s
+Traceback (most recent call last):
+  File "/tmp/ai_25901334/AmazonML/code/blocking/sparse_tfidf.py", line 226, in <module>
+    main()
+  File "/tmp/ai_25901334/AmazonML/code/blocking/sparse_tfidf.py", line 176, in main
+    out, parts = retrieve(Xn, Xa, name[ir + n1], addr[ir + n1], K1, 2048, dev)
+  File "/tmp/ai_25901334/AmazonML/code/blocking/sparse_tfidf.py", line 87, in retrieve
+    D = dense_T(Qn[s:e], dev)
+  File "/tmp/ai_25901334/AmazonML/code/blocking/sparse_tfidf.py", line 66, in dense_T
+    d = torch.zeros((m_rows.shape[1], m_rows.shape[0]), device=dev, dtype=torch.float32)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 8.00 GiB. GPU 0 has a total capacity of 46.38 GiB of which 6.77 GiB is free. Process 105761 has 35.36 GiB memory in use. Process 2042458 has 2.40 GiB memory in use. Process 2092023 has 36.78 GiB memory in use. Including non-PyTorch memory, this process has 374.00 MiB memory in use. Of the allocated memory 71.71 MiB is allocated by PyTorch, and 10.29 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

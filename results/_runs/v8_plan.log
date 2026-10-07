@@ -1,0 +1,4 @@
+== 2026-10-05T23:49:25+05:30 v8_plan
+python -u code/v8/choose_v8.py plan
+GPU: NVIDIA H100 NVL MIG 3g.47gb, 46.4 GiB, SMs 60, torch 2.5.1+cu121, cuda 12.1
+{"plan": {"tag": "xgb_v8_c1", "col": "p_round1", "caps": true, "em": false, "gamma_unseen": "same", "pl": false}, "ceiling_v8": {"f0": 0.997593212111114, "f4": 0.9976781727900889, "pair_recall_f0": 0.9922455570126727}}

@@ -19,3 +19,11 @@ def numstreet_key(am, first_num):
     n = pl.Series(first_num).fill_null("")
     return pl.select(pl.when((n != "") & (s != "")).then(pl.concat_str([n, s], separator="|")).otherwise(pl.lit("")))\
         .to_series().to_numpy()
+
+
+def name_sib_key(country, n):
+    """country + normalised full name (legal words, typos and word order kept: the spelling of the source version that
+    same-source siblings share); '' when the name is empty. Used to find a record's siblings (V8)."""
+    c = pl.Series(country).fill_null("")
+    n = pl.Series(n).fill_null("")
+    return pl.select(pl.when(n != "").then(pl.concat_str([c, n], separator="|")).otherwise(pl.lit(""))).to_series().to_numpy()

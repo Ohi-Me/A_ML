@@ -1,0 +1,8 @@
+== 2026-10-05T23:41:54+05:30 v8x_prep_te
+python -u code/neural_reranker/prep_pairs.py --split test --scores test_stage1_final_v8.parquet --name v8band --raw --maxlen 110 --lo 0.01 --hi 0.99
+GPU: NVIDIA H100 NVL MIG 3g.47gb, 46.4 GiB, SMs 60, torch 2.5.1+cu121, cuda 12.1
+[23:41:56] select uncertain pairs ...
+pairs 20854679 uncertain 2408985
+[23:41:56] select uncertain pairs done in 0.1s
+[23:41:56] texts ...
+[23:42:04] texts done in 8.5s

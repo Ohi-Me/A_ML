@@ -1,0 +1,58 @@
+{
+ "rule": "V8 decisions, fixed before any V8 number exists (do not tune them on the results).\n\nSame measurement as V6 / V7: DMS universe, clean held-out folds 0 and 4 (min of the two). The Scorer counts every true\npair, also those candidate generation missed, so V8's candidate recall and its pruning loss both show up.\n\n  plan (before the V8 file is written)\n    round  round 2 (xgb_v8_c2) unless round 1 (xgb_v8_c1) is higher on DMS\n    caps   per-source caps if they do not lower that round's DMS score by more than 0.0001\n    em, France gamma: from the V6 plan (results/v6/v6_plan.json)\n  pick\n    reference = the best of V6 and V7 on DMS (whichever exists). V8 is submitted first if DMS(V8) >= reference + 0.0005\n    and, for US and India, its test / DMS-fold-0 ratio of predicted matches per S1 exceeds the V2 chain's by at most\n    0.003 (the V6 rule). Order: final_v8 > final_v7 / final_v6 (as their own choice files say) > final_v2 (keep).\n  Also reported: V8's candidate ceiling on DMS (perfect scorer on the pruned candidates), pairs per record on train and\n  test, and the pruning loss on fold 0.\n\n  python code/v8/choose_v8.py plan | final_args | pick\n",
+ "plan": {
+  "tag": "xgb_v8_c1",
+  "col": "p_round1",
+  "caps": true,
+  "em": false,
+  "gamma_unseen": "same",
+  "pl": false
+ },
+ "dms_min_f0_f4": {
+  "V8": 0.9878737914167272
+ },
+ "ceiling": {
+  "v8_dms": 0.997593212111114,
+  "v6_dms": null
+ },
+ "dms": {
+  "V8": {
+   "f0": 0.9881464141684443,
+   "f4": 0.9878737914167272,
+   "f3_es": 0.987842367574514,
+   "gamma": 1.0,
+   "extra": 0.05,
+   "capped_records": 747,
+   "by_country_f0": {
+    "India": {
+     "f05": 0.9868172323690562,
+     "precision": 0.9970198648066536,
+     "recall": 0.9684787987785006,
+     "fp": 1439,
+     "fn": 15669,
+     "pred_per_s1": 3.370943082733537
+    },
+    "US": {
+     "f05": 0.9895802916573718,
+     "precision": 0.9977146836041939,
+     "recall": 0.973693839680092,
+     "fp": 1024,
+     "fn": 12078,
+     "pred_per_s1": 3.374487890107242
+    }
+   }
+  }
+ },
+ "v2_test_over_dms_ratio": null,
+ "v8_test_over_dms_ratio": {
+  "US": 1.0328121276126707,
+  "India": 1.0038537327193708
+ },
+ "v8_better": true,
+ "v8_consistent": true,
+ "submit_order": [
+  "final_v8",
+  "final_v2 (keep)"
+ ],
+ "first_choice_file": "results/final/final_v8/output/matching_results.tsv"
+}

@@ -1,0 +1,31 @@
+{
+ "blend": {
+  "full": "xgb_v8_full",
+  "noemb": "xgb_v8_noemb",
+  "w_seen": 0.75,
+  "w_unseen": 0.5
+ },
+ "val": {
+  "n_s1": 276027,
+  "macro_f05": 0.9861638002941892,
+  "tp": 925708,
+  "fp": 3673,
+  "fn": 30518,
+  "n_pred_matches": 929381,
+  "n_pred_empty": 15559,
+  "n_true_singletons": 15226,
+  "singleton_acc": 0.979968474977013,
+  "pair_precision": 0.9960479071554077,
+  "pair_recall": 0.9680849506288263,
+  "thr": 0.65,
+  "margin": 0.4,
+  "candidate_recall": 0.9922455570126727
+ },
+ "best": {
+  "thr": 0.65,
+  "margin": 0.4,
+  "f05_tune": 0.9860086156788009,
+  "p": 0.9958069395553796,
+  "r": 0.9683851677018893
+ }
+}

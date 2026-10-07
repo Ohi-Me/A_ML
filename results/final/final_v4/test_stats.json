@@ -1,0 +1,30 @@
+{
+ "rule": {
+  "rule": "expected-F0.5",
+  "gamma": 1.0,
+  "extra": 0.0,
+  "f05_tune": 0.990751963411366
+ },
+ "test_s1": 1732544,
+ "candidate_pairs": 83108284,
+ "pred_matches": 5923052,
+ "s1_empty": 99584,
+ "by_country": {
+  "France": {
+   "s1": 259452,
+   "with_match": 244283,
+   "matches": 862155
+  },
+  "India": {
+   "s1": 809986,
+   "with_match": 763431,
+   "matches": 2748677
+  },
+  "US": {
+   "s1": 663106,
+   "with_match": 625246,
+   "matches": 2312220
+  }
+ },
+ "runtime_s": 117.81647801399231
+}

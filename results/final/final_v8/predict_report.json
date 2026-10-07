@@ -1,0 +1,34 @@
+{
+ "pairs": 20854679,
+ "runtime_s": 423.05836057662964,
+ "args": {
+  "step": "rounds",
+  "feats": "c4v8_train_dmsA",
+  "test_feats": "c4v8_test",
+  "s1": "xgb_v8_blend",
+  "c1": "xgb_v8_c1",
+  "c2": "xgb_v8_c2",
+  "etag": "e2f",
+  "btag": "b1",
+  "round_mult": 1.25,
+  "out": "final_v8"
+ },
+ "extras": [],
+ "mean_p_by_country": {
+  "France": {
+   "p_stage1": 0.29782533645629883,
+   "p_round1": 0.2928948402404785,
+   "p": 0.2930747866630554
+  },
+  "India": {
+   "p_stage1": 0.28656256198883057,
+   "p_round1": 0.2842893600463867,
+   "p": 0.2843518853187561
+  },
+  "US": {
+   "p_stage1": 0.31050366163253784,
+   "p_round1": 0.3049784302711487,
+   "p": 0.3046669661998749
+  }
+ }
+}

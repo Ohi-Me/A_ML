@@ -1,0 +1,119 @@
+== 2026-09-26T03:20:36+05:30 v4c
+python -u code/phase2/v4.py stage2 --var hash1
+GPU: NVIDIA H100 PCIe MIG 3g.40gb, 39.5 GiB, SMs 46, torch 2.5.1+cu121, cuda 12.1
+[03:20:39] stage-2 context + sibling features (test, stage-1 half A) ...
+    siblings a<60000: 10790594 record pairs
+    siblings a<120000: 9052749 record pairs
+    siblings a<180000: 9289510 record pairs
+    siblings a<240000: 9766189 record pairs
+    siblings a<300000: 9734976 record pairs
+    siblings a<360000: 9607170 record pairs
+    siblings a<420000: 9676140 record pairs
+    siblings a<480000: 9992610 record pairs
+    siblings a<540000: 10349937 record pairs
+    siblings a<600000: 10644901 record pairs
+    siblings a<660000: 10753192 record pairs
+    siblings a<720000: 10551095 record pairs
+    siblings a<780000: 10222585 record pairs
+    siblings a<840000: 10049389 record pairs
+    siblings a<900000: 9623155 record pairs
+    siblings a<960000: 9595174 record pairs
+    siblings a<1020000: 9435718 record pairs
+    siblings a<1080000: 9428859 record pairs
+    siblings a<1140000: 9143601 record pairs
+    siblings a<1200000: 9157082 record pairs
+    siblings a<1260000: 9289861 record pairs
+    siblings a<1320000: 9249714 record pairs
+    siblings a<1380000: 9305592 record pairs
+    siblings a<1440000: 9369642 record pairs
+    siblings a<1500000: 9358237 record pairs
+    siblings a<1560000: 9423645 record pairs
+    siblings a<1620000: 9530990 record pairs
+    siblings a<1680000: 9719422 record pairs
+    siblings a<1740000: 8581041 record pairs
+[03:31:17] stage-2 context + sibling features (test, stage-1 half A) done in 638.1s
+[03:31:19] stage-2 model A: score test ...
+/tmp/ai_25901334/AmazonML/code/phase2/v4.py:96: DeprecationWarning: the default behavior of `how='horizontal'` for `concat` is deprecated and will require equal heights in the next breaking release. Use `how='horizontal_extend'` to keep the current behavior.
+(Deprecated in version 1.42.1)
+  d = pl.concat([d, add.select(new_cols).rename({"p": "s1_p"})], how="horizontal")
+[03:37:10] stage-2 model A: score test done in 350.8s
+Traceback (most recent call last):
+  File "/tmp/ai_25901334/AmazonML/code/phase2/v4.py", line 112, in <module>
+    main()
+  File "/tmp/ai_25901334/AmazonML/code/phase2/v4.py", line 108, in main
+    {"prep": cmd_prep, "xmean": cmd_xmean, "stage2": cmd_stage2}[args.step](args)
+  File "/tmp/ai_25901334/AmazonML/code/phase2/v4.py", line 99, in cmd_stage2
+    pl.concat(outs).write_parquet(cpath(f"feats/p2_test_v4c_{args.var}_scores.parquet"))
+  File "/tmp/ai_25901334/AmazonML/pkgs/polars/dataframe/frame.py", line 4375, in write_parquet
+    self.lazy().sink_parquet(
+  File "/tmp/ai_25901334/AmazonML/pkgs/polars/lazyframe/frame.py", line 3021, in sink_parquet
+    return _select_engine(engine).sink_parquet(
+  File "/tmp/ai_25901334/AmazonML/pkgs/polars/lazyframe/engine.py", line 616, in sink_parquet
+    return self._finish_sink(ldf_py, lazy=lazy, optimizations=optimizations)
+  File "/tmp/ai_25901334/AmazonML/pkgs/polars/lazyframe/engine.py", line 522, in _finish_sink
+    self.collect(lf, optimizations=optimizations)
+  File "/tmp/ai_25901334/AmazonML/pkgs/polars/lazyframe/engine.py", line 443, in collect
+    return wrap_df(ldf.collect(self.name, callback))
+polars.exceptions.ComputeError: parquet: File out of specification: underlying IO error: No space left on device (os error 28)
+== 2026-09-26T10:14:22+05:30 v4c
+/Data3/ai_25901334/.conda/envs/refused_h100/bin/python -u code/phase2/v4.py stage2 --var hash1
+GPU: NVIDIA H100 NVL, 93.1 GiB, SMs 132, torch 2.5.1+cu121, cuda 12.1
+[10:14:25] stage-2 context + sibling features (test, stage-1 half A) ...
+    siblings a<60000: 10790594 record pairs
+    siblings a<120000: 9052749 record pairs
+    siblings a<180000: 9289510 record pairs
+    siblings a<240000: 9766189 record pairs
+    siblings a<300000: 9734976 record pairs
+    siblings a<360000: 9607170 record pairs
+    siblings a<420000: 9676140 record pairs
+    siblings a<480000: 9992610 record pairs
+    siblings a<540000: 10349937 record pairs
+    siblings a<600000: 10644901 record pairs
+    siblings a<660000: 10753192 record pairs
+    siblings a<720000: 10551095 record pairs
+    siblings a<780000: 10222585 record pairs
+    siblings a<840000: 10049389 record pairs
+    siblings a<900000: 9623155 record pairs
+    siblings a<960000: 9595174 record pairs
+    siblings a<1020000: 9435718 record pairs
+    siblings a<1080000: 9428859 record pairs
+    siblings a<1140000: 9143601 record pairs
+    siblings a<1200000: 9157082 record pairs
+    siblings a<1260000: 9289861 record pairs
+    siblings a<1320000: 9249714 record pairs
+    siblings a<1380000: 9305592 record pairs
+    siblings a<1440000: 9369642 record pairs
+    siblings a<1500000: 9358237 record pairs
+    siblings a<1560000: 9423645 record pairs
+    siblings a<1620000: 9530990 record pairs
+    siblings a<1680000: 9719422 record pairs
+    siblings a<1740000: 8581041 record pairs
+[10:17:38] stage-2 context + sibling features (test, stage-1 half A) done in 192.4s
+[10:17:38] stage-2 model A: score test ...
+/tmp/ai_25901334/AmazonML/code/phase2/v4.py:96: DeprecationWarning: the default behavior of `how='horizontal'` for `concat` is deprecated and will require equal heights in the next breaking release. Use `how='horizontal_extend'` to keep the current behavior.
+(Deprecated in version 1.42.1)
+  d = pl.concat([d, add.select(new_cols).rename({"p": "s1_p"})], how="horizontal")
+== 2026-09-26T11:32:32+05:30 v4c
+/Data3/ai_25901334/.conda/envs/refused_h100/bin/python -u code/phase2/v4.py stage2 --var hash1
+GPU: NVIDIA H100 NVL, 93.1 GiB, SMs 132, torch 2.5.1+cu121, cuda 12.1
+[11:32:35] stage-2 context + sibling features (test, stage-1 half A) ...
+    siblings a<60000: 10790594 record pairs
+    siblings a<120000: 9052749 record pairs
+== 2026-09-26T11:33:06+05:30 v4c
+/Data3/ai_25901334/.conda/envs/refused_h100/bin/python -u code/phase2/v4.py stage2 --var hash1
+GPU: NVIDIA H100 NVL, 93.1 GiB, SMs 132, torch 2.5.1+cu121, cuda 12.1
+[11:33:09] stage-2 context + sibling features (test, stage-1 half A) ...
+    siblings a<180000: 9289510 record pairs
+    siblings a<240000: 9766189 record pairs
+    siblings a<300000: 9734976 record pairs
+    siblings a<360000: 9607170 record pairs
+    siblings a<60000: 10790594 record pairs
+    siblings a<420000: 9676140 record pairs
+    siblings a<120000: 9052749 record pairs
+    siblings a<480000: 9992610 record pairs
+    siblings a<540000: 10349937 record pairs
+    siblings a<180000: 9289510 record pairs
+    siblings a<600000: 10644901 record pairs
+    siblings a<240000: 9766189 record pairs
+    siblings a<300000: 9734976 record pairs
+    siblings a<660000: 10753192 record pairs

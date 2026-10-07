@@ -1,0 +1,19 @@
+== 2026-10-05T20:29:20+05:30 cands_test
+python -u code/blocking/build_candidates.py --name c2 --split test --lists emb/e2f:emb:5,blocking/b1:comb:3,blocking/b1:name:2,blocking/b1:addr:2
+GPU: NVIDIA H100 NVL MIG 3g.47gb, 46.4 GiB, SMs 60, torch 2.5.1+cu121, cuda 12.1
+[20:29:21] load lists ...
+[20:29:24] load lists done in 2.9s
+[20:29:24] union ...
+[20:29:28] union done in 3.8s
+pairs 49847945
+{
+ "name": "c2",
+ "lists": "emb/e2f:emb:5,blocking/b1:comb:3,blocking/b1:name:2,blocking/b1:addr:2",
+ "pairs": 49847945,
+ "split": "test",
+ "n_s1": 1732544,
+ "s1_with_candidates": 1732523,
+ "records_with_candidates": 9969589,
+ "cands_per_record_mean": 5.0,
+ "runtime_s": 7.698517799377441
+}

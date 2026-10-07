@@ -1,0 +1,4 @@
+== 2026-09-26T02:43:53+05:30 v4_prep
+python -u code/phase2/v4.py prep
+wrote pairs table halfA
+wrote pairs table refit

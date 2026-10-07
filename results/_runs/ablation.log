@@ -1,0 +1,168 @@
+== 2026-09-26T10:15:15+05:30 ablation
+/Data3/ai_25901334/.conda/envs/refused_h100/bin/python -u code/phase2/ablation.py
+GPU: NVIDIA H100 NVL, 93.1 GiB, SMs 132, torch 2.5.1+cu121, cuda 12.1
+== V2
+V2 ok 0.9869619273322854
+== V3
+== 2026-09-26T10:19:36+05:30 ablation
+/Data3/ai_25901334/.conda/envs/refused_h100/bin/python -u code/phase2/ablation.py
+GPU: NVIDIA H100 NVL, 93.1 GiB, SMs 132, torch 2.5.1+cu121, cuda 12.1
+== V2
+V2 ok 0.9869619273322854
+== V3
+== 2026-09-26T10:21:23+05:30 ablation
+/Data3/ai_25901334/.conda/envs/refused_h100/bin/python -u code/phase2/ablation.py
+GPU: NVIDIA H100 NVL, 93.1 GiB, SMs 132, torch 2.5.1+cu121, cuda 12.1
+== V2
+V2 ok 0.9869619273322854
+== V3
+== 2026-09-26T10:22:19+05:30 ablation
+/Data3/ai_25901334/.conda/envs/refused_h100/bin/python -u code/phase2/ablation.py
+GPU: NVIDIA H100 NVL, 93.1 GiB, SMs 132, torch 2.5.1+cu121, cuda 12.1
+== V2
+V2 ok 0.9869619273322854
+== V3
+== 2026-09-26T10:25:24+05:30 ablation
+/Data3/ai_25901334/.conda/envs/refused_h100/bin/python -u code/phase2/ablation.py
+GPU: NVIDIA H100 NVL, 93.1 GiB, SMs 132, torch 2.5.1+cu121, cuda 12.1
+== V2
+V2 ok 0.9869619273322854
+== V3
+V3 ok 0.9907843520865446
+== V3_noGNN
+V3 ok 0.9907843520865446
+== V3_noGNN
+V3 ok 0.9907843520865446
+== V3_noGNN
+V3_noGNN ok 0.9895076980825659
+== V3_noXLMR
+V3_noGNN ok 0.9895076980825659
+== V3_noXLMR
+V3_noGNN ok 0.9895076980825659
+== V3_noXLMR
+V3_noXLMR ok 0.9884077020433424
+== V3_GNNnoCos
+V3_noXLMR ok 0.9884077020433424
+== V3_GNNnoCos
+V3_noXLMR ok 0.9884077020433424
+== V3_GNNnoCos
+V3_GNNnoCos ok 0.9908002840729234
+== V3_cosHash1_GNN
+V3_GNNnoCos ok 0.9908002840729234
+== V3_cosHash1_GNN
+V3_GNNnoCos ok 0.9908002840729234
+== V3_cosHash1_GNN
+V3_cosHash1_GNN ok 0.9907843520865446
+== V3_cosHash1_chain
+V3_cosHash1_GNN ok 0.9907843520865446
+== V3_cosHash1_chain
+V3_cosHash1_GNN ok 0.9907843520865446
+== V3_cosHash1_chain
+V3_cosHash1_chain ok 0.9907843520865446
+== V3_V2decoder
+V3_cosHash1_chain ok 0.9907843520865446
+== V3_V2decoder
+V3_cosHash1_chain ok 0.9907843520865446
+== V3_V2decoder
+V3_V2decoder ok 0.9907843520865446
+== V3_noIso
+V3_V2decoder ok 0.9907843520865446
+== V3_noIso
+V3_V2decoder ok 0.9907843520865446
+== V3_noIso
+V3_noIso ok 0.990804202094134
+== V3_thrMargin
+V3_noIso ok 0.990804202094134
+== V3_thrMargin
+V3_thrMargin ok 0.9907583226464228
+== V3_stage1halfA
+V3_thrMargin ok 0.9907583226464228
+== V3_stage1halfA
+V3_noIso ok 0.990804202094134
+== V3_thrMargin
+V3_thrMargin ok 0.9907583226464228
+== V3_stage1halfA
+V3_stage1halfA ok 0.9907843520865446
+== V3_stage1halfB
+V3_stage1halfA ok 0.9907843520865446
+== V3_stage1halfB
+V3_stage1halfA ok 0.9907843520865446
+== V3_stage1halfB
+V3_stage1halfB ok 0.9907843520865446
+== V4A
+V3_stage1halfB ok 0.9907843520865446
+== V4A
+V3_stage1halfB ok 0.9907843520865446
+== V4A
+V4A ok 0.9907843520865446
+== V4B
+V4A ok 0.9907843520865446
+== V4B
+V4A ok 0.9907843520865446
+== V4B
+V4B ok 0.9884077020433424
+== V4C
+Traceback (most recent call last):
+  File "/tmp/ai_25901334/AmazonML/code/phase2/ablation.py", line 276, in <module>
+    main()
+  File "/tmp/ai_25901334/AmazonML/code/phase2/ablation.py", line 192, in main
+    res[n] = run_system(n, systems[n], sc, c_tr, c_te, dev, 0 if args.no_boot else args.n_boot, args.force, stack_cache)
+  File "/tmp/ai_25901334/AmazonML/code/phase2/ablation.py", line 134, in run_system
+    T = load_scores(tpath, tcol, tlog)
+  File "/tmp/ai_25901334/AmazonML/code/phase2/../phase2/p2lib.py", line 58, in load_scores
+    T = pl.read_parquet(cpath(path)).select(["a", "b", col])
+  File "/tmp/ai_25901334/AmazonML/pkgs/polars/_utils/deprecation.py", line 132, in wrapper
+    return function(*args, **kwargs)
+  File "/tmp/ai_25901334/AmazonML/pkgs/polars/_utils/deprecation.py", line 132, in wrapper
+    return function(*args, **kwargs)
+  File "/tmp/ai_25901334/AmazonML/pkgs/polars/io/parquet/functions.py", line 303, in read_parquet
+    ret = lf._collect_eager()
+  File "/tmp/ai_25901334/AmazonML/pkgs/polars/lazyframe/frame.py", line 2240, in _collect_eager
+    return _eager_engine().collect(
+  File "/tmp/ai_25901334/AmazonML/pkgs/polars/lazyframe/engine.py", line 443, in collect
+    return wrap_df(ldf.collect(self.name, callback))
+polars.exceptions.ComputeError: parquet: File out of specification: The file must end with PAR1
+V4B ok 0.9884077020433424
+== V4C
+Traceback (most recent call last):
+  File "/tmp/ai_25901334/AmazonML/code/phase2/ablation.py", line 276, in <module>
+    main()
+  File "/tmp/ai_25901334/AmazonML/code/phase2/ablation.py", line 192, in main
+    res[n] = run_system(n, systems[n], sc, c_tr, c_te, dev, 0 if args.no_boot else args.n_boot, args.force, stack_cache)
+  File "/tmp/ai_25901334/AmazonML/code/phase2/ablation.py", line 134, in run_system
+    T = load_scores(tpath, tcol, tlog)
+  File "/tmp/ai_25901334/AmazonML/code/phase2/../phase2/p2lib.py", line 58, in load_scores
+    T = pl.read_parquet(cpath(path)).select(["a", "b", col])
+  File "/tmp/ai_25901334/AmazonML/pkgs/polars/_utils/deprecation.py", line 132, in wrapper
+    return function(*args, **kwargs)
+  File "/tmp/ai_25901334/AmazonML/pkgs/polars/_utils/deprecation.py", line 132, in wrapper
+    return function(*args, **kwargs)
+  File "/tmp/ai_25901334/AmazonML/pkgs/polars/io/parquet/functions.py", line 303, in read_parquet
+    ret = lf._collect_eager()
+  File "/tmp/ai_25901334/AmazonML/pkgs/polars/lazyframe/frame.py", line 2240, in _collect_eager
+    return _eager_engine().collect(
+  File "/tmp/ai_25901334/AmazonML/pkgs/polars/lazyframe/engine.py", line 443, in collect
+    return wrap_df(ldf.collect(self.name, callback))
+polars.exceptions.ComputeError: parquet: File out of specification: The file must end with PAR1
+V4B ok 0.9884077020433424
+== V4C
+Traceback (most recent call last):
+  File "/tmp/ai_25901334/AmazonML/code/phase2/ablation.py", line 276, in <module>
+    main()
+  File "/tmp/ai_25901334/AmazonML/code/phase2/ablation.py", line 192, in main
+    res[n] = run_system(n, systems[n], sc, c_tr, c_te, dev, 0 if args.no_boot else args.n_boot, args.force, stack_cache)
+  File "/tmp/ai_25901334/AmazonML/code/phase2/ablation.py", line 134, in run_system
+    T = load_scores(tpath, tcol, tlog)
+  File "/tmp/ai_25901334/AmazonML/code/phase2/../phase2/p2lib.py", line 58, in load_scores
+    T = pl.read_parquet(cpath(path)).select(["a", "b", col])
+  File "/tmp/ai_25901334/AmazonML/pkgs/polars/_utils/deprecation.py", line 132, in wrapper
+    return function(*args, **kwargs)
+  File "/tmp/ai_25901334/AmazonML/pkgs/polars/_utils/deprecation.py", line 132, in wrapper
+    return function(*args, **kwargs)
+  File "/tmp/ai_25901334/AmazonML/pkgs/polars/io/parquet/functions.py", line 303, in read_parquet
+    ret = lf._collect_eager()
+  File "/tmp/ai_25901334/AmazonML/pkgs/polars/lazyframe/frame.py", line 2240, in _collect_eager
+    return _eager_engine().collect(
+  File "/tmp/ai_25901334/AmazonML/pkgs/polars/lazyframe/engine.py", line 443, in collect
+    return wrap_df(ldf.collect(self.name, callback))
+polars.exceptions.ComputeError: parquet: File out of specification: The file must end with PAR1

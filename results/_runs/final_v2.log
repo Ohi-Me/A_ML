@@ -1,0 +1,100 @@
+== 2026-10-05T21:28:28+05:30 final_v2
+python -u code/final/predict_test_v2.py --s1_feats c2_train_sim19 --s1_tag xgb_c2_sim19_v2 --blend_from xgb_c2_blend_v2 --s2_tag xgb_c2_blend_s2_v2 --test_feats c2_test --rename r_e2f_emb:r_e3_emb --etag_test e2f --out final_v2
+GPU: NVIDIA H100 NVL MIG 3g.47gb, 46.4 GiB, SMs 60, torch 2.5.1+cu121, cuda 12.1
+[21:28:31] stage 1 (xgb_c2_sim19_v2): fit on all folds ...
+[21:35:04] stage 1 (xgb_c2_sim19_v2): fit on all folds done in 393.1s
+[21:35:04] stage 1 (xgb_c2_sim19_v2): score test ...
+[21:35:58] stage 1 (xgb_c2_sim19_v2): score test done in 53.8s
+[21:35:58] stage 1 (xgb_c2_sim19_noemb_v2): fit on all folds ...
+[21:41:41] stage 1 (xgb_c2_sim19_noemb_v2): fit on all folds done in 343.3s
+[21:41:41] stage 1 (xgb_c2_sim19_noemb_v2): score test ...
+[21:42:29] stage 1 (xgb_c2_sim19_noemb_v2): score test done in 47.3s
+stage-1 blend weights by country: {'France': 0.5, 'India': 0.75, 'US': 0.75}
+[21:42:36] stage 2: test features ...
+    siblings a<60000: 5817099 record pairs
+    siblings a<120000: 5767269 record pairs
+    siblings a<180000: 5795175 record pairs
+    siblings a<240000: 5823302 record pairs
+    siblings a<300000: 5797488 record pairs
+    siblings a<360000: 5777333 record pairs
+    siblings a<420000: 5810780 record pairs
+    siblings a<480000: 5825306 record pairs
+    siblings a<540000: 5783637 record pairs
+    siblings a<600000: 5821997 record pairs
+    siblings a<660000: 5777808 record pairs
+    siblings a<720000: 5809873 record pairs
+    siblings a<780000: 5786593 record pairs
+    siblings a<840000: 5871804 record pairs
+    siblings a<900000: 5735252 record pairs
+    siblings a<960000: 5846599 record pairs
+    siblings a<1020000: 5813177 record pairs
+    siblings a<1080000: 5867285 record pairs
+    siblings a<1140000: 5778621 record pairs
+    siblings a<1200000: 5796505 record pairs
+    siblings a<1260000: 5849441 record pairs
+    siblings a<1320000: 5824577 record pairs
+    siblings a<1380000: 5857606 record pairs
+    siblings a<1440000: 5773545 record pairs
+    siblings a<1500000: 5812956 record pairs
+    siblings a<1560000: 5778268 record pairs
+    siblings a<1620000: 5815149 record pairs
+    siblings a<1680000: 5761358 record pairs
+    siblings a<1740000: 5093604 record pairs
+[21:47:53] stage 2: test features done in 317.0s
+[21:47:53] stage 2: fit on all folds ...
+[21:50:42] stage 2: fit on all folds done in 169.0s
+[21:50:42] stage 2: score test ...
+/tmp/ai_25901334/AmazonML/code/final/predict_test_v2.py:140: DeprecationWarning: the default behavior of `how='horizontal'` for `concat` is deprecated and will require equal heights in the next breaking release. Use `how='horizontal_extend'` to keep the current behavior.
+(Deprecated in version 1.42.1)
+  d = pl.concat([d, add], how="horizontal")
+[21:51:27] stage 2: score test done in 45.4s
+[21:51:28] calibrate + decode ...
+[21:53:35] calibrate + decode done in 126.8s
+[21:53:35] write submission files ...
+[21:54:21] write submission files done in 45.9s
+{
+ "test_s1": 1732544,
+ "candidate_pairs": 49847945,
+ "pred_matches": 5817987,
+ "s1_with_matches": 1633357,
+ "s1_empty": 99187,
+ "decode": {
+  "rule": "expected-F0.5",
+  "gamma": 1.0,
+  "extra": 0.05,
+  "f05_tune": 0.9862011067515714
+ },
+ "by_country": {
+  "France": {
+   "s1": 259452,
+   "with_match": 244619,
+   "matches": 848325
+  },
+  "India": {
+   "s1": 809986,
+   "with_match": 763453,
+   "matches": 2722291
+  },
+  "US": {
+   "s1": 663106,
+   "with_match": 625285,
+   "matches": 2247371
+  }
+ },
+ "args": {
+  "s1_feats": "c2_train_sim19",
+  "s1_tag": "xgb_c2_sim19_v2",
+  "s2_tag": "xgb_c2_blend_s2_v2",
+  "test_feats": "c2_test",
+  "rename": "r_e2f_emb:r_e3_emb",
+  "etag_test": "e2f",
+  "btag": "b1",
+  "out": "final_v2",
+  "round_mult": 1.25,
+  "extra_test": "",
+  "stage1_from": "",
+  "blend_from": "xgb_c2_blend_v2"
+ },
+ "runtime_s": 1549.7490713596344,
+ "gpu": "22.47 GiB peak"
+}

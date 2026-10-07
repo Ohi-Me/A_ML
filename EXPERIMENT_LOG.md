@@ -81,3 +81,47 @@ All compute runs as PBS GPU jobs on the NITJ H100 cluster (MIG 3g.47gb slice, 46
 Validated progression (test-prior simulation, fold 0): exact keys 0.641 -> stage 1 C1 0.9818 -> C2 (OOF embeddings,
 number/legal/token features) 0.9852 -> stage 2 0.9869 -> GNN 0.9884 -> GNN + multilingual cross-encoder 0.9908.
 Submissions: final_c1 (0.983 plain val), final_c2v1 (0.9848 sim), final_v2 (0.9870 sim), **final_v3 (0.9908 sim)**.
+
+## Phase 2 (25 Sep, evening): V3 leaderboard regression (0.99078 val → 0.982814 LB, V2 0.98696 → 0.98332)
+| id | what | result |
+|---|---|---|
+| SUBDIFF | label-free diff of the submitted files (`code/audit/submission_diff.py`) | V3 vs V2: +106,409 / −39,770 pairs (net +66,639, +1.14 %); 99.4 % of V3-only accepts are records V2 left unassigned, 98.2 % land on S1 V2 already matched; empty rate 5.705 % → 5.745 %. Validation predicted only +5,379 on 358 k S1 (≈ +26 k at test scale) → test change ≈ 2.5× validation |
+| CODE-AUDIT | train/test pipeline mismatches (see `PHASE2.md` §2) | M1 test `cos_e3` = mean of 5 fold models vs single held-out model in validation (GNN edge input in V3; dropped by V2's stage 2); M2 refit stage 1 vs half models; M3 XLM-R mean of halves + band from refit; M4 GNN mean of halves vs single chain on validation; M5 r_e3_emb from e2f on test |
+| PHASE2-SUITE | `code/phase2/` + `run_all.sh` + `H100_MANUAL.md`: cosine variants, 10-way ablation, extra-accept trace, India→US LOCO, chain-A V4 candidates (V4A/B/C), pre-registered selection | written and CPU smoke-tested on synthetic data (`code/phase2/tests/smoke.sh`); **labelled runs pending on the GPU** |
+| LB-V4A | V4A (chain-A replay + validation-style cosine) submitted | leaderboard **0.981** (V3 0.982814, V2 0.98332): more test accepts -> lower LB; the chain/cosine hypothesis is not the cause |
+| COS-RESULT | `results/phase2/cos/cos_report.json` (H100 run) | 5-model mean vs validation-style cosine on test: Pearson 0.96 (all pairs) / 0.985 (top pair), mean diff 0.035 -> minor |
+| V5 | `V5.md`, `code/v5/`: V2 recipe + 21 transferable features (ambiguity, specificity, street core), LOCO-chosen unseen-country decoder, France pseudo-labels gated by India->US LOCO, pre-registered choice | smoke-tested on CPU; **H100 run pending** (`bash run_all.sh --stage v5all`) |
+| ABLATION (H100) | `results/phase2/ablation.csv/json` | V3's extra test accepts are US (+49.4 k, 9.4x what validation predicted) and India (+17.8 k, 0.85x = consistent), France -0.6 k. Test/val predicted-matches-per-S1 in the US: V2 +0.95 %, V3 +2.9 %, V4A +3.5 %, GNN-only +9.3 %: **same order as the leaderboard**. "V3 without GNN" (stage 1 + XLM-R stack): val 0.98951, US +0.6 % (most consistent) -> best untested submission |
+| DENSITY | train vs test S1 per country | US test 0.66 M vs train 1.32 M (50 %), India 92 %: SIM19 matched records-per-S1 but not index density -> competition / count features shift in US -> over-acceptance. `code/v6/simulate_universe.py` + `score_chain.py` reproduce it on labelled data; `--stage v6a` retrains the V2 recipe at test density |
+| DATA STUDY | 3,000 true pairs, 40 multi-record entities, error dumps (`V6_RESEARCH.md`) | noise operators quantified; same-source siblings share addresses (81 % identical vs 76 % record-S1, 60 % cross-source) and non-S1 house numbers (8 of 12 groups) -> hierarchical generator, collective evidence; recall is ~90 % of the validation loss (FN 31.7 k vs FP 1.6 k); >50 % of misses involve empty-address records |
+
+## V6 (26 Sep): the chain trained at test density + collective sibling rounds + second cross-encoder (`V6.md`)
+| id | what | status |
+|---|---|---|
+| V6-DESIGN | DMS universe (US at test density) → V5 transferable features (name DF over the universe's S1) → stage 1 full + no-emb → XLM-R base score + `BAAI/bge-reranker-v2-m3` (Apache-2.0, 568 M) fine-tuned on V6's band [0.01, 0.99] → collective rounds 1-2 (exact same/cross-source sibling evidence, iterative) → isotonic on DMS → per-source caps (≤ 5 S2 / ≤ 6 S3, ground-truth limits) → optional per-country EM prior correction → expected-F0.5 (France: LOCO gamma if the plan says so) → optional France pseudo-labels | code complete; `bash code/v6/tests/smoke_v6.sh` runs the 35 runner steps end to end on synthetic data: PASS; phase-2 and V5 smoke tests still PASS |
+| V6-RULES | pre-registered plan (caps / EM / France gamma / pseudo-labels) and pick (DMS min(f0, f4) vs V2 chain and V3-without-GNN chain applied to DMS as on test, + US/India consistency gate) in `code/v6/choose_v6.py` | fixed before any V6 number |
+| V6-CEILING | `score_chain.py` now reports the perfect-scorer ceiling on the candidates (SIM19 and DMS) and the V3-without-GNN chain on DMS | pending (H100) |
+| V6-RUN | `bash run_all.sh --stage v6all` (≈ 11-14 h on the H100, reuses the V2/V3/phase-2 cache) | **pending (H100)** |
+
+## V6 result and V7 (26-27 Sep)
+| id | what | result / status |
+|---|---|---|
+| V6-RUN (H100) | `results/v6/v6_choice.json` | DMS min(f0, f4): V6 0.99127 (round 1 0.99128), V3-without-GNN chain 0.98981, V2 chain 0.98680; **candidate ceiling 0.99635** (pair recall 0.988); caps on, EM off, pseudo-labels off; US/India test/DMS ratio 1.0019 / 0.996 (consistent). **LB 0.988109** (best so far; V2 0.98332) |
+| DIAGNOSIS | ceiling vs target | validation >= 0.998 is impossible on C2 candidates; loss = blocking 0.0037 + scorer 0.0051 (FN 22.3 k vs FP 1.4 k); LB - DMS gap consistent with France ≈ 0.97 (inference) |
+| V7-DIAG | `code/v7/miss_probe.py`, `error_dump.py` (`--stage v7diag`) | blocking misses by type + simulated recall of new passes; V6 loss decomposition; FN / FP / France samples. Pending (H100) |
+| V7 | `V7.md`: native test-density candidates (lists re-cut on the universe's S1), deeper lists, exact key / address / number+street blocks, sibling expansion, pass flags as features, cross-encoders re-scored OOF with existing checkpoints, optional Qwen3 decoder reranker, same V6 chain, fixed choice rule vs V6 | smoke test of all 33 V7 runner steps PASS (real candidate builder, pair features, bi-encoder cosines, universe, XGBoost, rounds, test, choice); causal reranker path tested on a tiny random Qwen3. **H100 run pending** |
+
+## V8 (27 Sep): wide candidates + pruner, name-sibling evidence (`V8.md`)
+| id | what | result / status |
+|---|---|---|
+| V7-REVIEW | code review of V7 + CPU smoke test | V7 smoke PASS (33 steps). No correctness bug found. Gaps vs the new targets: V7 grows the candidate table (budget 12 per record vs C2 8.2) and needs >= 128 GB RAM for its test pair features; `sib_key` groups by key + state, so empty-address records (no state) are never grouped with their addressed siblings |
+| V8-DESIGN | wide union (`cands_plan.py --wide`, new `sib_name` pass) -> light XGBoost pruner (`code/v8/prune.py`, chunked, cut fixed in advance: score >= tau or top-2, <= 10 per record, tau = 0.05 % quantile of true-pair scores on folds 1-2) -> V7 chain on the pruned table; collective `c_name_same` / `c_name_cross`; `code/v8/sib_probe.py` (name-sibling structure, report-only id check); `choose_v8.py` (V8 first if DMS >= best(V6, V7) + 0.0005 and consistent) | V8 smoke PASS (38 runner steps); pruner parts never split a record. **H100 run pending** (`bash run_all.sh --stage v8all`) |
+
+## V8 run on the H100 (5-6 Oct) and storage clean-up (7 Oct)
+| id | what | result |
+|---|---|---|
+| V8-RUN (H100) | `bash run_all.sh --stage v8all` on the V6 cache, run by a teammate (v8_job.pbs); `results/v8/`, `results/v7/{cands_c3*.json,miss_probe.json}`, `results/final/final_v8/` | finished 6 Oct 00:00. Candidates: wide union 15.2 pairs per record, recall **0.9929** (C2: 0.988), pruned by the new pruner to **2.1 pairs per record** keeping 99.93 % of the true pairs of every fold -> perfect-scorer ceiling on DMS **0.99759** (V6: 0.99635, pair recall 0.9922). Test: 20.9 M pruned pairs (2.09 per record) instead of 83.1 M |
+| V8-SCORE | `results/v8/v8_choice.json`, `v8_plan.json` | plan: round 1 (xgb_v8_c1), caps on, EM off. DMS min(f0, f4) **0.98787** (c2: 0.98778), i.e. **below V6 (0.99127)** although the ceiling is higher: the gap between ceiling and score grew from 0.005 (V6) to 0.010. US test / DMS predicted-per-S1 ratio 1.033 (India 1.004): the same over-acceptance pattern as V3. The cluster run had no V6 files to compare with, so `v8_better: true` in the choice file is vacuous. Not recommended over V6. Test file: 5.90 M matches, 99.1 k empty S1 (`submissions/final_v8/`) |
+| V8-SIB | `results/v8/sib_probe.json` | for the empty-address records with an ambiguous name key (83.6 k in the DMS sample) only 40 % have a sibling with the identical normalised name, and the share of that name group that belongs to the same S1 is 0.50: the name-sibling signal is too weak to resolve them. Report-only id check: Spearman 0.001 (true pairs) vs 0.001 (random) -> ids carry no information |
+| V8-ENV | what differed on the cluster from `v8-work` | two edits: `ngram_biencoder.py` moves embedding chunks to the CPU (GPU memory; kept in the repo) and `validate.sh` was replaced by a file-exists check, so the V8 `v8_val` step did **not** run the official validator (not kept: the repo keeps the real validator) |
+| LB (V6 line) | leaderboard so far | V2 0.98332, V3 0.982814, V4A 0.981, V6 0.988109, V6 + consensus pairs (M1) 0.988059, V6 minus pairs no other system predicts (T1) 0.988285. V8 not uploaded as far as this log knows |

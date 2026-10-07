@@ -1,0 +1,16 @@
+== 2026-10-05T20:18:42+05:30 e2f_emb_train
+python -u code/embeddings/ngram_biencoder.py --mode embed --split train --tag e2f --model_from e2f
+GPU: NVIDIA H100 NVL MIG 3g.47gb, 46.4 GiB, SMs 60, torch 2.5.1+cu121, cuda 12.1
+[20:18:44] load inputs to GPU ...
+[20:19:09] load inputs to GPU done in 25.1s
+rows 12527040 S1 2206821 3.79 GiB peak
+/tmp/ai_25901334/AmazonML/code/embeddings/ngram_biencoder.py:190: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(mpath, map_location=dev))
+[20:19:14] embed all rows ...
+[20:19:42] embed all rows done in 27.6s
+[20:19:42] dense retrieval per country ...
+[20:25:37] dense retrieval per country done in 355.6s
+[20:25:37] recall ...
+val {'recall@1': 0.9803588756720821, 'recall@2': 0.9866974028854792, 'recall@3': 0.9894495289781341, 'recall@5': 0.9920256393981965, 'recall@10': 0.9944342404792861, 'recall@20': 0.9964181792127453, 'union_tfidf_comb@3': 0.9894495289781341, 'union_tfidf_comb@5': 0.9920256393981965, 'union_tfidf_comb@10': 0.9944342404792861, 'union_tfidf_comb@20': 0.9964181792127453}
+train_folds {'recall@1': 0.9802520158452606, 'recall@2': 0.9867365335906563, 'recall@3': 0.9894774088507996, 'recall@5': 0.9920240153503417, 'recall@10': 0.9944398545881142, 'recall@20': 0.9963825421941274, 'union_tfidf_comb@3': 0.9894774088507996, 'union_tfidf_comb@5': 0.9920240153503417, 'union_tfidf_comb@10': 0.9944398545881142, 'union_tfidf_comb@20': 0.9963825421941274}
+[20:25:44] recall done in 6.2s

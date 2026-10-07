@@ -1,0 +1,95 @@
+{
+ "rule": "V6 decisions, fixed before any V6 result exists (do not tune them on the results).\n\nEvery labelled number below is measured on the density-matched universe (DMS, code/v6/simulate_universe.py): the\ntraining data rebuilt at test density, clean held-out folds 0 and 4 (fold 3 was the early-stopping fold). Test labels\nare never used.\n\n  plan (run before the V6 submission files are written)\n    caps   per-source caps (<= 5 S2 / <= 6 S3 records per S1) are used if, on the V6 OOF table, min(f0, f4) with caps\n           >= without caps - 0.0001\n    em     per-country EM prior correction is used if, on the V2 chain applied to DMS exactly as it is applied to test\n           (score_chain.py), EM raises min(f0, f4) by > 0.001 and lowers no country's f0 by > 0.0005\n    gamma  the unseen country (France) gets the leave-one-country-out gamma (India -> US inside DMS, V6 features,\n           loco_eval.py) if that gamma beats the seen-country gamma on the unseen country by > 0.001; else the same\n    pl     France pseudo-labels (pl_v6.py) are used if, in that LOCO run, stage1_pl beats stage1_all on the unseen\n           country by > 0.001 and the pseudo-positive precision is >= 0.99\n  pick (after the files exist)\n    DMS score = min(f0, f4) of each system as it would run on test:\n      V2 chain and V3-without-GNN chain: trained on SIM19, applied to DMS with their SIM19 calibration (score_chain)\n      V6a, V6: trained and calibrated on DMS (their OOF tables), V6 with the plan's caps\n    a V6 system is submitted first if DMS(V6) >= max(DMS(V2), DMS(V3 without GNN)) + 0.0005 and it is consistent:\n    for US and India, (test predicted matches per S1) / (DMS fold-0 predicted per S1) may exceed the V2 chain's ratio\n    by at most 0.003. Order: final_v6pl (plan.pl) > final_v6 > final_v6a (same test) > final_v3nognn > V2 (keep).\n\n  python code/v6/choose_v6.py plan   -> results/v6/v6_plan.json\n  python code/v6/choose_v6.py pick   -> results/v6/v6_choice.json\n",
+ "v6_dms": {
+  "no_caps": {
+   "f0": 0.9914335998137999,
+   "f4": 0.9912691964515791,
+   "f3_es": 0.991375409505414,
+   "gamma": 1.0,
+   "extra": 0.0,
+   "capped_records": 0,
+   "by_country_f0": {
+    "India": {
+     "f05": 0.9913057302447493,
+     "precision": 0.9984953336818835,
+     "recall": 0.9758536614805248,
+     "fp": 731,
+     "fn": 12003,
+     "pred_per_s1": 3.3915933064791997
+    },
+    "US": {
+     "f05": 0.9915715412877691,
+     "precision": 0.998423018151973,
+     "recall": 0.9776796215467447,
+     "fp": 709,
+     "fn": 10248,
+     "pred_per_s1": 3.3858973972767803
+    }
+   }
+  },
+  "caps": {
+   "f0": 0.9914339783753462,
+   "f4": 0.9912695686310519,
+   "f3_es": 0.9913765885432123,
+   "gamma": 1.0,
+   "extra": 0.0,
+   "capped_records": 448,
+   "by_country_f0": {
+    "India": {
+     "f05": 0.9913057302447493,
+     "precision": 0.9984953336818835,
+     "recall": 0.9758536614805248,
+     "fp": 731,
+     "fn": 12003,
+     "pred_per_s1": 3.3915933064791997
+    },
+    "US": {
+     "f05": 0.9915723282290266,
+     "precision": 0.9984252388832542,
+     "recall": 0.9776796215467447,
+     "fp": 708,
+     "fn": 10248,
+     "pred_per_s1": 3.3858898662489456
+    }
+   }
+  }
+ },
+ "em_evidence": {
+  "gain_min_f0_f4": -3.301000959576861e-05,
+  "country_delta_f0": {
+   "India": -1.7951003338900762e-05,
+   "US": 0.00019548292470750184
+  }
+ },
+ "gamma_evidence": {
+  "grid": {
+   "1.0": 0.9794149204711509,
+   "1.25": 0.9790246180174222,
+   "1.5": 0.9784406079736665,
+   "2.0": 0.9772941103844064,
+   "3.0": 0.9750341533757019
+  },
+  "best": 1.0,
+  "nearest_to_seen": 1.0,
+  "gain": 0.0
+ },
+ "pl_evidence": {
+  "gain_unseen": -0.0009332568930048302,
+  "pseudo_positive_precision": 0.9995031314502081,
+  "pseudo_labels": {
+   "records": 3830652,
+   "pos_records": 1686528,
+   "distractor_records": 1444320,
+   "pairs": 4001240,
+   "pos_pairs": 509189,
+   "pseudo_label_accuracy": 0.9990997790684888,
+   "pseudo_positive_precision": 0.9995031314502081
+  }
+ },
+ "plan": {
+  "caps": true,
+  "em": false,
+  "gamma_unseen": "same",
+  "pl": false
+ }
+}

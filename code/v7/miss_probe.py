@@ -15,6 +15,8 @@ recall 0.988; results/v6/v6_choice.json, ceiling_dms). Validation >= 0.998 is im
      sib_addr      top-2 recut candidates of the record's siblings = other records with the identical non-empty
                    normalised address (hierarchical generator: 81 % of same-source siblings share it)
      sib_key       same with siblings = records with the identical name key and state (blocks <= 30)
+     sib_name      same with siblings = records with the identical normalised full name (legal words and typos kept:
+                   the source version's spelling), any address, groups of <= 5 / 10 / 20 records (V8)
   miss profile     empty address, key / address equality, script, source, rank in each list
 Writes results/v7/miss_probe.json and results/v7/missed_sample.tsv (500 missed pairs with the raw texts).
 
@@ -32,7 +34,7 @@ import polars as pl
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 from common.io import CACHE, NORM, RESULTS, load_gt, load_source  # noqa: E402
 from v6.simulate_universe import h  # noqa: E402
-from v7.keys import numstreet_key  # noqa: E402
+from v7.keys import name_sib_key, numstreet_key  # noqa: E402
 
 LISTS = [("emb/e3", "emb", 5), ("blocking/b1", "comb", 3), ("blocking/b1", "name", 2), ("blocking/b1", "addr", 2)]
 PLANS = {"dms": {"US": (0.62, 0.19), "India": (1.0, 0.19)}, "sim19": {"US": (1.0, 0.19), "India": (1.0, 0.19)},
@@ -73,12 +75,13 @@ def main():
     ap.add_argument("--sample_records", type=int, default=300_000, help="records used to estimate pairs per record")
     args = ap.parse_args()
     t0 = time.time()
-    want = ["id", "country", "key", "am", "first_num", "state", "nonlatin"]
+    want = ["id", "country", "key", "n", "am", "first_num", "state", "nonlatin"]
     def rd(k):
         path = os.path.join(CACHE, f"norm_{NORM}_train_s{k}.parquet")
         have = pl.read_parquet_schema(path)
         d = pl.read_parquet(path, columns=[c for c in want if c in have])
-        return d if "nonlatin" in d.columns else d.with_columns(pl.lit(False).alias("nonlatin"))
+        d = d if "nonlatin" in d.columns else d.with_columns(pl.lit(False).alias("nonlatin"))
+        return d if "n" in d.columns else d.with_columns(pl.col("key").alias("n"))
     s1 = rd(1)
     parts = [rd(2), rd(3)]
     rr = pl.concat(parts)
@@ -176,6 +179,8 @@ def main():
                                                                       separator="|")).otherwise(pl.lit("")).alias("gk"))
     rep["passes"]["sib_addr"] = sib_pass(gk["ga"].to_numpy(), 50)
     rep["passes"]["sib_key"] = sib_pass(gk["gk"].to_numpy(), 30)
+    gn = name_sib_key(rr["country"], rr["n"])
+    rep["passes"]["sib_name"] = {str(cap): sib_pass(gn, cap) for cap in (5, 10, 20)}
     allp = base | (key_eq & True) | addr_eq | ns_eq
     rep["recall_recut_plus_all_exact_passes_uncapped"] = float(allp.mean())
     # ---- profile of the misses (recut C2 depths)

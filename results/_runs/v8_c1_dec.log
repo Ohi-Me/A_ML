@@ -1,0 +1,19 @@
+== 2026-10-05T23:20:18+05:30 v8_c1_dec
+python -u code/xgboost/decode_eval.py --tag xgb_v8_c1 --simdrop 62
+GPU: NVIDIA H100 NVL MIG 3g.47gb, 46.4 GiB, SMs 60, torch 2.5.1+cu121, cuda 12.1
+[23:20:23] baseline threshold rule ...
+threshold rule {'thr': 0.7, 'margin': 0.5, 'f05_tune': 0.9878970917336938, 'val': {'n_s1': 276027, 'macro_f05': 0.9878485668411561, 'tp': 929845, 'fp': 2825, 'fn': 26381, 'n_pred_matches': 932670, 'n_pred_empty': 15863, 'n_true_singletons': 15226, 'singleton_acc': 0.9896886903980034, 'pair_precision': 0.9969710615759058, 'pair_recall': 0.9724113337223627}}
+[23:20:32] baseline threshold rule done in 9.0s
+[23:20:32] isotonic calibration on folds 1-2 ...
+[23:20:44] isotonic calibration on folds 1-2 done in 11.2s
+[23:20:44] expected-F decoding grid ...
+{'gamma': 0.8, 'extra': 0.0, 'f05_tune': 0.987892951768325}
+{'gamma': 0.8, 'extra': 0.05, 'f05_tune': 0.9878925468241215}
+{'gamma': 1.0, 'extra': 0.0, 'f05_tune': 0.9880108858573204}
+{'gamma': 1.0, 'extra': 0.05, 'f05_tune': 0.988011584058817}
+{'gamma': 1.25, 'extra': 0.0, 'f05_tune': 0.9880063566163304}
+{'gamma': 1.25, 'extra': 0.05, 'f05_tune': 0.9879933212446992}
+{'gamma': 1.5, 'extra': 0.0, 'f05_tune': 0.9878491506373939}
+{'gamma': 1.5, 'extra': 0.05, 'f05_tune': 0.9878484832820307}
+expected-F decode {"gamma": 1.0, "extra": 0.05, "f05_tune": 0.988011584058817} {"n_s1": 276027, "macro_f05": 0.988145414765962, "tp": 928479, "fp": 2465, "fn": 27747, "n_pred_matches": 930944, "n_pred_empty": 15605, "n_true_singletons": 15226, "singleton_acc": 0.9843031656377249, "pair_precision": 0.9973521500756222, "pair_recall": 0.9709828011369697}
+[23:25:18] expected-F decoding grid done in 274.9s

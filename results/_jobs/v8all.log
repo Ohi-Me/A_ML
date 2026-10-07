@@ -1,0 +1,334 @@
+job 34045.master on master at 2026-10-04T21:02:17+05:30; PBS CUDA_VISIBLE_DEVICES=unset
+CUDA_VISIBLE_DEVICES=MIG-32c916d8-1eff-5d16-963e-c216a6b6ba8e
+waiting 6300s to skip the :44 window
+missing data/dataset/train/train_source1.tsv - pass --data /path/to/dataset (folder with train/ and test/)
+EXIT rc=3 after 0 s at 2026-10-04T22:47:27+05:30
+job 34078.master on master at 2026-10-05T09:48:39+05:30; PBS CUDA_VISIBLE_DEVICES=unset
+CUDA_VISIBLE_DEVICES=MIG-004fd09c-9a79-5488-bc35-54fb8de861f1
+waiting 3540s to skip the :44 window
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ModuleNotFoundError: No module named 'polars'
+EXIT rc=4 after 2 s at 2026-10-05T10:47:54+05:30
+job 34142.master on master at 2026-10-05T17:17:59+05:30; PBS CUDA_VISIBLE_DEVICES=unset
+CUDA_VISIBLE_DEVICES=MIG-c7e12075-054a-5bc9-89e9-896eab5f7528
+waiting 5340s to skip the :44 window
+Terminated
+job 34144.master on master at 2026-10-05T18:16:02+05:30; PBS CUDA_VISIBLE_DEVICES=unset
+CUDA_VISIBLE_DEVICES=MIG-2f219700-5dc6-59eb-81ef-2bb9414d3ec0
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ModuleNotFoundError: No module named 'rapidfuzz'
+EXIT rc=4 after 3 s at 2026-10-05T18:16:07+05:30
+job 34145.master on master at 2026-10-05T18:17:28+05:30; PBS CUDA_VISIBLE_DEVICES=unset
+CUDA_VISIBLE_DEVICES=MIG-2f219700-5dc6-59eb-81ef-2bb9414d3ec0
+GPU NVIDIA H100 NVL MIG 3g.47gb 46 GiB | torch 2.5.1+cu121 | xgboost 3.2.0
+[run ] 18:17:38 v8_sib_probe
+[FAIL] v8_sib_probe (exit 1) after 1 s - last lines of results/_runs/v8_sib_probe.log:
+== 2026-10-05T18:17:38+05:30 v8_sib_probe
+python -u code/v8/sib_probe.py
+Traceback (most recent call last):
+  File "/tmp/ai_25901334/AmazonML/code/v8/sib_probe.py", line 122, in <module>
+    main()
+  File "/tmp/ai_25901334/AmazonML/code/v8/sib_probe.py", line 46, in main
+    s1 = rd(1)
+  File "/tmp/ai_25901334/AmazonML/code/v8/sib_probe.py", line 45, in <lambda>
+    rd = lambda k: pl.read_parquet(os.path.join(CACHE, f"norm_{NORM}_train_s{k}.parquet"), columns=cols)  # noqa: E731
+  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/_utils/deprecation.py", line 132, in wrapper
+    return function(*args, **kwargs)
+  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/_utils/deprecation.py", line 132, in wrapper
+    return function(*args, **kwargs)
+  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/io/parquet/functions.py", line 303, in read_parquet
+    ret = lf._collect_eager()
+  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/lazyframe/frame.py", line 2240, in _collect_eager
+    return _eager_engine().collect(
+  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/lazyframe/engine.py", line 443, in collect
+    return wrap_df(ldf.collect(self.name, callback))
+FileNotFoundError: No such file or directory (os error 2): data/cache_v2/norm_v2_train_s1.parquet
+EXIT rc=1 after 4 s at 2026-10-05T18:17:39+05:30
+job 34149.master on master at 2026-10-05T18:42:43+05:30; PBS CUDA_VISIBLE_DEVICES=unset
+CUDA_VISIBLE_DEVICES=MIG-c7e12075-054a-5bc9-89e9-896eab5f7528
+GPU NVIDIA H100 NVL MIG 1g.24gb 22 GiB | torch 2.5.1+cu121 | xgboost 3.2.0
+[run ] 18:42:49 v8_sib_probe
+[FAIL] v8_sib_probe (exit 1) after 2 s - last lines of results/_runs/v8_sib_probe.log:
+  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/lazyframe/frame.py", line 2240, in _collect_eager
+    return _eager_engine().collect(
+  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/lazyframe/engine.py", line 443, in collect
+    return wrap_df(ldf.collect(self.name, callback))
+FileNotFoundError: No such file or directory (os error 2): data/cache_v2/norm_v2_train_s1.parquet
+== 2026-10-05T18:42:49+05:30 v8_sib_probe
+python -u code/v8/sib_probe.py
+Traceback (most recent call last):
+  File "/tmp/ai_25901334/AmazonML/code/v8/sib_probe.py", line 122, in <module>
+    main()
+  File "/tmp/ai_25901334/AmazonML/code/v8/sib_probe.py", line 46, in main
+    s1 = rd(1)
+  File "/tmp/ai_25901334/AmazonML/code/v8/sib_probe.py", line 45, in <lambda>
+    rd = lambda k: pl.read_parquet(os.path.join(CACHE, f"norm_{NORM}_train_s{k}.parquet"), columns=cols)  # noqa: E731
+  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/_utils/deprecation.py", line 132, in wrapper
+    return function(*args, **kwargs)
+  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/_utils/deprecation.py", line 132, in wrapper
+    return function(*args, **kwargs)
+  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/io/parquet/functions.py", line 303, in read_parquet
+    ret = lf._collect_eager()
+  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/lazyframe/frame.py", line 2240, in _collect_eager
+    return _eager_engine().collect(
+  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/lazyframe/engine.py", line 443, in collect
+    return wrap_df(ldf.collect(self.name, callback))
+FileNotFoundError: No such file or directory (os error 2): data/cache_v2/norm_v2_train_s1.parquet
+EXIT rc=1 after 5 s at 2026-10-05T18:42:51+05:30
+job 34150.master on master at 2026-10-05T18:46:16+05:30; PBS CUDA_VISIBLE_DEVICES=unset
+CUDA_VISIBLE_DEVICES=MIG-c7e12075-054a-5bc9-89e9-896eab5f7528
+GPU NVIDIA H100 NVL MIG 1g.24gb 22 GiB | torch 2.5.1+cu121 | xgboost 3.2.0
+[run ] 18:46:22 v8_sib_probe
+[ ok ] v8_sib_probe in 40 s
+[run ] 18:47:02 v8_miss_probe
+[FAIL] v8_miss_probe (exit 1) after 11 s - last lines of results/_runs/v8_miss_probe.log:
+== 2026-10-05T18:47:02+05:30 v8_miss_probe
+python -u code/v7/miss_probe.py --universe dms
+Traceback (most recent call last):
+  File "/tmp/ai_25901334/AmazonML/code/v7/miss_probe.py", line 220, in <module>
+    main()
+  File "/tmp/ai_25901334/AmazonML/code/v7/miss_probe.py", line 100, in main
+    C = pl.read_parquet(os.path.join(CACHE, "cands", "c2_train.parquet"), columns=["a", "b"])
+  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/_utils/deprecation.py", line 132, in wrapper
+    return function(*args, **kwargs)
+  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/_utils/deprecation.py", line 132, in wrapper
+    return function(*args, **kwargs)
+  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/io/parquet/functions.py", line 303, in read_parquet
+    ret = lf._collect_eager()
+  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/lazyframe/frame.py", line 2240, in _collect_eager
+    return _eager_engine().collect(
+  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/lazyframe/engine.py", line 443, in collect
+    return wrap_df(ldf.collect(self.name, callback))
+FileNotFoundError: No such file or directory (os error 2): data/cache_v2/cands/c2_train.parquet
+EXIT rc=1 after 54 s at 2026-10-05T18:47:13+05:30
+job 34151.master on master at 2026-10-05T18:48:32+05:30; PBS CUDA_VISIBLE_DEVICES=unset
+CUDA_VISIBLE_DEVICES=MIG-c7e12075-054a-5bc9-89e9-896eab5f7528
+GPU NVIDIA H100 NVL MIG 1g.24gb 22 GiB | torch 2.5.1+cu121 | xgboost 3.2.0
+[skip] prep_train
+[skip] prep_test
+[run ] 18:48:41 blk_train
+[FAIL] blk_train (exit 1) after 212 s - last lines of results/_runs/blk_train.log:
+python -u code/blocking/sparse_tfidf.py --split train --tag b1 --no_s1side --k_rid 20
+GPU: NVIDIA H100 NVL MIG 1g.24gb, 21.6 GiB, SMs 26, torch 2.5.1+cu121, cuda 12.1
+[18:48:43] load normalized ...
+[18:48:43] load normalized done in 0.4s
+[18:48:43] hash features ...
+nc nnz/doc 17.1
+nw nnz/doc 2.6
+aw nnz/doc 5.6
+[18:52:02] hash features done in 198.6s
+[18:52:02] save tfidf matrices ...
+[18:52:05] save tfidf matrices done in 2.9s
+countries in S1: ['India', 'US']
+[18:52:11] India: 4133346 records -> 883188 S1 ...
+/tmp/ai_25901334/AmazonML/code/blocking/sparse_tfidf.py:59: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at ../aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
+  return torch.sparse_csr_tensor(torch.from_numpy(m.indptr.astype(np.int64)), torch.from_numpy(m.indices.astype(np.int64)),
+    0/4133346 queries, 0s, eta 18s
+[18:52:12] India: 4133346 records -> 883188 S1 done in 0.7s
+Traceback (most recent call last):
+  File "/tmp/ai_25901334/AmazonML/code/blocking/sparse_tfidf.py", line 226, in <module>
+    main()
+  File "/tmp/ai_25901334/AmazonML/code/blocking/sparse_tfidf.py", line 176, in main
+    out, parts = retrieve(Xn, Xa, name[ir + n1], addr[ir + n1], K1, 2048, dev)
+  File "/tmp/ai_25901334/AmazonML/code/blocking/sparse_tfidf.py", line 88, in retrieve
+    SnT = torch.sparse.mm(Xn, D).T.contiguous().half()
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 6.74 GiB. GPU 0 has a total capacity of 21.62 GiB of which 6.46 GiB is free. Process 1675824 has 342.00 MiB memory in use. Process 1874620 has 822.00 MiB memory in use. Including non-PyTorch memory, this process has 15.14 GiB memory in use. Of the allocated memory 15.00 GiB is allocated by PyTorch, and 2.28 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+EXIT rc=1 after 215 s at 2026-10-05T18:52:13+05:30
+job 34152.master on master at 2026-10-05T19:02:34+05:30; PBS CUDA_VISIBLE_DEVICES=unset
+CUDA_VISIBLE_DEVICES=MIG-4d38d5cf-c802-5308-80b8-251f3cec7480
+GPU NVIDIA H100 NVL MIG 3g.47gb 46 GiB | torch 2.5.1+cu121 | xgboost 3.2.0
+[skip] prep_train
+[skip] prep_test
+[skip] blk_train
+[run ] 19:02:38 blk_test
+[FAIL] blk_test (exit 1) after 230 s - last lines of results/_runs/blk_test.log:
+[19:02:40] load normalized ...
+[19:02:40] load normalized done in 0.4s
+[19:02:40] hash features ...
+nc nnz/doc 17.0
+nw nnz/doc 2.6
+aw nnz/doc 6.0
+[19:06:17] hash features done in 217.2s
+[19:06:17] save tfidf matrices ...
+[19:06:20] save tfidf matrices done in 2.7s
+countries in S1: ['France', 'India', 'US']
+[19:06:26] France: 1434993 records -> 259452 S1 ...
+/tmp/ai_25901334/AmazonML/code/blocking/sparse_tfidf.py:59: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at ../aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
+  return torch.sparse_csr_tensor(torch.from_numpy(m.indptr.astype(np.int64)), torch.from_numpy(m.indices.astype(np.int64)),
+    0/1434993 queries, 0s, eta 11s
+[19:06:27] France: 1434993 records -> 259452 S1 done in 0.4s
+Traceback (most recent call last):
+  File "/tmp/ai_25901334/AmazonML/code/blocking/sparse_tfidf.py", line 226, in <module>
+    main()
+  File "/tmp/ai_25901334/AmazonML/code/blocking/sparse_tfidf.py", line 176, in main
+    out, parts = retrieve(Xn, Xa, name[ir + n1], addr[ir + n1], K1, 2048, dev)
+  File "/tmp/ai_25901334/AmazonML/code/blocking/sparse_tfidf.py", line 87, in retrieve
+    D = dense_T(Qn[s:e], dev)
+  File "/tmp/ai_25901334/AmazonML/code/blocking/sparse_tfidf.py", line 66, in dense_T
+    d = torch.zeros((m_rows.shape[1], m_rows.shape[0]), device=dev, dtype=torch.float32)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 8.00 GiB. GPU 0 has a total capacity of 46.38 GiB of which 6.77 GiB is free. Process 105761 has 35.36 GiB memory in use. Process 2042458 has 2.40 GiB memory in use. Process 2092023 has 36.78 GiB memory in use. Including non-PyTorch memory, this process has 374.00 MiB memory in use. Of the allocated memory 71.71 MiB is allocated by PyTorch, and 10.29 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+EXIT rc=1 after 234 s at 2026-10-05T19:06:28+05:30
+job 34153.master on master at 2026-10-05T19:33:48+05:30; PBS CUDA_VISIBLE_DEVICES=unset
+CUDA_VISIBLE_DEVICES=MIG-2f219700-5dc6-59eb-81ef-2bb9414d3ec0
+GPU NVIDIA H100 NVL MIG 3g.47gb 46 GiB | torch 2.5.1+cu121 | xgboost 3.2.0
+[skip] prep_train
+[skip] prep_test
+[skip] blk_train
+[skip] blk_test
+[run ] 19:33:52 e3_train
+[FAIL] e3_train (exit 1) after 319 s - last lines of results/_runs/e3_train.log:
+    epoch 4 loss 0.0563
+    epoch 5 loss 0.0497
+    epoch 6 loss 0.0444
+    epoch 7 loss 0.0416
+    epoch 8 loss 0.0390
+    epoch 9 loss 0.0372
+    epoch 10 loss 0.0352
+    epoch 11 loss 0.0336
+    epoch 12 loss 0.0318
+    epoch 13 loss 0.0309
+    epoch 14 loss 0.0293
+    epoch 15 loss 0.0286
+    epoch 16 loss 0.0278
+    epoch 17 loss 0.0266
+    epoch 18 loss 0.0261
+    epoch 19 loss 0.0253
+[19:39:10] fold model 0 done in 278.2s
+Traceback (most recent call last):
+  File "/tmp/ai_25901334/AmazonML/code/embeddings/oof_biencoder.py", line 211, in <module>
+    main()
+  File "/tmp/ai_25901334/AmazonML/code/embeddings/oof_biencoder.py", line 165, in main
+    E = encode_rows(model, NM, AD, HAS, torch.arange(n_all, device=dev))
+  File "/tmp/ai_25901334/AmazonML/code/embeddings/ngram_biencoder.py", line 75, in encode_rows
+    return torch.cat(out)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 5.97 GiB. GPU 0 has a total capacity of 46.38 GiB of which 5.12 GiB is free. Process 2954011 has 45.82 GiB memory in use. Process 2154217 has 28.90 GiB memory in use. Including non-PyTorch memory, this process has 12.30 GiB memory in use. Of the allocated memory 11.81 GiB is allocated by PyTorch, and 73.45 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+EXIT rc=1 after 323 s at 2026-10-05T19:39:11+05:30
+job 34154.master on master at 2026-10-05T19:55:25+05:30; PBS CUDA_VISIBLE_DEVICES=unset
+CUDA_VISIBLE_DEVICES=MIG-2f219700-5dc6-59eb-81ef-2bb9414d3ec0
+GPU NVIDIA H100 NVL MIG 3g.47gb 46 GiB | torch 2.5.1+cu121 | xgboost 3.2.0
+[skip] prep_train
+[skip] prep_test
+[skip] blk_train
+[skip] blk_test
+[run ] 19:55:28 e3_train
+[ ok ] e3_train in 1174 s
+[run ] 20:15:02 e2f_train
+[ ok ] e2f_train in 220 s
+[run ] 20:18:42 e2f_emb_train
+[ ok ] e2f_emb_train in 423 s
+[run ] 20:25:45 e2f_emb_test
+[ ok ] e2f_emb_test in 196 s
+[run ] 20:29:01 cands_train
+[ ok ] cands_train in 19 s
+[run ] 20:29:20 cands_test
+[ ok ] cands_test in 10 s
+[run ] 20:29:30 paircos_train
+[ ok ] paircos_train in 82 s
+[run ] 20:30:52 paircos_test
+[ ok ] paircos_test in 92 s
+[run ] 20:32:24 feats_train
+[ ok ] feats_train in 797 s
+[run ] 20:45:41 feats_test
+[ ok ] feats_test in 791 s
+[run ] 20:58:52 sim19
+[ ok ] sim19 in 40 s
+[run ] 20:59:32 xgb_full
+[ ok ] xgb_full in 427 s
+[run ] 21:06:39 xgb_noemb
+[ ok ] xgb_noemb in 383 s
+[run ] 21:13:02 blend
+[ ok ] blend in 45 s
+[run ] 21:13:47 stage2
+[ ok ] stage2 in 488 s
+[run ] 21:21:55 dec_v2
+[ ok ] dec_v2 in 393 s
+[run ] 21:28:28 final_v2
+[ ok ] final_v2 in 1556 s
+[run ] 21:54:24 val_v2
+[FAIL] val_v2 (exit 2) after 0 s - last lines of results/_runs/val_v2.log:
+== 2026-10-05T21:54:24+05:30 val_v2
+bash code/final/validate.sh results/final/final_v2/output
+python: can't open file '/tmp/ai_25901334/AmazonML/data/utils/validate_submission.py': [Errno 2] No such file or directory
+EXIT rc=2 after 7139 s at 2026-10-05T21:54:24+05:30
+job 34158.master on master at 2026-10-05T22:11:38+05:30; PBS CUDA_VISIBLE_DEVICES=unset
+CUDA_VISIBLE_DEVICES=MIG-2f219700-5dc6-59eb-81ef-2bb9414d3ec0
+GPU NVIDIA H100 NVL MIG 3g.47gb 46 GiB | torch 2.5.1+cu121 | xgboost 3.2.0
+[skip] v8_sib_probe
+[run ] 22:11:41 v8_miss_probe
+[ ok ] v8_miss_probe in 237 s
+[run ] 22:15:38 v8_cands_plan
+[ ok ] v8_cands_plan in 1 s
+[run ] 22:15:39 v8_cands_train
+[ ok ] v8_cands_train in 226 s
+[run ] 22:19:25 v8_cands_test
+[ ok ] v8_cands_test in 226 s
+[run ] 22:23:11 v8_paircos_train
+[ ok ] v8_paircos_train in 102 s
+[run ] 22:24:53 v8_paircos_test
+[ ok ] v8_paircos_test in 110 s
+[run ] 22:26:43 v8_prune_feats_train
+[ ok ] v8_prune_feats_train in 161 s
+[run ] 22:29:24 v8_prune_feats_test
+[ ok ] v8_prune_feats_test in 222 s
+[run ] 22:33:06 v8_prune_fit
+[ ok ] v8_prune_fit in 329 s
+[run ] 22:38:35 v8_prune_train
+[ ok ] v8_prune_train in 20 s
+[run ] 22:38:55 v8_prune_test
+[ ok ] v8_prune_test in 709 s
+[run ] 22:50:44 v8_feats_train
+[ ok ] v8_feats_train in 279 s
+[run ] 22:55:23 v8_feats_test
+[ ok ] v8_feats_test in 368 s
+[run ] 23:01:31 v8_universe
+[ ok ] v8_universe in 36 s
+[run ] 23:02:07 v8_xfeats_train
+[ ok ] v8_xfeats_train in 70 s
+[run ] 23:03:17 v8_xfeats_test
+[ ok ] v8_xfeats_test in 83 s
+[run ] 23:04:40 v8_full
+[ ok ] v8_full in 233 s
+[run ] 23:08:33 v8_noemb
+[ ok ] v8_noemb in 229 s
+[run ] 23:12:22 v8_blend
+[ ok ] v8_blend in 57 s
+[run ] 23:13:19 v8x_prep
+[ ok ] v8x_prep in 9 s
+[run ] 23:13:28 v8x_xlmr
+[ ok ] v8x_xlmr in 0 s
+[run ] 23:13:28 v8x_bge
+[ ok ] v8x_bge in 0 s
+[run ] 23:13:28 v8x_qwen
+[ ok ] v8x_qwen in 0 s
+[run ] 23:13:28 v8_c1
+[ ok ] v8_c1 in 410 s
+[run ] 23:20:18 v8_c1_dec
+[ ok ] v8_c1_dec in 301 s
+[run ] 23:25:19 v8_c2
+[ ok ] v8_c2 in 336 s
+[run ] 23:30:55 v8_c2_dec
+[ ok ] v8_c2_dec in 299 s
+[run ] 23:35:54 v8_test_s1
+[ ok ] v8_test_s1 in 360 s
+[run ] 23:41:54 v8x_prep_te
+[ ok ] v8x_prep_te in 12 s
+[run ] 23:42:06 v8x_xlmr_te
+[ ok ] v8x_xlmr_te in 0 s
+[run ] 23:42:06 v8x_bge_te
+[ ok ] v8x_bge_te in 0 s
+[run ] 23:42:06 v8x_qwen_te
+[ ok ] v8x_qwen_te in 0 s
+[run ] 23:42:06 v8_test_rounds
+[ ok ] v8_test_rounds in 439 s
+[run ] 23:49:25 v8_plan
+[ ok ] v8_plan in 404 s
+[run ] 23:56:09 v8_final
+[ ok ] v8_final in 154 s
+[run ] 23:58:44 v8_val
+[ ok ] v8_val in 0 s
+[run ] 23:58:44 v8_choose
+[ ok ] v8_choose in 105 s
+done (v8all). Choice: results/v8/v8_choice.json (V8) / results/v7/v7_choice.json (V7) / results/v6/v6_choice.json (V6), first_choice_file
+EXIT rc=0 after 6531 s at 2026-10-06T00:00:29+05:30

@@ -1,0 +1,202 @@
+== 2026-10-05T18:47:02+05:30 v8_miss_probe
+python -u code/v7/miss_probe.py --universe dms
+Traceback (most recent call last):
+  File "/tmp/ai_25901334/AmazonML/code/v7/miss_probe.py", line 220, in <module>
+    main()
+  File "/tmp/ai_25901334/AmazonML/code/v7/miss_probe.py", line 100, in main
+    C = pl.read_parquet(os.path.join(CACHE, "cands", "c2_train.parquet"), columns=["a", "b"])
+  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/_utils/deprecation.py", line 132, in wrapper
+    return function(*args, **kwargs)
+  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/_utils/deprecation.py", line 132, in wrapper
+    return function(*args, **kwargs)
+  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/io/parquet/functions.py", line 303, in read_parquet
+    ret = lf._collect_eager()
+  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/lazyframe/frame.py", line 2240, in _collect_eager
+    return _eager_engine().collect(
+  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/lazyframe/engine.py", line 443, in collect
+    return wrap_df(ldf.collect(self.name, callback))
+FileNotFoundError: No such file or directory (os error 2): data/cache_v2/cands/c2_train.parquet
+== 2026-10-05T22:11:41+05:30 v8_miss_probe
+python -u code/v7/miss_probe.py --universe dms
+{
+ "universe": "dms",
+ "true_pairs": 4778345,
+ "present_s1": 1380302,
+ "kept_records": 7973917,
+ "lists": {
+  "emb": {
+   "depth": 20,
+   "c2_depth": 5,
+   "recall_top1": 0.9706186974778924,
+   "recall_top2": 0.9790990395210057,
+   "recall_top3": 0.9825284695851807,
+   "recall_top5": 0.9857745725769068,
+   "recall_top10": 0.9890123044694346,
+   "recall_top20": 0.9905297754766557
+  },
+  "comb": {
+   "depth": 20,
+   "c2_depth": 3,
+   "recall_top1": 0.0,
+   "recall_top2": 0.0,
+   "recall_top3": 0.0,
+   "recall_top5": 0.0,
+   "recall_top10": 0.0,
+   "recall_top20": 0.0
+  },
+  "name": {
+   "depth": 20,
+   "c2_depth": 2,
+   "recall_top1": 0.0,
+   "recall_top2": 0.0,
+   "recall_top3": 0.0,
+   "recall_top5": 0.0,
+   "recall_top10": 0.0,
+   "recall_top20": 0.0
+  },
+  "addr": {
+   "depth": 20,
+   "c2_depth": 2,
+   "recall_top1": 0.0,
+   "recall_top2": 0.0,
+   "recall_top3": 0.0,
+   "recall_top5": 0.0,
+   "recall_top10": 0.0,
+   "recall_top20": 0.0
+  }
+ },
+ "recall_c2_as_filtered": 0.9837516964555719,
+ "recall_recut": {
+  "c2_depths": 0.9857745725769068,
+  "x2_depths": 0.9890123044694346,
+  "x4_depths": 0.9905297754766557,
+  "all_20": 0.9905297754766557
+ },
+ "pairs_per_record_recut": {
+  "c2_depths": 4.997636666666667,
+  "x2_depths": 9.642476666666667,
+  "x4_depths": 13.35758,
+  "all_20": 13.35758
+ },
+ "passes": {
+  "key": {
+   "1": {
+    "recall_gain": 6.341107642918207e-05,
+    "pairs_per_record": 0.22839640793853258
+   },
+   "3": {
+    "recall_gain": 0.00012703143033832845,
+    "pairs_per_record": 0.4324858159421524
+   },
+   "5": {
+    "recall_gain": 0.00017893224536947417,
+    "pairs_per_record": 0.5762056464846574
+   },
+   "10": {
+    "recall_gain": 0.0004436682575243102,
+    "pairs_per_record": 0.81771919622439
+   },
+   "30": {
+    "recall_gain": 0.0013458634736503957,
+    "pairs_per_record": 1.6054567661037857
+   }
+  },
+  "addr": {
+   "1": {
+    "recall_gain": 0.00030303379098830244,
+    "pairs_per_record": 0.18987117623622116
+   },
+   "3": {
+    "recall_gain": 0.00031705538214591035,
+    "pairs_per_record": 0.21309489426589215
+   },
+   "5": {
+    "recall_gain": 0.00032333370654483927,
+    "pairs_per_record": 0.22616626182590063
+   },
+   "10": {
+    "recall_gain": 0.000328774921023911,
+    "pairs_per_record": 0.23067157583907633
+   }
+  },
+  "numstreet": {
+   "1": {
+    "recall_gain": 0.0003580737682189126,
+    "pairs_per_record": 0.25632396223838294
+   },
+   "3": {
+    "recall_gain": 0.0003890468352536286,
+    "pairs_per_record": 0.3098912366406623
+   },
+   "5": {
+    "recall_gain": 0.00040202203901141506,
+    "pairs_per_record": 0.34036496743068684
+   },
+   "10": {
+    "recall_gain": 0.0004193920698484517,
+    "pairs_per_record": 0.3625579498758264
+   }
+  },
+  "sib_addr": {
+   "recall_gain": 0.0011506075848437063,
+   "misses_with_sibling": 0.3125606849677818
+  },
+  "sib_key": {
+   "recall_gain": 0.0019785092955824663,
+   "misses_with_sibling": 0.8239768146644305
+  },
+  "sib_name": {
+   "5": {
+    "recall_gain": 0.0005079164438733495,
+    "misses_with_sibling": 0.5503133551063641
+   },
+   "10": {
+    "recall_gain": 0.0008716407040512981,
+    "misses_with_sibling": 0.6161179274428458
+   },
+   "20": {
+    "recall_gain": 0.0014471537739531156,
+    "misses_with_sibling": 0.7689999117309559
+   }
+  }
+ },
+ "recall_recut_plus_all_exact_passes_uncapped": 0.9927615105229949,
+ "miss_profile": {
+  "n_missed": 67974,
+  "share_of_true_pairs": 0.014225427423093143,
+  "empty_record_address": 0.6536028481478212,
+  "key_equal": 0.4594992202901109,
+  "addr_equal": 0.02311177803277724,
+  "numstreet_equal": 0.030070321005090182,
+  "first_num_equal": 0.18505605084296936,
+  "record_nonlatin": 0.0454291346691382,
+  "source_S3": 0.5833112660723218,
+  "by_country": {
+   "India": 0.6306087621737724,
+   "US": 0.3693912378262277
+  },
+  "rank_in_lists": {
+   "emb": {
+    "1-5": 0.0,
+    "5-20": 0.33427486980316,
+    "absent": 0.66572513019684
+   },
+   "comb": {
+    "1-5": 0.0,
+    "5-20": 0.0,
+    "absent": 1.0
+   },
+   "name": {
+    "1-5": 0.0,
+    "5-20": 0.0,
+    "absent": 1.0
+   },
+   "addr": {
+    "1-5": 0.0,
+    "5-20": 0.0,
+    "absent": 1.0
+   }
+  }
+ },
+ "runtime_s": 233.18739414215088
+}

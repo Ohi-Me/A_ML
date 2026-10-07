@@ -10,6 +10,12 @@ Every chosen pass keeps its efficiency (gain / pairs per record) so build_cands.
 passes first if the total goes over the pair budget. Without a probe the conservative default below is used.
 
   python code/v7/cands_plan.py [--budget 12]   -> results/v7/cands_plan.json
+
+V8 (--wide): the union is only the input of the candidate pruner (code/v8/prune.py), which cuts it back to a few
+pairs per record, so recall counts more than size here: depth x2 / x4 need >= 0.0002 recall (instead of 0.0005) and
+<= BUDGET - 4 pairs per record, block passes may take up to 3 pairs per record, and the name-sibling pass (sib_name)
+takes its largest cap that adds >= 0.0002.
+  python code/v7/cands_plan.py --wide --budget 24 --out results/v8/cands_plan.json
 """
 import argparse
 import json
@@ -26,9 +32,12 @@ DEFAULT = {"depth_mult": 2, "passes": {"key": 5, "addr": 5, "numstreet": 5, "sib
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--budget", type=float, default=12.0, help="max candidate pairs per record (C2: ~8.2)")
+    ap.add_argument("--wide", action="store_true", help="V8: wide union for the pruner")
+    ap.add_argument("--out", default=os.path.join(RESULTS, "v7", "cands_plan.json"))
     args = ap.parse_args()
     path = os.path.join(RESULTS, "v7", "miss_probe.json")
-    out = {"budget_pairs_per_record": args.budget}
+    g_depth, slack, blk_ppr = (0.0002, 4, 3.0) if args.wide else (0.0005, 2, 1.5)
+    out = {"budget_pairs_per_record": args.budget, "wide": args.wide}
     if not os.path.exists(path):
         out.update(DEFAULT)
         out["source"] = "default (no miss_probe.json)"
@@ -36,15 +45,15 @@ def main():
         P = json.load(open(path))
         rc, ppr = P["recall_recut"], P["pairs_per_record_recut"]
         mult = 1
-        if rc["x2_depths"] - rc["c2_depths"] >= 0.0005 and ppr["x2_depths"] <= args.budget - 2:
+        if rc["x2_depths"] - rc["c2_depths"] >= g_depth and ppr["x2_depths"] <= args.budget - slack:
             mult = 2
-            if rc["x4_depths"] - rc["x2_depths"] >= 0.0005 and ppr["x4_depths"] <= args.budget - 2:
+            if rc["x4_depths"] - rc["x2_depths"] >= g_depth and ppr["x4_depths"] <= args.budget - slack:
                 mult = 4
         passes, eff = {}, {}
         for name in ("key", "addr", "numstreet"):
             best = None
             for cap, v in sorted(P["passes"][name].items(), key=lambda t: int(t[0])):
-                if v["recall_gain"] >= 0.0002 and v["pairs_per_record"] <= 1.5:
+                if v["recall_gain"] >= 0.0002 and v["pairs_per_record"] <= blk_ppr:
                     best = (int(cap), v)
             passes[name] = best[0] if best else 0
             eff[name] = best[1]["recall_gain"] / max(best[1]["pairs_per_record"], 1e-3) if best else 0.0
@@ -52,11 +61,19 @@ def main():
             g = P["passes"][name]["recall_gain"]
             passes[name] = cap if g >= 0.0002 else 0
             eff[name] = g                     # cost measured by build_cands.py
+        passes["sib_name"], eff["sib_name"] = 0, 0.0
+        if args.wide and "sib_name" in P["passes"]:
+            for cap, v in sorted(P["passes"]["sib_name"].items(), key=lambda t: int(t[0])):
+                if v["recall_gain"] >= 0.0002:
+                    passes["sib_name"], eff["sib_name"] = int(cap), v["recall_gain"]
         out.update({"depth_mult": mult, "passes": passes, "efficiency": eff, "source": "miss_probe.json",
                     "probe": {"recall_c2_as_filtered": P["recall_c2_as_filtered"], "recall_recut": rc,
                               "pairs_per_record_recut": ppr}})
-    os.makedirs(os.path.join(RESULTS, "v7"), exist_ok=True)
-    json.dump(out, open(os.path.join(RESULTS, "v7", "cands_plan.json"), "w"), indent=1)
+    if args.wide and out["source"].startswith("default"):
+        out["passes"] = dict(out["passes"], sib_name=10)
+        out["efficiency"] = dict(out["efficiency"], sib_name=1.0)
+    os.makedirs(os.path.dirname(args.out), exist_ok=True)
+    json.dump(out, open(args.out, "w"), indent=1)
     print(json.dumps(out, indent=1), flush=True)
 
 

@@ -1,0 +1,9 @@
+== 2026-10-05T23:35:54+05:30 v8_test_s1
+python -u code/v6/predict_v6.py --step stage1 --feats c4v8_train_dmsA --test_feats c4v8_test --s1 xgb_v8_blend --c1 xgb_v8_c1 --c2 xgb_v8_c2 --out final_v8
+GPU: NVIDIA H100 NVL MIG 3g.47gb, 46.4 GiB, SMs 60, torch 2.5.1+cu121, cuda 12.1
+[23:35:57] refit xgb_v8_full on all folds (1848 rounds) ...
+[23:38:40] refit xgb_v8_full on all folds (1848 rounds) done in 163.0s
+[23:38:40] refit xgb_v8_noemb on all folds (1666 rounds) ...
+[23:40:58] refit xgb_v8_noemb on all folds (1666 rounds) done in 138.5s
+[23:40:58] stage 1 on test ...
+[23:41:53] stage 1 on test done in 55.0s

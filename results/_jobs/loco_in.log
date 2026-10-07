@@ -1,0 +1,138 @@
+job 32858.master on master at 2026-09-25T19:53:33+05:30; PBS CUDA_VISIBLE_DEVICES=unset
+CUDA_VISIBLE_DEVICES=MIG-110b5c2d-162d-5ada-814c-2aef6f9812f1
+waiting 3240s to skip the :44 window
+GPU: NVIDIA H100 PCIe MIG 3g.40gb, 39.5 GiB, SMs 46, torch 2.5.1+cu121, cuda 12.1
+76 features: ['r_b1_comb', 'r_b1_name', 'r_b1_addr', 'cos_name', 'cos_addr', 'cos_sum', 'b_n', 'a_n', 'b_gap_cos_sum', 'b_rank_cos_sum', 'a_gap_cos_sum', 'a_rank_cos_sum', 'b_gap2_cos_sum', 'key_n_s1', 'key_n_r', 'n_ratio', 'n_tsort', 'n_tset', 'n_partial', 'n_jw', 'k_tsort', 'k_tset', 'ns_ratio', 'ns_partial', 'ns_lev', 'a_tset', 'a_tsort', 'a_partial', 'n_jac', 'n_c12', 'n_c21', 'k_jac', 'k_c12', 'k_c21', 'k_eq', 'k_sorted_eq', 'first_tok_eq', 'n_len1', 'n_len2', 'n_ntok1', 'n_ntok2', 'legal_1', 'legal_2', 'legal_jac', 'is_domain', 'nonlatin', 'nonascii_left', 'src3', 'a_empty2', 'a_jac', 'a_c12', 'a_c21', 'a_ntok2', 'num_jac', 'num_c12', 'num_c21', 'num_n1', 'num_n2', 'num_conflict', 'fnum_eq', 'fnum_in', 'state_cmp', 'fnum_lev', 'fnum_reldiff', 'fnum1_in_r', 'cnum_jac', 'cnum_c12', 'cnum_c21', 'cnum_conflict', 'legal_fam_cmp', 'legal_added', 'legal_dropped', 'tok_unm_12', 'tok_unm_21', 'tok_minbest_12', 'tok_minbest_21']
+[20:47:41] model A: train folds 1,2 / early stop fold 3 ...
+train rows 44830464 pos 3907140
+[0]	fold3-logloss:0.23829	fold3-aucpr:0.99068
+[250]	fold3-logloss:0.00752	fold3-aucpr:0.99881
+[500]	fold3-logloss:0.00689	fold3-aucpr:0.99898
+[750]	fold3-logloss:0.00670	fold3-aucpr:0.99903
+[1000]	fold3-logloss:0.00663	fold3-aucpr:0.99904
+[1250]	fold3-logloss:0.00660	fold3-aucpr:0.99905
+[1480]	fold3-logloss:0.00660	fold3-aucpr:0.99905
+[20:51:14] model A: train folds 1,2 / early stop fold 3 done in 212.9s
+rounds 1331 0.00 GiB peak
+[20:51:14] model B: train folds 3,4 ...
+[20:53:46] model B: train folds 3,4 done in 152.1s
+[20:53:46] out-of-fold scores (streamed) ...
+[20:55:16] out-of-fold scores (streamed) done in 90.4s
+[20:55:16] decision search ...
+[20:56:06] decision search done in 49.4s
+VALIDATION fold 0: {"n_s1": 357966, "macro_f05": 0.9790207584347833, "tp": 1182562, "fp": 8165, "fn": 56600, "n_pred_matches": 1190727, "n_pred_empty": 20455, "n_true_singletons": 19918, "singleton_acc": 0.9655587910432775, "pair_precision": 0.9931428446654859, "pair_recall": 0.954323970554294, "thr": 0.65, "margin": 0.6, "candidate_recall": 0.988268684804731}
+GPU: NVIDIA H100 PCIe MIG 3g.40gb, 39.5 GiB, SMs 46, torch 2.5.1+cu121, cuda 12.1
+[20:56:08] select uncertain pairs ...
+pairs 68536196 uncertain 1254849
+[20:56:08] select uncertain pairs done in 0.5s
+[20:56:08] texts ...
+[20:56:14] texts done in 6.0s
+positives 530352 by fold [{'fold': 0, 'len': 251309}, {'fold': 1, 'len': 250399}, {'fold': 2, 'len': 250811}, {'fold': 3, 'len': 251503}, {'fold': 4, 'len': 250827}]
+GPU: NVIDIA H100 PCIe MIG 3g.40gb, 39.5 GiB, SMs 46, torch 2.5.1+cu121, cuda 12.1
+[20:56:18] tokenize 1254849 pairs ...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[20:58:37] tokenize 1254849 pairs done in 139.6s
+[20:58:38] model A: fine-tune on 180915 pairs ...
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 7970.31it/s]
+[1mXLMRobertaModel LOAD REPORT[0m from: FacebookAI/xlm-roberta-base
+Key                       | Status     |  | 
+--------------------------+------------+--+-
+lm_head.layer_norm.bias   | UNEXPECTED |  | 
+lm_head.dense.bias        | UNEXPECTED |  | 
+lm_head.dense.weight      | UNEXPECTED |  | 
+lm_head.bias              | UNEXPECTED |  | 
+lm_head.layer_norm.weight | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+    step 2000/5654 loss 0.3885 149s
+    epoch 0 loss 0.3518 (210s)
+    step 4000/5654 loss 0.2340 87s
+    epoch 1 loss 0.2236 (210s)
+[21:05:40] model A: fine-tune on 180915 pairs done in 422.6s
+[21:05:40] model A: score 753639 pairs ...
+[21:06:52] model A: score 753639 pairs done in 71.5s
+[21:06:52] model B: fine-tune on 180894 pairs ...
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 2840.34it/s]
+[1mXLMRobertaModel LOAD REPORT[0m from: FacebookAI/xlm-roberta-base
+Key                       | Status     |  | 
+--------------------------+------------+--+-
+lm_head.layer_norm.bias   | UNEXPECTED |  | 
+lm_head.dense.bias        | UNEXPECTED |  | 
+lm_head.dense.weight      | UNEXPECTED |  | 
+lm_head.bias              | UNEXPECTED |  | 
+lm_head.layer_norm.weight | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+    step 2000/5654 loss 0.3702 148s
+    epoch 0 loss 0.3384 (209s)
+    step 4000/5654 loss 0.2327 87s
+    epoch 1 loss 0.2244 (209s)
+[21:13:53] model B: fine-tune on 180894 pairs done in 421.0s
+[21:13:53] model B: score 501210 pairs ...
+[21:14:41] model B: score 501210 pairs done in 47.6s
+{"args": {"name": "locoin", "split": "train", "epochs": 2, "max_train": 400000, "score_only": false, "fit_country": "India"}, "pairs": 1254849, "model": "FacebookAI/xlm-roberta-base", "val_auc_mlxenc": 0.8443426577120308, "val_auc_stage1": 0.8943008505053499, "val_ap_mlxenc": 0.769320318606965, "val_ap_stage1": 0.8741954859657739, "runtime_s": 1103.3880643844604, "gpu": "7.37 GiB peak"}
+GPU: NVIDIA H100 PCIe MIG 3g.40gb, 39.5 GiB, SMs 46, torch 2.5.1+cu121, cuda 12.1
+[21:14:43] load edges to the GPU ...
+edges 68536196 S1 2206821 records 10320219 6.66 GiB peak
+[21:15:04] load edges to the GPU done in 20.4s
+[21:15:08] GNN A: train on 285923 S1 ...
+    epoch 0 loss 0.03592
+    epoch 1 loss 0.00621
+    epoch 2 loss 0.00563
+    epoch 3 loss 0.00541
+[21:16:29] GNN A: train on 285923 S1 done in 81.0s
+[21:16:29] GNN A: score ...
+[21:16:56] GNN A: score done in 27.1s
+[21:16:57] GNN B: train on 286167 S1 ...
+    epoch 0 loss 0.02768
+    epoch 1 loss 0.00610
+    epoch 2 loss 0.00530
+    epoch 3 loss 0.00504
+[21:18:18] GNN B: train on 286167 S1 done in 81.3s
+[21:18:18] GNN B: score ...
+[21:18:36] GNN B: score done in 18.2s
+{"args": {"feats": "c2_train_sim19", "s1": "oof_loco_in_noemb.parquet", "tag": "loco_in_gnn", "split": "train", "epochs": 4, "batch_s1": 1500, "lr": 0.002, "extra": "", "halves": "A,B", "out_tag": "", "score_only": false, "score_folds": "0", "fit_country": "India", "drop_feats": "cos_e3"}, "edges": 68536196, "val_auc_gnn": 0.999835850812223, "val_ap_gnn": 0.9985631481654518, "val_ap_stage1": 0.9981234210443527, "runtime_s": 244.75835943222046, "gpu": "12.34 GiB peak"}
+GPU: NVIDIA H100 PCIe MIG 3g.40gb, 39.5 GiB, SMs 46, torch 2.5.1+cu121, cuda 12.1
+68536196 0 0.08908527689913726
+GPU: NVIDIA H100 PCIe MIG 3g.40gb, 39.5 GiB, SMs 46, torch 2.5.1+cu121, cuda 12.1
+[21:19:09] load edges to the GPU ...
+edges 68536196 S1 2206821 records 10320219 6.91 GiB peak
+[21:19:37] load edges to the GPU done in 28.7s
+[21:19:42] GNN A: train on 285923 S1 ...
+    epoch 0 loss 0.03001
+    epoch 1 loss 0.00367
+    epoch 2 loss 0.00347
+    epoch 3 loss 0.00338
+[21:21:04] GNN A: train on 285923 S1 done in 81.8s
+[21:21:04] GNN A: score ...
+[21:21:31] GNN A: score done in 27.0s
+[21:21:31] GNN B: train on 286167 S1 ...
+    epoch 0 loss 0.03182
+    epoch 1 loss 0.00366
+    epoch 2 loss 0.00345
+    epoch 3 loss 0.00337
+[21:22:54] GNN B: train on 286167 S1 done in 82.6s
+[21:22:54] GNN B: score ...
+[21:23:13] GNN B: score done in 19.3s
+{"args": {"feats": "c2_train_sim19", "s1": "oof_loco_in_noemb.parquet", "tag": "loco_in_gnnx", "split": "train", "epochs": 4, "batch_s1": 1500, "lr": 0.002, "extra": "xenc/ml_locoin_train_scores.parquet:mlxenc", "halves": "A,B", "out_tag": "", "score_only": false, "score_folds": "0", "fit_country": "India", "drop_feats": "cos_e3"}, "edges": 68536196, "val_auc_gnn": 0.9998114786390917, "val_ap_gnn": 0.9982439523714929, "val_ap_stage1": 0.9981234210443527, "runtime_s": 260.9865942001343, "gpu": "12.61 GiB peak"}
+GPU: NVIDIA H100 PCIe MIG 3g.40gb, 39.5 GiB, SMs 46, torch 2.5.1+cu121, cuda 12.1
+68536196 0 0.09076381387719765
+GPU: NVIDIA H100 PCIe MIG 3g.40gb, 39.5 GiB, SMs 46, torch 2.5.1+cu121, cuda 12.1
+[21:23:55] s1 ...
+s1 {"threshold": {"thr": 0.65, "margin": 0.4, "tune": 0.9824901707819379, "India": 0.9828000734113204, "US": 0.9764748397648109}, "expected_f": {"gamma": 1.0, "tune": 0.9820716106997293, "India": 0.9822004985772923, "US": 0.9755867605303346}, "cal_drift_US": {"foreign_cal_eval_half": 0.9755496563386455, "own_cal_eval_half": 0.9754850073849622, "threshold_eval_half": 0.976299797754733}}
+[21:31:59] s1 done in 484.6s
+[21:31:59] gnn ...
+gnn {"threshold": {"thr": 0.65, "margin": 0.6, "tune": 0.9854440792533412, "India": 0.9851630311054846, "US": 0.9795348251251655}, "expected_f": {"gamma": 1.0, "tune": 0.9855442707065175, "India": 0.9852383534943565, "US": 0.9795582014170264}, "cal_drift_US": {"foreign_cal_eval_half": 0.9792041405164019, "own_cal_eval_half": 0.9792549309521624, "threshold_eval_half": 0.9793355510477341}}
+[21:39:52] gnn done in 472.6s
+[21:39:52] gnnx ...
+gnnx {"threshold": {"thr": 0.65, "margin": 0.5, "tune": 0.9903070561863081, "India": 0.9904923046265505, "US": 0.9593045109330959}, "expected_f": {"gamma": 1.0, "tune": 0.9903271007739134, "India": 0.9904528853182719, "US": 0.9596924195405359}, "cal_drift_US": {"foreign_cal_eval_half": 0.9595797991183064, "own_cal_eval_half": 0.9678381751509384, "threshold_eval_half": 0.9592717700826798}}
+[21:47:38] gnnx done in 465.8s
+[21:47:38] seen_s1 ...
+seen_s1 {"threshold": {"thr": 0.7, "margin": 0.3, "tune": 0.9822085485821779, "India": 0.9824722734506847, "US": 0.9858065854350938}, "expected_f": {"gamma": 1.25, "tune": 0.981798740174326, "India": 0.9820178911242753, "US": 0.9854036238140723}, "cal_drift_US": {"foreign_cal_eval_half": 0.9853154853429508, "own_cal_eval_half": 0.9853853088073684, "threshold_eval_half": 0.9858094350188601}}
+[21:55:27] seen_s1 done in 468.9s
+[21:55:27] seen_v3 ...
+seen_v3 {"threshold": {"thr": 0.65, "margin": 0.6, "tune": 0.990870855803557, "India": 0.9909795173139644, "US": 0.9905638709882779}, "expected_f": {"gamma": 0.8, "tune": 0.9909408128147509, "India": 0.9910556192043931, "US": 0.9906246587128252}, "cal_drift_US": {"foreign_cal_eval_half": 0.9906298407287824, "own_cal_eval_half": 0.9906060868342872, "threshold_eval_half": 0.9906083110138296}}
+[22:03:13] seen_v3 done in 466.7s
+EXIT rc=0 after 4536 s at 2026-09-25T22:03:14+05:30

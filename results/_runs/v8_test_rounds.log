@@ -1,0 +1,82 @@
+== 2026-10-05T23:42:06+05:30 v8_test_rounds
+python -u code/v6/predict_v6.py --step rounds --feats c4v8_train_dmsA --test_feats c4v8_test --s1 xgb_v8_blend --c1 xgb_v8_c1 --c2 xgb_v8_c2 --out final_v8
+GPU: NVIDIA H100 NVL MIG 3g.47gb, 46.4 GiB, SMs 60, torch 2.5.1+cu121, cuda 12.1
+extra inputs on test: []
+[23:42:11] round-1 features on test ...
+    siblings a<60000: 2502198 record pairs
+    siblings a<120000: 2491326 record pairs
+    siblings a<180000: 2500765 record pairs
+    siblings a<240000: 2496752 record pairs
+    siblings a<300000: 2493351 record pairs
+    siblings a<360000: 2475554 record pairs
+    siblings a<420000: 2491115 record pairs
+    siblings a<480000: 2475787 record pairs
+    siblings a<540000: 2475141 record pairs
+    siblings a<600000: 2482777 record pairs
+    siblings a<660000: 2470354 record pairs
+    siblings a<720000: 2462468 record pairs
+    siblings a<780000: 2458109 record pairs
+    siblings a<840000: 2469793 record pairs
+    siblings a<900000: 2446179 record pairs
+    siblings a<960000: 2460986 record pairs
+    siblings a<1020000: 2443778 record pairs
+    siblings a<1080000: 2457396 record pairs
+    siblings a<1140000: 2441895 record pairs
+    siblings a<1200000: 2424652 record pairs
+    siblings a<1260000: 2440499 record pairs
+    siblings a<1320000: 2438503 record pairs
+    siblings a<1380000: 2450564 record pairs
+    siblings a<1440000: 2429625 record pairs
+    siblings a<1500000: 2431314 record pairs
+    siblings a<1560000: 2406389 record pairs
+    siblings a<1620000: 2419231 record pairs
+    siblings a<1680000: 2408229 record pairs
+    siblings a<1740000: 2120423 record pairs
+[23:45:38] round-1 features on test done in 206.2s
+[23:45:38] refit xgb_v8_c1 on all folds (570 rounds) ...
+[23:47:02] refit xgb_v8_c1 on all folds (570 rounds) done in 84.6s
+[23:47:02] round-1 model on test ...
+/tmp/ai_25901334/AmazonML/code/v6/predict_v6.py:72: DeprecationWarning: the default behavior of `how='horizontal'` for `concat` is deprecated and will require equal heights in the next breaking release. Use `how='horizontal_extend'` to keep the current behavior.
+(Deprecated in version 1.42.1)
+  d = pl.concat([d, add.select(keep).rename({"p": "s1_p"})], how="horizontal")
+[23:47:27] round-1 model on test done in 25.0s
+[23:47:27] round-2 features on test ...
+[23:47:46] round-2 features on test done in 19.0s
+[23:47:46] refit xgb_v8_c2 on all folds (226 rounds) ...
+[23:48:45] refit xgb_v8_c2 on all folds (226 rounds) done in 58.4s
+[23:48:45] round-2 model on test ...
+[23:49:09] round-2 model on test done in 24.1s
+{
+ "pairs": 20854679,
+ "runtime_s": 423.05836057662964,
+ "args": {
+  "step": "rounds",
+  "feats": "c4v8_train_dmsA",
+  "test_feats": "c4v8_test",
+  "s1": "xgb_v8_blend",
+  "c1": "xgb_v8_c1",
+  "c2": "xgb_v8_c2",
+  "etag": "e2f",
+  "btag": "b1",
+  "round_mult": 1.25,
+  "out": "final_v8"
+ },
+ "extras": [],
+ "mean_p_by_country": {
+  "France": {
+   "p_stage1": 0.29782533645629883,
+   "p_round1": 0.2928948402404785,
+   "p": 0.2930747866630554
+  },
+  "India": {
+   "p_stage1": 0.28656256198883057,
+   "p_round1": 0.2842893600463867,
+   "p": 0.2843518853187561
+  },
+  "US": {
+   "p_stage1": 0.31050366163253784,
+   "p_round1": 0.3049784302711487,
+   "p": 0.3046669661998749
+  }
+ }
+}

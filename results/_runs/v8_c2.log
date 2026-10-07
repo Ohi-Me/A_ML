@@ -1,0 +1,59 @@
+== 2026-10-05T23:25:19+05:30 v8_c2
+python -u code/v6/train_collective.py --feats c4v8_train_dmsA --s1tag xgb_v8_blend --prev xgb_v8_c1 --tag xgb_v8_c2 --simdrop 62 --extra auto --extra_set v8 --drop_feats cos_e3,b_gap_cos_e3,b_rank_cos_e3,a_gap_cos_e3,a_rank_cos_e3,b_gap2_cos_e3,r_e3_emb,sib_emb_max,sib_emb_mean
+GPU: NVIDIA H100 NVL MIG 3g.47gb, 46.4 GiB, SMs 60, torch 2.5.1+cu121, cuda 12.1
+extra inputs: []
+[23:25:21] context + sibling + collective features ...
+    siblings a<60000: 1490492 record pairs
+    siblings a<120000: 1495050 record pairs
+    siblings a<180000: 1497332 record pairs
+    siblings a<240000: 1489609 record pairs
+    siblings a<300000: 1490302 record pairs
+    siblings a<360000: 1489352 record pairs
+    siblings a<420000: 1473919 record pairs
+    siblings a<480000: 1483198 record pairs
+    siblings a<540000: 1471916 record pairs
+    siblings a<600000: 1472678 record pairs
+    siblings a<660000: 1469551 record pairs
+    siblings a<720000: 1485986 record pairs
+    siblings a<780000: 1479256 record pairs
+    siblings a<840000: 1476823 record pairs
+    siblings a<900000: 1471277 record pairs
+    siblings a<960000: 1486551 record pairs
+    siblings a<1020000: 1459789 record pairs
+    siblings a<1080000: 1463514 record pairs
+    siblings a<1140000: 1464263 record pairs
+    siblings a<1200000: 1476993 record pairs
+    siblings a<1260000: 1447555 record pairs
+    siblings a<1320000: 1464369 record pairs
+    siblings a<1380000: 1466756 record pairs
+    siblings a<1440000: 1464595 record pairs
+    siblings a<1500000: 1450137 record pairs
+    siblings a<1560000: 1470969 record pairs
+    siblings a<1620000: 1455013 record pairs
+    siblings a<1680000: 1445756 record pairs
+    siblings a<1740000: 1454571 record pairs
+    siblings a<1800000: 1460782 record pairs
+    siblings a<1860000: 1456719 record pairs
+    siblings a<1920000: 1466444 record pairs
+    siblings a<1980000: 1441063 record pairs
+    siblings a<2040000: 1455251 record pairs
+    siblings a<2100000: 1449497 record pairs
+    siblings a<2160000: 1450051 record pairs
+    siblings a<2220000: 1125425 record pairs
+collective feature means: {'c_addr_same': 0.1365, 'c_addr_cross': 0.0655, 'c_num_same': 0.2431, 'c_num_cross': 0.2169, 'c_num_nonS1': 0.039, 'c_key': 0.3816, 'c_name_same': 0.107, 'c_name_cross': 0.1206, 'c_support': 0.6912, 'c_nsib': 3.2333, 'c_nsib_same': 1.5709, 'c_src_conf': 1.852, 'c_support_margin': -0.0355}
+[23:28:41] context + sibling + collective features done in 200.0s
+[23:28:41] write side-car parts ...
+[23:28:44] write side-car parts done in 2.4s
+133 features
+[23:28:44] model A (folds 1,2; early stop fold 3) ...
+[0]	fold3-logloss:0.54631	fold3-aucpr:0.99900
+[250]	fold3-logloss:0.01673	fold3-aucpr:0.99939
+[330]	fold3-logloss:0.01681	fold3-aucpr:0.99938
+[23:29:25] model A (folds 1,2; early stop fold 3) done in 41.3s
+[23:29:25] model B (folds 3,4) ...
+[23:29:55] model B (folds 3,4) done in 29.4s
+[23:29:55] OOF scores ...
+[23:30:18] OOF scores done in 23.0s
+[23:30:18] decision search ...
+[23:30:53] decision search done in 35.8s
+VALIDATION fold 0: {"n_s1": 276027, "macro_f05": 0.9875152808562633, "tp": 927763, "fp": 2246, "fn": 28463, "n_pred_matches": 930009, "n_pred_empty": 15990, "n_true_singletons": 15226, "singleton_acc": 0.9914619729410219, "pair_precision": 0.997584969607821, "pair_recall": 0.9702340241742015, "thr": 0.7, "margin": 0.6, "candidate_recall": 0.9922455570126727}

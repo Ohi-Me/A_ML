@@ -1,0 +1,8 @@
+== 2026-09-26T00:52:47+05:30 cosvar
+python -u code/phase2/cos_variants.py variants --vars mean5,hash1
+[00:52:49] variant mean5: cosine + competition features ...
+[00:53:14] variant mean5: cosine + competition features done in 24.3s
+mean5 sanity (max |diff| vs feature part 0): {'cos_e3': 2.384185791015625e-07, 'b_gap_cos_e3': 3.5762786865234375e-07, 'b_rank_cos_e3': 1.0, 'a_gap_cos_e3': 3.5762786865234375e-07, 'a_rank_cos_e3': 4.0, 'b_gap2_cos_e3': 2.980232238769531e-07}
+[00:53:17] variant hash1: cosine + competition features ...
+[00:53:43] variant hash1: cosine + competition features done in 26.3s
+wrote /tmp/ai_25901334/AmazonML/results/phase2/cos/variants_step.json

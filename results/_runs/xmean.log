@@ -1,0 +1,4 @@
+== 2026-09-26T02:56:45+05:30 xmean
+python -u code/phase2/v4.py xmean
+xenc_chainA_hash1 band pairs 1297674
+xenc_refit_hash1 band pairs 1283208

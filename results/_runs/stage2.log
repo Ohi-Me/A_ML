@@ -1,0 +1,58 @@
+== 2026-10-05T21:13:47+05:30 stage2
+python -u code/xgboost/stage2.py --feats c2_train_sim19 --s1tag xgb_c2_blend_v2 --tag xgb_c2_blend_s2_v2 --etag e2f --simdrop 19 --drop_feats cos_e3,b_gap_cos_e3,b_rank_cos_e3,a_gap_cos_e3,a_rank_cos_e3,b_gap2_cos_e3,r_e3_emb,sib_emb_max,sib_emb_mean
+GPU: NVIDIA H100 NVL MIG 3g.47gb, 46.4 GiB, SMs 60, torch 2.5.1+cu121, cuda 12.1
+[21:13:49] context + sibling features ...
+    siblings a<60000: 3731489 record pairs
+    siblings a<120000: 3759592 record pairs
+    siblings a<180000: 3741701 record pairs
+    siblings a<240000: 3751377 record pairs
+    siblings a<300000: 3739310 record pairs
+    siblings a<360000: 3768422 record pairs
+    siblings a<420000: 3726840 record pairs
+    siblings a<480000: 3763155 record pairs
+    siblings a<540000: 3714633 record pairs
+    siblings a<600000: 3739417 record pairs
+    siblings a<660000: 3740307 record pairs
+    siblings a<720000: 3762319 record pairs
+    siblings a<780000: 3730553 record pairs
+    siblings a<840000: 3749273 record pairs
+    siblings a<900000: 3724968 record pairs
+    siblings a<960000: 3796549 record pairs
+    siblings a<1020000: 3727396 record pairs
+    siblings a<1080000: 3744728 record pairs
+    siblings a<1140000: 3736779 record pairs
+    siblings a<1200000: 3759719 record pairs
+    siblings a<1260000: 3691247 record pairs
+    siblings a<1320000: 3770988 record pairs
+    siblings a<1380000: 3754401 record pairs
+    siblings a<1440000: 3771180 record pairs
+    siblings a<1500000: 3753080 record pairs
+    siblings a<1560000: 3767588 record pairs
+    siblings a<1620000: 3748848 record pairs
+    siblings a<1680000: 3732153 record pairs
+    siblings a<1740000: 3787789 record pairs
+    siblings a<1800000: 3754440 record pairs
+    siblings a<1860000: 3769891 record pairs
+    siblings a<1920000: 3787444 record pairs
+    siblings a<1980000: 3733269 record pairs
+    siblings a<2040000: 3767421 record pairs
+    siblings a<2100000: 3749775 record pairs
+    siblings a<2160000: 3790281 record pairs
+    siblings a<2220000: 2910724 record pairs
+[21:17:07] context + sibling features done in 198.3s
+[21:17:07] write stage-2 side-car parts (new columns only) ...
+[21:17:11] write stage-2 side-car parts (new columns only) done in 3.7s
+92 features
+[21:17:11] model A ...
+[0]	fold3-logloss:0.36760	fold3-aucpr:0.99895
+[250]	fold3-logloss:0.00736	fold3-aucpr:0.99959
+[500]	fold3-logloss:0.00726	fold3-aucpr:0.99960
+[654]	fold3-logloss:0.00727	fold3-aucpr:0.99960
+[21:19:05] model A done in 114.3s
+[21:19:05] model B ...
+[21:20:24] model B done in 78.2s
+[21:20:24] oof scores ...
+[21:21:10] oof scores done in 46.1s
+[21:21:10] decision search ...
+[21:21:54] decision search done in 44.1s
+VALIDATION fold 0: {"n_s1": 357966, "macro_f05": 0.9860429976258064, "tp": 1197740, "fp": 3652, "fn": 41422, "n_pred_matches": 1201392, "n_pred_empty": 20902, "n_true_singletons": 19918, "singleton_acc": 0.9898082136760719, "pair_precision": 0.9969601928429688, "pair_recall": 0.9665725708180206, "thr": 0.7, "margin": 0.6, "candidate_recall": 0.9844209231722729}

@@ -1,0 +1,17 @@
+{
+ "args": {
+  "name": "v6band",
+  "split": "test",
+  "epochs": 1,
+  "max_train": 400000,
+  "score_only": true,
+  "model": "BAAI/bge-reranker-v2-m3",
+  "col": "bgexenc",
+  "lr": 0.0,
+  "bs": 0
+ },
+ "pairs": 1570733,
+ "model": "BAAI/bge-reranker-v2-m3",
+ "runtime_s": 1152.0919284820557,
+ "gpu": "4.26 GiB peak"
+}

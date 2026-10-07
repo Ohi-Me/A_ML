@@ -1,0 +1,34 @@
+{
+ "split": "test",
+ "universe": "none",
+ "depth_mult": 4,
+ "passes_planned": {
+  "key": 30,
+  "addr": 10,
+  "numstreet": 10,
+  "sib_addr": 50,
+  "sib_key": 30,
+  "sib_name": 20
+ },
+ "records": 9969589,
+ "list_pairs": 199391780,
+ "passes_kept": {
+  "key": 30,
+  "addr": 10,
+  "numstreet": 10,
+  "sib_addr": 50,
+  "sib_key": 30,
+  "sib_name": 20
+ },
+ "pairs": 215851328,
+ "pairs_per_record": 21.65097558184194,
+ "only_from_pass": {
+  "x_key": 5417894,
+  "x_addr": 199605,
+  "x_numst": 647188,
+  "x_sib_addr": 2678108,
+  "x_sib_key": 5036264,
+  "x_sib_name": 3961950
+ },
+ "runtime_s": 220.90268301963806
+}

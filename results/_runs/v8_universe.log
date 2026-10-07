@@ -1,0 +1,38 @@
+== 2026-10-05T23:01:31+05:30 v8_universe
+python -u code/v6/simulate_universe.py --src c4dms_train --plan US:0.62:0.19,India:1.0:0.19 --tag dmsA --code 62
+[23:01:43] slim frame + filter to the simulated universe ...
+[23:01:43] slim frame + filter to the simulated universe done in 0.2s
+[23:01:43] recompute ranks, competition and count features ...
+[23:01:59] recompute ranks, competition and count features done in 15.8s
+[23:01:59] write parts ...
+[23:02:05] write parts done in 5.6s
+{
+ "plan": {
+  "US": [
+   0.62,
+   0.19
+  ],
+  "India": [
+   1.0,
+   0.19
+  ]
+ },
+ "pairs_before": 16720350,
+ "pairs_after": 16720350,
+ "code": 62,
+ "runtime_s": 32.66791534423828,
+ "by_country": {
+  "India": {
+   "s1_present": 715335,
+   "records": 4133346,
+   "records_per_s1": 5.778196229738514,
+   "distractor_share": 0.4004779662772001
+  },
+  "US": {
+   "s1_present": 664967,
+   "records": 3840571,
+   "records_per_s1": 5.775581344638155,
+   "distractor_share": 0.401049218983323
+  }
+ }
+}

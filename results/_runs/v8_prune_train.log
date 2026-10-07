@@ -1,0 +1,15 @@
+== 2026-10-05T22:38:35+05:30 v8_prune_train
+python -u code/v8/prune.py apply --cands c3wdms --split train --out c4dms
+GPU: NVIDIA H100 NVL MIG 3g.47gb, 46.4 GiB, SMs 60, torch 2.5.1+cu121, cuda 12.1
+{
+ "cands": "c3wdms",
+ "split": "train",
+ "out": "c4dms",
+ "tau": 0.0032383420038968325,
+ "pairs_before": 121048754,
+ "pairs_after": 16720350,
+ "records": 7973917,
+ "pairs_per_record_after": 2.096880366324355,
+ "runtime_s": 15.052264213562012,
+ "kept_share_of_true_fold0": 0.9992722500847813
+}

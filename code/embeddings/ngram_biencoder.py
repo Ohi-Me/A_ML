@@ -70,9 +70,9 @@ def encode_rows(model, NM, AD, HAS, rows, bs=65536):
     with torch.no_grad():
         for s in range(0, len(rows), bs):
             r = rows[s:s + bs]
-            out.append(model(NM.batch(r), AD.batch(r), HAS[r]).half())
+            out.append(model(NM.batch(r), AD.batch(r), HAS[r]).half().cpu())
     model.train()
-    return torch.cat(out)
+    return torch.cat(out).to(NM.indptr.device)
 
 
 def topk_dense(Q, E, K, B=None):

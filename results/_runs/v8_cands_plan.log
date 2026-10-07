@@ -1,0 +1,39 @@
+== 2026-10-05T22:15:38+05:30 v8_cands_plan
+python -u code/v7/cands_plan.py --wide --budget 24 --out results/v8/cands_plan.json
+{
+ "budget_pairs_per_record": 24.0,
+ "wide": true,
+ "depth_mult": 4,
+ "passes": {
+  "key": 30,
+  "addr": 10,
+  "numstreet": 10,
+  "sib_addr": 50,
+  "sib_key": 30,
+  "sib_name": 20
+ },
+ "efficiency": {
+  "key": 0.0008383056473807227,
+  "addr": 0.0014252944682411786,
+  "numstreet": 0.0011567587195152958,
+  "sib_addr": 0.0011506075848437063,
+  "sib_key": 0.0019785092955824663,
+  "sib_name": 0.0014471537739531156
+ },
+ "source": "miss_probe.json",
+ "probe": {
+  "recall_c2_as_filtered": 0.9837516964555719,
+  "recall_recut": {
+   "c2_depths": 0.9857745725769068,
+   "x2_depths": 0.9890123044694346,
+   "x4_depths": 0.9905297754766557,
+   "all_20": 0.9905297754766557
+  },
+  "pairs_per_record_recut": {
+   "c2_depths": 4.997636666666667,
+   "x2_depths": 9.642476666666667,
+   "x4_depths": 13.35758,
+   "all_20": 13.35758
+  }
+ }
+}

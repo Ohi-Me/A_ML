@@ -1,0 +1,43 @@
+{
+ "pairs": 83108284,
+ "runtime_s": 5996.877089977264,
+ "args": {
+  "step": "rounds",
+  "feats": "c2v6_train_dmsA",
+  "test_feats": "c2v6_test",
+  "s1": "xgb_v6_blend",
+  "c1": "xgb_v6_c1",
+  "c2": "xgb_v6_c2",
+  "etag": "e2f",
+  "btag": "b1",
+  "round_mult": 1.25,
+  "out": "final_v6"
+ },
+ "extras": [
+  [
+   "xenc/ml_hardv2_test_scores.parquet",
+   "mlxenc"
+  ],
+  [
+   "xenc/ml_v6band_test_scores.parquet",
+   "bgexenc"
+  ]
+ ],
+ "mean_p_by_country": {
+  "France": {
+   "p_stage1": 0.07162509113550186,
+   "p_round1": 0.06994312256574631,
+   "p": 0.06990716606378555
+  },
+  "India": {
+   "p_stage1": 0.0695125162601471,
+   "p_round1": 0.06915085762739182,
+   "p": 0.06912049651145935
+  },
+  "US": {
+   "p_stage1": 0.07520800083875656,
+   "p_round1": 0.07479790598154068,
+   "p": 0.07474368810653687
+  }
+ }
+}

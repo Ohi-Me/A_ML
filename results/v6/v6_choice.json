@@ -1,0 +1,163 @@
+{
+ "rule": "V6 decisions, fixed before any V6 result exists (do not tune them on the results).\n\nEvery labelled number below is measured on the density-matched universe (DMS, code/v6/simulate_universe.py): the\ntraining data rebuilt at test density, clean held-out folds 0 and 4 (fold 3 was the early-stopping fold). Test labels\nare never used.\n\n  plan (run before the V6 submission files are written)\n    caps   per-source caps (<= 5 S2 / <= 6 S3 records per S1) are used if, on the V6 OOF table, min(f0, f4) with caps\n           >= without caps - 0.0001\n    em     per-country EM prior correction is used if, on the V2 chain applied to DMS exactly as it is applied to test\n           (score_chain.py), EM raises min(f0, f4) by > 0.001 and lowers no country's f0 by > 0.0005\n    gamma  the unseen country (France) gets the leave-one-country-out gamma (India -> US inside DMS, V6 features,\n           loco_eval.py) if that gamma beats the seen-country gamma on the unseen country by > 0.001; else the same\n    pl     France pseudo-labels (pl_v6.py) are used if, in that LOCO run, stage1_pl beats stage1_all on the unseen\n           country by > 0.001 and the pseudo-positive precision is >= 0.99\n  pick (after the files exist)\n    DMS score = min(f0, f4) of each system as it would run on test:\n      V2 chain and V3-without-GNN chain: trained on SIM19, applied to DMS with their SIM19 calibration (score_chain)\n      V6a, V6: trained and calibrated on DMS (their OOF tables), V6 with the plan's caps\n    a V6 system is submitted first if DMS(V6) >= max(DMS(V2), DMS(V3 without GNN)) + 0.0005 and it is consistent:\n    for US and India, (test predicted matches per S1) / (DMS fold-0 predicted per S1) may exceed the V2 chain's ratio\n    by at most 0.003. Order: final_v6pl (plan.pl) > final_v6 > final_v6a (same test) > final_v3nognn > V2 (keep).\n\n  python code/v6/choose_v6.py plan   -> results/v6/v6_plan.json\n  python code/v6/choose_v6.py pick   -> results/v6/v6_choice.json\n",
+ "plan": {
+  "caps": true,
+  "em": false,
+  "gamma_unseen": "same",
+  "pl": false
+ },
+ "ceiling_dms": {
+  "f0": 0.9963485638576896,
+  "f4": 0.996342762451399,
+  "by_country_f0": {
+   "India": 0.9959976558993905,
+   "US": 0.9967271117902012
+  },
+  "pair_recall_f0": 0.9879787832583511
+ },
+ "dms_min_f0_f4": {
+  "V2_chain": 0.9868011898287956,
+  "V3noGNN_chain": 0.9898100986306566,
+  "V6a": null,
+  "V6": 0.9912695686310519,
+  "V6_round1": 0.9912789069169168
+ },
+ "dms": {
+  "V2_chain": {
+   "f0": 0.9868434313851681,
+   "f4": 0.9868011898287956,
+   "by_country_f0": {
+    "India": {
+     "f05": 0.9853488316450743,
+     "precision": 0.9956671186131463,
+     "recall": 0.9661512711881455,
+     "fp": 2090,
+     "fn": 16826,
+     "pred_per_s1": 3.367410623904833,
+     "pred_over_true": 0.9703557073712417
+    },
+    "US": {
+     "f05": 0.9884557562930655,
+     "precision": 0.9976678958192384,
+     "recall": 0.9699541743986478,
+     "fp": 1041,
+     "fn": 13795,
+     "pred_per_s1": 3.361685142788288,
+     "pred_over_true": 0.9722214962145962
+    }
+   },
+   "uncertain_share_f0": {
+    "India": 0.06698675349777489,
+    "US": 0.048670873767734685
+   }
+  },
+  "V3noGNN_chain": {
+   "f0": 0.9899546632623374,
+   "f4": 0.9898100986306566,
+   "by_country_f0": {
+    "India": {
+     "f05": 0.9899524598943978,
+     "precision": 0.9980136607282969,
+     "recall": 0.9723432590214326,
+     "fp": 962,
+     "fn": 13748,
+     "pred_per_s1": 3.38102385456881,
+     "pred_over_true": 0.9742785066808289
+    },
+    "US": {
+     "f05": 0.9899570401830036,
+     "precision": 0.9984708932401392,
+     "recall": 0.9713611771778051,
+     "fp": 683,
+     "fn": 13149,
+     "pred_per_s1": 3.363854078804675,
+     "pred_over_true": 0.9728487668034465
+    }
+   },
+   "uncertain_share_f0": {
+    "India": 0.03482552646455382,
+    "US": 0.04262954752511793
+   }
+  },
+  "V6a": null,
+  "V6": {
+   "f0": 0.9914339783753462,
+   "f4": 0.9912695686310519,
+   "f3_es": 0.9913765885432123,
+   "gamma": 1.0,
+   "extra": 0.0,
+   "capped_records": 448,
+   "by_country_f0": {
+    "India": {
+     "f05": 0.9913057302447493,
+     "precision": 0.9984953336818835,
+     "recall": 0.9758536614805248,
+     "fp": 731,
+     "fn": 12003,
+     "pred_per_s1": 3.3915933064791997
+    },
+    "US": {
+     "f05": 0.9915723282290266,
+     "precision": 0.9984252388832542,
+     "recall": 0.9776796215467447,
+     "fp": 708,
+     "fn": 10248,
+     "pred_per_s1": 3.3858898662489456
+    }
+   }
+  },
+  "V6_round1": {
+   "f0": 0.9914789015553289,
+   "f4": 0.9912789069169168,
+   "f3_es": 0.9913600082738464,
+   "gamma": 1.0,
+   "extra": 0.05,
+   "capped_records": 594,
+   "by_country_f0": {
+    "India": {
+     "f05": 0.9913150231230982,
+     "precision": 0.9986037661246479,
+     "recall": 0.9754975920047315,
+     "fp": 678,
+     "fn": 12180,
+     "pred_per_s1": 3.3899876433752434
+    },
+    "US": {
+     "f05": 0.9916556882033283,
+     "precision": 0.9985911668610397,
+     "recall": 0.9772244147652527,
+     "fp": 633,
+     "fn": 10457,
+     "pred_per_s1": 3.3837510543438967
+    }
+   }
+  }
+ },
+ "v2_test_over_dms_ratio": {
+  "US": 1.0095486519269055,
+  "India": 1.0005611392352454
+ },
+ "checks": {
+  "final_v6": {
+   "available": true,
+   "dms_min_f0_f4": 0.9912695686310519,
+   "reference": 0.9898100986306566,
+   "better": true,
+   "test_over_dms_ratio": {
+    "US": 1.0018515531608059,
+    "India": 0.9961694401877332
+   },
+   "consistent": true,
+   "pass": true
+  },
+  "final_v6a": {
+   "available": false
+  }
+ },
+ "submit_order": [
+  "final_v6",
+  "final_v3nognn",
+  "final_v2 (keep)"
+ ],
+ "first_choice_file": "results/final/final_v6/output/matching_results.tsv"
+}

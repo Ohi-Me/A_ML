@@ -1,0 +1,14 @@
+== 2026-09-26T02:23:08+05:30 gnn_nocos
+python -u code/phase2/gnn_run.py train --tag gnn_mlx_nocos --extra xenc/ml_hardv2_train_scores.parquet:mlxenc --drop_feats cos_e3
+GPU: NVIDIA H100 PCIe MIG 3g.40gb, 39.5 GiB, SMs 46, torch 2.5.1+cu121, cuda 12.1
+graph: edges 68536196 S1 2206821 records 10320219 inputs 26
+    epoch 0 loss 0.01697
+    epoch 1 loss 0.00367
+    epoch 2 loss 0.00334
+    epoch 3 loss 0.00318
+    epoch 0 loss 0.01896
+    epoch 1 loss 0.00372
+    epoch 2 loss 0.00344
+    epoch 3 loss 0.00326
+{"args": {"cmd": "train", "tag": "gnn_mlx_nocos", "feats": "c2_train_sim19", "s1": "feats/oof_xgb_c2_blend_v2.parquet", "extra": "xenc/ml_hardv2_train_scores.parquet:mlxenc", "drop_feats": "cos_e3", "fit_country": "", "epochs": 4, "batch_s1": 1500, "lr": 0.002, "ckpt": "", "split": "test", "override": "", "halves": "A,B", "score_folds": "0", "out": ""}, "feats": ["cos_sum", "cos_name", "cos_addr", "n_tset", "k_tset", "a_tset", "cnum_conflict", "cnum_c21", "num_conflict", "fnum_eq", "fnum_lev", "a_empty2", "legal_fam_cmp", "legal_added", "state_cmp", "k_eq", "tok_unm_21", "tok_unm_12", "is_domain", "nonlatin", "key_n_s1", "b_n", "a_n"], "val_auc": 0.9999775150271634, "val_ap": 0.99977994630405, "runtime_s": 468.45140528678894}
+wrote /tmp/ai_25901334/AmazonML/results/phase2/gnn/gnn_mlx_nocos_train.json

@@ -1,0 +1,21 @@
+{
+ "args": {
+  "name": "v6band",
+  "split": "train",
+  "epochs": 2,
+  "max_train": 400000,
+  "score_only": false,
+  "model": "BAAI/bge-reranker-v2-m3",
+  "col": "bgexenc",
+  "lr": 0.0,
+  "bs": 0
+ },
+ "pairs": 878689,
+ "model": "BAAI/bge-reranker-v2-m3",
+ "val_auc_mlxenc": 0.9672431738220948,
+ "val_auc_stage1": 0.9438721746466661,
+ "val_ap_mlxenc": 0.955351233241447,
+ "val_ap_stage1": 0.9287398922843748,
+ "runtime_s": 6178.187167167664,
+ "gpu": "16.91 GiB peak"
+}

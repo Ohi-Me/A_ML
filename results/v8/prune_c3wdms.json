@@ -1,0 +1,210 @@
+{
+ "cands": "c3wdms",
+ "features": [
+  "r_e3_emb",
+  "r_b1_comb",
+  "r_b1_name",
+  "r_b1_addr",
+  "x_key",
+  "x_addr",
+  "x_numst",
+  "x_sib_addr",
+  "x_sib_key",
+  "x_sib_name",
+  "cos_name",
+  "cos_addr",
+  "cos_sum",
+  "cos_e3",
+  "key_eq",
+  "name_eq",
+  "addr_eq",
+  "fnum_eq",
+  "state_eq",
+  "rec_addr_empty",
+  "s1_addr_empty",
+  "key_n_s1",
+  "key_n_r",
+  "a_n",
+  "a_gap_cos_sum",
+  "a_rank_cos_sum",
+  "a_gap_cos_e3",
+  "a_rank_cos_e3",
+  "b_n",
+  "b_gap_cos_sum",
+  "b_rank_cos_sum",
+  "b_gap2_cos_sum",
+  "b_gap_cos_e3",
+  "b_rank_cos_e3",
+  "b_gap2_cos_e3"
+ ],
+ "rounds": 800,
+ "params": {
+  "objective": "binary:logistic",
+  "eval_metric": [
+   "logloss",
+   "aucpr"
+  ],
+  "tree_method": "hist",
+  "device": "cuda",
+  "max_depth": 8,
+  "eta": 0.1,
+  "subsample": 0.8,
+  "colsample_bytree": 0.8,
+  "min_child_weight": 5,
+  "lambda": 2.0,
+  "max_bin": 256
+ },
+ "tau": 0.0032383420038968325,
+ "top": 2,
+ "max_per_record": 10,
+ "max_loss": 0.0005,
+ "pairs_before": 121048754,
+ "pairs_after": 16720350,
+ "pairs_per_record_before": 15.18058866175808,
+ "pairs_per_record_after": 2.096880366324355,
+ "by_fold": {
+  "0": {
+   "true_pairs_in_union": 949502,
+   "kept_share_of_true": 0.9992722500847813
+  },
+  "1": {
+   "true_pairs_in_union": 949198,
+   "kept_share_of_true": 0.9992741240499875
+  },
+  "2": {
+   "true_pairs_in_union": 948793,
+   "kept_share_of_true": 0.9992632744971769
+  },
+  "3": {
+   "true_pairs_in_union": 950018,
+   "kept_share_of_true": 0.9992936975930983
+  },
+  "4": {
+   "true_pairs_in_union": 946862,
+   "kept_share_of_true": 0.9992850066852403
+  }
+ },
+ "importance_gain": [
+  [
+   "b_gap2_cos_e3",
+   5915.87451171875
+  ],
+  [
+   "b_gap2_cos_sum",
+   3410.99658203125
+  ],
+  [
+   "fnum_eq",
+   1302.5216064453125
+  ],
+  [
+   "b_gap_cos_sum",
+   1284.8817138671875
+  ],
+  [
+   "cos_e3",
+   920.6773681640625
+  ],
+  [
+   "rec_addr_empty",
+   641.0631713867188
+  ],
+  [
+   "name_eq",
+   530.443115234375
+  ],
+  [
+   "x_sib_addr",
+   507.4712219238281
+  ],
+  [
+   "x_sib_name",
+   415.62078857421875
+  ],
+  [
+   "state_eq",
+   182.8706817626953
+  ],
+  [
+   "addr_eq",
+   174.78497314453125
+  ],
+  [
+   "a_rank_cos_e3",
+   137.98121643066406
+  ],
+  [
+   "b_rank_cos_sum",
+   132.53433227539062
+  ],
+  [
+   "r_e3_emb",
+   111.40931701660156
+  ],
+  [
+   "cos_addr",
+   107.98704528808594
+  ],
+  [
+   "x_numst",
+   80.85175323486328
+  ],
+  [
+   "key_eq",
+   80.07366943359375
+  ],
+  [
+   "x_key",
+   76.22049713134766
+  ],
+  [
+   "b_gap_cos_e3",
+   57.729122161865234
+  ],
+  [
+   "cos_sum",
+   57.038516998291016
+  ],
+  [
+   "x_sib_key",
+   53.4096794128418
+  ],
+  [
+   "cos_name",
+   47.51504135131836
+  ],
+  [
+   "b_n",
+   33.83335494995117
+  ],
+  [
+   "a_gap_cos_e3",
+   30.544063568115234
+  ],
+  [
+   "a_rank_cos_sum",
+   28.508710861206055
+  ],
+  [
+   "key_n_s1",
+   27.33648681640625
+  ],
+  [
+   "key_n_r",
+   26.785036087036133
+  ],
+  [
+   "b_rank_cos_e3",
+   21.793500900268555
+  ],
+  [
+   "a_gap_cos_sum",
+   12.529895782470703
+  ],
+  [
+   "a_n",
+   7.587879180908203
+  ]
+ ],
+ "runtime_s": 325.9501829147339
+}

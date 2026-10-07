@@ -1,0 +1,20 @@
+== 2026-10-05T23:03:17+05:30 v8_xfeats_test
+python -u code/v5/extra_feats.py --src c4_test --out c4v8_test
+/tmp/ai_25901334/AmazonML/code/v5/extra_feats.py:70: DeprecationWarning: In Polars 2.0, the default behavior for `empty_as_null` will change to `False`. To keep the current behavior, explicitly set `empty_as_null=True`.
+  return s1tok.select(["country", "nt"]).explode("nt").drop_nulls("nt").group_by(["country", "nt"]).len() \
+/tmp/ai_25901334/AmazonML/code/v5/extra_feats.py:130: DeprecationWarning: In Polars 2.0, the default behavior for `empty_as_null` will change to `False`. To keep the current behavior, explicitly set `empty_as_null=True`.
+  e = T.with_row_index("i").select(["i", "country", "nt"]).explode("nt").join(
+/tmp/ai_25901334/AmazonML/code/v5/extra_feats.py:156: DeprecationWarning: In Polars 2.0, the default behavior for `empty_as_null` will change to `False`. To keep the current behavior, explicitly set `empty_as_null=True`.
+  sh = P.select(["k", "country", pl.col("n1").list.set_intersection(pl.col("n2")).alias("sh")]).explode("sh").drop_nulls("sh")
+  part 0: 2000000 pairs, 18s
+  part 1: 2000000 pairs, 25s
+  part 2: 2000000 pairs, 32s
+  part 3: 2000000 pairs, 39s
+  part 4: 2000000 pairs, 46s
+  part 5: 2000000 pairs, 53s
+  part 6: 2000000 pairs, 59s
+  part 7: 2000000 pairs, 66s
+  part 8: 2000000 pairs, 72s
+  part 9: 2000000 pairs, 79s
+  part 10: 854679 pairs, 82s
+new columns: ['v5_name_top', 'v5_name_n05', 'v5_name_n15', 'v5_name_gap12', 'v5_name_sc', 'v5_name_gap', 'v5_addr_top', 'v5_addr_n05', 'v5_addr_n15', 'v5_addr_gap12', 'v5_addr_sc', 'v5_addr_gap', 'v5_s1_mindf', 'v5_s1_meandf', 'v5_rec_mindf', 'v5_shared_mindf', 'v5_n_shared_rare', 'v5_st_tset', 'v5_st_jac', 'v5_st_c12', 'v5_st_c21']

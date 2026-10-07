@@ -84,7 +84,11 @@ def main():
     ap.add_argument("--out_tag", default="", help="test: name of the score file (default = tag)")
     ap.add_argument("--score_only", action="store_true", help="train split: no fitting, score --score_folds with --halves")
     ap.add_argument("--score_folds", default="0")
+    ap.add_argument("--fit_country", default="", help="train only on S1 of this country (open-set test)")
+    ap.add_argument("--drop_feats", default="", help="comma list of edge features left out")
     args = ap.parse_args()
+    global FEATS
+    FEATS = [f for f in FEATS if f not in set(args.drop_feats.split(","))]
     dev = gpu_init()
     t0 = time.time()
     gdir = os.path.join(CACHE, "gnn")
@@ -198,6 +202,9 @@ def main():
             model = EdgeGNN(X.shape[1]).to(dev)
             opt = torch.optim.AdamW(model.parameters(), lr=args.lr, weight_decay=1e-4)
             tr_nodes = present[np.isin(s1_fold[present], fit_f) & (deg[present] <= BIG)]
+            if args.fit_country:
+                from common.decide import ids
+                tr_nodes = tr_nodes[ids("train")[0]["country"].to_numpy()[tr_nodes] == args.fit_country]
             steps = args.epochs * int(np.ceil(len(tr_nodes) / args.batch_s1))
             sched = torch.optim.lr_scheduler.OneCycleLR(opt, max_lr=args.lr, total_steps=steps, pct_start=0.05)
             with Timer(f"GNN {name}: train on {len(tr_nodes)} S1"):

@@ -1,0 +1,9 @@
+job 32850.master on master at 2026-09-25T19:53:33+05:30; PBS CUDA_VISIBLE_DEVICES=unset
+CUDA_VISIBLE_DEVICES=MIG-004fd09c-9a79-5488-bc35-54fb8de861f1
+waiting 3240s to skip the :44 window
+GPU: NVIDIA H100 NVL MIG 1g.24gb, 21.6 GiB, SMs 26, torch 2.5.1+cu121, cuda 12.1
+[20:47:50] refit xgb_c2_sim19_v2 on folds 1-4, 2447 rounds ...
+[21:09:06] refit xgb_c2_sim19_v2 on folds 1-4, 2447 rounds done in 1275.5s
+[21:09:06] refit xgb_c2_sim19_noemb_v2 on folds 1-4, 2408 rounds ...
+[21:28:02] refit xgb_c2_sim19_noemb_v2 on folds 1-4, 2408 rounds done in 1136.6s
+EXIT rc=0 after 2415 s at 2026-09-25T21:28:03+05:30

@@ -1,0 +1,180 @@
+{
+ "final_c1": {
+  "pairs": 5817909,
+  "empty_s1": 98780,
+  "empty_rate": 0.057014425030475414,
+  "mean_k": 3.358015149975989,
+  "k_hist": {
+   "0": 98780,
+   "1": 114754,
+   "2": 312783,
+   "3": 421265,
+   "4": 368872,
+   "5": 238575,
+   "6": 116838,
+   "7": 44598,
+   "8": 12924,
+   "9": 2753,
+   "10": 374,
+   "11": 28
+  },
+  "records_S2": 2820776,
+  "records_S3": 2997133
+ },
+ "final_c2v1": {
+  "pairs": 5795193,
+  "empty_s1": 96125,
+  "empty_rate": 0.05548199641682982,
+  "mean_k": 3.3449037946511027,
+  "k_hist": {
+   "0": 96125,
+   "1": 116567,
+   "2": 317553,
+   "3": 424363,
+   "4": 368963,
+   "5": 236113,
+   "6": 114476,
+   "7": 43217,
+   "8": 12241,
+   "9": 2570,
+   "10": 335,
+   "11": 21
+  },
+  "records_S2": 2810404,
+  "records_S3": 2984789
+ },
+ "final_v2": {
+  "pairs": 5842005,
+  "empty_s1": 98849,
+  "empty_rate": 0.05705425085885265,
+  "mean_k": 3.37192302186842,
+  "k_hist": {
+   "0": 98849,
+   "1": 104791,
+   "2": 311990,
+   "3": 426595,
+   "4": 373288,
+   "5": 240434,
+   "6": 116863,
+   "7": 44244,
+   "8": 12523,
+   "9": 2630,
+   "10": 320,
+   "11": 17
+  },
+  "records_S2": 2831862,
+  "records_S3": 3010143
+ },
+ "final_v3": {
+  "pairs": 5908644,
+  "empty_s1": 99537,
+  "empty_rate": 0.05745135477078793,
+  "mean_k": 3.410386114292047,
+  "k_hist": {
+   "0": 99537,
+   "1": 102046,
+   "2": 301527,
+   "3": 420735,
+   "4": 375122,
+   "5": 246477,
+   "6": 122426,
+   "7": 47404,
+   "8": 13818,
+   "9": 3012,
+   "10": 410,
+   "11": 30
+  },
+  "records_S2": 2865113,
+  "records_S3": 3043531
+ },
+ "diff_v2_to_v3": {
+  "common": 5802235,
+  "only_final_v3": 106409,
+  "only_final_v2": 39770,
+  "net": 66639,
+  "only_final_v3_record_was_assigned_elsewhere_in_final_v2": 591,
+  "only_final_v3_record_new (unassigned in final_v2)": 105818,
+  "only_final_v3_on_S1_empty_in_final_v2": 1904,
+  "only_final_v3_by_kx": {
+   "0": 1904,
+   "1": 8524,
+   "2": 23098,
+   "3": 28079,
+   "4": 22618,
+   "5": 13542,
+   "6": 5986,
+   "7": 1983,
+   "8": 562,
+   "9": 103,
+   "10": 10
+  },
+  "s1_k_transitions": {
+   "shrink": 31682,
+   "grow": 94609,
+   "nonempty->empty": 2430,
+   "empty->nonempty": 1742
+  },
+  "s1_changed": 130463,
+  "jaccard_pairs": 0.9754255504072178
+ },
+ "diff_c2v1_to_v2": {
+  "common": 5762233,
+  "only_final_v2": 79772,
+  "only_final_c2v1": 32960,
+  "net": 46812,
+  "only_final_v2_record_was_assigned_elsewhere_in_final_c2v1": 915,
+  "only_final_v2_record_new (unassigned in final_c2v1)": 78857,
+  "only_final_v2_on_S1_empty_in_final_c2v1": 959,
+  "only_final_v2_by_kx": {
+   "0": 959,
+   "1": 11961,
+   "2": 20102,
+   "3": 19863,
+   "4": 14601,
+   "5": 7736,
+   "6": 3271,
+   "7": 1023,
+   "8": 224,
+   "9": 30,
+   "10": 2
+  },
+  "s1_k_transitions": {
+   "grow": 70364,
+   "shrink": 25637,
+   "nonempty->empty": 3531,
+   "empty->nonempty": 807
+  },
+  "s1_changed": 100339,
+  "jaccard_pairs": 0.9808114601533796
+ },
+ "diff_c1_to_v2": {
+  "common": 5757858,
+  "only_final_v2": 84147,
+  "only_final_c1": 60051,
+  "net": 24096,
+  "only_final_v2_record_was_assigned_elsewhere_in_final_c1": 1142,
+  "only_final_v2_record_new (unassigned in final_c1)": 83005,
+  "only_final_v2_on_S1_empty_in_final_c1": 3048,
+  "only_final_v2_by_kx": {
+   "0": 3048,
+   "1": 13695,
+   "2": 20684,
+   "3": 19969,
+   "4": 14484,
+   "5": 7713,
+   "6": 3270,
+   "7": 995,
+   "8": 248,
+   "9": 37,
+   "10": 4
+  },
+  "s1_k_transitions": {
+   "nonempty->empty": 2492,
+   "shrink": 51305,
+   "grow": 69956,
+   "empty->nonempty": 2423
+  },
+  "s1_changed": 126176,
+  "jaccard_pairs": 0.975568174886853
+ }
+}

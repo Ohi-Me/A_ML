@@ -1,0 +1,12 @@
+{
+ "cands": "c3wdms",
+ "split": "train",
+ "out": "c4dms",
+ "tau": 0.0032383420038968325,
+ "pairs_before": 121048754,
+ "pairs_after": 16720350,
+ "records": 7973917,
+ "pairs_per_record_after": 2.096880366324355,
+ "runtime_s": 15.052264213562012,
+ "kept_share_of_true_fold0": 0.9992722500847813
+}

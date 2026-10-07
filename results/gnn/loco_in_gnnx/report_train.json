@@ -1,0 +1,24 @@
+{
+ "args": {
+  "feats": "c2_train_sim19",
+  "s1": "oof_loco_in_noemb.parquet",
+  "tag": "loco_in_gnnx",
+  "split": "train",
+  "epochs": 4,
+  "batch_s1": 1500,
+  "lr": 0.002,
+  "extra": "xenc/ml_locoin_train_scores.parquet:mlxenc",
+  "halves": "A,B",
+  "out_tag": "",
+  "score_only": false,
+  "score_folds": "0",
+  "fit_country": "India",
+  "drop_feats": "cos_e3"
+ },
+ "edges": 68536196,
+ "val_auc_gnn": 0.9998114786390917,
+ "val_ap_gnn": 0.9982439523714929,
+ "val_ap_stage1": 0.9981234210443527,
+ "runtime_s": 260.9865942001343,
+ "gpu": "12.61 GiB peak"
+}

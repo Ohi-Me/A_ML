@@ -186,10 +186,10 @@ def cmd_evaluate(args):
     base = pl.read_parquet(os.path.join(CACHE, "feats", OOF_GNN))           # a, b, fold, y, p (GNN OOF, chain A on fold 0)
     iso12 = fit_iso(*[base.filter(pl.col("fold").is_in([1, 2])).sample(n=8_000_000, seed=0)[c].to_numpy() for c in ("p", "y")])
     v = (base["fold"] == 0).to_numpy()
-    lg = {"A": np.log(np.clip(base["p"].to_numpy()[v], 1e-7, 1 - 1e-7) / np.clip(1 - base["p"].to_numpy()[v], 1e-7, 1))}
     keys = base.filter(pl.Series(v)).select(["a", "b"])
-    for k in ("B", "R"):
-        fp = os.path.join(CACHE, "gnn", f"chain{k}_train_scores.parquet")
+    lg = {}
+    for k, fn in (("A", "gnn_mlx_v2"), ("B", "chainB"), ("R", "chainR")):
+        fp = os.path.join(CACHE, "gnn", f"{fn}_train_scores.parquet")
         if os.path.exists(fp):
             s = keys.join(pl.read_parquet(fp), on=["a", "b"], how="left")
             assert s["gnn"].null_count() == 0

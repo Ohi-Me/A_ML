@@ -1,6 +1,6 @@
 # H100 run manual — Business Entity Resolution (V2 → V3 → phase-2 diagnosis → V4 → V6)
 
-**Current version: V7** (`V7.md`): on the V6 cache run `nohup bash run_all.sh --stage v7all > run_v7.out 2>&1 &`
+**Current version: V8** (`V8.md`): on the V6 cache run `nohup bash run_all.sh --stage v8all > run_v8.out 2>&1 &` (agent prompt `AGENT_RUN_V8_PROMPT.md`). Previous: V7 (`V7.md`): on the V6 cache run `nohup bash run_all.sh --stage v7all > run_v7.out 2>&1 &`
 (about 8–11 h; choice in `results/v7/v7_choice.json`; agent prompt `AGENT_RUN_V7_PROMPT.md`).
 
 V6 (`V6.md`). On a machine where V2, V3 and phase 2 already ran:

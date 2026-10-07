@@ -1,0 +1,21 @@
+{
+ "args": {
+  "feats": "c2_test",
+  "s1": "test_stage1_halfB_v2.parquet",
+  "tag": "gnn_mlx_v2",
+  "split": "test",
+  "epochs": 4,
+  "batch_s1": 1500,
+  "lr": 0.002,
+  "extra": "xenc/ml_hardv2_test_scores.parquet:mlxenc",
+  "halves": "B",
+  "out_tag": "gnn_cfB",
+  "score_only": false,
+  "score_folds": "0",
+  "fit_country": "",
+  "drop_feats": ""
+ },
+ "edges": 83108284,
+ "runtime_s": 259.6242341995239,
+ "gpu": "13.89 GiB peak"
+}

@@ -13,6 +13,8 @@ Features (0 when the S1 has no qualifying sibling):
   c_num_same / c_num_cross     max p(sibling) over siblings with the same first house number
   c_num_nonS1                  ... where that shared number differs from the S1's own number (source-version signature)
   c_key                        max p(sibling) over siblings with the identical name key
+  c_name_same / c_name_cross   max p(sibling) over siblings with the identical normalised FULL name (legal words, typos:
+                               the source version's spelling), same / other source (V8; reaches empty-address records)
   c_support                    sum over siblings of p * (addr_eq + num_eq + key_eq) / 3
   c_nsib / c_nsib_same         number of confident siblings (p >= 0.5), all / same source
   c_src_conf                   confident records of this S1 from b's source (per-source caps: S2 <= 5, S3 <= 6)
@@ -25,8 +27,9 @@ import polars as pl
 
 from common.io import CACHE, NORM
 
-COLS = ["c_addr_same", "c_addr_cross", "c_num_same", "c_num_cross", "c_num_nonS1", "c_key", "c_support",
-        "c_nsib", "c_nsib_same", "c_src_conf", "c_support_margin"]
+AGG = ["c_addr_same", "c_addr_cross", "c_num_same", "c_num_cross", "c_num_nonS1", "c_key", "c_name_same", "c_name_cross",
+       "c_support", "c_nsib", "c_nsib_same"]
+COLS = AGG + ["c_src_conf", "c_support_margin"]
 
 
 def _h(s):
@@ -40,17 +43,23 @@ def _h(s):
 def record_attrs(split):
     """per-record arrays: source (0 = S2, 1 = S3), hashes of the normalised address, first house number and name key;
     per-S1 hash of the first house number."""
-    s2 = pl.read_parquet(os.path.join(CACHE, f"norm_{NORM}_{split}_s2.parquet"), columns=["am", "first_num", "key"])
-    s3 = pl.read_parquet(os.path.join(CACHE, f"norm_{NORM}_{split}_s3.parquet"), columns=["am", "first_num", "key"])
+    def rd(k):
+        path = os.path.join(CACHE, f"norm_{NORM}_{split}_s{k}.parquet")
+        have = pl.read_parquet_schema(path)
+        d = pl.read_parquet(path, columns=[c for c in ("am", "first_num", "key", "n") if c in have])
+        return d if "n" in d.columns else d.with_columns(pl.col("key").alias("n"))
+    s2, s3 = rd(2), rd(3)
     rr = pl.concat([s2, s3])
     s1 = pl.read_parquet(os.path.join(CACHE, f"norm_{NORM}_{split}_s1.parquet"), columns=["first_num"])
     src = np.r_[np.zeros(s2.height, np.int8), np.ones(s3.height, np.int8)]
-    return {"src": src, "ah": _h(rr["am"]), "nh": _h(rr["first_num"]), "kh": _h(rr["key"]), "s1_nh": _h(s1["first_num"])}
+    return {"src": src, "ah": _h(rr["am"]), "nh": _h(rr["first_num"]), "kh": _h(rr["key"]), "mh": _h(rr["n"]),
+            "s1_nh": _h(s1["first_num"])}
 
 
 def collective_features(D, attrs, conf_thr=0.3, chunk_a=60_000):
     """D: frame with r (row id), a, b, p. Returns D with the COLS added (p is the probability the evidence uses)."""
     src, ah, nh, kh, s1nh = attrs["src"], attrs["ah"], attrs["nh"], attrs["kh"], attrs["s1_nh"]
+    mh = attrs.get("mh", kh)
     conf = D.filter(pl.col("p") >= conf_thr).select(["a", pl.col("b").alias("b2"), pl.col("p").alias("p2")])
     a_max = int(D["a"].max()) + 1 if D.height else 0
     outs = []
@@ -69,16 +78,19 @@ def collective_features(D, attrs, conf_thr=0.3, chunk_a=60_000):
         neq = (nh[b] != 0) & (nh[b] == nh[b2])
         non1 = neq & (nh[b] != s1nh[a])
         keq = (kh[b] != 0) & (kh[b] == kh[b2])
+        meq = (mh[b] != 0) & (mh[b] == mh[b2])
         conf5 = p2 >= 0.5
         J = pl.DataFrame({"r": j["r"], "x_as": np.where(aeq & same, p2, 0), "x_ac": np.where(aeq & ~same, p2, 0),
                           "x_ns": np.where(neq & same, p2, 0), "x_nc": np.where(neq & ~same, p2, 0),
                           "x_n1": np.where(non1, p2, 0), "x_k": np.where(keq, p2, 0),
+                          "x_ms": np.where(meq & same, p2, 0), "x_mc": np.where(meq & ~same, p2, 0),
                           "x_sup": p2 * (aeq.astype(np.float32) + neq + keq) / 3,
                           "x_c": conf5.astype(np.int32), "x_cs": (conf5 & same).astype(np.int32)})
         outs.append(J.group_by("r").agg(
             pl.col("x_as").max().alias("c_addr_same"), pl.col("x_ac").max().alias("c_addr_cross"),
             pl.col("x_ns").max().alias("c_num_same"), pl.col("x_nc").max().alias("c_num_cross"),
             pl.col("x_n1").max().alias("c_num_nonS1"), pl.col("x_k").max().alias("c_key"),
+            pl.col("x_ms").max().alias("c_name_same"), pl.col("x_mc").max().alias("c_name_cross"),
             pl.col("x_sup").sum().alias("c_support"), pl.col("x_c").sum().alias("c_nsib"),
             pl.col("x_cs").sum().alias("c_nsib_same")))
     # b's source is attached while the rows are still in D's order (joins below may reorder rows)
@@ -88,8 +100,8 @@ def collective_features(D, attrs, conf_thr=0.3, chunk_a=60_000):
         S = pl.concat(outs)
         base = base.join(S, on="r", how="left")
     else:
-        base = base.with_columns([pl.lit(None, pl.Float32).alias(c) for c in COLS[:9]])
-    base = base.with_columns([pl.col(c).fill_null(0).cast(pl.Float32) for c in COLS[:9]])
+        base = base.with_columns([pl.lit(None, pl.Float32).alias(c) for c in AGG])
+    base = base.with_columns([pl.col(c).fill_null(0).cast(pl.Float32) for c in AGG])
     # confident records of this S1 per source (per-source caps), joined on b's source
     cc = base.filter(pl.col("p") >= 0.5).group_by(["a", "src_b"]).len().rename({"len": "c_src_conf"})
     base = base.join(cc, on=["a", "src_b"], how="left").with_columns(pl.col("c_src_conf").fill_null(0).cast(pl.Float32))

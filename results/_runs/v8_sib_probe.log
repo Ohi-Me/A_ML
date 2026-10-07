@@ -1,0 +1,117 @@
+== 2026-10-05T18:17:38+05:30 v8_sib_probe
+python -u code/v8/sib_probe.py
+Traceback (most recent call last):
+  File "/tmp/ai_25901334/AmazonML/code/v8/sib_probe.py", line 122, in <module>
+    main()
+  File "/tmp/ai_25901334/AmazonML/code/v8/sib_probe.py", line 46, in main
+    s1 = rd(1)
+  File "/tmp/ai_25901334/AmazonML/code/v8/sib_probe.py", line 45, in <lambda>
+    rd = lambda k: pl.read_parquet(os.path.join(CACHE, f"norm_{NORM}_train_s{k}.parquet"), columns=cols)  # noqa: E731
+  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/_utils/deprecation.py", line 132, in wrapper
+    return function(*args, **kwargs)
+  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/_utils/deprecation.py", line 132, in wrapper
+    return function(*args, **kwargs)
+  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/io/parquet/functions.py", line 303, in read_parquet
+    ret = lf._collect_eager()
+  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/lazyframe/frame.py", line 2240, in _collect_eager
+    return _eager_engine().collect(
+  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/lazyframe/engine.py", line 443, in collect
+    return wrap_df(ldf.collect(self.name, callback))
+FileNotFoundError: No such file or directory (os error 2): data/cache_v2/norm_v2_train_s1.parquet
+== 2026-10-05T18:42:49+05:30 v8_sib_probe
+python -u code/v8/sib_probe.py
+Traceback (most recent call last):
+  File "/tmp/ai_25901334/AmazonML/code/v8/sib_probe.py", line 122, in <module>
+    main()
+  File "/tmp/ai_25901334/AmazonML/code/v8/sib_probe.py", line 46, in main
+    s1 = rd(1)
+  File "/tmp/ai_25901334/AmazonML/code/v8/sib_probe.py", line 45, in <lambda>
+    rd = lambda k: pl.read_parquet(os.path.join(CACHE, f"norm_{NORM}_train_s{k}.parquet"), columns=cols)  # noqa: E731
+  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/_utils/deprecation.py", line 132, in wrapper
+    return function(*args, **kwargs)
+  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/_utils/deprecation.py", line 132, in wrapper
+    return function(*args, **kwargs)
+  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/io/parquet/functions.py", line 303, in read_parquet
+    ret = lf._collect_eager()
+  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/lazyframe/frame.py", line 2240, in _collect_eager
+    return _eager_engine().collect(
+  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/lazyframe/engine.py", line 443, in collect
+    return wrap_df(ldf.collect(self.name, callback))
+FileNotFoundError: No such file or directory (os error 2): data/cache_v2/norm_v2_train_s1.parquet
+== 2026-10-05T18:46:22+05:30 v8_sib_probe
+python -u code/v8/sib_probe.py
+{
+ "universe": "dms",
+ "normalised_name": {
+  "all_true": {
+   "records": 4778314,
+   "has_sibling_same_name": 0.3763653874567473,
+   "has_same_source_sibling_same_name": 0.22382015916074163,
+   "has_sibling_same_name_with_address": 0.3672171816251506,
+   "purity_mean": 0.5970944688687786,
+   "group_size_le_5": 0.7759278691186892,
+   "group_size_le_20": 0.857508108508566,
+   "sibling_and_group_le_10": 0.2511938311295574
+  },
+  "empty_address": {
+   "records": 206327,
+   "has_sibling_same_name": 0.3570594250873613,
+   "has_same_source_sibling_same_name": 0.20795145569896328,
+   "has_sibling_same_name_with_address": 0.3450299766874912,
+   "purity_mean": 0.7590791267974729,
+   "group_size_le_5": 0.881130438575659,
+   "group_size_le_20": 0.9456445351311268,
+   "sibling_and_group_le_10": 0.30570405230532116
+  },
+  "empty_address_ambiguous_key": {
+   "records": 83573,
+   "has_sibling_same_name": 0.40534622425903105,
+   "has_same_source_sibling_same_name": 0.24346379811661661,
+   "has_sibling_same_name_with_address": 0.39248321826427196,
+   "purity_mean": 0.49839891399843966,
+   "group_size_le_5": 0.7154224450480419,
+   "group_size_le_20": 0.8671460878513395,
+   "sibling_and_group_le_10": 0.27927679992342025
+  }
+ },
+ "raw_name": {
+  "all_true": {
+   "records": 4778345,
+   "has_sibling_same_name": 0.19173458592881007,
+   "has_same_source_sibling_same_name": 0.10093411003182064,
+   "has_sibling_same_name_with_address": 0.18661691443376316,
+   "purity_mean": 0.6362692420455868,
+   "group_size_le_5": 0.8655915384929301,
+   "group_size_le_20": 0.9467830388973588,
+   "sibling_and_group_le_10": 0.1486405858095219
+  },
+  "empty_address": {
+   "records": 206328,
+   "has_sibling_same_name": 0.14792951029428872,
+   "has_same_source_sibling_same_name": 0.07553991702531891,
+   "has_sibling_same_name_with_address": 0.1402572602845954,
+   "purity_mean": 0.8532423338369798,
+   "group_size_le_5": 0.9573494629909658,
+   "group_size_le_20": 0.9940434647745338,
+   "sibling_and_group_le_10": 0.14240917374277848
+  },
+  "empty_address_ambiguous_key": {
+   "records": 83573,
+   "has_sibling_same_name": 0.1533031002835844,
+   "has_same_source_sibling_same_name": 0.07875749344884113,
+   "has_sibling_same_name_with_address": 0.14375456188003302,
+   "purity_mean": 0.67549162803892,
+   "group_size_le_5": 0.8979933710648176,
+   "group_size_le_20": 0.9856771923946729,
+   "sibling_and_group_le_10": 0.14005719550572554
+  }
+ },
+ "id_check": {
+  "spearman_true_pairs": 0.0011585353269555829,
+  "spearman_random_pairs": 0.0009348929501311616,
+  "median_abs_diff_true": 292985449.0,
+  "median_abs_diff_random": 292495032.0,
+  "note": "report only; no model reads ids"
+ },
+ "runtime_s": 36.436485290527344
+}

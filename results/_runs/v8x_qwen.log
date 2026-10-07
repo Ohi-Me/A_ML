@@ -1,0 +1,3 @@
+== 2026-10-05T23:13:28+05:30 v8x_qwen
+[ 'none' = none ] && { echo 'third cross-encoder off (XENC3_MODEL)'; exit 0; }; python -u code/neural_reranker/ml_cross_encoder.py --name v8band --split train --epochs 1 --model none --col qwxenc --out_name ml_v8qwen  || { echo 'WARNING: third cross-encoder failed - V8 continues without it'; rm -f data/cache_v2/xenc/ml_v8qwen_train_scores.parquet data/cache_v2/xenc/ml_v8qwen_model_A.pt data/cache_v2/xenc/ml_v8qwen_model_B.pt; }
+third cross-encoder off (XENC3_MODEL)

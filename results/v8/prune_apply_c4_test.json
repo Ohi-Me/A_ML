@@ -1,0 +1,11 @@
+{
+ "cands": "c3w",
+ "split": "test",
+ "out": "c4",
+ "tau": 0.0032383420038968325,
+ "pairs_before": 215851328,
+ "pairs_after": 20854679,
+ "records": 9969589,
+ "pairs_per_record_after": 2.0918293622736104,
+ "runtime_s": 705.0708284378052
+}

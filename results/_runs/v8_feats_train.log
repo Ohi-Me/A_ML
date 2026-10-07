@@ -1,0 +1,27 @@
+== 2026-10-05T22:50:44+05:30 v8_feats_train
+python -u code/tfidf_fuzzy/pair_features.py --cands c4dms --split train --btag b1 --etags '' --fset v2 --pairc emb/e3_train/paircos_c3wdms.parquet
+GPU: NVIDIA H100 NVL MIG 3g.47gb, 46.4 GiB, SMs 60, torch 2.5.1+cu121, cuda 12.1
+pairs 16720350 S1 2206821 records 10320219
+[22:50:48] tfidf cosines ...
+[22:50:59] tfidf cosines done in 11.0s
+[22:50:59] join OOF pair cosines ...
+[22:51:04] join OOF pair cosines done in 5.7s
+[22:51:04] context features ...
+[22:51:14] context features done in 10.0s
+[22:51:14] labels ...
+[22:51:18] labels done in 3.5s
+[22:51:18] string features (streamed parts) ...
+/tmp/ai_25901334/AmazonML/code/tfidf_fuzzy/pair_features.py:137: DeprecationWarning: the default behavior of `how='horizontal'` for `concat` is deprecated and will require equal heights in the next breaking release. Use `how='horizontal_extend'` to keep the current behavior.
+(Deprecated in version 1.42.1)
+  pl.concat([C[ps:pe], FE], how="horizontal").write_parquet(os.path.join(out_dir, f"part_{pi:03d}.parquet"))
+  part 0: pairs 0-2000000, 60s
+  part 1: pairs 2000000-4000000, 89s
+  part 2: pairs 4000000-6000000, 115s
+  part 3: pairs 6000000-8000000, 145s
+  part 4: pairs 8000000-10000000, 173s
+  part 5: pairs 10000000-12000000, 204s
+  part 6: pairs 12000000-14000000, 236s
+  part 7: pairs 14000000-16000000, 265s
+  part 8: pairs 16000000-16720350, 275s
+[22:55:21] string features (streamed parts) done in 243.4s
+{"pairs": 16720350, "cols": ["a", "b", "r_e3_emb", "r_b1_comb", "r_b1_name", "r_b1_addr", "x_key", "x_addr", "x_numst", "x_sib_addr", "x_sib_key", "x_sib_name", "cos_name", "cos_addr", "cos_sum", "cos_e3", "b_n", "a_n", "b_gap_cos_sum", "b_rank_cos_sum", "a_gap_cos_sum", "a_rank_cos_sum", "b_gap_cos_e3", "b_rank_cos_e3", "a_gap_cos_e3", "a_rank_cos_e3", "b_gap2_cos_sum", "b_gap2_cos_e3", "key_n_s1", "key_n_r", "fold", "y", "b_has_match"], "runtime_s": 274.53449964523315, "positives": 4740946}

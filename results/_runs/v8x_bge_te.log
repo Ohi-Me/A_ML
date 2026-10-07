@@ -1,0 +1,3 @@
+== 2026-10-05T23:42:06+05:30 v8x_bge_te
+[ -f data/cache_v2/xenc/ml_v8bge_train_scores.parquet ] || { echo 'not available: skipped'; exit 0; }; python -u code/neural_reranker/ml_cross_encoder.py --name v8band --split test --models_from ml_v6band --out_name ml_v8bge --col bgexenc
+not available: skipped

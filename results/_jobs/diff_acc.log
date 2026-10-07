@@ -1,0 +1,208 @@
+job 32862.master on master at 2026-09-25T22:03:16+05:30; PBS CUDA_VISIBLE_DEVICES=unset
+CUDA_VISIBLE_DEVICES=MIG-110b5c2d-162d-5ada-814c-2aef6f9812f1
+GPU: NVIDIA H100 PCIe MIG 3g.40gb, 39.5 GiB, SMs 46, torch 2.5.1+cu121, cuda 12.1
+[22:03:38] train ...
+train {
+ "India": {
+  "n": 5561,
+  "has_xenc": 0.9976622909548643,
+  "xenc_mean": 4.943398492836488,
+  "p1_median": 0.5018501281738281,
+  "p1_lt_0.5": 0.49685308397770184,
+  "cos_sum": 1.3268675499898328,
+  "cos_e3": 0.7759761156484477,
+  "cos_name": 0.7990895719561345,
+  "cos_addr": 0.5277779775691256,
+  "n_tset": 87.78790242567784,
+  "a_tset": 74.19780101366254,
+  "k_eq": 0.6394533357309836,
+  "state_cmp": 0.7495054846250674,
+  "fnum_eq": 0.24006473655817298,
+  "fnum_lev": 0.5894623269196188,
+  "cnum_conflict": 0.6428699874123359,
+  "num_conflict": 0.649343643229635,
+  "a_empty2": 0.174249235748966,
+  "legal_fam_cmp": 0.6982557094047833,
+  "nonlatin": 0.09027153389678115,
+  "is_domain": 0.023017442905952167,
+  "b_n": 7.008631541089732,
+  "a_n": 46.62165078223341,
+  "key_n_s1": 70.32404243841036,
+  "b_gap2_cos_sum": 0.3829043116383663,
+  "b_rank_cos_sum": 1.4522567883474196,
+  "per_s1": 0.038822141396089166,
+  "v2_only_per_s1": 0.01301285228597558,
+  "precision_v3_only": 0.9431756878259306,
+  "precision_v2_only": 0.2757510729613734
+ },
+ "US": {
+  "n": 4088,
+  "has_xenc": 0.9894814090019569,
+  "xenc_mean": 3.6815161083773127,
+  "p1_median": 0.537024736404419,
+  "p1_lt_0.5": 0.4623287671232877,
+  "cos_sum": 1.326223500102117,
+  "cos_e3": 0.8002025953288064,
+  "cos_name": 0.8044043687218253,
+  "cos_addr": 0.5218191307558406,
+  "n_tset": 89.33722054608414,
+  "a_tset": 71.42019829778056,
+  "k_eq": 0.5914872798434442,
+  "state_cmp": 0.7578277886497065,
+  "fnum_eq": 0.2079256360078278,
+  "fnum_lev": 0.776174168297456,
+  "cnum_conflict": 0.6641389432485323,
+  "num_conflict": 0.6646281800391389,
+  "a_empty2": 0.21281800391389433,
+  "legal_fam_cmp": 0.3595890410958904,
+  "nonlatin": 0.0,
+  "is_domain": 0.00684931506849315,
+  "b_n": 6.622553816046967,
+  "a_n": 44.013454011741686,
+  "key_n_s1": 36.79231898238748,
+  "b_gap2_cos_sum": 0.46670658064827525,
+  "b_rank_cos_sum": 1.2771526418786692,
+  "per_s1": 0.019038482137451507,
+  "v2_only_per_s1": 0.011344848944919734,
+  "precision_v3_only": 0.9395792563600783,
+  "precision_v2_only": 0.4909688013136289
+ }
+}
+[22:07:55] train done in 256.1s
+[22:07:55] test ...
+test {
+ "France": {
+  "n": 16106,
+  "has_xenc": 0.9492114739848504,
+  "xenc_mean": 2.155592150943308,
+  "p1_median": 0.4592505693435669,
+  "p1_lt_0.5": 0.5489258661368435,
+  "cos_sum": 1.4156427086195293,
+  "cos_e3": 0.7767850537633475,
+  "cos_name": 0.6709105882069238,
+  "cos_addr": 0.7447321203138412,
+  "n_tset": 76.12624529327914,
+  "a_tset": 88.05580773277192,
+  "k_eq": 0.3619148143548988,
+  "state_cmp": 0.6023842046442319,
+  "fnum_eq": 0.6017633180181299,
+  "fnum_lev": 0.30355147150130385,
+  "cnum_conflict": 0.2616416242394139,
+  "num_conflict": 0.2616416242394139,
+  "a_empty2": 0.09021482677263132,
+  "legal_fam_cmp": 0.47516453495591704,
+  "nonlatin": 0.0,
+  "is_domain": 0.03383832112256302,
+  "b_n": 8.932075003104433,
+  "a_n": 54.29119582764187,
+  "key_n_s1": 33.690115484912454,
+  "b_gap2_cos_sum": 0.3325978776623444,
+  "b_rank_cos_sum": 1.3986713026201416,
+  "per_s1": 0.06207699304688343,
+  "v2_only_per_s1": 0.06443966514037279
+ },
+ "India": {
+  "n": 32714,
+  "has_xenc": 0.9622791465427646,
+  "xenc_mean": 3.647159742369888,
+  "p1_median": 0.4317898750305176,
+  "p1_lt_0.5": 0.5723237757535,
+  "cos_sum": 1.3588005889651462,
+  "cos_e3": 0.7838281331130751,
+  "cos_name": 0.810829489684584,
+  "cos_addr": 0.5479710994178664,
+  "n_tset": 88.09241885525852,
+  "a_tset": 76.32484423966281,
+  "k_eq": 0.6665953414440301,
+  "state_cmp": 0.7562205783456624,
+  "fnum_eq": 0.23488414745980316,
+  "fnum_lev": 0.6417435960139389,
+  "cnum_conflict": 0.6805954637158403,
+  "num_conflict": 0.6834077153512258,
+  "a_empty2": 0.15568258238063215,
+  "legal_fam_cmp": 0.5957693953658983,
+  "nonlatin": 0.08620162621507611,
+  "is_domain": 0.021091887265390963,
+  "b_n": 8.542367182246133,
+  "a_n": 55.687198141468485,
+  "key_n_s1": 58.081494161521064,
+  "b_gap2_cos_sum": 0.40422611177548834,
+  "b_rank_cos_sum": 1.54786941370667,
+  "per_s1": 0.040388352391275896,
+  "v2_only_per_s1": 0.01845093618902055
+ },
+ "US": {
+  "n": 57574,
+  "has_xenc": 0.8421162330218501,
+  "xenc_mean": -1.3357786548559583,
+  "p1_median": 0.062448807060718536,
+  "p1_lt_0.5": 0.8312606384826484,
+  "cos_sum": 1.5571724588946494,
+  "cos_e3": 0.8611373362493535,
+  "cos_name": 0.9454091039493056,
+  "cos_addr": 0.6117633552889403,
+  "n_tset": 97.22680208593319,
+  "a_tset": 85.64018388145162,
+  "k_eq": 0.8675443776704762,
+  "state_cmp": 0.9284746587001077,
+  "fnum_eq": 0.044065029353527636,
+  "fnum_lev": 1.4072498002570604,
+  "cnum_conflict": 0.9670337305033522,
+  "num_conflict": 0.9671032063084031,
+  "a_empty2": 0.06478618820995588,
+  "legal_fam_cmp": 0.10087886893389378,
+  "nonlatin": 0.0,
+  "is_domain": 0.0007294959530343558,
+  "b_n": 7.903532844686838,
+  "a_n": 41.25370827109459,
+  "key_n_s1": 13.626654392607774,
+  "b_gap2_cos_sum": 0.6981120674831147,
+  "b_rank_cos_sum": 1.0838572966964255,
+  "per_s1": 0.08682473088767105,
+  "v2_only_per_s1": 0.012461054492041997
+ }
+}
+
+examples: V3-only accepts on US test (S1 || record | p1 xenc gnn-cal)
+  Optimal Innovative Allurion | 9288 Brighton View Drive, Sandy City, UT  ||  S2-909591467 Optimal  Innovative Allurion LLC | SANDY CITY, UT, 9291 Brighton View Dr   | 0.048 -1.18 0.987
+  Gouveia Ramaco | Hickory, 1157 13th Avenue Circle, NC  ||  S2-312834977 Gouveia Ramaco Corp | 1170 13TH AVENUE CIRCLE, HICKROY, NC   | 0.033 -2.17 0.975
+  Pacific College LLC | 1883 Kristin Lane, Unit A, Webb City, MO  ||  S2-637542816 Pacific College LLC Foundation | 1883 KRISTIN LN, WEBB CITY, MO   | 0.866 7.89 1.000
+  Bay Energetics Inc. | 10218 Hermann Trace, Texas City, TX  ||  S3-72318228 Bay énergetics Inc | 10220- Hermann Trace, Texas City, Texas   | 0.911 -3.15 0.936
+  Valley Charities-Corolla | 460 Pipsis Point Road, Corolla, NC  ||  S3-834693579 Valley Charities-Corolla (Ltd) | 463 Pipsis Point Rd, Corolla, North Carolina   | 0.068 -2.82 0.998
+  Eastern Coastal Art | OH, Mansfield, 442 Gem Avenue  ||  S3-654425568 Eastern Coastal-Art Inc | 446 Gem Avenue, Mansfield, Ohio   | 0.063 -3.11 0.789
+  XG United Earth PC | 1039 Main Street, ME, Wilton, Unit Lot 12  ||  S3-850452804 XG United  PC Services |    | 0.608 2.78 0.897
+  Vision Metropolitan Group P.C. | 38 Spring Meadow Court, Somers, NY  ||  S2-820597437 vision metropolitan group p.c. |    | 0.562 2.74 0.996
+  Alia's Electric | 38 Harford Drive, Brookhaven, NY  ||  S3-982653736 A1ia'S Electric Co | Coram, New York, 49 Harford Drive   | 0.030 -3.56 0.955
+  Global Express Uranium | 3351 Sheringham Drive, Mobile, AL  ||  S2-406144215 Global Express Uranium Inc | AL, MOBILE, 3355 SHERINGHAM DR   | 0.160 -3.23 0.997
+  Desert Vanguard Futurecrest | 1023 Elton Street, Houston, TX  ||  S2-768096426 *** Desert Vanguard-Futurecrest Inc | TX, HOUSTON, 1028 ELTON STREET   | 0.081 -4.04 0.955
+  Cate's Services | 310 Enochville Avenue, NC, Kannapolis  ||  S2-769190688 Cate's Services Co | 317 ENLCHVILLE AVE, KANNAPOLIS, NC   | 0.087 -3.8 0.897
+  Persis Moreno, DDS, M.D., P.C. PC | 5250 32nd Avenue, Unit Apartment 1005, Fargo, ND  ||  S2-276894624 Persis Mortno, DDS, M.D.,  P.C. PC |    | 0.415 0.29 0.789
+  Lyrium Consulting | 10455 Spyglass Drive, Eden Prairie, MN  ||  S2-913338656 Lyrium Consulting Co | 10459 SPYGLASS DRSVE, EDEN PRAIRIE, MN   | 0.025 -2.02 0.897
+  Lucky Nails Care | 12781 Cerro Colorado Drive, Topock, AZ  ||  S2-674301573 Lucky Nails Care Ltd | 13087 CERRO COLORADO DRIVE, TOPOCK, AZ   | 0.181 -1.42 0.994
+  LC Resilience | 424 Tampa Drive, Owensboro, KY  ||  S3-321540 LC Resilience LLC | 427 Tama Dr, Owensboro, Kentucky   | 0.019 None 0.975
+  Empire Charities | 800 South Avenue, Newport News City, VA  ||  S2-536903652 Empire Charities Charities Inc. | 821 South Avenue, NEWORT NEWS, VA   | 0.113 -1.5 0.936
+  Dynamic Payment Works | NC, Cornelius, 9409 Magnolia Estates Drive  ||  S3-77486691 Dynamic Payment Works LLC | 9413 Magnolia Estates Drive, North Carolina, Cornelius   | 0.022 -3.08 0.955
+  Human Rights Association | Milepost 5.5 Wissahickon Green Ribbon Trail, Lower Gwynedd Township, PA  ||  S3-658869633 Human Human Riogas Association Corp | Ambler, Milepost 5. Wissahickon Green Ribbon Trail, Pennsylvania   | 0.730 2.0 0.990
+  Sterling Dpc | 27 Stream View Lane, Lancaster, NY  ||  S3-131374597 Sterling Dpc Inc | 40 Stream View Ln, Lancaster, New York   | 0.024 -3.2 0.789
+  Studio 50 Barbershop | 1505 Trice Road, Henderson, TN  ||  S3-801741916 Studio 50 Barbershop  Co | 1507 Trice Road, Henderson, Tennessee   | 0.123 -2.88 0.990
+  Johnath's Group PC | GA, Bldg E1, 1599 Memorial Drive, Atlanta  ||  S3-878473760 Johnath's Group LLC | 1602 Memorial Drive, Building E1, Adk, Georgia   | 0.052 0.48 0.975
+  Leyva Ramaco | 18200 Lewis Rogers Lane, Newberg, OR  ||  S2-67899404 Leyva Ramaco Ltd | OR, NEWBERG TWONSHIP, 18211. LEWIS ROGERS LANE   | 0.092 -4.58 0.955
+  Cardiology Partners | 602 South Drive, Murfreesboro, NC  ||  S3-232406518 Cardiology Partners Corp | 11 South Dr, Murfreesboro, North Carolina   | 0.264 -2.78 0.765
+  Cherida Johnson Tri-State Adamas Care | 22 Sullivan Avenue, Port Jervis, NY  ||  S2-745897432 CHERIDA JOHNSON TRI-STATE ADAMAS CARE CO | 23 SULLIVAN AVENUE, PORT JERVIS, NY   | 0.468 -3.21 0.988
+  Federal Integrated Mobility | 205 United States Highway 82, Avery, TX  ||  S2-139099444 Federal Integrated Mobility Corp | #208 UNITED STATES HIGHWAY 82, AVERY, TX   | 0.048 -4.3 0.975
+  Baptist Delta Services | 30518 Dr William P Hytche Boulevard, Princess Anne, MD  ||  S2-191578052 Baptist Delta Services Inc | 30519 DR WILLIAM P HYTCHE BOULEVARD, PRINCESS ANNE CITY, MD   | 0.154 -3.6 0.996
+  Hedi's Bright Advisors | 720 Mesquite Street, Palo Pinto, TX  ||  S3-433275035 Hedi's Bríght Advisors Holdings | 722 Mesquite St, N/A, Palo Pinto, Texas   | 0.005 None 0.897
+  Cornerstone Online Co | 32014 W River Road, Wilmington, IL  ||  S2-777318763 Comerstone Ónline | 32014  W RIVER ROAD, WILMINGOTN TOWNSHIP, IL   | 0.545 6.58 0.996
+  Plumbers Local 499 | 624 Leland Avenue, Dayton, OH  ||  S3-612072115 Plumbers L0cal 499 Corp | 633 Leland Avenue, Datyon, Ohio   | 0.066 -3.31 0.955
+  Houston Community Church | 13607 White Cliff Drive, Houston, TX  ||  S3-325689844 Houston Community Church  Inc | 13611 White Cliff Dr, Houston, Texas   | 0.036 -2.67 0.897
+  Shalne G. Miles, MD LLC | 50 Kendall Road, Holden, MA  ||  S2-86802213 Shalne G. Miles, MD Llc | 45 Kendall Rd, HOLDEN, MA   | 0.639 8.0 0.999
+  Surgical Associates | 3154 Sulky Lane, Evergreen, CO  ||  S2-904233504 Surgical Associates Inc | 3161 SULKY LANE, EVERGREEN, CO   | 0.037 -3.23 0.955
+  Tenino National Krakacquisition | 17633 Dusty Court, Fl 1, Tenino, WA  ||  S2-461536050 Tenino National Krakacquisition Inc | WA, 17646 DUSTY CT, TENINO CITY   | 0.083 -2.81 0.725
+  Ridenour, Evangelia, D.D.S., DDS PC | 604 Selma Street, Norristown Borough, PA  ||  S2-298794014 RIDENOUR  EVANGELIA D.D.S. DDS PC LTD | 60 SELMA STREET, NORRISTOWN, PA   | 0.479 -0.64 0.897
+  Lucky Hair Studio! | 2288 Princess Anne Road, Virginia Beach City, VA  ||  S2-932212562 LUCKY HAIR-STUDIO! CO | 2290 PRINCESS ANNE ROAD, VIRGINIA BEACH CITY, VA   | 0.024 -0.82 0.936
+  Clovis Harbors | 3713 Linkwood Lane, Clovis, NM  ||  S3-934903125 Clovis  Harbors LLC | 3718 Linkwood Lane, N/A, Clovis, New Mexico   | 0.085 -3.64 0.936
+  Melton Procap | 1961 S Cove Road, Roosevelt, UT  ||  S3-652341150 Melton Procap Co | 1968 South Cove Road, Roosevelt, Utah   | 0.030 -3.07 0.955
+  Brunn Xii | 201 Foley Brindle Lane, Dobson, NC  ||  S2-25136548 Brunn Xii Co | 205 Foley Brindle Lane, DOBSON, NC   | 0.022 -3.54 0.975
+  Physical Therapy Medicine | 25 Broadway, Unit Apartment 201, Long Beach, NY  ||  S2-695651279 Physical Therapy Medicine Corp | 0029 BROADWAY, LONG BEACH, NY   | 0.253 -4.16 0.955
+[22:13:14] test done in 319.4s
+EXIT rc=0 after 584 s at 2026-09-25T22:13:16+05:30

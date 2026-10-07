@@ -1,0 +1,26 @@
+== 2026-10-05T18:48:41+05:30 blk_train
+python -u code/blocking/sparse_tfidf.py --split train --tag b1 --no_s1side --k_rid 20
+GPU: NVIDIA H100 NVL MIG 1g.24gb, 21.6 GiB, SMs 26, torch 2.5.1+cu121, cuda 12.1
+[18:48:43] load normalized ...
+[18:48:43] load normalized done in 0.4s
+[18:48:43] hash features ...
+nc nnz/doc 17.1
+nw nnz/doc 2.6
+aw nnz/doc 5.6
+[18:52:02] hash features done in 198.6s
+[18:52:02] save tfidf matrices ...
+[18:52:05] save tfidf matrices done in 2.9s
+countries in S1: ['India', 'US']
+[18:52:11] India: 4133346 records -> 883188 S1 ...
+/tmp/ai_25901334/AmazonML/code/blocking/sparse_tfidf.py:59: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at ../aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
+  return torch.sparse_csr_tensor(torch.from_numpy(m.indptr.astype(np.int64)), torch.from_numpy(m.indices.astype(np.int64)),
+    0/4133346 queries, 0s, eta 18s
+[18:52:12] India: 4133346 records -> 883188 S1 done in 0.7s
+Traceback (most recent call last):
+  File "/tmp/ai_25901334/AmazonML/code/blocking/sparse_tfidf.py", line 226, in <module>
+    main()
+  File "/tmp/ai_25901334/AmazonML/code/blocking/sparse_tfidf.py", line 176, in main
+    out, parts = retrieve(Xn, Xa, name[ir + n1], addr[ir + n1], K1, 2048, dev)
+  File "/tmp/ai_25901334/AmazonML/code/blocking/sparse_tfidf.py", line 88, in retrieve
+    SnT = torch.sparse.mm(Xn, D).T.contiguous().half()
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 6.74 GiB. GPU 0 has a total capacity of 21.62 GiB of which 6.46 GiB is free. Process 1675824 has 342.00 MiB memory in use. Process 1874620 has 822.00 MiB memory in use. Including non-PyTorch memory, this process has 15.14 GiB memory in use. Of the allocated memory 15.00 GiB is allocated by PyTorch, and 2.28 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

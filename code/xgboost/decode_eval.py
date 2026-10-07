@@ -47,7 +47,8 @@ def main():
         rep["threshold_rule"] = {"thr": thr, "margin": mg, "f05_tune": f, "val": mv}
         print("threshold rule", rep["threshold_rule"], flush=True)
     with Timer("isotonic calibration on folds 1-2"):
-        tr = D.filter(pl.col("fold").is_in([1, 2])).sample(n=min(8_000_000, D.height), seed=0)
+        tr = D.filter(pl.col("fold").is_in([1, 2]))
+        tr = tr.sample(n=min(8_000_000, tr.height), seed=0)
         iso = IsotonicRegression(out_of_bounds="clip", y_min=0.0, y_max=1.0).fit(tr["p"].to_numpy(), tr["y"].to_numpy())
         D = D.with_columns(pl.Series("p", iso.predict(D["p"].to_numpy()).astype(np.float32)))
     with Timer("expected-F decoding grid"):

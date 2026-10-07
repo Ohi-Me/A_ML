@@ -1,0 +1,14 @@
+== 2026-10-05T22:38:55+05:30 v8_prune_test
+python -u code/v8/prune.py apply --cands c3w --split test --out c4 --fit_from c3wdms
+GPU: NVIDIA H100 NVL MIG 3g.47gb, 46.4 GiB, SMs 60, torch 2.5.1+cu121, cuda 12.1
+{
+ "cands": "c3w",
+ "split": "test",
+ "out": "c4",
+ "tau": 0.0032383420038968325,
+ "pairs_before": 215851328,
+ "pairs_after": 20854679,
+ "records": 9969589,
+ "pairs_per_record_after": 2.0918293622736104,
+ "runtime_s": 705.0708284378052
+}

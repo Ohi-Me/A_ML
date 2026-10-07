@@ -1,0 +1,9 @@
+{
+ "records": 3830652,
+ "pos_records": 1686528,
+ "distractor_records": 1444320,
+ "pairs": 4001240,
+ "pos_pairs": 509189,
+ "pseudo_label_accuracy": 0.9990997790684888,
+ "pseudo_positive_precision": 0.9995031314502081
+}

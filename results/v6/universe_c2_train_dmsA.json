@@ -1,0 +1,30 @@
+{
+ "plan": {
+  "US": [
+   0.62,
+   0.19
+  ],
+  "India": [
+   1.0,
+   0.19
+  ]
+ },
+ "pairs_before": 84853404,
+ "pairs_after": 44623660,
+ "code": 62,
+ "runtime_s": 105.54219436645508,
+ "by_country": {
+  "India": {
+   "s1_present": 715335,
+   "records": 4133346,
+   "records_per_s1": 5.778196229738514,
+   "distractor_share": 0.4004779662772001
+  },
+  "US": {
+   "s1_present": 664967,
+   "records": 3840571,
+   "records_per_s1": 5.775581344638155,
+   "distractor_share": 0.401049218983323
+  }
+ }
+}

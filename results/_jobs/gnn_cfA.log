@@ -1,0 +1,77 @@
+job 32847.master on master at 2026-09-25T20:19:32+05:30; PBS CUDA_VISIBLE_DEVICES=unset
+CUDA_VISIBLE_DEVICES=MIG-c747c071-8b61-5993-a5e0-33f4b566bd6e
+GPU: NVIDIA H100 PCIe MIG 3g.40gb, 39.5 GiB, SMs 46, torch 2.5.1+cu121, cuda 12.1
+[20:19:40] load edges to the GPU ...
+/tmp/ai_25901334/AmazonML/code/gnn/edge_gnn.py:124: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ck0 = torch.load(os.path.join(gdir, f"{args.tag}_A.pt"), map_location="cpu")
+edges 83108284 S1 1732544 records 9969589 8.54 GiB peak
+[20:20:12] load edges to the GPU done in 31.9s
+/tmp/ai_25901334/AmazonML/code/gnn/edge_gnn.py:245: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ck = torch.load(os.path.join(gdir, f"{args.tag}_{name}.pt"), map_location=dev)
+{"args": {"feats": "c2_test", "s1": "test_stage1_halfA_v2.parquet", "tag": "gnn_mlx_v2", "split": "test", "epochs": 4, "batch_s1": 1500, "lr": 0.002, "extra": "xenc/ml_hardv2_test_scores.parquet:mlxenc", "halves": "A", "out_tag": "gnn_cfA", "score_only": false, "score_folds": "0", "fit_country": "", "drop_feats": ""}, "edges": 83108284, "runtime_s": 103.30732560157776, "gpu": "13.89 GiB peak"}
+GPU: NVIDIA H100 PCIe MIG 3g.40gb, 39.5 GiB, SMs 46, torch 2.5.1+cu121, cuda 12.1
+{
+ "France": {
+  "s1": 259452,
+  "pred_per_s1": 3.3203405639578802,
+  "empty_share": 0.0587468973066309,
+  "mean_p_accepted": 0.9959884881973267,
+  "exp_fp_per_s1": 0.013320292626381758,
+  "assigned_band_share": 0.09741754460056955
+ },
+ "India": {
+  "s1": 809986,
+  "pred_per_s1": 3.395942645922275,
+  "empty_share": 0.057468894524102886,
+  "mean_p_accepted": 0.9984931945800781,
+  "exp_fp_per_s1": 0.00511707158846727,
+  "assigned_band_share": 0.05754594571108629
+ },
+ "US": {
+  "s1": 663106,
+  "pred_per_s1": 3.4885478339812943,
+  "empty_share": 0.05707684744218873,
+  "mean_p_accepted": 0.9973260760307312,
+  "exp_fp_per_s1": 0.009328155909226806,
+  "assigned_band_share": 0.08776315794468335
+ },
+ "_total_matches": 5925412
+}
+GPU: NVIDIA H100 PCIe MIG 3g.40gb, 39.5 GiB, SMs 46, torch 2.5.1+cu121, cuda 12.1
+[20:22:57] load edges to the GPU ...
+/tmp/ai_25901334/AmazonML/code/gnn/edge_gnn.py:124: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ck0 = torch.load(os.path.join(gdir, f"{args.tag}_A.pt"), map_location="cpu")
+edges 83108284 S1 1732544 records 9969589 8.54 GiB peak
+[20:26:03] load edges to the GPU done in 186.8s
+/tmp/ai_25901334/AmazonML/code/gnn/edge_gnn.py:245: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ck = torch.load(os.path.join(gdir, f"{args.tag}_{name}.pt"), map_location=dev)
+{"args": {"feats": "c2_test", "s1": "test_stage1_halfB_v2.parquet", "tag": "gnn_mlx_v2", "split": "test", "epochs": 4, "batch_s1": 1500, "lr": 0.002, "extra": "xenc/ml_hardv2_test_scores.parquet:mlxenc", "halves": "B", "out_tag": "gnn_cfB", "score_only": false, "score_folds": "0", "fit_country": "", "drop_feats": ""}, "edges": 83108284, "runtime_s": 259.6242341995239, "gpu": "13.89 GiB peak"}
+GPU: NVIDIA H100 PCIe MIG 3g.40gb, 39.5 GiB, SMs 46, torch 2.5.1+cu121, cuda 12.1
+{
+ "France": {
+  "s1": 259452,
+  "pred_per_s1": 3.3317338081803185,
+  "empty_share": 0.05863897753727086,
+  "mean_p_accepted": 0.9957517385482788,
+  "exp_fp_per_s1": 0.014154077482299231,
+  "assigned_band_share": 0.10440125126999603
+ },
+ "India": {
+  "s1": 809986,
+  "pred_per_s1": 3.391430222250755,
+  "empty_share": 0.05735160854632056,
+  "mean_p_accepted": 0.9986657500267029,
+  "exp_fp_per_s1": 0.00452470777417372,
+  "assigned_band_share": 0.048073400362099214
+ },
+ "US": {
+  "s1": 663106,
+  "pred_per_s1": 3.458186172346503,
+  "empty_share": 0.05679484124710076,
+  "mean_p_accepted": 0.9978611469268799,
+  "exp_fp_per_s1": 0.007396271798221174,
+  "assigned_band_share": 0.07318465788536625
+ },
+ "_total_matches": 5904580
+}
+EXIT rc=0 after 538 s at 2026-09-25T20:28:37+05:30

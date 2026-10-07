@@ -1,0 +1,48 @@
+== 2026-10-05T22:19:25+05:30 v8_cands_test
+python -u code/v7/build_cands.py --split test --name c3w --passes_from c3wdms --plan results/v8/cands_plan.json
+[22:19:27] re-cut lists on the present S1 (depth x4) ...
+[22:19:44] re-cut lists on the present S1 (depth x4) done in 16.5s
+[22:19:45] block and sibling passes ...
+  pass key: 17525110 pairs
+  pass addr: 2184166 pairs
+  pass numstreet: 3512490 pairs
+  pass sib_addr: 7401812 pairs
+  pass sib_key: 12341721 pairs
+  pass sib_name: 8453650 pairs
+[22:22:31] block and sibling passes done in 165.6s
+[22:22:31] union (in record chunks) ...
+[22:22:54] union (in record chunks) done in 22.9s
+{
+ "split": "test",
+ "universe": "none",
+ "depth_mult": 4,
+ "passes_planned": {
+  "key": 30,
+  "addr": 10,
+  "numstreet": 10,
+  "sib_addr": 50,
+  "sib_key": 30,
+  "sib_name": 20
+ },
+ "records": 9969589,
+ "list_pairs": 199391780,
+ "passes_kept": {
+  "key": 30,
+  "addr": 10,
+  "numstreet": 10,
+  "sib_addr": 50,
+  "sib_key": 30,
+  "sib_name": 20
+ },
+ "pairs": 215851328,
+ "pairs_per_record": 21.65097558184194,
+ "only_from_pass": {
+  "x_key": 5417894,
+  "x_addr": 199605,
+  "x_numst": 647188,
+  "x_sib_addr": 2678108,
+  "x_sib_key": 5036264,
+  "x_sib_name": 3961950
+ },
+ "runtime_s": 220.90268301963806
+}

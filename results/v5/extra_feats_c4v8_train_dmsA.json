@@ -1,0 +1,30 @@
+{
+ "src": "c4dms_train_dmsA",
+ "out": "data/cache_v2/feats/c4v8_train_dmsA",
+ "new_columns": [
+  "v5_name_top",
+  "v5_name_n05",
+  "v5_name_n15",
+  "v5_name_gap12",
+  "v5_name_sc",
+  "v5_name_gap",
+  "v5_addr_top",
+  "v5_addr_n05",
+  "v5_addr_n15",
+  "v5_addr_gap12",
+  "v5_addr_sc",
+  "v5_addr_gap",
+  "v5_s1_mindf",
+  "v5_s1_meandf",
+  "v5_rec_mindf",
+  "v5_shared_mindf",
+  "v5_n_shared_rare",
+  "v5_st_tset",
+  "v5_st_jac",
+  "v5_st_c12",
+  "v5_st_c21"
+ ],
+ "cosvar": "none",
+ "absent_code": 62,
+ "runtime_s": 69.7789318561554
+}
