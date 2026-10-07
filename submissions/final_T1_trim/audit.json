@@ -1,0 +1,11 @@
+{
+ "rule": "T1: V6 minus the pairs no other system predicts (not LORA, not V3-noGNN, V4, V3, V2, C2v1, C1), only on S1 that\nkeep at least one other match (no new empty S1). Leaderboard evidence so far: pairs added to V6 are right ~75-78 % of\nthe time (breakeven), so the untested direction is removing V6's least-supported pairs.",
+ "v6_pairs": 5836570,
+ "removed": 4257,
+ "pairs_after": 5832313,
+ "removed_by_country": {
+  "US": 841,
+  "India": 1190,
+  "France": 2226
+ }
+}

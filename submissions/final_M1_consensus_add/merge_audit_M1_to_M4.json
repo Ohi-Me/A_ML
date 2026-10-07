@@ -1,0 +1,66 @@
+{
+ "rules": "Conservative merges of the test predictions, V6 as the base (best leaderboard score, 0.988109).\n\nRules fixed from the label-free agreement structure (agreement.json, disputed.json), never from test labels:\n  M1 consensus_add   V6 + LORA-only pairs where V6's list for that S1 is a subset of LORA's (no conflict), the record\n                     is not given to any other S1 by V6, and >= 4 of the 6 other systems (V3-noGNN, V4, V3, V2, C2v1,\n                     C1) also predict it (so >= 6 of 8 systems agree). S1 that V6 leaves empty stay empty.\n  M2 consensus_trim  M1 minus V6-only pairs that NO other system predicts (not LORA, not any of the 6), only where the\n                     S1 keeps at least one other match (a predicted-empty S1 is never created by trimming)\n  M3 france_lora     V6 for US / India, LORA for France (a probe: V6 and LORA differ most in France)\n  M4 m1_france_lora  M1 for US / India, LORA for France\nEvery S1 of test_source1 appears once in the original order, IDs deduplicated, no record in two S1.\nPrecision / recall / F0.5 can't be computed on test (no labels): the audit reports the agreement counts only.\n",
+ "base_V6_pairs": 5836570,
+ "added_by_M1": 12684,
+ "trimmed_by_M2": 4257,
+ "added_by_M1_by_country": {
+  "US": 2379,
+  "France": 8863,
+  "India": 1442
+ },
+ "trimmed_by_M2_by_country": {
+  "France": 2226,
+  "India": 1190,
+  "US": 841
+ },
+ "files": {
+  "M1_consensus_add": {
+   "pairs": 5849254,
+   "added_vs_v6": 12684,
+   "removed_vs_v6": 0,
+   "empty_s1": 99777,
+   "pairs_per_s1": {
+    "US": 3.3957,
+    "India": 3.3804,
+    "France": 3.3126
+   },
+   "file": "C:\\Users\\Ohi\\Desktop\\A_ML\\merged\\M1_consensus_add\\matching_results.tsv"
+  },
+  "M2_consensus_trim": {
+   "pairs": 5844997,
+   "added_vs_v6": 12684,
+   "removed_vs_v6": 4257,
+   "empty_s1": 99777,
+   "pairs_per_s1": {
+    "US": 3.3945,
+    "India": 3.3789,
+    "France": 3.304
+   },
+   "file": "C:\\Users\\Ohi\\Desktop\\A_ML\\merged\\M2_consensus_trim\\matching_results.tsv"
+  },
+  "M3_france_lora": {
+   "pairs": 5862127,
+   "added_vs_v6": 36475,
+   "removed_vs_v6": 10918,
+   "empty_s1": 99716,
+   "pairs_per_s1": {
+    "US": 3.3922,
+    "India": 3.3786,
+    "France": 3.3769
+   },
+   "file": "C:\\Users\\Ohi\\Desktop\\A_ML\\merged\\M3_france_lora\\matching_results.tsv"
+  },
+  "M4_m1_france_lora": {
+   "pairs": 5865948,
+   "added_vs_v6": 40296,
+   "removed_vs_v6": 10918,
+   "empty_s1": 99716,
+   "pairs_per_s1": {
+    "US": 3.3957,
+    "India": 3.3804,
+    "France": 3.3769
+   },
+   "file": "C:\\Users\\Ohi\\Desktop\\A_ML\\merged\\M4_m1_france_lora\\matching_results.tsv"
+  }
+ }
+}

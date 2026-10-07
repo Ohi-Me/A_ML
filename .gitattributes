@@ -1,0 +1,5 @@
+# keep data files byte-for-byte (no CRLF conversion on Windows checkouts)
+*.tsv -text
+*.json -text
+*.zip binary
+*.parquet binary

@@ -19,8 +19,14 @@ are from `EXPERIMENT_LOG.md` (the older systems on SIM19 validation, V6 / V8 on 
 `final_v6/candidate_pairs.tsv` (1.09 GB, kept locally, not in git) is the candidate set shared by V2, V3, V3-no-GNN and
 V6 (all copies had the same md5 `b5db23a2...`). `final_v8/candidate_pairs.tsv` is V8's own pruned set (277 MB, local only).
 
-`Enigma_submission.zip` is the final package for the challenge portal (V6 files, source code, documentation) with
-`output/`, `code/` and `Documentation_template.md` at the zip root, as the rules require.
-`Enigma_submission_wrapped_in_folder.zip` has the same files inside one extra top-level `Enigma_submission/` folder
-(what Windows Explorer produces). Large files (TSVs over 100 MB, zips) are not in git: only the matching files up to
+Packages for the challenge portal (all three: source code, documentation and both TSVs; the last one is the one to use):
+
+| zip | output/matching_results.tsv | zip structure |
+|---|---|---|
+| `Enigma_submission.zip` | V6 (`final_v6`, 0.988109) | correct: `output/`, `code/`, `Documentation_template.md` at the zip root |
+| `Enigma_submission_wrapped_in_folder.zip` | T1 (`final_T1_trim`, 0.988285) | everything inside one extra top-level `Enigma_submission/` folder (what Windows Explorer produces); the structure rule asks for the files at the zip root |
+| `Enigma_submission_T1_correct_structure.zip` | T1 (`final_T1_trim`, 0.988285) | correct (built 7 Oct from the same code and documentation) |
+
+The editable copy of the code and documentation is `Enigma_submission/` (the TSVs are not duplicated there; they are in
+`final_T1_trim/` and `final_v6/`). Large files (TSVs over 100 MB, zips) are not in git: only the matching files up to
 100 MB are tracked.
