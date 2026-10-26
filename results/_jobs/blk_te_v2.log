@@ -13,7 +13,7 @@ aw nnz/doc 5.9
 [14:49:33] save tfidf matrices done in 2.6s
 countries in S1: ['France', 'India', 'US']
 [14:49:38] France: 1434993 records -> 259452 S1 ...
-/tmp/ai_25901334/AmazonML/code/blocking/sparse_tfidf.py:59: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at ../aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
+/tmp/<account>/AmazonML/code/blocking/sparse_tfidf.py:59: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at ../aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
   return torch.sparse_csr_tensor(torch.from_numpy(m.indptr.astype(np.int64)), torch.from_numpy(m.indices.astype(np.int64)),
     0/1434993 queries, 0s, eta 5s
     409600/1434993 queries, 18s, eta 46s

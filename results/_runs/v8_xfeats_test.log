@@ -1,10 +1,10 @@
 == 2026-10-05T23:03:17+05:30 v8_xfeats_test
 python -u code/v5/extra_feats.py --src c4_test --out c4v8_test
-/tmp/ai_25901334/AmazonML/code/v5/extra_feats.py:70: DeprecationWarning: In Polars 2.0, the default behavior for `empty_as_null` will change to `False`. To keep the current behavior, explicitly set `empty_as_null=True`.
+/tmp/<account>/AmazonML/code/v5/extra_feats.py:70: DeprecationWarning: In Polars 2.0, the default behavior for `empty_as_null` will change to `False`. To keep the current behavior, explicitly set `empty_as_null=True`.
   return s1tok.select(["country", "nt"]).explode("nt").drop_nulls("nt").group_by(["country", "nt"]).len() \
-/tmp/ai_25901334/AmazonML/code/v5/extra_feats.py:130: DeprecationWarning: In Polars 2.0, the default behavior for `empty_as_null` will change to `False`. To keep the current behavior, explicitly set `empty_as_null=True`.
+/tmp/<account>/AmazonML/code/v5/extra_feats.py:130: DeprecationWarning: In Polars 2.0, the default behavior for `empty_as_null` will change to `False`. To keep the current behavior, explicitly set `empty_as_null=True`.
   e = T.with_row_index("i").select(["i", "country", "nt"]).explode("nt").join(
-/tmp/ai_25901334/AmazonML/code/v5/extra_feats.py:156: DeprecationWarning: In Polars 2.0, the default behavior for `empty_as_null` will change to `False`. To keep the current behavior, explicitly set `empty_as_null=True`.
+/tmp/<account>/AmazonML/code/v5/extra_feats.py:156: DeprecationWarning: In Polars 2.0, the default behavior for `empty_as_null` will change to `False`. To keep the current behavior, explicitly set `empty_as_null=True`.
   sh = P.select(["k", "country", pl.col("n1").list.set_intersection(pl.col("n2")).alias("sh")]).explode("sh").drop_nulls("sh")
   part 0: 2000000 pairs, 18s
   part 1: 2000000 pairs, 25s

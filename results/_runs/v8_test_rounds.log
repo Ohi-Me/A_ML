@@ -36,7 +36,7 @@ extra inputs on test: []
 [23:45:38] refit xgb_v8_c1 on all folds (570 rounds) ...
 [23:47:02] refit xgb_v8_c1 on all folds (570 rounds) done in 84.6s
 [23:47:02] round-1 model on test ...
-/tmp/ai_25901334/AmazonML/code/v6/predict_v6.py:72: DeprecationWarning: the default behavior of `how='horizontal'` for `concat` is deprecated and will require equal heights in the next breaking release. Use `how='horizontal_extend'` to keep the current behavior.
+/tmp/<account>/AmazonML/code/v6/predict_v6.py:72: DeprecationWarning: the default behavior of `how='horizontal'` for `concat` is deprecated and will require equal heights in the next breaking release. Use `how='horizontal_extend'` to keep the current behavior.
 (Deprecated in version 1.42.1)
   d = pl.concat([d, add.select(keep).rename({"p": "s1_p"})], how="horizontal")
 [23:47:27] round-1 model on test done in 25.0s

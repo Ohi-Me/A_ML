@@ -44,7 +44,7 @@ stage-1 blend weights by country: {'France': 0.5, 'India': 0.75, 'US': 0.75}
 [17:51:40] stage 2: fit on all folds ...
 [17:56:56] stage 2: fit on all folds done in 315.7s
 [17:56:56] stage 2: score test ...
-/tmp/ai_25901334/AmazonML/code/final/predict_test_v2.py:140: DeprecationWarning: the default behavior of `how='horizontal'` for `concat` is deprecated and will require equal heights in the next breaking release. Use `how='horizontal_extend'` to keep the current behavior.
+/tmp/<account>/AmazonML/code/final/predict_test_v2.py:140: DeprecationWarning: the default behavior of `how='horizontal'` for `concat` is deprecated and will require equal heights in the next breaking release. Use `how='horizontal_extend'` to keep the current behavior.
 (Deprecated in version 1.42.1)
   d = pl.concat([d, add], how="horizontal")
 [17:58:33] stage 2: score test done in 97.2s

@@ -28,21 +28,21 @@ GPU NVIDIA H100 NVL MIG 3g.47gb 46 GiB | torch 2.5.1+cu121 | xgboost 3.2.0
 == 2026-10-05T18:17:38+05:30 v8_sib_probe
 python -u code/v8/sib_probe.py
 Traceback (most recent call last):
-  File "/tmp/ai_25901334/AmazonML/code/v8/sib_probe.py", line 122, in <module>
+  File "/tmp/<account>/AmazonML/code/v8/sib_probe.py", line 122, in <module>
     main()
-  File "/tmp/ai_25901334/AmazonML/code/v8/sib_probe.py", line 46, in main
+  File "/tmp/<account>/AmazonML/code/v8/sib_probe.py", line 46, in main
     s1 = rd(1)
-  File "/tmp/ai_25901334/AmazonML/code/v8/sib_probe.py", line 45, in <lambda>
+  File "/tmp/<account>/AmazonML/code/v8/sib_probe.py", line 45, in <lambda>
     rd = lambda k: pl.read_parquet(os.path.join(CACHE, f"norm_{NORM}_train_s{k}.parquet"), columns=cols)  # noqa: E731
-  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/_utils/deprecation.py", line 132, in wrapper
+  File "/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/_utils/deprecation.py", line 132, in wrapper
     return function(*args, **kwargs)
-  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/_utils/deprecation.py", line 132, in wrapper
+  File "/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/_utils/deprecation.py", line 132, in wrapper
     return function(*args, **kwargs)
-  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/io/parquet/functions.py", line 303, in read_parquet
+  File "/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/io/parquet/functions.py", line 303, in read_parquet
     ret = lf._collect_eager()
-  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/lazyframe/frame.py", line 2240, in _collect_eager
+  File "/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/lazyframe/frame.py", line 2240, in _collect_eager
     return _eager_engine().collect(
-  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/lazyframe/engine.py", line 443, in collect
+  File "/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/lazyframe/engine.py", line 443, in collect
     return wrap_df(ldf.collect(self.name, callback))
 FileNotFoundError: No such file or directory (os error 2): data/cache_v2/norm_v2_train_s1.parquet
 EXIT rc=1 after 4 s at 2026-10-05T18:17:39+05:30
@@ -51,29 +51,29 @@ CUDA_VISIBLE_DEVICES=MIG-c7e12075-054a-5bc9-89e9-896eab5f7528
 GPU NVIDIA H100 NVL MIG 1g.24gb 22 GiB | torch 2.5.1+cu121 | xgboost 3.2.0
 [run ] 18:42:49 v8_sib_probe
 [FAIL] v8_sib_probe (exit 1) after 2 s - last lines of results/_runs/v8_sib_probe.log:
-  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/lazyframe/frame.py", line 2240, in _collect_eager
+  File "/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/lazyframe/frame.py", line 2240, in _collect_eager
     return _eager_engine().collect(
-  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/lazyframe/engine.py", line 443, in collect
+  File "/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/lazyframe/engine.py", line 443, in collect
     return wrap_df(ldf.collect(self.name, callback))
 FileNotFoundError: No such file or directory (os error 2): data/cache_v2/norm_v2_train_s1.parquet
 == 2026-10-05T18:42:49+05:30 v8_sib_probe
 python -u code/v8/sib_probe.py
 Traceback (most recent call last):
-  File "/tmp/ai_25901334/AmazonML/code/v8/sib_probe.py", line 122, in <module>
+  File "/tmp/<account>/AmazonML/code/v8/sib_probe.py", line 122, in <module>
     main()
-  File "/tmp/ai_25901334/AmazonML/code/v8/sib_probe.py", line 46, in main
+  File "/tmp/<account>/AmazonML/code/v8/sib_probe.py", line 46, in main
     s1 = rd(1)
-  File "/tmp/ai_25901334/AmazonML/code/v8/sib_probe.py", line 45, in <lambda>
+  File "/tmp/<account>/AmazonML/code/v8/sib_probe.py", line 45, in <lambda>
     rd = lambda k: pl.read_parquet(os.path.join(CACHE, f"norm_{NORM}_train_s{k}.parquet"), columns=cols)  # noqa: E731
-  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/_utils/deprecation.py", line 132, in wrapper
+  File "/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/_utils/deprecation.py", line 132, in wrapper
     return function(*args, **kwargs)
-  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/_utils/deprecation.py", line 132, in wrapper
+  File "/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/_utils/deprecation.py", line 132, in wrapper
     return function(*args, **kwargs)
-  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/io/parquet/functions.py", line 303, in read_parquet
+  File "/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/io/parquet/functions.py", line 303, in read_parquet
     ret = lf._collect_eager()
-  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/lazyframe/frame.py", line 2240, in _collect_eager
+  File "/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/lazyframe/frame.py", line 2240, in _collect_eager
     return _eager_engine().collect(
-  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/lazyframe/engine.py", line 443, in collect
+  File "/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/lazyframe/engine.py", line 443, in collect
     return wrap_df(ldf.collect(self.name, callback))
 FileNotFoundError: No such file or directory (os error 2): data/cache_v2/norm_v2_train_s1.parquet
 EXIT rc=1 after 5 s at 2026-10-05T18:42:51+05:30
@@ -87,19 +87,19 @@ GPU NVIDIA H100 NVL MIG 1g.24gb 22 GiB | torch 2.5.1+cu121 | xgboost 3.2.0
 == 2026-10-05T18:47:02+05:30 v8_miss_probe
 python -u code/v7/miss_probe.py --universe dms
 Traceback (most recent call last):
-  File "/tmp/ai_25901334/AmazonML/code/v7/miss_probe.py", line 220, in <module>
+  File "/tmp/<account>/AmazonML/code/v7/miss_probe.py", line 220, in <module>
     main()
-  File "/tmp/ai_25901334/AmazonML/code/v7/miss_probe.py", line 100, in main
+  File "/tmp/<account>/AmazonML/code/v7/miss_probe.py", line 100, in main
     C = pl.read_parquet(os.path.join(CACHE, "cands", "c2_train.parquet"), columns=["a", "b"])
-  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/_utils/deprecation.py", line 132, in wrapper
+  File "/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/_utils/deprecation.py", line 132, in wrapper
     return function(*args, **kwargs)
-  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/_utils/deprecation.py", line 132, in wrapper
+  File "/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/_utils/deprecation.py", line 132, in wrapper
     return function(*args, **kwargs)
-  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/io/parquet/functions.py", line 303, in read_parquet
+  File "/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/io/parquet/functions.py", line 303, in read_parquet
     ret = lf._collect_eager()
-  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/lazyframe/frame.py", line 2240, in _collect_eager
+  File "/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/lazyframe/frame.py", line 2240, in _collect_eager
     return _eager_engine().collect(
-  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/lazyframe/engine.py", line 443, in collect
+  File "/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/lazyframe/engine.py", line 443, in collect
     return wrap_df(ldf.collect(self.name, callback))
 FileNotFoundError: No such file or directory (os error 2): data/cache_v2/cands/c2_train.parquet
 EXIT rc=1 after 54 s at 2026-10-05T18:47:13+05:30
@@ -123,16 +123,16 @@ aw nnz/doc 5.6
 [18:52:05] save tfidf matrices done in 2.9s
 countries in S1: ['India', 'US']
 [18:52:11] India: 4133346 records -> 883188 S1 ...
-/tmp/ai_25901334/AmazonML/code/blocking/sparse_tfidf.py:59: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at ../aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
+/tmp/<account>/AmazonML/code/blocking/sparse_tfidf.py:59: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at ../aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
   return torch.sparse_csr_tensor(torch.from_numpy(m.indptr.astype(np.int64)), torch.from_numpy(m.indices.astype(np.int64)),
     0/4133346 queries, 0s, eta 18s
 [18:52:12] India: 4133346 records -> 883188 S1 done in 0.7s
 Traceback (most recent call last):
-  File "/tmp/ai_25901334/AmazonML/code/blocking/sparse_tfidf.py", line 226, in <module>
+  File "/tmp/<account>/AmazonML/code/blocking/sparse_tfidf.py", line 226, in <module>
     main()
-  File "/tmp/ai_25901334/AmazonML/code/blocking/sparse_tfidf.py", line 176, in main
+  File "/tmp/<account>/AmazonML/code/blocking/sparse_tfidf.py", line 176, in main
     out, parts = retrieve(Xn, Xa, name[ir + n1], addr[ir + n1], K1, 2048, dev)
-  File "/tmp/ai_25901334/AmazonML/code/blocking/sparse_tfidf.py", line 88, in retrieve
+  File "/tmp/<account>/AmazonML/code/blocking/sparse_tfidf.py", line 88, in retrieve
     SnT = torch.sparse.mm(Xn, D).T.contiguous().half()
 torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 6.74 GiB. GPU 0 has a total capacity of 21.62 GiB of which 6.46 GiB is free. Process 1675824 has 342.00 MiB memory in use. Process 1874620 has 822.00 MiB memory in use. Including non-PyTorch memory, this process has 15.14 GiB memory in use. Of the allocated memory 15.00 GiB is allocated by PyTorch, and 2.28 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
 EXIT rc=1 after 215 s at 2026-10-05T18:52:13+05:30
@@ -155,18 +155,18 @@ aw nnz/doc 6.0
 [19:06:20] save tfidf matrices done in 2.7s
 countries in S1: ['France', 'India', 'US']
 [19:06:26] France: 1434993 records -> 259452 S1 ...
-/tmp/ai_25901334/AmazonML/code/blocking/sparse_tfidf.py:59: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at ../aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
+/tmp/<account>/AmazonML/code/blocking/sparse_tfidf.py:59: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at ../aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
   return torch.sparse_csr_tensor(torch.from_numpy(m.indptr.astype(np.int64)), torch.from_numpy(m.indices.astype(np.int64)),
     0/1434993 queries, 0s, eta 11s
 [19:06:27] France: 1434993 records -> 259452 S1 done in 0.4s
 Traceback (most recent call last):
-  File "/tmp/ai_25901334/AmazonML/code/blocking/sparse_tfidf.py", line 226, in <module>
+  File "/tmp/<account>/AmazonML/code/blocking/sparse_tfidf.py", line 226, in <module>
     main()
-  File "/tmp/ai_25901334/AmazonML/code/blocking/sparse_tfidf.py", line 176, in main
+  File "/tmp/<account>/AmazonML/code/blocking/sparse_tfidf.py", line 176, in main
     out, parts = retrieve(Xn, Xa, name[ir + n1], addr[ir + n1], K1, 2048, dev)
-  File "/tmp/ai_25901334/AmazonML/code/blocking/sparse_tfidf.py", line 87, in retrieve
+  File "/tmp/<account>/AmazonML/code/blocking/sparse_tfidf.py", line 87, in retrieve
     D = dense_T(Qn[s:e], dev)
-  File "/tmp/ai_25901334/AmazonML/code/blocking/sparse_tfidf.py", line 66, in dense_T
+  File "/tmp/<account>/AmazonML/code/blocking/sparse_tfidf.py", line 66, in dense_T
     d = torch.zeros((m_rows.shape[1], m_rows.shape[0]), device=dev, dtype=torch.float32)
 torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 8.00 GiB. GPU 0 has a total capacity of 46.38 GiB of which 6.77 GiB is free. Process 105761 has 35.36 GiB memory in use. Process 2042458 has 2.40 GiB memory in use. Process 2092023 has 36.78 GiB memory in use. Including non-PyTorch memory, this process has 374.00 MiB memory in use. Of the allocated memory 71.71 MiB is allocated by PyTorch, and 10.29 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
 EXIT rc=1 after 234 s at 2026-10-05T19:06:28+05:30
@@ -197,11 +197,11 @@ GPU NVIDIA H100 NVL MIG 3g.47gb 46 GiB | torch 2.5.1+cu121 | xgboost 3.2.0
     epoch 19 loss 0.0253
 [19:39:10] fold model 0 done in 278.2s
 Traceback (most recent call last):
-  File "/tmp/ai_25901334/AmazonML/code/embeddings/oof_biencoder.py", line 211, in <module>
+  File "/tmp/<account>/AmazonML/code/embeddings/oof_biencoder.py", line 211, in <module>
     main()
-  File "/tmp/ai_25901334/AmazonML/code/embeddings/oof_biencoder.py", line 165, in main
+  File "/tmp/<account>/AmazonML/code/embeddings/oof_biencoder.py", line 165, in main
     E = encode_rows(model, NM, AD, HAS, torch.arange(n_all, device=dev))
-  File "/tmp/ai_25901334/AmazonML/code/embeddings/ngram_biencoder.py", line 75, in encode_rows
+  File "/tmp/<account>/AmazonML/code/embeddings/ngram_biencoder.py", line 75, in encode_rows
     return torch.cat(out)
 torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 5.97 GiB. GPU 0 has a total capacity of 46.38 GiB of which 5.12 GiB is free. Process 2954011 has 45.82 GiB memory in use. Process 2154217 has 28.90 GiB memory in use. Including non-PyTorch memory, this process has 12.30 GiB memory in use. Of the allocated memory 11.81 GiB is allocated by PyTorch, and 73.45 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
 EXIT rc=1 after 323 s at 2026-10-05T19:39:11+05:30
@@ -250,7 +250,7 @@ GPU NVIDIA H100 NVL MIG 3g.47gb 46 GiB | torch 2.5.1+cu121 | xgboost 3.2.0
 [FAIL] val_v2 (exit 2) after 0 s - last lines of results/_runs/val_v2.log:
 == 2026-10-05T21:54:24+05:30 val_v2
 bash code/final/validate.sh results/final/final_v2/output
-python: can't open file '/tmp/ai_25901334/AmazonML/data/utils/validate_submission.py': [Errno 2] No such file or directory
+python: can't open file '/tmp/<account>/AmazonML/data/utils/validate_submission.py': [Errno 2] No such file or directory
 EXIT rc=2 after 7139 s at 2026-10-05T21:54:24+05:30
 job 34158.master on master at 2026-10-05T22:11:38+05:30; PBS CUDA_VISIBLE_DEVICES=unset
 CUDA_VISIBLE_DEVICES=MIG-2f219700-5dc6-59eb-81ef-2bb9414d3ec0

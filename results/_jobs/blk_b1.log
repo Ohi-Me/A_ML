@@ -12,7 +12,7 @@ aw nnz/doc 5.6
 [10:47:40] save tfidf matrices done in 6.5s
 countries in S1: ['India', 'US']
 [10:47:47] India: 4133346 records -> 883188 S1 ...
-/tmp/ai_25901334/AmazonML/code/blocking/sparse_tfidf.py:59: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at ../aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
+/tmp/<account>/AmazonML/code/blocking/sparse_tfidf.py:59: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at ../aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
   return torch.sparse_csr_tensor(torch.from_numpy(m.indptr.astype(np.int64)), torch.from_numpy(m.indices.astype(np.int64)),
     0/4133346 queries, 0s, eta 11s
     409600/4133346 queries, 103s, eta 941s
@@ -103,58 +103,58 @@ all {
 [11:37:40] recall analysis done in 6.9s
 Exception ignored in: <Finalize object, dead>
 Traceback (most recent call last):
-  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/multiprocessing/util.py", line 224, in __call__
+  File "/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/multiprocessing/util.py", line 224, in __call__
     res = self._callback(*self._args, **self._kwargs)
-  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/multiprocessing/synchronize.py", line 87, in _cleanup
+  File "/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/multiprocessing/synchronize.py", line 87, in _cleanup
     sem_unlink(name)
 FileNotFoundError: [Errno 2] No such file or directory
 Exception ignored in: <Finalize object, dead>
 Traceback (most recent call last):
-  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/multiprocessing/util.py", line 224, in __call__
+  File "/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/multiprocessing/util.py", line 224, in __call__
     res = self._callback(*self._args, **self._kwargs)
-  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/multiprocessing/synchronize.py", line 87, in _cleanup
+  File "/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/multiprocessing/synchronize.py", line 87, in _cleanup
     sem_unlink(name)
 FileNotFoundError: [Errno 2] No such file or directory
 Exception ignored in: <Finalize object, dead>
 Traceback (most recent call last):
-  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/multiprocessing/util.py", line 224, in __call__
+  File "/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/multiprocessing/util.py", line 224, in __call__
     res = self._callback(*self._args, **self._kwargs)
-  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/multiprocessing/synchronize.py", line 87, in _cleanup
+  File "/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/multiprocessing/synchronize.py", line 87, in _cleanup
     sem_unlink(name)
 FileNotFoundError: [Errno 2] No such file or directory
 Exception ignored in: <Finalize object, dead>
 Traceback (most recent call last):
-  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/multiprocessing/util.py", line 224, in __call__
+  File "/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/multiprocessing/util.py", line 224, in __call__
     res = self._callback(*self._args, **self._kwargs)
-  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/multiprocessing/synchronize.py", line 87, in _cleanup
+  File "/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/multiprocessing/synchronize.py", line 87, in _cleanup
     sem_unlink(name)
 FileNotFoundError: [Errno 2] No such file or directory
 Exception ignored in: <Finalize object, dead>
 Traceback (most recent call last):
-  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/multiprocessing/util.py", line 224, in __call__
+  File "/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/multiprocessing/util.py", line 224, in __call__
     res = self._callback(*self._args, **self._kwargs)
-  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/multiprocessing/synchronize.py", line 87, in _cleanup
+  File "/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/multiprocessing/synchronize.py", line 87, in _cleanup
     sem_unlink(name)
 FileNotFoundError: [Errno 2] No such file or directory
 Exception ignored in: <Finalize object, dead>
 Traceback (most recent call last):
-  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/multiprocessing/util.py", line 224, in __call__
+  File "/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/multiprocessing/util.py", line 224, in __call__
     res = self._callback(*self._args, **self._kwargs)
-  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/multiprocessing/synchronize.py", line 87, in _cleanup
+  File "/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/multiprocessing/synchronize.py", line 87, in _cleanup
     sem_unlink(name)
 FileNotFoundError: [Errno 2] No such file or directory
-/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 6 leaked semaphore objects to clean up at shutdown
+/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 6 leaked semaphore objects to clean up at shutdown
   warnings.warn('resource_tracker: There appear to be %d '
-/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/multiprocessing/resource_tracker.py:237: UserWarning: resource_tracker: '/mp-lx74sffm': [Errno 2] No such file or directory
+/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/multiprocessing/resource_tracker.py:237: UserWarning: resource_tracker: '/mp-lx74sffm': [Errno 2] No such file or directory
   warnings.warn('resource_tracker: %r: %s' % (name, e))
-/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/multiprocessing/resource_tracker.py:237: UserWarning: resource_tracker: '/mp-slej_fgd': [Errno 2] No such file or directory
+/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/multiprocessing/resource_tracker.py:237: UserWarning: resource_tracker: '/mp-slej_fgd': [Errno 2] No such file or directory
   warnings.warn('resource_tracker: %r: %s' % (name, e))
-/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/multiprocessing/resource_tracker.py:237: UserWarning: resource_tracker: '/mp-1zrrxibi': [Errno 2] No such file or directory
+/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/multiprocessing/resource_tracker.py:237: UserWarning: resource_tracker: '/mp-1zrrxibi': [Errno 2] No such file or directory
   warnings.warn('resource_tracker: %r: %s' % (name, e))
-/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/multiprocessing/resource_tracker.py:237: UserWarning: resource_tracker: '/mp-85weqot6': [Errno 2] No such file or directory
+/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/multiprocessing/resource_tracker.py:237: UserWarning: resource_tracker: '/mp-85weqot6': [Errno 2] No such file or directory
   warnings.warn('resource_tracker: %r: %s' % (name, e))
-/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/multiprocessing/resource_tracker.py:237: UserWarning: resource_tracker: '/mp-ca_rog2l': [Errno 2] No such file or directory
+/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/multiprocessing/resource_tracker.py:237: UserWarning: resource_tracker: '/mp-ca_rog2l': [Errno 2] No such file or directory
   warnings.warn('resource_tracker: %r: %s' % (name, e))
-/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/multiprocessing/resource_tracker.py:237: UserWarning: resource_tracker: '/mp-c3gkw5e7': [Errno 2] No such file or directory
+/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/multiprocessing/resource_tracker.py:237: UserWarning: resource_tracker: '/mp-c3gkw5e7': [Errno 2] No such file or directory
   warnings.warn('resource_tracker: %r: %s' % (name, e))
 EXIT rc=0 after 3041 s at 2026-09-25T11:37:41+05:30

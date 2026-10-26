@@ -1,19 +1,19 @@
 == 2026-10-05T18:47:02+05:30 v8_miss_probe
 python -u code/v7/miss_probe.py --universe dms
 Traceback (most recent call last):
-  File "/tmp/ai_25901334/AmazonML/code/v7/miss_probe.py", line 220, in <module>
+  File "/tmp/<account>/AmazonML/code/v7/miss_probe.py", line 220, in <module>
     main()
-  File "/tmp/ai_25901334/AmazonML/code/v7/miss_probe.py", line 100, in main
+  File "/tmp/<account>/AmazonML/code/v7/miss_probe.py", line 100, in main
     C = pl.read_parquet(os.path.join(CACHE, "cands", "c2_train.parquet"), columns=["a", "b"])
-  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/_utils/deprecation.py", line 132, in wrapper
+  File "/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/_utils/deprecation.py", line 132, in wrapper
     return function(*args, **kwargs)
-  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/_utils/deprecation.py", line 132, in wrapper
+  File "/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/_utils/deprecation.py", line 132, in wrapper
     return function(*args, **kwargs)
-  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/io/parquet/functions.py", line 303, in read_parquet
+  File "/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/io/parquet/functions.py", line 303, in read_parquet
     ret = lf._collect_eager()
-  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/lazyframe/frame.py", line 2240, in _collect_eager
+  File "/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/lazyframe/frame.py", line 2240, in _collect_eager
     return _eager_engine().collect(
-  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/lazyframe/engine.py", line 443, in collect
+  File "/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/lazyframe/engine.py", line 443, in collect
     return wrap_df(ldf.collect(self.name, callback))
 FileNotFoundError: No such file or directory (os error 2): data/cache_v2/cands/c2_train.parquet
 == 2026-10-05T22:11:41+05:30 v8_miss_probe

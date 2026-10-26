@@ -16,11 +16,11 @@ training pairs 6110092
 [10:25:43] dense retrieval per country ...
 [10:27:50] dense retrieval per country done in 127.5s
 Traceback (most recent call last):
-  File "/tmp/ai_25901334/AmazonML/code/embeddings/ngram_biencoder.py", line 230, in <module>
+  File "/tmp/<account>/AmazonML/code/embeddings/ngram_biencoder.py", line 230, in <module>
     main()
-  File "/tmp/ai_25901334/AmazonML/code/embeddings/ngram_biencoder.py", line 196, in main
+  File "/tmp/<account>/AmazonML/code/embeddings/ngram_biencoder.py", line 196, in main
     idx, sc = topk_dense(Q, E1, args.k)
-  File "/tmp/ai_25901334/AmazonML/code/embeddings/ngram_biencoder.py", line 81, in topk_dense
+  File "/tmp/<account>/AmazonML/code/embeddings/ngram_biencoder.py", line 81, in topk_dense
     S = Q[s:s + B] @ E.T
 torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 10.10 GiB. GPU 0 has a total capacity of 39.50 GiB of which 8.60 GiB is free. Including non-PyTorch memory, this process has 30.85 GiB memory in use. Of the allocated memory 24.93 GiB is allocated by PyTorch, and 5.57 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
 EXIT rc=1 after 213 s at 2026-09-25T10:27:51+05:30

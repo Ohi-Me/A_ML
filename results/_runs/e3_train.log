@@ -26,11 +26,11 @@ GPU: NVIDIA H100 NVL MIG 3g.47gb, 46.4 GiB, SMs 60, torch 2.5.1+cu121, cuda 12.1
     epoch 19 loss 0.0253
 [19:39:10] fold model 0 done in 278.2s
 Traceback (most recent call last):
-  File "/tmp/ai_25901334/AmazonML/code/embeddings/oof_biencoder.py", line 211, in <module>
+  File "/tmp/<account>/AmazonML/code/embeddings/oof_biencoder.py", line 211, in <module>
     main()
-  File "/tmp/ai_25901334/AmazonML/code/embeddings/oof_biencoder.py", line 165, in main
+  File "/tmp/<account>/AmazonML/code/embeddings/oof_biencoder.py", line 165, in main
     E = encode_rows(model, NM, AD, HAS, torch.arange(n_all, device=dev))
-  File "/tmp/ai_25901334/AmazonML/code/embeddings/ngram_biencoder.py", line 75, in encode_rows
+  File "/tmp/<account>/AmazonML/code/embeddings/ngram_biencoder.py", line 75, in encode_rows
     return torch.cat(out)
 torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 5.97 GiB. GPU 0 has a total capacity of 46.38 GiB of which 5.12 GiB is free. Process 2954011 has 45.82 GiB memory in use. Process 2154217 has 28.90 GiB memory in use. Including non-PyTorch memory, this process has 12.30 GiB memory in use. Of the allocated memory 11.81 GiB is allocated by PyTorch, and 73.45 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
 == 2026-10-05T19:55:28+05:30 e3_train

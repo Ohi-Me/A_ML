@@ -11,7 +11,7 @@ pairs 51601095 S1 2206821 records 10320219
 [20:34:21] labels ...
 [20:34:25] labels done in 4.3s
 [20:34:25] string features (streamed parts) ...
-/tmp/ai_25901334/AmazonML/code/tfidf_fuzzy/pair_features.py:137: DeprecationWarning: the default behavior of `how='horizontal'` for `concat` is deprecated and will require equal heights in the next breaking release. Use `how='horizontal_extend'` to keep the current behavior.
+/tmp/<account>/AmazonML/code/tfidf_fuzzy/pair_features.py:137: DeprecationWarning: the default behavior of `how='horizontal'` for `concat` is deprecated and will require equal heights in the next breaking release. Use `how='horizontal_extend'` to keep the current behavior.
 (Deprecated in version 1.42.1)
   pl.concat([C[ps:pe], FE], how="horizontal").write_parquet(os.path.join(out_dir, f"part_{pi:03d}.parquet"))
   part 0: pairs 0-2000000, 146s

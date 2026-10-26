@@ -4,7 +4,7 @@ GPU: NVIDIA H100 PCIe MIG 3g.40gb, 39.5 GiB, SMs 46, torch 2.5.1+cu121, cuda 12.
 [14:56:29] encode 911280 pairs ...
 [14:56:33] encode 911280 pairs done in 4.1s
 [14:56:33] model A: train on 366276 pairs ...
-/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/torch/nn/modules/transformer.py:379: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/site-packages/torch/nn/modules/transformer.py:379: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
   warnings.warn(
     epoch 0 loss 0.6444 (87s)
     epoch 1 loss 0.6275 (87s)
@@ -12,7 +12,7 @@ GPU: NVIDIA H100 PCIe MIG 3g.40gb, 39.5 GiB, SMs 46, torch 2.5.1+cu121, cuda 12.
 [14:59:28] model A: score 545004 pairs ...
 [15:00:01] model A: score 545004 pairs done in 33.4s
 [15:00:01] model B: train on 363608 pairs ...
-/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/torch/nn/modules/transformer.py:379: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/site-packages/torch/nn/modules/transformer.py:379: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
   warnings.warn(
     epoch 0 loss 0.6481 (86s)
     epoch 1 loss 0.6315 (86s)

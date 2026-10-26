@@ -41,7 +41,7 @@ GPU: NVIDIA H100 NVL MIG 3g.47gb, 46.4 GiB, SMs 60, torch 2.5.1+cu121, cuda 12.1
     siblings a<2220000: 5961862 record pairs
 [12:12:08] context + sibling features done in 295.2s
 [12:12:08] write stage-2 parts ...
-/tmp/ai_25901334/AmazonML/code/xgboost/stage2.py:136: DeprecationWarning: the default behavior of `how='horizontal'` for `concat` is deprecated and will require equal heights in the next breaking release. Use `how='horizontal_extend'` to keep the current behavior.
+/tmp/<account>/AmazonML/code/xgboost/stage2.py:136: DeprecationWarning: the default behavior of `how='horizontal'` for `concat` is deprecated and will require equal heights in the next breaking release. Use `how='horizontal_extend'` to keep the current behavior.
 (Deprecated in version 1.42.1)
   pl.concat([d, add], how="horizontal").write_parquet(os.path.join(out_dir, f"part_{i:03d}.parquet"))
 [12:12:32] write stage-2 parts done in 24.8s

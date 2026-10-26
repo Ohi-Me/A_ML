@@ -41,24 +41,24 @@ GPU: NVIDIA H100 NVL MIG 3g.47gb, 46.4 GiB, SMs 60, torch 2.5.1+cu121, cuda 12.1
     siblings a<2220000: 4816441 record pairs
 [13:26:04] context + sibling features done in 331.1s
 [13:26:04] write stage-2 parts ...
-/tmp/ai_25901334/AmazonML/code/xgboost/stage2.py:79: DeprecationWarning: the default behavior of `how='horizontal'` for `concat` is deprecated and will require equal heights in the next breaking release. Use `how='horizontal_extend'` to keep the current behavior.
+/tmp/<account>/AmazonML/code/xgboost/stage2.py:79: DeprecationWarning: the default behavior of `how='horizontal'` for `concat` is deprecated and will require equal heights in the next breaking release. Use `how='horizontal_extend'` to keep the current behavior.
 (Deprecated in version 1.42.1)
   pl.concat([d, add], how="horizontal").write_parquet(os.path.join(out_dir, f"part_{i:03d}.parquet"))
 [13:26:07] write stage-2 parts done in 2.2s
 Traceback (most recent call last):
-  File "/tmp/ai_25901334/AmazonML/code/xgboost/stage2.py", line 132, in <module>
+  File "/tmp/<account>/AmazonML/code/xgboost/stage2.py", line 132, in <module>
     main()
-  File "/tmp/ai_25901334/AmazonML/code/xgboost/stage2.py", line 79, in main
+  File "/tmp/<account>/AmazonML/code/xgboost/stage2.py", line 79, in main
     pl.concat([d, add], how="horizontal").write_parquet(os.path.join(out_dir, f"part_{i:03d}.parquet"))
-  File "/tmp/ai_25901334/AmazonML/pkgs/polars/dataframe/frame.py", line 4375, in write_parquet
+  File "/tmp/<account>/AmazonML/pkgs/polars/dataframe/frame.py", line 4375, in write_parquet
     self.lazy().sink_parquet(
-  File "/tmp/ai_25901334/AmazonML/pkgs/polars/lazyframe/frame.py", line 3021, in sink_parquet
+  File "/tmp/<account>/AmazonML/pkgs/polars/lazyframe/frame.py", line 3021, in sink_parquet
     return _select_engine(engine).sink_parquet(
-  File "/tmp/ai_25901334/AmazonML/pkgs/polars/lazyframe/engine.py", line 616, in sink_parquet
+  File "/tmp/<account>/AmazonML/pkgs/polars/lazyframe/engine.py", line 616, in sink_parquet
     return self._finish_sink(ldf_py, lazy=lazy, optimizations=optimizations)
-  File "/tmp/ai_25901334/AmazonML/pkgs/polars/lazyframe/engine.py", line 522, in _finish_sink
+  File "/tmp/<account>/AmazonML/pkgs/polars/lazyframe/engine.py", line 522, in _finish_sink
     self.collect(lf, optimizations=optimizations)
-  File "/tmp/ai_25901334/AmazonML/pkgs/polars/lazyframe/engine.py", line 443, in collect
+  File "/tmp/<account>/AmazonML/pkgs/polars/lazyframe/engine.py", line 443, in collect
     return wrap_df(ldf.collect(self.name, callback))
 polars.exceptions.ComputeError: parquet: File out of specification: underlying IO error: No space left on device (os error 28)
 EXIT rc=1 after 337 s at 2026-09-25T13:26:08+05:30

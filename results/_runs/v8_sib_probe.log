@@ -1,41 +1,41 @@
 == 2026-10-05T18:17:38+05:30 v8_sib_probe
 python -u code/v8/sib_probe.py
 Traceback (most recent call last):
-  File "/tmp/ai_25901334/AmazonML/code/v8/sib_probe.py", line 122, in <module>
+  File "/tmp/<account>/AmazonML/code/v8/sib_probe.py", line 122, in <module>
     main()
-  File "/tmp/ai_25901334/AmazonML/code/v8/sib_probe.py", line 46, in main
+  File "/tmp/<account>/AmazonML/code/v8/sib_probe.py", line 46, in main
     s1 = rd(1)
-  File "/tmp/ai_25901334/AmazonML/code/v8/sib_probe.py", line 45, in <lambda>
+  File "/tmp/<account>/AmazonML/code/v8/sib_probe.py", line 45, in <lambda>
     rd = lambda k: pl.read_parquet(os.path.join(CACHE, f"norm_{NORM}_train_s{k}.parquet"), columns=cols)  # noqa: E731
-  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/_utils/deprecation.py", line 132, in wrapper
+  File "/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/_utils/deprecation.py", line 132, in wrapper
     return function(*args, **kwargs)
-  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/_utils/deprecation.py", line 132, in wrapper
+  File "/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/_utils/deprecation.py", line 132, in wrapper
     return function(*args, **kwargs)
-  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/io/parquet/functions.py", line 303, in read_parquet
+  File "/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/io/parquet/functions.py", line 303, in read_parquet
     ret = lf._collect_eager()
-  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/lazyframe/frame.py", line 2240, in _collect_eager
+  File "/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/lazyframe/frame.py", line 2240, in _collect_eager
     return _eager_engine().collect(
-  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/lazyframe/engine.py", line 443, in collect
+  File "/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/lazyframe/engine.py", line 443, in collect
     return wrap_df(ldf.collect(self.name, callback))
 FileNotFoundError: No such file or directory (os error 2): data/cache_v2/norm_v2_train_s1.parquet
 == 2026-10-05T18:42:49+05:30 v8_sib_probe
 python -u code/v8/sib_probe.py
 Traceback (most recent call last):
-  File "/tmp/ai_25901334/AmazonML/code/v8/sib_probe.py", line 122, in <module>
+  File "/tmp/<account>/AmazonML/code/v8/sib_probe.py", line 122, in <module>
     main()
-  File "/tmp/ai_25901334/AmazonML/code/v8/sib_probe.py", line 46, in main
+  File "/tmp/<account>/AmazonML/code/v8/sib_probe.py", line 46, in main
     s1 = rd(1)
-  File "/tmp/ai_25901334/AmazonML/code/v8/sib_probe.py", line 45, in <lambda>
+  File "/tmp/<account>/AmazonML/code/v8/sib_probe.py", line 45, in <lambda>
     rd = lambda k: pl.read_parquet(os.path.join(CACHE, f"norm_{NORM}_train_s{k}.parquet"), columns=cols)  # noqa: E731
-  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/_utils/deprecation.py", line 132, in wrapper
+  File "/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/_utils/deprecation.py", line 132, in wrapper
     return function(*args, **kwargs)
-  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/_utils/deprecation.py", line 132, in wrapper
+  File "/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/_utils/deprecation.py", line 132, in wrapper
     return function(*args, **kwargs)
-  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/io/parquet/functions.py", line 303, in read_parquet
+  File "/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/io/parquet/functions.py", line 303, in read_parquet
     ret = lf._collect_eager()
-  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/lazyframe/frame.py", line 2240, in _collect_eager
+  File "/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/lazyframe/frame.py", line 2240, in _collect_eager
     return _eager_engine().collect(
-  File "/Data3/ai_25901334/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/lazyframe/engine.py", line 443, in collect
+  File "/Data3/<account>/.conda/envs/refused_h100/lib/python3.10/site-packages/polars/lazyframe/engine.py", line 443, in collect
     return wrap_df(ldf.collect(self.name, callback))
 FileNotFoundError: No such file or directory (os error 2): data/cache_v2/norm_v2_train_s1.parquet
 == 2026-10-05T18:46:22+05:30 v8_sib_probe

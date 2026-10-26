@@ -2,7 +2,7 @@ job 32570.master on master at 2026-09-25T10:16:13+05:30
 CUDA_VISIBLE_DEVICES=MIG-2f219700-5dc6-59eb-81ef-2bb9414d3ec0
 GPU: NVIDIA H100 NVL MIG 3g.47gb, 46.4 GiB, SMs 60, torch 2.5.1+cu121, cuda 12.1
 [10:16:20] normalize train s1 (2206821 rows) ...
-/tmp/ai_25901334/AmazonML/code/common/prep.py:84: DeprecationWarning: the default behavior of `how='horizontal'` for `concat` is deprecated and will require equal heights in the next breaking release. Use `how='horizontal_extend'` to keep the current behavior.
+/tmp/<account>/AmazonML/code/common/prep.py:84: DeprecationWarning: the default behavior of `how='horizontal'` for `concat` is deprecated and will require equal heights in the next breaking release. Use `how='horizontal_extend'` to keep the current behavior.
 (Deprecated in version 1.42.1)
   nd = pl.concat([df.select(pl.col("entity_id").alias("id"), "country"), nd], how="horizontal")
 [10:16:27] normalize train s1 (2206821 rows) done in 7.6s
